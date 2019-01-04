@@ -238,7 +238,7 @@ gulp.task('clean:all', () => {
 //-- BrowserSync
 gulp.task('serve', () => {
     browserSync.init({
-        proxy: "http://localhost/wordpress",
+        proxy: "http://localhost/acerola",
         ws: true
     });
 

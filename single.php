@@ -10,18 +10,6 @@
     </footer>
 </section>
 
-<?php if ( in_category( 'Portfolio' )) {
-    get_sidebar(); 
-} else { ?>
-    <aside id="sidebar" role="complementary" class="sidebar">
-        <div class="side-summary" id="sideSummary" data-spy="affix">
-            <div class="h3 widget-title">Sommaire</div>
-            <?php 
-                $sidecontent = get_post_meta($post->ID,'scrollspy-sidebar',true);
-                echo $sidecontent;
-            ?>    
-        </div>    
-    </aside>
-<?php } ?>
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

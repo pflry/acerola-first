@@ -7,7 +7,7 @@
  * Display specific template to display home page
  * 
  * @package WordPress
- * @subpackage PFLRYGULP
+ * @subpackage ACEROLA CARRIERE v3.0
  */
 
 get_header(); ?>

@@ -6,7 +6,7 @@
  * This template is include in entry template.
  *
  * @package WordPress
- * @subpackage PFLRYGULP
+ * @subpackage ACEROLA CARRIERE v3.0
  */
 
 ?><section class="entry-meta d-none">

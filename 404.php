@@ -5,7 +5,7 @@
  * Displays page error 404.
  *
  * @package WordPress
- * @subpackage PFLRYGULP
+ * @subpackage ACEROLA CARRIERE v3.0
  */
 
 ?><?php get_header(); ?>

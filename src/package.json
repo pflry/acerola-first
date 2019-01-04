@@ -12,9 +12,7 @@
     "license": "ISC",
     "dependencies": {},
     "devDependencies": {
-        "bootstrap": "3.3.7",
         "browser-sync": "^2.18.8",
-        "dynamic-scrollspy": "^0.2.0",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^4.0.0",
         "gulp-changed": "^3.2.0",
@@ -26,7 +24,6 @@
         "gulp-sass": "^3.1.0",
         "gulp-sourcemaps": "^2.6.0",
         "gulp-strip-css-comments": "^2.0.0",
-        "highlight.js": "^9.12.0",
         "jquery": "^3.3.1",
         "merge-stream": "^1.0.1",
         "vinyl-named": "^1.1.0",

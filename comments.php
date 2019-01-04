@@ -5,7 +5,7 @@
  * Displays the comments at the end of single post.
  *
  * @package WordPress
- * @subpackage PFLRYGULP
+ * @subpackage ACEROLA CARRIERE v3.0
  */
 
 ?><?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>

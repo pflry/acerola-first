@@ -5,7 +5,7 @@
  * Displays standard single page.
  *
  * @package WordPress
- * @subpackage PFLRYGULP
+ * @subpackage ACEROLA CARRIERE v3.0
  */
 
 ?><?php get_header(); ?>

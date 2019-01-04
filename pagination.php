@@ -5,7 +5,7 @@
  * Displays the pagination in posts list
  *
  * @package WordPress
- * @subpackage PFLRYGULP
+ * @subpackage ACEROLA CARRIERE v3.0
  */
 
 ?><?php 

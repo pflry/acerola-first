@@ -4,7 +4,7 @@
  * Medias functions
  *
  * @package WordPress
- * @subpackage PFLRYGULP
+ * @subpackage ACEROLA CARRIERE v3.0
  * @since 1.0
  */
 

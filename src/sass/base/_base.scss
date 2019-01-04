@@ -62,8 +62,8 @@ body {
     width: 100%;
 
     @media screen and (min-width: $medium) {
-        margin-left: 0.9375rem;
-        order: 2;
+        margin-right: 0.9375rem;
+        order: 1;
         width: 65%;
     }
 }
