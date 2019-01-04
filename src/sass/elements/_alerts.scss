@@ -1,0 +1,64 @@
+//
+// Alerts
+// --------------------------------------------------
+
+// alert
+.alert {
+    background-position: 1rem 0.75rem;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    border-radius: $border-radius;
+    border: 1px solid transparent;
+    font-size: $font-size-sm;
+    margin: 0 0 1.375rem;
+    padding: 0.8rem 1.25rem 0.75rem 3.125rem;
+    position: relative;
+
+    .alert-title {
+        display: block;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
+        margin-bottom: 0.25rem;
+        margin-top: -0.125rem;
+    }
+}
+
+.alert-info {
+    background-color: tint($color-info, 85);
+    background-image: url('../icons/info-circle.svg');
+    color: shade($color-info, 50);
+
+    .alert-title {
+        color: shade($color-info, 35);
+    }
+}
+
+.alert-success {
+    background-color: tint($color-success, 80);
+    background-image: url('../icons/check-circle.svg');
+    color: shade($color-success, 50);
+
+    .alert-title {
+        color: shade($color-success, 50);
+    }
+}
+
+.alert-warning {
+    background-color: tint($color-warning, 80);
+    background-image: url('../icons/exclamation-circle.svg');
+    color: shade($color-warning, 50);
+
+    .alert-title {
+        color: shade($color-warning, 50);
+    }
+}
+
+.alert-danger {
+    background-color: tint($color-danger, 85);
+    background-image: url('../icons/exclamation-triangle.svg');
+    color: shade($color-danger, 50);
+
+    .alert-title {
+        color: shade($color-danger, 50);
+    }
+}

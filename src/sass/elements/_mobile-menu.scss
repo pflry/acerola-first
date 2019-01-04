@@ -1,0 +1,197 @@
+//
+// Mobile menu
+// --------------------------------------------------
+
+// btn hamburger + cross
+.menu-toggle {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    padding: 0 1.625rem 0.21875rem 0;
+    text-indent: -99999px;
+    z-index: 1005;
+
+    span,
+    span:before,
+    span:after {
+        background: white;
+        border-radius: 3px;
+        content: '';
+        cursor: pointer;
+        display: block;
+        height: 4px;
+        position: absolute;
+        transition: $transition-base;
+        width: 25px;
+    }
+
+    span:before {
+        top: -8px;
+    }
+
+    span:after {
+        top: 8px;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: none;
+    }
+}
+
+// just cross
+.menu-toggle.active {
+    span {
+        background: transparent;
+    }
+
+    span:before {
+        background: $white;
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    span:after {
+        background: $white;
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
+
+
+// Mobile Menu Mechanics
+// -----------------------------------
+
+.blog-header {
+    background-color: $color-primary;
+    height: 110px;
+    overflow: hidden;
+    transition: $transition-base;
+
+    &.move {
+        height: 100vh;
+    }
+
+    @media screen and (min-width: $medium) {
+        height: 190px;
+
+        .mobile-menu {
+            display: none;
+        }
+    }
+}
+
+// fixe le body pour stop scroll
+.fix {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+}
+
+
+// Mobile Menu
+// -----------------------------------
+
+.mobile-menu .container {
+    display: block;
+    min-height: 80vh;
+}
+
+.mobile-menu a,
+.mobile-menu__search {
+    align-content: stretch;
+    align-items: stretch;
+    background-color: $peter-river;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 12vh;
+    justify-content: flex-start;
+    padding-left: 6vh;
+}
+
+// recherche
+.mobile-menu__search .search-form {
+    align-content: stretch;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.mobile-menu__search .search-form .search-field {
+    background-color: $peter-river;
+    border: none;
+    color: $white;
+    flex: 1 1 auto;
+    width: 100%;
+
+    &::placeholder {
+        color: $white;
+        transition: $transition-base;
+    }
+
+    &:focus::placeholder {
+        color: white(0.4);
+    }
+}
+
+.mobile-menu__search .search-form .search-submit {
+    background-color: $color-dark;
+    border-radius: 0;
+    flex: 0 0 90px;
+
+    .icon {
+        height: 42px;
+        width: 42px;
+    }
+}
+
+// menu
+.mobile-menu a {
+    margin-top: 1vh;
+
+    span {
+        align-self: center;
+        flex: 1 1 auto;
+        order: 0;
+    }
+
+    &:after {
+        align-self: auto;
+        background-color: $color-dark;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 48px;
+        content: '';
+        display: block;
+        flex: 0 1 auto;
+        order: 0;
+        width: 90px;
+    }
+}
+
+.mobile-menu .container a:first-of-type:after {
+    background-image: url('../icons/code-mm.svg');
+}
+
+.mobile-menu .container a:nth-of-type(2):after {
+    background-image: url('../icons/wordpress-mm.svg');
+    background-size: 42px;
+}
+
+.mobile-menu .container a:nth-of-type(3):after {
+    background-image: url('../icons/portfolio-mm.svg');
+}
+
+.mobile-menu .container a:nth-of-type(4):after {
+    background-image: url('../icons/contact-mm.svg');
+}
+
+.mobile-menu .container a:last-of-type:after {
+    background-image: url('../icons/sitemap-mm.svg');
+}

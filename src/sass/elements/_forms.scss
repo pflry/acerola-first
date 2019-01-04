@@ -1,0 +1,65 @@
+//
+// Forms
+// --------------------------------------------------
+
+.form-control {
+    background-clip: padding-box;
+    background-color: white;
+    border-radius: $border-radius;
+    border: solid 1px $concrete;
+    color: $color-dark;
+    display: block;
+    font-size: $font-size-base;
+    line-height: 1;
+    outline: none;
+    padding: 0.375rem 0.75rem;
+    transition: $transition-base;
+    width: 100%;
+
+    &::placeholder {
+        color: $color-secondary;
+        opacity: 1;
+    }
+
+    &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 5px rgba($color-primary, 1);
+    }
+
+    @media screen and (min-width: $medium) {
+        max-width: 60%;
+    }
+}
+
+.form-group {
+   margin-bottom: 1rem; 
+}
+
+.form-group label {
+    display: inline-block;
+    font-size: $font-size-sm;
+    padding-bottom: 0.375rem;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+
+    @media screen and (min-width: $medium) {
+        &.form-control {
+            max-width: 100%;
+        }
+    }
+}
+
+.form-submit {
+    margin-top: 2rem;
+}
+
+.required {
+    color: $color-primary;
+}
+
+.form-control.required {
+    color: $color-dark;
+}

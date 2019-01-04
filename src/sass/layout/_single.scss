@@ -1,0 +1,41 @@
+//
+// Single blog post
+// --------------------------------------------------
+
+.entry-footer {
+    background-color: $color-light;
+    border-radius: $border-radius;
+    border: 1px solid $color-light;
+    color: $color-muted;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: $font-size-sm;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    position: relative;
+
+    span > span {
+        color: $color-dark;
+        font-weight: $font-weight-medium;
+    }
+}
+
+.single-post .tag-links {
+    display: block;
+    font-size: $font-size-sm;
+
+    a {
+        background-color: $color-primary;
+        border-radius: 5rem;
+        color: rgba(white,0.9);
+        padding: 0.1rem 0.45rem;
+        word-break: break-word;
+        display: inline-block;
+        margin: 0.125rem 0.25rem 0.125rem 0;
+    }
+}
+
+.single-post .entry-content {
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,50 @@
+//
+// Functions
+// --------------------------------------------------
+
+// Transparent helper black
+/// @access public
+/// @param {Opacity} $opacity - opacity value
+/// @return {rgba black}
+@function black($opacity) {
+    @return rgba(0, 0, 0, $opacity);
+}
+
+// Transparent helper white
+/// @access public
+/// @param {Opacity} $opacity - opacity value
+/// @return {rgba white}
+@function white($opacity) {
+    @return rgba(255, 255, 255, $opacity);
+}
+
+// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+// Dynamic text color
+/// @access public
+/// @param {Color} $color - background color
+/// @return {black or white} - Lighter background, return dark color and inv.
+@function dynamic-color($color) {
+    @if (lightness($color) > 50) {
+        @return black;
+    }
+    @else {
+        @return white;
+    }
+}

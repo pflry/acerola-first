@@ -1,0 +1,120 @@
+//
+// Base
+// --------------------------------------------------
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: $background-color-base;
+    color: $color-base;
+    font-family: $font-family-base;
+    font-size: 1rem;
+    line-height: $line-height-base;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+// Scaffholding
+// --------------------------------------------------
+
+// wrapper
+.wrapper {
+    min-height: 100vh;
+    padding-bottom: 150px;
+    transform: translate(0);
+
+    @media screen and (min-width: $medium) {
+        padding-bottom: 80px;
+    }
+}
+
+// containers
+.container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 1.875rem;
+    width: 100%;
+}
+
+.container-main {
+    align-items: stretch;
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
+
+    @media screen and (min-width: $medium) {
+        padding-bottom: 3.75rem;
+        padding-top: 3.75rem;
+    }
+}
+
+// main
+.main {
+    flex: 0 1 auto;
+    width: 100%;
+
+    @media screen and (min-width: $medium) {
+        margin-left: 0.9375rem;
+        order: 2;
+        width: 65%;
+    }
+}
+
+
+// elements
+// -----------------------------------
+
+// table
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.375rem;
+    background-color: transparent;
+}
+
+.table thead th {
+    border-bottom: solid 2px $color-border;
+    font-weight: $font-weight-bold;
+    vertical-align: bottom;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: solid 1px $color-border;
+}
+
+// img
+.img-fluid {
+    border-radius: $border-radius;
+    height: auto;
+    max-width: 100%;
+}
+
+// utilities
+// -----------------------------------
+.d-none {
+    display: none !important;
+}
+
+.rounded {
+    border-radius: $border-radius;
+}
+
+.text-muted {
+    color: $color-muted;
+    font-size: $font-size-sm;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,74 @@
+//
+// Post navigation
+// --------------------------------------------------
+
+// Single post navigation
+.post-navigation {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    height: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.post-navigation .nav-direction {
+    background-color: transparent;
+    border: solid 1px $color-primary;
+    border-radius: $border-radius;
+    color: $color-primary;
+    padding: 0.5rem 0.75rem; 
+    transition: $transition-base;
+
+    .icon {
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+.post-navigation .nav-title {
+    color: $concrete;
+    display: block; // masqué
+    display: none;
+    font-size: $font-size-sm;
+    margin-top: 1rem;
+    transition: $transition-base;
+}
+
+.post-navigation .nav-previous {
+    .nav-title {
+        padding-left: 6px;
+    }
+
+    .icon {
+        transform: translate(-4px, -1px);
+    }
+
+    @media screen and (min-width: $small) {
+        padding-right: 1rem;
+    }
+}
+
+.post-navigation .nav-next {
+    padding-top: 1rem;
+    text-align: right;
+
+    .nav-title {
+        padding-right: 6px;
+    }
+
+    .icon {
+        transform: translate(4px, -1px);
+    }
+
+    @media screen and (min-width: $small) {
+        padding-left: 1rem;
+        padding-top: 0;
+    }
+}
+
+.post-navigation a:hover .nav-direction {
+    color: white;
+    background-color: $color-primary;
+}

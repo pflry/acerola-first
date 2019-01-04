@@ -1,0 +1,115 @@
+//
+// Header
+// --------------------------------------------------
+
+// blog header
+// -----------------------------------
+.blog-header__banner {
+    background-color: $color-header-banner;
+
+    .container {
+        align-items: center;
+        height: 110px;
+    }
+}
+
+// titre blog
+.site-title {
+    flex: 1 1 auto;
+
+    a {
+        color: $white;
+        font-family: $font-family-title;
+        font-size: 2.5rem;
+        font-weight: $font-weight-black;
+        line-height: 1;
+        text-decoration: none;
+    }
+
+    .h1 {
+        margin: 0;
+    }
+}
+
+// main menu blog
+.site-menu {
+    display: none;
+    flex: 0 1 auto;
+
+    .menu {
+        margin: 0;
+    }
+
+    .menu-item {
+        display: inline-block;
+    }
+
+    .menu-item + .menu-item {
+        padding-left: 0.5rem;
+    }
+
+    .menu-item a {
+        background-color: transparent;
+        border-radius: $border-radius;
+        color: $white;
+        font-size: $font-size-sm;
+        padding: 0.5rem 0.75rem;
+        text-decoration: none;
+        transition: $transition-base;
+    }
+
+    .menu-item a:hover {
+        background-color: black(0.2);
+        color: $white;
+        text-decoration: none;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
+}
+
+
+// page header
+// -----------------------------------
+.page-header {
+    background-color: $color-page-header;
+    display: none;
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
+}
+
+.page-header__search {
+    width: auto;
+}
+
+.page-header .search-form {
+    display: flex;
+    justify-content: flex-end;
+
+    .search-field {
+        background-color: white;
+        max-width: 100% !important;
+    }
+
+    .search-submit {
+        border-radius: 0 $border-radius $border-radius 0;
+        background-color: transparent;
+        border: none;
+        color: $color-primary;
+    }
+
+    @media screen and (min-width: $medium) {
+        .search-field {
+            font-size: $font-size-sm;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+//
+// Breadcrumb
+// --------------------------------------------------
+
+.breadcrumb {
+    font-size: $font-size-sm;
+    margin: 0.65rem 0;
+    padding: 0;
+}
+
+.breadcrumb-item {
+    display: inline;
+
+    a {
+        color: $link-color-breadcrumb;
+    }
+
+    a:hover {
+        color: $link-color-hover-breadcrumb;
+    }
+
+    &.active {
+        color: black(0.6);
+    }
+
+    .icon {
+        height: 1rem;
+        stroke: $color-primary;
+        transform: translateY(-1px);
+    }
+}

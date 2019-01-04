@@ -1,0 +1,105 @@
+/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
+
+$gainsboro:     #dcdcdc;
+$nobel:         #9b9b9b;
+$nero:          #1e1e1e;
+$fuchsia:       #bd63c5;
+$columbia-blue: #9cdcfe;
+$picton-blue:   #569cd6;
+$pixie-green:   #b8d7a3;
+$fruit-salad:   #57a64a;
+$glade-green:   #608B4E;
+$myrtle:        #144212;
+$mint-julep:    #dcdcaa;
+$gold:          #ffd700;
+$straw:         #d7ba7d;
+$tumbleweed:    #d69d85;
+$piper:         #9a5334;
+$maroon:        #660000;
+
+
+/* color properties */
+.hljs {
+    background: $nero;
+    color: $gainsboro;
+}
+
+.hljs-addition {
+    background-color: $myrtle;
+}
+
+.hljs-deletion {
+    background-color: $maroon;
+}
+
+$elements: (
+    attr: $columbia-blue,
+    attribute: $columbia-blue,
+    built_in: $mint-julep,
+    builtin-name: $columbia-blue,
+    bullet: $straw,
+    class: $pixie-green,
+    comment: $fruit-salad,
+    doctag: $glade-green,
+    formula: $gainsboro,
+    function: $picton-blue,
+    keyword: $picton-blue,
+    link: $picton-blue,
+    literal: $picton-blue,
+    meta-keyword: $nobel,
+    meta-string: $tumbleweed,
+    meta: $nobel,
+    name: $picton-blue,
+    number: $pixie-green,
+    params: $gainsboro,
+    quote: $fruit-salad,
+    regexp: $piper,
+    section: $gold,
+    selector-attr: $straw,
+    selector-class: $straw,
+    selector-id: $straw,
+    selector-pseudo: $straw,
+    selector-tag: $straw,
+    string: $tumbleweed,
+    subst: $gainsboro,
+    symbol: $picton-blue,
+    tag: $nobel,
+    template-tag: $piper,
+    template-variable: $fuchsia,
+    title: $straw,
+    type: $gold,
+    variable: $fuchsia,
+);
+
+@each $element, $hex in $elements {
+    .hljs-#{$element} {
+        color: $hex;
+    }
+}
+
+/* other properties */
+.hljs {
+    display: block;
+    overflow-x: auto;
+}
+
+.hljs-link {
+    text-decoration: underline;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: 700;
+}
+
+.hljs-addition,
+.hljs-deletion {
+    display: inline-block;
+    width: 100%;
+}

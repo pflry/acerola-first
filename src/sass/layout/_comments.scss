@@ -1,0 +1,45 @@
+//
+// Comments
+// --------------------------------------------------
+
+.comments {
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
+}
+
+.comment-notes {
+    font-size: $font-size-sm;
+}
+
+// comment
+.comment {
+    border-radius: $border-radius;
+    border: solid 1px $color-border;
+    font-size: $font-size-sm;
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem 0.25rem;
+}
+
+.comment-author {
+    .avatar {
+        border-radius: 50%;
+        float: left;
+        margin-right: 1rem;
+    }
+
+    .fn {
+        font-size: $font-size-base;
+    }
+
+    .says {
+        display: none;
+    }
+}
+
+.comment-meta {
+    margin-bottom: 0.5rem;
+}
+
+.akismet_comment_form_privacy_notice {
+    display: none;
+}

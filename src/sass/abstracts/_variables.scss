@@ -1,0 +1,134 @@
+//
+// PFLRY.EU - Variables and config
+// --------------------------------------------------
+
+// ----------------
+// Breakpoints zone
+// ----------------
+$small:   576px;
+$medium:  768px;
+$large:   992px;
+$x-large: 1200px;
+
+// ----------
+// Fonts zone
+// ----------
+
+// Font families
+$font-family-base : ('Roboto', sans-serif);
+$font-family-headings : $font-family-base;
+$font-family-monospace: (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
+$font-family-title : ('Titillium Web', Arial, sans-serif);
+
+// Font sizes
+$font-size-base: 1rem;
+$font-size-lg:   1.125rem;
+$font-size-sm:   0.875rem;
+
+// Font weights
+$font-weight-light:   100;
+$font-weight-book:    300;
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
+$font-weight-black:   900;
+
+$font-weight-base: $font-weight-regular;
+$font-weight-headings: $font-weight-medium;
+
+// Line heights
+$line-height-base:     1.45;
+$line-height-headings: 1.2;
+
+// Headings sizes (major third - 1.250)
+//--> https://goo.gl/ej32bY
+$font-size-h1: 2.441rem;
+$font-size-h2: 1.953rem;
+$font-size-h3: 1.563rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1.125rem;
+$font-size-h6: 1rem;
+
+
+// ----------
+// Colors zone
+// ----------
+
+$white:    #fff;
+$black:    #000;
+
+// Flat UI colors
+$june-bud:      #badc58;
+$pure-apple:    #6ab04c;
+
+$peter-river:   #3498db;
+$belize-hole:   #2980b9;
+
+$sun-flower:    #f1c40f;
+$orange:        #f39c12;
+
+$carrot:        #e67e22;
+$pumpkin:       #d35400;
+
+$alizarin:      #e74c3c;
+$pomegranate:   #c0392b;
+
+$clouds:        #ecf0f1;
+$silver:        #bdc3c7;
+
+$concrete:      #95a5a6;
+$asbestos:      #7f8c8d;
+
+$wet-asphalt:   #34495e;
+$midnight-blue: #2c3e50;
+
+$razzmatazz:    #db0a5b;
+
+// Social colors
+$facebook-color:    #3b5998;
+$google-plus-color: #dd4b39;
+$linkedin-color:    #0077b5;
+
+// Semantic colors
+$color-primary :  $belize-hole;
+$color-secondary: $asbestos;
+$color-success :  $june-bud;
+$color-info:      $peter-river;
+$color-warning:   $sun-flower;
+$color-danger:    $alizarin;
+$color-light:     $clouds;
+$color-dark:      $wet-asphalt;
+
+// Composants colors
+$color-base:            $color-dark;
+$color-headings:        $midnight-blue;
+$background-color-base: $white;
+
+$color-header-banner:           $color-primary;
+$color-page-header:             $color-light;
+$link-color-breadcrumb:         $color-base;
+$link-color-hover-breadcrumb:   $color-header-banner;
+
+$link-color:        $color-primary;
+$link-color-hover:  shade($link-color, 25%);
+
+$color-muted :  $color-secondary;
+$color-border : $silver;
+$color-forms :  $color-dark;
+$color-code :   $razzmatazz;
+
+
+// ---------------
+// Components zone
+// ---------------
+
+// Global border-radius
+$border-radius: 0.25rem;
+
+// Global transition
+$transition-base : all .25s ease-in-out;
+
+// Forms
+$input-focus-color: $color-base;
+$input-focus-bg: mix($white, $color-info, 95);
+$input-focus-border-color: $color-info;

@@ -1,0 +1,5 @@
+jquery: 265.38 KB (77.4%)
+highlight.js: 57.93 KB (16.9%)
+bootstrap: 9.32 KB (2.72%)
+dynamic-scrollspy: 7.12 KB (2.07%)
+<self>: 3.21 KB (0.935%)
