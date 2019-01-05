@@ -188,3 +188,25 @@
         url('../fonts/montserrat-v12-latin-800.woff2') format('woff2'),
         url('../fonts/montserrat-v12-latin-800.woff') format('woff');
 }
+
+// Prehistoric
+// -----------------------------------
+@font-face {
+    font-family: 'prehistoric';
+    font-style: normal;
+    font-weight: 400;
+    src: local('prehistoric'), local('prehistoric'),
+        url('../fonts/prehistoric.woff2') format('woff2'),
+        url('../fonts/prehistoric.woff') format('woff');
+}
+
+// Youm
+// -----------------------------------
+@font-face {
+    font-family: 'Youm';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Youm'), local('Youm'),
+        url('../fonts/Youm.woff2') format('woff2'),
+        url('../fonts/Youm.woff') format('woff');
+}

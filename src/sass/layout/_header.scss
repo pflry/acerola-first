@@ -18,12 +18,17 @@
     flex: 1 1 auto;
 
     a {
-        color: $midnight-blue;
+        color: $color-darker;
         font-family: $font-family-title;
         font-size: 2.5rem;
-        font-weight: $font-weight-black;
+        font-weight: 800;
         line-height: 1;
         text-decoration: none;
+    }
+
+    a > span {
+        font-size: 2.4rem;
+        font-weight: 300;
     }
 
     .h1 {
@@ -72,16 +77,15 @@
 
 // blog header top
 // -----------------------------------
-
 .blog-header__top {
-    background-color: $midnight-blue;
-    font-size: $font-size-sm;
+    background-color: $color-darker;
     color: $color-light;
+    font-size: $font-size-sm;
 
     .container {
-        display: flex;
         align-content: flex-start;
         align-items: center;
+        display: flex;
         height: 40px;
     }
 
@@ -96,8 +100,8 @@
 }
 
 .blog-header__top .top-contact {
-    order: 0;
     flex: 1 1 auto; 
+    order: 0;
 }
 
 
@@ -108,9 +112,9 @@
     display: none;
 
     .container {
-        justify-content: space-between;
         align-items: center;
         height: 80px;
+        justify-content: space-between;
     }
 
     @media screen and (min-width: $medium) {
@@ -132,8 +136,8 @@
     }
 
     .search-submit {
-        border-radius: 0 $border-radius $border-radius 0;
         background-color: transparent;
+        border-radius: 0 $border-radius $border-radius 0;
         border: none;
         color: $color-primary;
     }
