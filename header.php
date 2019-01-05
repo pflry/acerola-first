@@ -73,6 +73,7 @@
                     <button id="openSlideMenu" class="menu-toggle"><span>Menu</span></button>
                 </div>
             </section>
+
             <section class="page-header">
                 <div class="container">
                     <div id="filAriane" class="page-header__breadcrumb">
@@ -83,6 +84,7 @@
                     </div>
                 </div>
             </section>
+            
             <section class="mobile-menu">
                 <div class="container">
                     <div id="search" class="mobile-menu__search">

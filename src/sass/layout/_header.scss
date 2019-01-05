@@ -80,6 +80,7 @@
 .blog-header__top {
     background-color: $color-darker;
     color: $color-light;
+    display: none;
     font-size: $font-size-sm;
 
     .container {
@@ -96,6 +97,10 @@
 
     a {
         color: $color-light;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: block;
     }
 }
 
