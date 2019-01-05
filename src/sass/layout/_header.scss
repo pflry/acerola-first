@@ -2,10 +2,10 @@
 // Header
 // --------------------------------------------------
 
-// blog header
+// blog header banner
 // -----------------------------------
 .blog-header__banner {
-    background-color: $color-header-banner;
+    background-color: $color-primary;
 
     .container {
         align-items: center;
@@ -18,7 +18,7 @@
     flex: 1 1 auto;
 
     a {
-        color: $white;
+        color: $midnight-blue;
         font-family: $font-family-title;
         font-size: 2.5rem;
         font-weight: $font-weight-black;
@@ -67,6 +67,37 @@
     @media screen and (min-width: $medium) {
         display: block;
     }
+}
+
+
+// blog header top
+// -----------------------------------
+
+.blog-header__top {
+    background-color: $midnight-blue;
+    font-size: $font-size-sm;
+    color: $color-light;
+
+    .container {
+        display: flex;
+        align-content: flex-start;
+        align-items: center;
+        height: 40px;
+    }
+
+    .feather {
+        height: $font-size-sm;
+        width: auto;
+    }
+
+    a {
+        color: $color-light;
+    }
+}
+
+.blog-header__top .top-contact {
+    order: 0;
+    flex: 1 1 auto; 
 }
 
 
