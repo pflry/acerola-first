@@ -60,6 +60,16 @@
         color: $color-light;
     }
 
+    .signature {
+        font-family: $font-family-title;
+        font-size: 1.15rem;
+        font-weight: 700;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
     @media screen and (min-width: $medium) {
         display: block;
     }

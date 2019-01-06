@@ -64,7 +64,7 @@
             <section id="blogHeaderTop" class="blog-header__top">
                 <div class="container">
                     <div class="top-contact">
-                        <span class="strong uppercase">Acérola Carrière</span> &nbsp; Paris • Neuilly-Plaisance • Montévrain</a></span>
+                        <span class="signature">acérola <span>carrière</span></span> &nbsp; Paris • Neuilly-Plaisance • Montévrain</a></span>
                         <span><?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93</span>
                         <span><?php echo get_build_icon_path('mail.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">contact</a></span>
                     </div>
@@ -88,7 +88,7 @@
             <section id="blogBanner" class="blog-header__banner">
                 <div class="container">
                     <div id="siteTitle" class="site-title">
-                        <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">acerola <span>carrière</span></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
+                        <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">acérola <span>carrière</span></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
                     </div>
                     <nav id="menu" class="site-menu">
                         <?php wp_nav_menu( array(
