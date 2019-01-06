@@ -27,7 +27,7 @@ app.scrollTop = {
 app.slideMenu = {
     init: function() {
         $('.menu-toggle').click(function () {
-            $('.blog-header').toggleClass('move');
+            $('#mobalMenu').toggleClass('move');
             $('body').toggleClass('fix');
             $('.menu-toggle').toggleClass('active');
         });

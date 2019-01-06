@@ -32,6 +32,31 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <section id="mobalMenu" class="mobile-menu">
+        <div class="container">
+            <div id="search" class="mobile-menu__search">
+                <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Recherche', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                    <button type="submit" class="search-submit btn"><?php echo get_build_icon_path('search.svg') ?></button>
+                </form>
+            </div>
+            
+            <?php 
+            $mobilMenu = array(
+                'theme_location'  => 'tertiary',
+                'container'       => false, 
+                'echo'            => false,
+                'fallback_cb'     => false,
+                'items_wrap'      => '%3$s',
+                'depth'           => 0,
+                'link_before'     => '<span>',
+                'link_after'      => '</span>'
+            );
+            echo strip_tags(wp_nav_menu( $mobilMenu ), '<a><span>');
+            ?>
+        </div>
+    </section>
+
     <div id="containerWrapper" class="wrapper">
         
         <header id="header" class="blog-header">
@@ -66,7 +91,9 @@
                         <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">acerola <span>carrière</span></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
                     </div>
                     <nav id="menu" class="site-menu">
-                        <?php wp_nav_menu( array( 
+                        <?php wp_nav_menu( array(
+                            'container_id' => 'cssmenu', 
+                            'walker' => new CSS_Menu_Maker_Walker(),
                             'theme_location' => 'primary',
 						    'menu'           => 'Primary Menu') ); ?>
                     </nav>
@@ -82,31 +109,6 @@
                     <div id="search" class="page-header__search">
                         <?php get_search_form(); ?>
                     </div>
-                </div>
-            </section>
-            
-            <section class="mobile-menu">
-                <div class="container">
-                    <div id="search" class="mobile-menu__search">
-                        <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                            <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Recherche', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-                            <button type="submit" class="search-submit btn"><?php echo get_build_icon_path('search.svg') ?></button>
-                        </form>
-                    </div>
-                    
-                    <?php 
-                    $mobilMenu = array(
-                        'theme_location'  => 'tertiary',
-                        'container'       => false, 
-                        'echo'            => false,
-                        'fallback_cb'     => false,
-                        'items_wrap'      => '%3$s',
-                        'depth'           => 0,
-                        'link_before'     => '<span>',
-                        'link_after'      => '</span>'
-                    );
-                    echo strip_tags(wp_nav_menu( $mobilMenu ), '<a><span>');
-                    ?>
                 </div>
             </section>
         </header>

@@ -36,49 +36,10 @@
     }
 }
 
-// main menu blog
-.site-menu {
-    display: none;
-    flex: 0 1 auto;
-
-    .menu {
-        margin: 0;
-    }
-
-    .menu-item {
-        display: inline-block;
-    }
-
-    .menu-item + .menu-item {
-        padding-left: 0.5rem;
-    }
-
-    .menu-item a {
-        background-color: transparent;
-        border-radius: $border-radius;
-        color: $white;
-        font-size: $font-size-sm;
-        padding: 0.5rem 0.75rem;
-        text-decoration: none;
-        transition: $transition-base;
-    }
-
-    .menu-item a:hover {
-        background-color: black(0.2);
-        color: $white;
-        text-decoration: none;
-    }
-
-    @media screen and (min-width: $medium) {
-        display: block;
-    }
-}
-
-
 // blog header top
 // -----------------------------------
 .blog-header__top {
-    background-color: $color-darker;
+    background-color: $color-dark;
     color: $color-light;
     display: none;
     font-size: $font-size-sm;

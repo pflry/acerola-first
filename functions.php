@@ -140,7 +140,12 @@ function pflrygulp_setup() {
 	/**
 	 * AMP theming
 	 */
-	require get_parent_theme_file_path( '/inc/amp-functions.php' );
+	// require get_parent_theme_file_path( '/inc/amp-functions.php' );
+
+	/**
+	 * Walker menu
+	 */
+	require get_parent_theme_file_path( '/inc/walker-functions.php' );
 
 }
 endif; // pflrygulp_setup

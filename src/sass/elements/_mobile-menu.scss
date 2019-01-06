@@ -16,7 +16,7 @@
     span,
     span:before,
     span:after {
-        background: white;
+        background: $white;
         border-radius: 3px;
         content: '';
         cursor: pointer;
@@ -62,24 +62,22 @@
 
 // Mobile Menu Mechanics
 // -----------------------------------
-
-.blog-header {
-    background-color: $color-primary;
-    height: 110px;
-    overflow: hidden;
+.mobile-menu {
+    background-color: $color-darker;
+    left: -83vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
     transition: $transition-base;
+    width: 82vw;
+    z-index: 102;
 
     &.move {
-        height: 100vh;
+        left: 0;
     }
 
     @media screen and (min-width: $medium) {
-        background-color: transparent;
-        height: 230px;
-
-        .mobile-menu {
-            display: none;
-        }
+        display: none;
     }
 }
 
@@ -93,7 +91,6 @@
 
 // Mobile Menu
 // -----------------------------------
-
 .mobile-menu .container {
     display: block;
     min-height: 80vh;
