@@ -16,9 +16,9 @@ $x-large: 1200px;
 
 // Font families
 $font-family-base : ('Roboto', Arial, sans-serif);
-$font-family-headings : ('Montserrat', Arial, sans-serif);
+$font-family-headings : ('Roboto', Arial, sans-serif);
 $font-family-monospace: (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
-$font-family-title : $font-family-headings;
+$font-family-title : ('Montserrat', Arial, sans-serif);
 
 // Font sizes
 $font-size-base: 1rem;
@@ -114,10 +114,10 @@ $link-color-hover-breadcrumb:   $color-header-banner;
 $link-color:        $pure-apple;
 $link-color-hover:  shade($link-color, 25%);
 
-$color-muted :  $color-secondary;
-$color-border : $silver;
-$color-forms :  $color-dark;
-$color-code :   $razzmatazz;
+$color-muted:  $color-secondary;
+$color-border: $silver;
+$color-forms:  $color-dark;
+$color-code:   $razzmatazz;
 
 
 // ---------------

@@ -92,7 +92,7 @@ function pflrygulp_setup() {
 	/**
 	 * Breadcrumb function
 	 */ 
-	require get_parent_theme_file_path( '/inc/breadcrumb-functions.php' );
+	//require get_parent_theme_file_path( '/inc/breadcrumb-functions.php' );
 
 	/**
 	 * Comments functions

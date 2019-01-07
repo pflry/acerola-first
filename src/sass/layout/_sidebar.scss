@@ -14,88 +14,24 @@
     }
 }
 
-.side-summary,
-.side-standard {
-    background-color: $color-light;
-    border-radius: $border-radius;
-    padding: 1.875rem;
-}
-
-.widget-title {
-    margin: 0 0 1rem;
-}
-
 // side standard
 .side-standard {
     align-self: flex-start;
 
     ul li {
-        margin-bottom: 1rem;
+        background-color: $color-light;
+        padding: 1.5rem;
+        border-radius: $border-radius;
+    }
+
+    ul li + li {
+        margin-top: 1.5rem;
     }
 
     .ul-wrapper,
     .ul-wrapper > li,
+    .ul-wrapper > li p:last-child,
     .ul-wrapper > li:last-child ul {
         margin-bottom: 0
     }
-}
-
-
-// Affix plugin
-// -----------------------------------
-.affix {
-    position: sticky;
-    top: 1.25rem;
-}
-
-.affix-bottom {
-    position: absolute;
-}
-
-// Scrollspy
-// -----------------------------------
-.side-summary ul {
-    margin-bottom: 0;
-}
-
-.summary-nav {
-    font-size: $font-size-sm;
-    list-style-position: outside;
-    padding-left: 0;
-}
-
-.summary-nav a {
-    background-color: transparent;
-    border-radius: $border-radius;
-    color: $link-color-breadcrumb;
-    display: block;
-    margin-top: 0.25rem;
-    padding: 0.5rem 0.75rem;
-    text-decoration: none;
-    transition: $transition-base;
-
-    &:hover {
-        background-color: black(0.2);
-    }
-}
-
-/* active link */
-.summary-nav li.active > a {
-    background-color: $color-primary;
-    color: $white;
-}
-
-/* second */
-.summary-nav .nav li > a {
-    margin-left: 1.5rem;
-}
-
-/* hide second level lists */
-.summary-nav .nav {
-    display: none;
-}
-
-/* show second-level when active */
-.summary-nav > .active > .nav {
-    display: block;
 }

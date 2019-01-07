@@ -2,104 +2,108 @@
 // Main Menu
 // --------------------------------------------------
 
+// Menu icon Home
+.menu-header .menu-home {
+    color: $color-base;
+    padding-right: 1rem;
+    
+    .feather {
+        height: $font-size-base;
+        vertical-align: text-top;
+        width: auto;
+    }
+}
+
 // main menu blog
 .site-menu {
     display: none;
-    flex: 0 1 auto;
+    align-items: center;
+    height: 60px;
 
     @media screen and (min-width: $medium) {
-        display: block;
-    }
-
-    ul {
-        margin-bottom: 0;
-    }
-
-    .menu {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        z-index: 597;
-
-        > .menu-item {
-            padding-right: 0.25rem;
-        }
-
-        > .menu-item:last-child {
-            padding-right: 0;
-        }
     }
+}
+
+.site-menu ul {
+    margin-bottom: 0;
+}
+
+.site-menu .menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    z-index: 597;
+
+    > .menu-item {
+        padding-right: 0rem;
+    }
+
+    > .menu-item:last-child {
+        padding-right: 0;
+    }
+}
+
+.site-menu .menu .menu-item {
+    min-height: 1px;
+    position: relative;
+    vertical-align: middle;
+
+    &.hover,
+    &:hover {
+        cursor: default;
+        position: relative;
+        z-index: 101;
+    }
+
+    &:hover > ul {
+        visibility: visible;
+    }
+}
+
+.site-menu .menu .menu-item a {
+    align-items: center;
+    background-color: transparent;
+    color: $color-base;
+    display: flex;
+    height: 60px;
+    line-height: 1em;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+        background-color: $silver;
+        color: $color-darker;
+        text-decoration: none;
+    }
+}
+
+
+.site-menu .menu ul {
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    width: auto;
+    z-index: 100;
+    white-space: nowrap;
 
     .menu-item {
-        position: relative;
-        min-height: 1px;
-        vertical-align: middle;
-
-        &.hover,
-        &:hover {
-            position: relative;
-            z-index: 599;
-            cursor: default;
-        }
-
-        &:hover > ul {
-            visibility: visible;
-        }
-    }
-
-    a {
-        color: $color-base;
-        display: block;
-        line-height: 1em;
-        text-decoration: none;
-    }
-
-    .menu-item a {
-        background-color: transparent;
-        border-radius: $border-radius;
-        color: $color-base;
-        padding: 0.5rem 0.75rem;
-        text-decoration: none;
-        transition: $transition-base;
-    }
-
-    //.menu-item.active a,
-    .menu-item a:hover {
-        background-color: tint($color-dark, 15%);
-        color: $color-light;
-        text-decoration: none;
-    }
-
-    .menu ul {
-        bottom: 0;
-        left: 0;
-        margin-top: 0;
-        position: absolute;
-        top: 100%;
-        visibility: hidden;
-        width: auto;
-        z-index: 598;
-        white-space: nowrap;
-    }
-
-    .menu ul .menu-item {
         a {
-            background-color: $color-dark;
-            color: $color-light;
-            border-radius: 0;
-            padding: 0.75rem;
+            background-color: $color-page-header;
+            color: $color-base;
+            padding: 0.75rem 1rem;
+            border-top: solid 1px $white;
+            
         }
 
         a:hover {
-            background-color: tint($color-dark, 15%);
-        }
-
-        &:first-child a {
-            border-radius: $border-radius $border-radius 0 0;
-        }
-
-        &:last-child a {
-            border-radius: 0 0 $border-radius $border-radius;
+            background-color: $silver;
+            color: $color-darker;
         }
     }
 }

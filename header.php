@@ -90,6 +90,18 @@
                     <div id="siteTitle" class="site-title">
                         <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">acérola <span>carrière</span></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
                     </div>
+                    <div id="search" class="site-search">
+                        <?php get_search_form(); ?>
+                    </div>
+                    <button id="openSlideMenu" class="menu-toggle"><span>Menu</span></button>
+                </div>
+            </section>
+
+            <section class="menu-header">
+                <div class="container">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" class="menu-home">
+                        <?php echo get_build_icon_path('home.svg') ?>
+                    </a>
                     <nav id="menu" class="site-menu">
                         <?php wp_nav_menu( array(
                             'container_id' => 'cssmenu', 
@@ -97,18 +109,6 @@
                             'theme_location' => 'primary',
 						    'menu'           => 'Primary Menu') ); ?>
                     </nav>
-                    <button id="openSlideMenu" class="menu-toggle"><span>Menu</span></button>
-                </div>
-            </section>
-
-            <section class="page-header">
-                <div class="container">
-                    <div id="filAriane" class="page-header__breadcrumb">
-                        <?php echo get_the_breadcrumb() ?>
-                    </div>
-                    <div id="search" class="page-header__search">
-                        <?php get_search_form(); ?>
-                    </div>
                 </div>
             </section>
         </header>
