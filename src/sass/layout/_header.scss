@@ -36,8 +36,10 @@
     }
 }
 
+// search field
 .site-search {
-    width: auto;
+    width: 35%;
+    padding-left: 0.9375rem;
 }
 
 .site-search .search-form {
@@ -45,16 +47,17 @@
     justify-content: flex-end;
 
     .search-field {
-        background-color: white;
+        background-color: tint($color-primary, 40%);
         max-width: 100% !important;
         position: relative;
+        border-color: transparent;
     }
 
     .search-submit {
         background-color: transparent;
         border-radius: 0 $border-radius $border-radius 0;
         border: none;
-        color: $color-darker;
+        color: $color-dark;
         position: absolute;
     }
 
