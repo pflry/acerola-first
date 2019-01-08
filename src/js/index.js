@@ -41,7 +41,7 @@ app.scrollHeader = {
 
         $(window).scroll(function () {
             let st = $(this).scrollTop();
-            st > 195 ? $('#blogHeaderTop').addClass('scroll') : $('#blogHeaderTop').removeClass('scroll');
+            st > 100 ? $('#blogHeaderTop').addClass('scroll') : $('#blogHeaderTop').removeClass('scroll');
         });
     }
 };

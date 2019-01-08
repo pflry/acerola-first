@@ -2,6 +2,121 @@
 // Header
 // --------------------------------------------------
 
+// blog header top
+// -----------------------------------
+.blog-header__top {
+    background-color: $color-dark;
+    color: $color-light;
+    display: none;
+    font-size: $font-size-sm;
+    position: sticky;
+    top: 0;
+    z-index: 700;
+
+    .container {
+        align-items: center;
+        height: 40px;
+    }
+
+    a {
+        color: $color-light;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
+}
+
+.blog-header__top.scroll {
+    transform: translateY(-40px);
+    transition-duration: .3s;
+}
+
+// Top contact
+.blog-header__top .top-contact {
+    flex: 1 1 auto;
+    order: 0;
+
+    .signature {
+        font-family: $font-family-title;
+        font-size: 1.15rem;
+        font-weight: 700;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .agence {
+        display: none;
+
+        @media screen and (min-width: 846px) {
+            display: inline-block;
+            padding-left: 1rem;
+        }
+    }
+
+    .bullet {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 0;
+        padding: 0 0.25rem;
+        transform: translateY(0.25rem);
+        color: white(0.7);
+    }
+
+    .contact-telephone,
+    .contact-email {
+        padding-left: 1rem;
+
+        .feather {
+            color: white(0.7);
+            height: $font-size-sm;
+            padding-right: 0.1rem;
+            vertical-align: middle;
+            width: auto;
+        }   
+    }
+}
+
+// Top social
+.blog-header__top .top-social a {
+    border-radius: 50%;
+    border: solid 1px white(0.7);
+    color: white(0.7);
+    display: inline-block;
+    margin-left: 0.25rem;
+    padding: 0.15rem;
+    text-align: center;
+    width: 1.675rem;
+    transition: $transition-base;
+
+    .feather {
+        height: $font-size-sm;
+        vertical-align: middle;
+        width: auto;
+        transition: $transition-base;
+    }
+
+    .feather-facebook,
+    .feather-twitter,
+    .feather-linkedin {
+        fill: white(0.7);
+        stroke-width: 0;
+    }
+
+    &:hover {
+        background-color: $white;
+        border-color: $white
+    }
+
+    &:hover .feather {
+        fill: $color-darker;
+    }
+}
+
+
+
 // blog header banner
 // -----------------------------------
 .blog-header__banner {
@@ -71,61 +186,10 @@
     }
 }
 
-// blog header top
-// -----------------------------------
-.blog-header__top {
-    background-color: $color-dark;
-    color: $color-light;
-    display: none;
-    font-size: $font-size-sm;
-    position: sticky;
-    top: 0;
-    z-index: 700;	
-
-    .container {
-        align-items: center;
-        height: 40px;
-    }
-
-    .feather {
-        height: $font-size-sm;
-        width: auto;
-    }
-
-    a {
-        color: $color-light;
-    }
-
-    .signature {
-        font-family: $font-family-title;
-        font-size: 1.15rem;
-        font-weight: 700;
-
-        span {
-            font-weight: 300;
-        }
-    }
-
-    @media screen and (min-width: $medium) {
-        display: block;
-    }
-}
-
-.blog-header__top .top-contact {
-    flex: 1 1 auto; 
-    order: 0;
-}
-
-.blog-header__top.scroll {
-    transform: translateY(-40px);
-    transition-duration: .3s;		
-}
-
-
-// page header
+// Menu header
 // -----------------------------------
 .menu-header {
-    background-color: $color-page-header;
+    background-color: $color-header-menu;
     display: none;
 
     .container {

@@ -28,11 +28,11 @@ body {
 // wrapper
 .wrapper {
     min-height: 100vh;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
     transform: translate(0);
 
     @media screen and (min-width: $medium) {
-        padding-bottom: 80px;
+        padding-bottom: 380px;
     }
 }
 

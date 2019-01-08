@@ -1,48 +1,43 @@
 //
-// Blog footer
+// Footer
 // --------------------------------------------------
 
 .footer {
-    background-color: $color-dark;
     bottom: 0;
-    font-size: $font-size-sm;
     left: 0;
     position: absolute;
     right: 0;
-    color: $white;
+}
+
+// Footer copyright
+// -----------------------------------
+.footer__copyright {
+    background-color: $color-darker;
+    color: $color-light;
+    font-size: $font-size-sm;
 
     .container {
         align-items: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: 150px;
+        height: 80px;
         justify-content: center;
-    }
 
-    @media screen and (min-width: $medium) {
-        .container {
-            align-items: flex-start;
-            flex-direction: column;
-            height: 100px;
-            justify-content: center;
-        } 
+        @media screen and (min-width: $medium) {
+            height: 50px;
+        }
     }
 }
 
-// footer copyright
-.footer-copyright {
-    a {
-        color: $color-light;
-        text-decoration: none;
-    }
+.footer__copyright .copy a {
+    color: $color-light;
+    text-decoration: none;
 
-    a:hover {
+    &:hover {
         color: $link-color-hover-breadcrumb;
         text-decoration: none;
     }
 }
 
-.footer-copyright .blog-name {
+.footer__copyright .copy .blog-name {
     font-family: $font-family-title;
     font-weight: 700;
     font-size: 1.15rem;
@@ -54,40 +49,113 @@
     }
 }
 
-
-// main menu blog
-.footer-menu {
-    width: 100%;
+// Footer menu
+// -----------------------------------
+.footer__menu {
+    background-color: $color-darker;
     display: none;
 
-    .menu {
-        margin: 0;
+    .container {
+        align-items: flex-end;
+        height: 50px;
+        justify-content: center;
     }
+
+    @media screen and (min-width: $large) {
+        display: block;
+    }
+}
+
+.footer-menu {
+    width: 100%;
+    border-bottom: solid 1px white(0.3);
+    padding-bottom: 0.75rem;
+}
+
+.footer-menu .menu {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    font-size: $font-size-sm;
+    margin-bottom: 0;  
+}
+
+.footer-menu a {
+    color: $silver;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-color-hover-breadcrumb;
+        text-decoration: none;
+    }
+}
+
+// Footer infos
+// -----------------------------------
+.footer__infos {
+    background-color: $color-light;
+    font-size: $font-size-sm;
+    color: $color-base;
+    display: none;
 
     @media screen and (min-width: $medium) {
         display: block;
     }
 }
 
-.footer-menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding-top: 0.25rem;
-    transform: translateX(-0.5rem);
+.footer-contact {
     width: 100%;
-}
+    text-align: center;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
 
-.footer-menu li {
-    padding: 0 0.5rem 0.25rem;
-
-    a {
-        color: $silver;
-        text-decoration: none;
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
     }
 
-    a:hover {
-        color: $link-color-hover-breadcrumb;
-        text-decoration: none;
+    .contact-telephone,
+    .contact-email {
+        font-size: $font-size-lg;
+        font-weight: 600;
+    }
+}
+
+.footer-adresse {
+    align-items: center;
+    display: flex;
+    height: 130px;
+    width: 100%;
+
+    div {
+        border-left: solid 4px $color-primary;
+        padding-left: 1rem;
+    }
+
+    .h6 {
+        margin-bottom: 0.15rem;
+    }
+
+    .feather {
+        float: left;
+        margin-right: 0.5rem;
+        transform: translateY(0.15rem);
+    }
+
+    @media screen and (min-width: $medium) {
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: $large) {
+        justify-content: space-around;
     }
 }

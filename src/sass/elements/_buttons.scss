@@ -31,7 +31,7 @@
 .btn-scrolltop {
     @extend .btn-primary;
     border-radius: 50%;
-    bottom: 90px;
+    bottom: 55px;
     height: 50px;
     opacity: 0;
     position: fixed;
@@ -41,7 +41,7 @@
     z-index: 1000;
 
     @media screen and (min-width: $medium) {
-        bottom: 55px;
+        bottom: 75px;
         right: 1rem;
     }
 }

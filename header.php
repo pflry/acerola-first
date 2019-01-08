@@ -61,11 +61,24 @@
 
         <section id="blogHeaderTop" class="blog-header__top">
             <div class="container">
+                
                 <div class="top-contact">
-                    <span class="signature">acérola <span>carrière</span></span> &nbsp; Paris • Neuilly-Plaisance • Montévrain</a></span>
-                    <span><?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93</span>
-                    <span><?php echo get_build_icon_path('mail.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">contact</a></span>
+                    <span class="signature">acérola <span>carrière</span></span>
+                    <span class="agence">
+                        Paris
+                        <span class="bullet">•</span>
+                        Neuilly-Plaisance
+                        <span class="bullet">•</span>
+                        Montévrain
+                    </span>
+                    <span class="contact-telephone">
+                        <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93
+                    </span>
+                    <span class="contact-email">
+                        <?php echo get_build_icon_path('mail.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">contact</a>
+                    </span>
                 </div>
+
                 <div class="top-social">
                     <a href="https://www.facebook.com/acerolacarriere" class="" target="_blank">
                         <?php echo get_build_icon_path('facebook.svg') ?>
