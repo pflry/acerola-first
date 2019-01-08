@@ -4,6 +4,7 @@ const app = {
     init: function() {
         app.scrollTop.init();
         app.slideMenu.init();
+        app.scrollHeader.init();
     }
 };
 
@@ -30,6 +31,17 @@ app.slideMenu = {
             $('#mobalMenu').toggleClass('move');
             $('body').toggleClass('fix');
             $('.menu-toggle').toggleClass('active');
+        });
+    }
+};
+
+// Scroll header
+app.scrollHeader = {
+    init: function() {
+
+        $(window).scroll(function () {
+            let st = $(this).scrollTop();
+            st > 195 ? $('#blogHeaderTop').addClass('scroll') : $('#blogHeaderTop').removeClass('scroll');
         });
     }
 };
