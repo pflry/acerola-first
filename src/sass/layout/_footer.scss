@@ -7,11 +7,170 @@
     left: 0;
     position: absolute;
     right: 0;
+
+    ul {
+        margin-bottom: 0;
+    }
 }
 
-// Footer copyright
+
+
+// Footer infos
 // -----------------------------------
-.footer__copyright {
+.footer__infos {
+    background-color: $color-light;
+    color: $color-base;
+    display: none;
+    font-size: $font-size-sm;
+    padding: 1.5rem 0;
+
+    .container {
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
+}
+
+.footer__infos a {
+    color: $color-base;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-color-hover-breadcrumb;
+        text-decoration: none;
+    }
+}
+
+.footer__infos .h5 {
+    margin-bottom: 0.75rem;
+    color: tint($color-darker, 20%);
+    font-family: $font-family-title;
+}
+
+// footer connect
+.footer__connect {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33%;
+    font-size: $font-size-base;
+    justify-content: space-between;
+}
+
+// footer connect contact
+.footer__connect-contact .blog-name {
+    font-family: $font-family-title;
+    font-size: 1.85rem;
+    font-weight: 700;
+
+    span {
+        font-weight: 300;
+    }
+}
+
+.footer__connect-contact .welcome {
+    padding: 0.5rem 0;
+}
+
+.footer__connect-contact .contact {
+    .feather {
+        height: $font-size-base;
+        width: auto;
+        transform: translateY(-0.075rem);
+    }
+
+    .bullet {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 0;
+        padding: 0 0.5rem;
+        transform: translateY(0.25rem);
+        // visibility: hidden;
+    }
+
+    & + .contact {
+        padding-top: 0.2rem;
+    }
+}
+
+// footer connect socials
+.footer__connect-socials a {
+    background-color: $color-primary;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    text-align: center;
+    transition: $transition-base;
+    width: 42px;
+
+    & + a {
+        margin-left: 0.75rem;
+    }
+
+    .feather {
+        fill: tint($color-darker, 20%);
+        height: 1.5rem;
+        stroke-width: 0;
+        transition: $transition-base;
+        width: auto;
+    }
+
+    &:hover {
+        background-color: $color-dark;
+    }
+
+    &:hover .feather {
+        fill: $color-light;
+    }
+}
+
+// footer office
+.footer-office {
+    border-left: solid 4px $color-primary;
+    flex: 0 1 auto;
+    padding-left: 1rem;
+}
+
+.footer-office .office {
+
+    & + .office {
+        margin-top: 0.75rem;
+    }
+
+    .office--name {
+        font-size: $font-size-base;
+        font-weight: 700;
+        margin-bottom: 0.1rem;
+    }
+
+    .feather {
+        color: $color-dark;
+        float: left;
+        margin-right: 0.5rem;
+        transform: translateY(0.15rem);
+    }
+}
+
+// footer menu
+.footer-menu {
+    border-left: solid 4px $color-primary;
+    flex: 0 1 auto;
+    padding-left: 1rem;
+}
+
+.footer-menu .menu-item {
+    &+.menu-item {
+        padding-top: 0.35rem;
+    }
+}
+
+
+// Footer legal
+// -----------------------------------
+.footer__legal {
     background-color: $color-darker;
     color: $color-light;
     font-size: $font-size-sm;
@@ -23,21 +182,27 @@
 
         @media screen and (min-width: $medium) {
             height: 50px;
+            justify-content: flex-start;
+        }
+    }
+
+    a {
+        color: $color-light;
+        text-decoration: none;
+
+        &:hover {
+            color: $link-color-hover-breadcrumb;
+            text-decoration: none;
         }
     }
 }
 
-.footer__copyright .copy a {
-    color: $color-light;
-    text-decoration: none;
-
-    &:hover {
-        color: $link-color-hover-breadcrumb;
-        text-decoration: none;
-    }
+// copyright
+.footer__legal .copyright {
+    flex: 0 1 auto;
 }
 
-.footer__copyright .copy .blog-name {
+.footer__legal .copyright .blog-name {
     font-family: $font-family-title;
     font-weight: 700;
     font-size: 1.15rem;
@@ -49,113 +214,17 @@
     }
 }
 
-// Footer menu
-// -----------------------------------
-.footer__menu {
-    background-color: $color-darker;
+// legal menu
+.footer__legal .legal-menu {
+    flex: 1 1 auto;
     display: none;
 
-    .container {
-        align-items: flex-end;
-        height: 50px;
-        justify-content: center;
+    .menu-item {
+        display: inline-block;
+        padding-right: 1rem;
     }
-
-    @media screen and (min-width: $large) {
-        display: block;
-    }
-}
-
-.footer-menu {
-    width: 100%;
-    border-bottom: solid 1px white(0.3);
-    padding-bottom: 0.75rem;
-}
-
-.footer-menu .menu {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    width: 100%;
-    font-size: $font-size-sm;
-    margin-bottom: 0;  
-}
-
-.footer-menu a {
-    color: $silver;
-    text-decoration: none;
-
-    &:hover {
-        color: $link-color-hover-breadcrumb;
-        text-decoration: none;
-    }
-}
-
-// Footer infos
-// -----------------------------------
-.footer__infos {
-    background-color: $color-light;
-    font-size: $font-size-sm;
-    color: $color-base;
-    display: none;
 
     @media screen and (min-width: $medium) {
         display: block;
-    }
-}
-
-.footer-contact {
-    width: 100%;
-    text-align: center;
-    height: 130px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: none;
-
-    p {
-        font-family: 'Times New Roman', Times, serif;
-        font-style: italic;
-        font-weight: 600;
-        font-size: 2rem;
-        line-height: 1;
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-telephone,
-    .contact-email {
-        font-size: $font-size-lg;
-        font-weight: 600;
-    }
-}
-
-.footer-adresse {
-    align-items: center;
-    display: flex;
-    height: 130px;
-    width: 100%;
-
-    div {
-        border-left: solid 4px $color-primary;
-        padding-left: 1rem;
-    }
-
-    .h6 {
-        margin-bottom: 0.15rem;
-    }
-
-    .feather {
-        float: left;
-        margin-right: 0.5rem;
-        transform: translateY(0.15rem);
-    }
-
-    @media screen and (min-width: $medium) {
-        justify-content: space-between;
-    }
-
-    @media screen and (min-width: $large) {
-        justify-content: space-around;
     }
 }

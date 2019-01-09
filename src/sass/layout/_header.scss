@@ -137,7 +137,7 @@
         font-family: $font-family-title;
         font-size: 2.5rem;
         font-weight: 800;
-        line-height: 1;
+        line-height: 0.6;
         text-decoration: none;
     }
 
@@ -153,19 +153,26 @@
 
 // search field
 .site-search {
-    width: 35%;
+    display: none;
     padding-left: 0.9375rem;
+    width: 35%;
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
 }
 
 .site-search .search-form {
-    display: none;
+    display: flex;
     justify-content: flex-end;
 
     .search-field {
         background-color: tint($color-primary, 40%);
+        border-color: transparent;
+        font-size: $font-size-sm;
+        height: 24px;
         max-width: 100% !important;
         position: relative;
-        border-color: transparent;
     }
 
     .search-submit {
@@ -174,15 +181,6 @@
         border: none;
         color: $color-dark;
         position: absolute;
-    }
-
-    @media screen and (min-width: $medium) {
-        display: flex;
-
-        .search-field {
-            font-size: $font-size-sm;
-            height: 24px;
-        }
     }
 }
 

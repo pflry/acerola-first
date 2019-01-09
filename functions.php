@@ -61,9 +61,10 @@ function pflrygulp_setup() {
 	 */
 	register_nav_menus( 
 		array(
-			'primary'	=>	__( 'Primary Menu', 'pflrygulp' ),
-			'secondary'	=>	__( 'Secondary Menu', 'pflrygulp' ),
-			'tertiary'	=>	__( 'Tertiary Menu', 'pflrygulp' )
+			'primary'	=>	__( 'Header Menu', 'pflrygulp' ),
+			'secondary'	=>	__( 'Footer Menu', 'pflrygulp' ),
+			'tertiary'	=>	__( 'Legal Menu', 'pflrygulp' ),
+			'quaternary'	=>	__( 'Mobile Menu', 'pflrygulp' )
 		)
 	);
 

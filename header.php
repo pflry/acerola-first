@@ -15,9 +15,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#2980b9">
+    <meta name="theme-color" content="#f1c40f">
     <meta name="msapplication-square310x310logo" content="<?php echo get_build_img_path('icon_largetile.png') ?>">
-    <meta name="google-site-verification" content="7S5lhodilTkoatr4lOKtbrI4quU9EbuLCgATqPkK9JA">
+    <meta name="google-site-verification" content="">
 
     <title>
         <?php bloginfo('name'); ?> // <?php is_front_page() ? bloginfo('description') : wp_title(''); ?>
@@ -43,7 +43,7 @@
             
             <?php 
             $mobilMenu = array(
-                'theme_location'  => 'tertiary',
+                'theme_location'  => 'quaternary',
                 'container'       => false, 
                 'echo'            => false,
                 'fallback_cb'     => false,
@@ -118,7 +118,7 @@
                             'container_id' => 'cssmenu', 
                             'walker' => new CSS_Menu_Maker_Walker(),
                             'theme_location' => 'primary',
-						    'menu'           => 'Primary Menu') ); ?>
+						    'menu'           => 'Header Menu') ); ?>
                     </nav>
                 </div>
             </section>
