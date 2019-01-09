@@ -14,6 +14,19 @@
 }
 
 
+// Footer approval
+// -----------------------------------
+.footer__approval {
+    background-image: url('../images/congruent_pentagon.png');
+    background-repeat: repeat;
+    background-color: $color-primary;
+    background-blend-mode: luminosity;
+
+    .container {
+        height: 125px;
+    }
+}
+
 
 // Footer infos
 // -----------------------------------

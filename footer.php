@@ -2,6 +2,12 @@
 
         <footer id="footer" role="contentinfo" class="footer">
 
+            <div class="footer__approval">
+                <div class="container">                    
+                    <a href="https://www.fongecif-idf.fr/" target="_blank" rel="noopener noreferrer">
+                    <img src="<?php echo get_build_img_path('logo-fongecif.png') ?>" alt="Fongecif"></a>
+                </div>
+            </div>
             
             <div class="footer__infos">
                 <div class="container">
