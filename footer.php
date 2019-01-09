@@ -5,7 +5,20 @@
             <div class="footer__approval">
                 <div class="container">                    
                     <a href="https://www.fongecif-idf.fr/" target="_blank" rel="noopener noreferrer">
-                    <img src="<?php echo get_build_img_path('logo-fongecif.png') ?>" alt="Fongecif"></a>
+                        <img src="<?php echo get_build_img_path('logo-fongecif.png') ?>" alt="Fongecif">
+                    </a>
+                    <a href="https://www.afdas.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php echo get_build_img_path('logo-afdas.png') ?>" alt="Afdas">
+                    </a>
+                    <a href="https://www.data-dock.fr/" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php echo get_build_img_path('logo-datadock.png') ?>" alt="Datadock">
+                    </a>
+                    <a href="http://www.agefos-pme.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php echo get_build_img_path('logo-agefos.jpg') ?>" alt="Agefos PME">
+                    </a>
+                    <a href="http://www.opcalia.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="<?php echo get_build_img_path('logo-opcalia.png') ?>" alt="Opcalia">
+                    </a>
                 </div>
             </div>
             
@@ -25,16 +38,16 @@
                         <div class="footer__connect-socials">
                             <h5 class="h5">Suivez nous</h5>
                             <div>
-                                <a href="https://www.facebook.com/acerolacarriere" class="" target="_blank">
+                                <a href="https://www.facebook.com/acerolacarriere" target="_blank">
                                     <?php echo get_build_icon_path('facebook.svg') ?>
                                 </a>
-                                <a href="https://twitter.com/AcerolaCarriere" class="" target="_blank">
+                                <a href="https://twitter.com/AcerolaCarriere" target="_blank">
                                     <?php echo get_build_icon_path('twitter.svg') ?>
                                 </a>
-                                <a href="https://www.linkedin.com/profile/view?id=222313042" class="picto-social picto-social--sm" target="_blank">
+                                <a href="https://www.linkedin.com/profile/view?id=222313042" target="_blank">
                                     <?php echo get_build_icon_path('linkedin.svg') ?>
                                 </a>
-                                <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" class="" target="_blank">
+                                <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" target="_blank">
                                     <?php echo get_build_icon_path('viadeo.svg') ?>
                                 </a>
                             </div>

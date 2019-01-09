@@ -23,7 +23,14 @@
     background-blend-mode: luminosity;
 
     .container {
+        align-items: center;
         height: 125px;
+        justify-content: space-between;
+    }
+
+    img {
+        max-height: 75px;
+        width: auto;
     }
 }
 
