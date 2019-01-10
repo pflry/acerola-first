@@ -34,26 +34,23 @@
 <body <?php body_class(); ?>>
     <section id="mobalMenu" class="mobile-menu">
         <div class="container">
+            <button class="menu-toggle active">
+                <span>Menu</span>
+            </button>
+
             <div id="search" class="mobile-menu__search">
                 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Recherche', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
                     <button type="submit" class="search-submit btn"><?php echo get_build_icon_path('search.svg') ?></button>
                 </form>
             </div>
-            
-            <?php 
-            $mobilMenu = array(
-                'theme_location'  => 'quaternary',
-                'container'       => false, 
-                'echo'            => false,
-                'fallback_cb'     => false,
-                'items_wrap'      => '%3$s',
-                'depth'           => 0,
-                'link_before'     => '<span>',
-                'link_after'      => '</span>'
-            );
-            echo strip_tags(wp_nav_menu( $mobilMenu ), '<a><span>');
-            ?>
+
+            <nav id="menu" class="smart-menu">
+                <?php wp_nav_menu( array(
+                    'walker' => new CSS_Menu_Maker_Walker(),
+                    'theme_location' => 'quaternary',
+                    'menu'           => 'Mobile Menu') ); ?>
+            </nav>
         </div>
     </section>
 
@@ -99,13 +96,16 @@
         <header id="header" class="blog-header">
              <section id="blogBanner" class="blog-header__banner">
                 <div class="container">
+                    <button id="openSlideMenu" class="menu-toggle">
+                        <?php echo get_build_icon_path('menu.svg') ?>
+                    </button>
+                    
                     <div id="siteTitle" class="site-title">
                         <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">acérola <span>carrière</span></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
                     </div>
                     <div id="search" class="site-search">
                         <?php get_search_form(); ?>
                     </div>
-                    <button id="openSlideMenu" class="menu-toggle"><span>Menu</span></button>
                 </div>
             </section>
             <section class="menu-header">
@@ -115,7 +115,6 @@
                     </a>
                     <nav id="menu" class="site-menu">
                         <?php wp_nav_menu( array(
-                            'container_id' => 'cssmenu', 
                             'walker' => new CSS_Menu_Maker_Walker(),
                             'theme_location' => 'primary',
 						    'menu'           => 'Header Menu') ); ?>

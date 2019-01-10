@@ -2,60 +2,35 @@
 // Mobile menu
 // --------------------------------------------------
 
-// btn hamburger + cross
+// toggle button
 .menu-toggle {
     background: none;
     border: 0;
+    color: $white;
     cursor: pointer;
     display: block;
     outline: none;
-    padding: 0 1.625rem 0.21875rem 0;
-    text-indent: -99999px;
+    padding: 0;
     z-index: 1005;
-
-    span,
-    span:before,
-    span:after {
-        background: $white;
-        border-radius: 3px;
-        content: '';
-        cursor: pointer;
-        display: block;
-        height: 4px;
-        position: absolute;
-        transition: $transition-base;
-        width: 25px;
-    }
-
-    span:before {
-        top: -8px;
-    }
-
-    span:after {
-        top: 8px;
-    }
 
     @media screen and (min-width: $medium) {
         display: none;
     }
 }
 
-// just cross
 .menu-toggle.active {
-    span {
-        background: transparent;
-    }
+    // bottom: 0;
+    // position: fixed;
+    // right: 0;
+    // top: 0;
+    // width: 18vw;
+    // text-indent: -9999px;
+    // display: none;
 
-    span:before {
-        background: $white;
-        top: 0;
-        transform: rotate(45deg);
-    }
-
-    span:after {
-        background: $white;
-        top: 0;
-        transform: rotate(-45deg);
+    &:focus,
+    &:active {
+        background: none;
+        outline: none;
     }
 }
 
@@ -93,103 +68,69 @@
 // -----------------------------------
 .mobile-menu .container {
     display: block;
-    min-height: 80vh;
+    // min-height: 80vh;
 }
 
 .mobile-menu a,
 .mobile-menu__search {
-    align-content: stretch;
-    align-items: stretch;
-    background-color: $peter-river;
-    color: $white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 12vh;
-    justify-content: flex-start;
-    padding-left: 6vh;
+    // align-content: stretch;
+    // align-items: stretch;
+    // background-color: $peter-river;
+    // color: $white;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    // height: 12vh;
+    // justify-content: flex-start;
+    // padding-left: 6vh;
 }
 
 // recherche
 .mobile-menu__search .search-form {
-    align-content: stretch;
-    align-items: stretch;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    width: 100%;
+    // align-content: stretch;
+    // align-items: stretch;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    // justify-content: flex-end;
+    // width: 100%;
 }
 
 .mobile-menu__search .search-form .search-field {
-    background-color: $peter-river;
-    border: none;
-    color: $white;
-    flex: 1 1 auto;
-    width: 100%;
+    // background-color: $peter-river;
+    // border: none;
+    // color: $white;
+    // flex: 1 1 auto;
+    // width: 100%;
 
-    &::placeholder {
-        color: $white;
-        transition: $transition-base;
-    }
+    // &::placeholder {
+    //     color: $white;
+    //     transition: $transition-base;
+    // }
 
-    &:focus::placeholder {
-        color: white(0.4);
-    }
+    // &:focus::placeholder {
+    //     color: white(0.4);
+    // }
 }
 
 .mobile-menu__search .search-form .search-submit {
-    background-color: $color-dark;
-    border-radius: 0;
-    flex: 0 0 90px;
+    // background-color: $color-dark;
+    // border-radius: 0;
+    // flex: 0 0 90px;
 
-    .icon {
-        height: 42px;
-        width: 42px;
-    }
+    // .icon {
+    //     height: 42px;
+    //     width: 42px;
+    // }
 }
 
 // menu
 .mobile-menu a {
-    margin-top: 1vh;
+    // margin-top: 1vh;
 
-    span {
-        align-self: center;
-        flex: 1 1 auto;
-        order: 0;
-    }
-
-    &:after {
-        align-self: auto;
-        background-color: $color-dark;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: 48px;
-        content: '';
-        display: block;
-        flex: 0 1 auto;
-        order: 0;
-        width: 90px;
-    }
-}
-
-.mobile-menu .container a:first-of-type:after {
-    background-image: url('../icons/code-mm.svg');
-}
-
-.mobile-menu .container a:nth-of-type(2):after {
-    background-image: url('../icons/wordpress-mm.svg');
-    background-size: 42px;
-}
-
-.mobile-menu .container a:nth-of-type(3):after {
-    background-image: url('../icons/portfolio-mm.svg');
-}
-
-.mobile-menu .container a:nth-of-type(4):after {
-    background-image: url('../icons/contact-mm.svg');
-}
-
-.mobile-menu .container a:last-of-type:after {
-    background-image: url('../icons/sitemap-mm.svg');
+    // span {
+    //     align-self: center;
+    //     flex: 1 1 auto;
+    //     order: 0;
+    // }
 }

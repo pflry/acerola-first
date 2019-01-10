@@ -1,6 +1,5 @@
 'use strict';
 
-const $ = require('jquery');
 require('slick-carousel');
 
 const app = {
@@ -34,7 +33,7 @@ app.slideMenu = {
         $('.menu-toggle').click(function () {
             $('#mobalMenu').toggleClass('move');
             $('body').toggleClass('fix');
-            $('.menu-toggle').toggleClass('active');
+            $('#containerWrapper').toggleClass('covered');
         });
     }
 };
