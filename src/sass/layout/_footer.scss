@@ -17,22 +17,73 @@
 // Footer approval
 // -----------------------------------
 .footer__approval {
-    background-image: url('../images/congruent_pentagon.png');
-    background-repeat: repeat;
-    background-color: $color-primary;
-    background-blend-mode: luminosity;
+    height: 180px;
+    padding-top: 1rem;
+}
 
-    .container {
-        align-items: center;
-        height: 125px;
-        justify-content: space-between;
+// titre
+.footer__approval--title {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    width: 100%;
+    
+    .h4 {
+        font-family: $font-family-title;
+        flex: 0 1 auto;
+        margin: 0 1rem;
+        text-align: center;
+        white-space: nowrap;
     }
 
-    img {
-        max-height: 75px;
-        width: auto;
+    .line-title {
+        border-top: solid 1px $color-primary;
+        flex: 1 1 auto;
+        height: 1px;
+    }
+
+    @media screen and (min-width: $medium) {
+        .h4 {
+            flex: 0 1 25%;
+            margin: 0;
+        }
+
+        .line-title {
+            flex: 0 1 35%;
+        }
     }
 }
+
+// carousel 
+.footer__approval .container-block {
+    display: block;
+    padding: 0 3.75rem;
+}
+
+.footer__approval .carousel a {
+    padding: 0 2rem;
+
+    img {
+        max-height: 65px;
+        outline: none;
+        width: auto;
+    }
+
+    @media screen and (min-width: $medium) {
+        img {
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: $transition-base;
+        }
+
+        &:hover img {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+}
+
 
 
 // Footer infos

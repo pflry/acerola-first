@@ -1,10 +1,14 @@
 'use strict';
 
+const $ = require('jquery');
+require('slick-carousel');
+
 const app = {
     init: function() {
         app.scrollTop.init();
         app.slideMenu.init();
         app.scrollHeader.init();
+        app.slickCarousel.init();
     }
 };
 
@@ -43,6 +47,22 @@ app.scrollHeader = {
             let st = $(this).scrollTop();
             st > 100 ? $('#blogHeaderTop').addClass('scroll') : $('#blogHeaderTop').removeClass('scroll');
         });
+    }
+};
+
+// Slick carousel
+app.slickCarousel = {
+    init: function() {
+        $(document).ready(function () {
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
+        });  
     }
 };
 
