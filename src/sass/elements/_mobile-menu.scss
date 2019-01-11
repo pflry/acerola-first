@@ -13,19 +13,23 @@
     padding: 0;
     z-index: 1005;
 
+    .feather {
+        height: 2rem;
+        width: auto;
+    }
+
     @media screen and (min-width: $medium) {
         display: none;
     }
 }
 
 .menu-toggle.active {
-    // bottom: 0;
-    // position: fixed;
-    // right: 0;
-    // top: 0;
-    // width: 18vw;
-    // text-indent: -9999px;
-    // display: none;
+    background: $color-primary;
+    min-height: 110px;
+    position: absolute;
+    right: -18vw;
+    top: 0;
+    width: 18vw;
 
     &:focus,
     &:active {
@@ -39,7 +43,7 @@
 // -----------------------------------
 .mobile-menu {
     background-color: $color-darker;
-    left: -83vw;
+    left: -100vw;
     min-height: 100vh;
     position: absolute;
     top: 0;
@@ -68,69 +72,44 @@
 // -----------------------------------
 .mobile-menu .container {
     display: block;
-    // min-height: 80vh;
+    padding: 1.875rem 0;
 }
 
-.mobile-menu a,
-.mobile-menu__search {
-    // align-content: stretch;
-    // align-items: stretch;
-    // background-color: $peter-river;
-    // color: $white;
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: nowrap;
-    // height: 12vh;
-    // justify-content: flex-start;
-    // padding-left: 6vh;
+.mobile-menu ul {
+    margin: 0;
 }
 
-// recherche
-.mobile-menu__search .search-form {
-    // align-content: stretch;
-    // align-items: stretch;
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: nowrap;
-    // justify-content: flex-end;
-    // width: 100%;
+// smart menu
+.smart-menu .menu .menu-item {
+    min-height: 1px;
+    position: relative;
+    vertical-align: middle;
+
+    &.hover,
+    &:hover {
+        cursor: default;
+        position: relative;
+        z-index: 101;
+    }
+
+    &:hover > ul {
+        display: block;
+    }
 }
 
-.mobile-menu__search .search-form .search-field {
-    // background-color: $peter-river;
-    // border: none;
-    // color: $white;
-    // flex: 1 1 auto;
-    // width: 100%;
+.smart-menu .menu-item a {
+    color: $color-light;
+    display: block;
+    padding: 0.45rem 1rem;
 
-    // &::placeholder {
-    //     color: $white;
-    //     transition: $transition-base;
-    // }
-
-    // &:focus::placeholder {
-    //     color: white(0.4);
-    // }
+    + ul a {
+        padding-left: 2rem;
+    }
 }
 
-.mobile-menu__search .search-form .search-submit {
-    // background-color: $color-dark;
-    // border-radius: 0;
-    // flex: 0 0 90px;
-
-    // .icon {
-    //     height: 42px;
-    //     width: 42px;
-    // }
-}
-
-// menu
-.mobile-menu a {
-    // margin-top: 1vh;
-
-    // span {
-    //     align-self: center;
-    //     flex: 1 1 auto;
-    //     order: 0;
-    // }
+.smart-menu .menu ul {
+    display: none;
+    background-color: $color-dark;
+    margin: 0.45rem 0;
+    padding: 0.45rem 0;
 }

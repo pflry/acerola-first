@@ -65,18 +65,16 @@
     padding: 0 2rem;
 
     img {
+        filter: grayscale(100%);
         max-height: 65px;
+        opacity: 0.5;
         outline: none;
+        transition: $transition-base;
         width: auto;
     }
 
-    @media screen and (min-width: $medium) {
-        img {
-            filter: grayscale(100%);
-            opacity: 0.5;
-            transition: $transition-base;
-        }
 
+    @media screen and (min-width: $medium) {
         &:hover img {
             filter: grayscale(0);
             opacity: 1;
@@ -84,6 +82,12 @@
     }
 }
 
+.footer__approval .carousel .slick-active.slick-center a {
+    img {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+}
 
 // Footer infos
 // -----------------------------------
@@ -185,6 +189,7 @@
         height: 1.5rem;
         stroke-width: 0;
         transition: $transition-base;
+        vertical-align: bottom;
         width: auto;
     }
 

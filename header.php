@@ -33,11 +33,10 @@
 
 <body <?php body_class(); ?>>
     <section id="mobalMenu" class="mobile-menu">
+        <button class="menu-toggle active">
+            <?php echo get_build_icon_path('x.svg') ?>
+        </button>
         <div class="container">
-            <button class="menu-toggle active">
-                <span>Menu</span>
-            </button>
-
             <div id="search" class="mobile-menu__search">
                 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Recherche', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
