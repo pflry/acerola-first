@@ -64,7 +64,8 @@ function pflrygulp_setup() {
 			'primary'	=>	__( 'Header Menu', 'pflrygulp' ),
 			'secondary'	=>	__( 'Footer Menu', 'pflrygulp' ),
 			'tertiary'	=>	__( 'Legal Menu', 'pflrygulp' ),
-			'quaternary'	=>	__( 'Mobile Menu', 'pflrygulp' )
+			'quaternary'	=>	__( 'Mobile Menu', 'pflrygulp' ),
+			'quinary'	=>	__( 'Mobile Legal', 'pflrygulp' )
 		)
 	);
 

@@ -3,8 +3,9 @@
 // --------------------------------------------------
 
 .mobile-menu .container {
-    display: block;
-    padding: 1.15rem 0;
+    flex-direction: column;
+    padding: 1.15rem 0 0;
+    height: 100vh;
 }
 
 .mobile-menu ul {
@@ -34,8 +35,9 @@
 // fixe le body pour stop scroll
 .fix {
     overflow: hidden;
-    position: fixed;
+    // position: fixed;
     width: 100vw;
+    height: 100vh;
 }
 
 
@@ -79,6 +81,17 @@
 
 // Smart Menu
 // -----------------------------------
+.smart-menu {
+    flex: 10 1 auto;
+}
+
+.smart-menu--legal {
+    flex: 0 1 auto;
+    // padding: 0.45rem 0;
+    background-color: $color-dark;
+}
+
+
 .smart-menu .menu .menu-item {
     min-height: 1px;
     position: relative;
@@ -94,16 +107,34 @@
     &:hover > ul {
         display: block;
     }
+
+    &.active,
+    &.current-menu-ancestor {
+        background-color: $belize-hole;
+    }
 }
 
 .smart-menu .menu-item a {
     color: $color-light;
     display: block;
-    padding: 0.45rem 1.15rem;
+    padding: 0.55rem 1.15rem;
+    font-size: $font-size-lg;
 
     + ul a {
         padding-left: 2.3rem;
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.smart-menu--legal .menu-item a {
+    color: white(0.7);
+    font-size: $font-size-base;
+    padding: 0.45rem 1.15rem;
 }
 
 .smart-menu .menu ul {
@@ -116,6 +147,7 @@
 // Mobile search
 // -----------------------------------
 .mobile-menu .search-form {
+    flex: 0 1 auto;
     display: flex;
     padding: 0 1rem 1rem;
     position: relative;
