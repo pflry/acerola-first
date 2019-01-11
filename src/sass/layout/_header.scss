@@ -183,12 +183,15 @@
     justify-content: flex-end;
 
     .search-field {
-        background-color: tint($color-primary, 40%);
+        background-color: white(0.3);
         border-color: transparent;
-        font-size: $font-size-sm;
         height: 24px;
         max-width: 100% !important;
         position: relative;
+
+        &::placeholder {
+            color: tint($color-base, 20%);
+        }
     }
 
     .search-submit {

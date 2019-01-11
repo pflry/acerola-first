@@ -39,11 +39,10 @@
         <div class="container">
             <div id="search" class="mobile-menu__search">
                 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Recherche', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                    <input type="search" class="form-control search-field" placeholder="<?php echo esc_attr_x( 'Recherche', 'placeholder' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
                     <button type="submit" class="search-submit btn"><?php echo get_build_icon_path('search.svg') ?></button>
                 </form>
             </div>
-
             <nav id="menu" class="smart-menu">
                 <?php wp_nav_menu( array(
                     'walker' => new CSS_Menu_Maker_Walker(),

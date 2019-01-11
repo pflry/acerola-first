@@ -2,7 +2,45 @@
 // Mobile menu
 // --------------------------------------------------
 
+.mobile-menu .container {
+    display: block;
+    padding: 1.15rem 0;
+}
+
+.mobile-menu ul {
+    margin: 0;
+}
+
+// Mobile Menu Mechanics
+.mobile-menu {
+    background-color: $color-darker;
+    left: -100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: $transition-base;
+    width: 82vw;
+    z-index: 102;
+
+    &.move {
+        left: 0;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: none;
+    }
+}
+
+// fixe le body pour stop scroll
+.fix {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+}
+
+
 // toggle button
+// -----------------------------------
 .menu-toggle {
     background: none;
     border: 0;
@@ -39,47 +77,8 @@
 }
 
 
-// Mobile Menu Mechanics
+// Smart Menu
 // -----------------------------------
-.mobile-menu {
-    background-color: $color-darker;
-    left: -100vw;
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    transition: $transition-base;
-    width: 82vw;
-    z-index: 102;
-
-    &.move {
-        left: 0;
-    }
-
-    @media screen and (min-width: $medium) {
-        display: none;
-    }
-}
-
-// fixe le body pour stop scroll
-.fix {
-    overflow: hidden;
-    position: fixed;
-    width: 100vw;
-}
-
-
-// Mobile Menu
-// -----------------------------------
-.mobile-menu .container {
-    display: block;
-    padding: 1.875rem 0;
-}
-
-.mobile-menu ul {
-    margin: 0;
-}
-
-// smart menu
 .smart-menu .menu .menu-item {
     min-height: 1px;
     position: relative;
@@ -100,10 +99,10 @@
 .smart-menu .menu-item a {
     color: $color-light;
     display: block;
-    padding: 0.45rem 1rem;
+    padding: 0.45rem 1.15rem;
 
     + ul a {
-        padding-left: 2rem;
+        padding-left: 2.3rem;
     }
 }
 
@@ -112,4 +111,32 @@
     background-color: $color-dark;
     margin: 0.45rem 0;
     padding: 0.45rem 0;
+}
+
+// Mobile search
+// -----------------------------------
+.mobile-menu .search-form {
+    display: flex;
+    padding: 0 1rem 1rem;
+    position: relative;
+
+    .search-field {
+        background-color: white(0.15);
+        border-color: transparent;
+        color: $color-light;
+        height: 30px;
+        
+        &::placeholder {
+            color: shade($color-light, 30%);
+        }
+    }
+
+    .search-submit {
+        background-color: transparent;
+        border: none;
+        color: $color-light;
+        position: absolute;
+        right: 1rem;
+        top: 0.25rem;
+    }
 }
