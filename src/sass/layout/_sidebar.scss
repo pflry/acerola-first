@@ -9,7 +9,7 @@
     order: 2;
     width: 35%;
 
-    @media screen and (min-width: $medium) {
+    @media screen and (min-width: $intermediate) {
         display: block;
     }
 }
@@ -35,3 +35,68 @@
         margin-bottom: 0
     }
 }
+
+.widget-title {
+    font-family: $font-family-title;
+    font-size: $font-size-h4;
+    line-height: 0.5;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+// Static widgets
+// -----------------------------------
+.widget a {
+    color: $color-base;
+}
+
+// Widget contact
+.widget__contact .office {
+    font-size: $font-size-sm;
+
+    & + .office {
+        padding-top: 0.75rem;
+    }
+
+    .office--name {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.1rem;
+    }
+
+    .feather {
+        float: left;
+        margin-right: 0.5rem;
+        transform: translateY(0.15rem);
+        height: auto;
+        width: auto;
+    }
+}
+
+.widget__contact .office--contact {
+    font-size: $font-size-base;
+
+    & + .office--contact {
+        padding-top: 0;
+    }
+
+    .feather {
+        height: 1rem;
+        width: auto;
+        margin-right: 0.5rem;
+    }
+} 
+
+// Widget follow
+.widget__follow .footer__connect-socials {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+        margin-bottom: 0;
+    }
+
+    a + a {
+        margin-left: 0;
+    }
+} 

@@ -161,6 +161,11 @@
         &::placeholder {
             color: shade($color-light, 30%);
         }
+
+        &:focus {
+            border-color: $belize-hole;
+            box-shadow: 0 0 5px rgba($belize-hole, 1);
+        }
     }
 
     .search-submit {

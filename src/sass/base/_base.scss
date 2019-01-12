@@ -55,7 +55,7 @@ body {
     padding-bottom: 1.875rem;
     padding-top: 1.875rem;
 
-    @media screen and (min-width: $medium) {
+    @media screen and (min-width: $intermediate) {
         padding-bottom: 3.75rem;
         padding-top: 3.75rem;
     }
@@ -66,7 +66,7 @@ body {
     flex: 0 1 auto;
     width: 100%;
 
-    @media screen and (min-width: $medium) {
+    @media screen and (min-width: $intermediate) {
         margin-right: 0.9375rem;
         order: 1;
         width: 65%;
