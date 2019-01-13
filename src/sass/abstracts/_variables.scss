@@ -112,6 +112,11 @@ $color-header-menu:             $color-light;
 $link-color-breadcrumb:         $color-base;
 $link-color-hover-breadcrumb:   $color-header-banner;
 
+$color-menu-bg-hover: $silver;
+$color-menu-bg-active: tint($color-menu-bg-hover, 35%);
+$color-menu-text-hover: $color-base;
+$color-menu-text-active: $color-menu-text-hover;
+
 $link-color:        $pure-apple;
 $link-color-hover:  shade($link-color, 25%);
 

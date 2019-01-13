@@ -5,7 +5,7 @@
 // Menu icon Home
 .menu-header .menu-home {
     color: $color-base;
-    padding-right: 0.25rem;
+    padding-right: 1rem;
     
     .feather {
         height: $font-size-base;
@@ -16,8 +16,8 @@
 
 // main menu blog
 .site-menu {
-    display: none;
     align-items: center;
+    display: none;
     height: 60px;
 
     @media screen and (min-width: $medium) {
@@ -33,7 +33,6 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    z-index: 597;
 
     > .menu-item {
         padding-right: 0rem;
@@ -44,6 +43,7 @@
     }
 }
 
+// Menu niveau 1
 .site-menu .menu .menu-item {
     min-height: 1px;
     position: relative;
@@ -70,17 +70,34 @@
     line-height: 1em;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    text-decoration: none;
     transition: $transition-base;
 
     &:hover {
-        background-color: $silver;
-        color: $color-darker;
+        background-color: $color-menu-bg-hover;
+        color: $color-menu-text-hover;
         text-decoration: none;
     }
 }
 
+.site-menu .menu .menu-item.active > a,
+.site-menu .menu .menu-item.current-menu-ancestor > a {
+    background-color: $color-menu-bg-active;
 
+    &:after {
+        border-color: $color-primary transparent transparent transparent;
+        border-style: solid;
+        border-width: 1rem 1rem 0 0;
+        content: '';
+        display: block;
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 0;
+    }
+}
+
+// Menu niveau 2
 .site-menu .menu ul {
     bottom: 0;
     left: 0;
@@ -91,19 +108,23 @@
     width: auto;
     z-index: 100;
     white-space: nowrap;
+}
 
-    .menu-item {
-        a {
-            background-color: $color-header-menu;
-            color: $color-base;
-            padding: 0.75rem 1rem;
-            border-top: solid 1px $white;
-            
-        }
+.site-menu .menu ul .menu-item {
+    a {
+        background-color: $color-header-menu;
+        border-top: solid 1px $white;
+        color: $color-base;
+        padding: 0.75rem 1rem;
+        
+    }
 
-        a:hover {
-            background-color: $silver;
-            color: $color-darker;
-        }
+    a:hover {
+        background-color: $color-menu-bg-hover;
+        color: $color-menu-text-hover;
+    }
+
+    &.active > a:after {
+        display: none;
     }
 }
