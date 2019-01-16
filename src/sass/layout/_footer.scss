@@ -133,18 +133,19 @@
 }
 
 // footer connect contact
-.footer__connect-contact .blog-name {
-    font-family: $font-family-title;
-    font-size: 1.85rem;
-    font-weight: 700;
+.footer__connect-contact .logo-acerola-filet {
+    color: $color-dark;
+    height: 65px;
+    margin-top: -0.2rem;
+    width: auto;
 
-    span {
-        font-weight: 300;
+    .ball {
+        color: $color-primary;
     }
 }
 
 .footer__connect-contact .welcome {
-    padding: 0.5rem 0;
+    padding: 0.25rem 0 0.5rem;
 }
 
 .footer__connect-contact .contact {

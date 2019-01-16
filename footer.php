@@ -37,7 +37,7 @@
 
                     <div class="footer__connect">
                         <div class="footer__connect-contact">
-                            <div class="blog-name">acérola <span>carrière</span></div>
+                            <div class="blog-name"><?php echo get_build_icon_path('logo-acerola-filet.svg') ?></div>
                             <div class="welcome">Prenez contact dès maintenant, nous vous réservons le meilleur accueil.</div>
 
                             <div class="contact">

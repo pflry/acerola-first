@@ -171,6 +171,36 @@
     }
 }
 
+.site-title .logo-acerola-filet {
+    color: $color-darker;
+    height: 75px;
+    margin-top: 0.75rem;
+    width: auto;
+
+    .ball {
+        color: $white;
+    }
+}
+
+.site-title .logo-acerola {
+    color: $color-darker;
+    height: 67px;
+    margin-top: 1rem;
+    width: auto;
+
+    .acerola {
+        color: $white;
+    }
+
+    .ball {
+        color: $color-primary;
+    }
+
+    .carriere {
+        color: $color-dark;
+    }
+}
+
 // search field
 .site-search {
     display: none;
