@@ -83,18 +83,7 @@
 .site-menu .menu .menu-item.current-menu-ancestor > a {
     background-color: $color-menu-bg-active;
 
-    &:after {
-        border-color: $color-primary transparent transparent transparent;
-        border-style: solid;
-        border-width: 1rem 1rem 0 0;
-        content: '';
-        display: block;
-        height: 0;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 0;
-    }
+    @include angle-cut($color-primary);
 }
 
 // Menu niveau 2

@@ -19,9 +19,11 @@
     align-self: flex-start;
 
     ul li {
+        position: relative;
         background-color: $color-light;
         padding: 1.5rem;
         border-radius: $border-radius;
+        // @include angle-cut($white);
     }
 
     ul li + li {

@@ -25,10 +25,12 @@
 
     <link rel="icon" sizes="192x192" href="<?php echo get_build_img_path('icon.png') ?>">
     <link rel="apple-touch-icon" href="<?php echo get_build_img_path('ios-icon.png') ?>">
-
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <?php get_template_part( 'header-styles' ); ?>
 
     <?php wp_head(); ?>
+    
 </head>
 
 <body <?php body_class(); ?>>
@@ -100,17 +102,20 @@
         <header id="header" class="blog-header">
              <section id="blogBanner" class="blog-header__banner">
                 <div class="container">
-                    <button id="openSlideMenu" class="menu-toggle">
-                        <?php echo get_build_icon_path('menu.svg') ?>
-                    </button>
-                    
                     <div id="siteTitle" class="site-title">
-                        <?php /* if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">acérola <span>carrière</span></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; }*/ ?>
+                        <span class="site-title--invisible">
+                            <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">acérola <span>carrière</span></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
+                        </span>
                         <?php echo get_build_icon_path('logo-acerola.svg') ?>
                     </div>
+
                     <div id="search" class="site-search">
                         <?php get_search_form(); ?>
                     </div>
+                    
+                    <button id="openSlideMenu" class="menu-toggle">
+                        <?php echo get_build_icon_path('menu.svg') ?>
+                    </button>
                 </div>
             </section>
             <section class="menu-header">

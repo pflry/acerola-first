@@ -57,3 +57,19 @@
         z-index: $z-index;
     }
 }
+
+// Cut angle
+@mixin angle-cut($color) {
+    &:after {
+        border-color: $color transparent transparent transparent;
+        border-style: solid;
+        border-width: 1rem 1.5rem 0 0;
+        content: '';
+        display: block;
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 0;
+    }
+}

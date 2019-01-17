@@ -2,7 +2,8 @@
 // Typography
 // --------------------------------------------------
 
-// headings
+// Headings
+// -----------------------------------
 h1,.h1,
 h2,.h2,
 h3,.h3,
@@ -42,12 +43,14 @@ h6, .h6 {
     font-size: $font-size-h6;
 }
 
-// styles
+// Syles
+// -----------------------------------
 b, strong {
     font-weight: $font-weight-bold;
 }
 
-// listes
+// Listes
+// -----------------------------------
 ol,
 ul,
 dl {
@@ -67,7 +70,8 @@ dl {
     }
 }
 
-// links
+// Links
+// -----------------------------------
 a {
     color: $link-color;
     cursor: pointer;
@@ -80,37 +84,58 @@ a {
     }
 }
 
-// lead
+// Lead
+// -----------------------------------
 .lead {
     font-size: $font-size-lg;
     font-weight: $font-weight-medium;
 }
 
-// paragraph
+// Paragragph
+// -----------------------------------
 p {
     margin: 0 0 1.375rem;
 }
 
-// blockquote
-blockquote {
-    border-left: solid 5px $color-border;
-    color: $color-headings;
-    font-size: $font-size-h5;
-    margin: 2.5rem 0;
-    padding-left: 2.5rem;
+// Blockquote
+// -----------------------------------
+.wp-block-quote {
+    margin-bottom: 1.375rem;
+    position: relative;
+    padding: 1.5rem;
+    border: solid 3px $clouds;
+    border-radius: $border-radius;
 
     p {
-        margin: 0;
+        font-style: italic;
+        margin: 0 0 0.5rem 3.5rem;
+    }
+
+    cite {
+        color: $color-muted;
+        font-size: $font-size-sm;
+        margin-left: 3.5rem;
+    }
+
+    &:before {
+        background-image: icon('quote.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $color-primary;
+        content: '';
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
     }
 }
 
+
+
+// Font style
+// -----------------------------------
 i,
 em {
     font-style: italic;
 }
 
-cite {
-    color: $color-muted;
-    font-size: $font-size-sm;
-    font-style: italic;
-}
