@@ -35,6 +35,7 @@
         margin: 0 1rem;
         text-align: center;
         white-space: nowrap;
+        font-weight: 600;
     }
 
     .line-title {
@@ -119,8 +120,9 @@
 
 .footer__infos .h5 {
     margin-bottom: 0.75rem;
-    color: tint($color-darker, 20%);
+    color: $color-darker;
     font-family: $font-family-title;
+    font-weight: 600;
 }
 
 // footer connect

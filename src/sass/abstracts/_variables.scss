@@ -17,7 +17,7 @@ $x-large: 1200px;
 
 // Font families
 $font-family-base : ('Roboto', Arial, sans-serif);
-$font-family-headings : ('Roboto', Arial, sans-serif);
+$font-family-headings : $font-family-base;
 $font-family-monospace: (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
 $font-family-title : ('Montserrat', Arial, sans-serif);
 
@@ -42,12 +42,11 @@ $line-height-base:     1.45;
 $line-height-headings: 1.2;
 
 // Headings sizes (major third - 1.250)
-//--> https://goo.gl/ej32bY
-$font-size-h1: 2.441rem;
-$font-size-h2: 1.953rem;
-$font-size-h3: 1.563rem;
-$font-size-h4: 1.25rem;
-$font-size-h5: 1.125rem;
+$font-size-h1: 2.95rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
 $font-size-h6: 1rem;
 
 
