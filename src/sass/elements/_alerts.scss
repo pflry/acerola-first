@@ -24,41 +24,17 @@
 }
 
 .alert-info {
-    background-color: tint($color-info, 85);
-    color: shade($color-info, 50);
-
-    .alert-title,
-    .alert-icon {
-        color: shade($color-info, 35);
-    }
+    @include alert($color-info);
 }
 
 .alert-success {
-    background-color: tint($color-success, 80);
-    color: shade($color-success, 50);
-
-    .alert-title,
-    .alert-icon {
-        color: shade($color-success, 50);
-    }
+    @include alert($color-success);
 }
 
 .alert-warning {
-    background-color: tint($color-warning, 80);
-    color: shade($color-warning, 50);
-
-    .alert-title,
-    .alert-icon {
-        color: shade($color-warning, 50);
-    }
+    @include alert($color-warning);
 }
 
 .alert-danger {
-    background-color: tint($color-danger, 85);
-    color: shade($color-danger, 50);
-
-    .alert-title,
-    .alert-icon {
-        color: shade($color-danger, 50);
-    }
+    @include alert($color-danger);
 }

@@ -73,3 +73,14 @@
         width: 0;
     }
 }
+
+// Alerts
+@mixin alert($color) {
+    background-color: tint($color, 85);
+    color: shade($color, 50);
+
+    .alert-title,
+    .alert-icon {
+        color: shade($color, 35);
+    }
+}
