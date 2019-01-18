@@ -16,10 +16,14 @@ $x-large: 1200px;
 // ----------
 
 // Font families
-$font-family-base : ('Roboto', Arial, sans-serif);
-$font-family-headings : $font-family-base;
+$font-family-sans-serif: ('Roboto', Arial, sans-serif);
+$font-family-serif: ('Noto Serif', serif);
 $font-family-monospace: (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
+
+$font-family-base : $font-family-sans-serif;
+$font-family-headings : $font-family-serif;
 $font-family-title : ('Montserrat', Arial, sans-serif);
+
 
 // Font sizes
 $font-size-base: 1rem;
@@ -27,15 +31,8 @@ $font-size-lg:   1.125rem;
 $font-size-sm:   0.875rem;
 
 // Font weights
-$font-weight-light:   100;
-$font-weight-book:    300;
-$font-weight-regular: 400;
-$font-weight-medium:  500;
-$font-weight-bold:    700;
-$font-weight-black:   900;
-
-$font-weight-base: $font-weight-regular;
-$font-weight-headings: $font-weight-medium;
+$font-weight-base: 400;
+$font-weight-headings: 500;
 
 // Line heights
 $line-height-base:     1.45;
@@ -102,7 +99,7 @@ $color-dark:      $wet-asphalt;
 $color-darker:    $midnight-blue;
 
 // Composants colors
-$color-base:            $color-dark;
+$color-base:            #222222;
 $color-headings:        $color-darker;
 $background-color-base: $white;
 

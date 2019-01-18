@@ -26,28 +26,32 @@ function alert_func( $atts, $content = null ) {
 	switch($a['class']) {
 		case 'info':
 			$class = 'alert-info';
+			$icon = get_build_icon_path('info.svg');
 			break;
 		case 'success':
 			$class = 'alert-success';
+			$icon = get_build_icon_path('check-circle.svg');
 			break;
 		case 'warning':
 			$class = 'alert-warning';
+			$icon = get_build_icon_path('alert-circle.svg');
 			break;
 		case 'danger':
 			$class = 'alert-danger';
+			$icon = get_build_icon_path('alert-triangle.svg');
 			break;
 		default:
 			$class = 'alert-info';
+			$icon = get_build_icon_path('info.svg');
 			break;
 	}
 
 	// title
 	if ($a['title'] != '' ) {
-		$title = '<span class="alert-title">'. esc_attr($a['title']) .'</span>';
+		$title = '<span class="alert-icon">'. $icon .'</span><span class="alert-title">'. esc_attr($a['title']) .'</span>';
 	} else {
-		$title = '';
+		$title = '<span class="alert-icon">'. $icon .'</span>';
 	}
-	
 	return '<div class="alert '. esc_attr($class) .'">'. $title .''. do_shortcode($content) .'</div>';
 }
 

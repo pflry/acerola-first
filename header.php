@@ -26,7 +26,7 @@
     <link rel="icon" sizes="192x192" href="<?php echo get_build_img_path('icon.png') ?>">
     <link rel="apple-touch-icon" href="<?php echo get_build_img_path('ios-icon.png') ?>">
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,700|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i|Montserrat:600|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <?php get_template_part( 'header-styles' ); ?>
 
     <?php wp_head(); ?>
