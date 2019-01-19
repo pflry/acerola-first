@@ -103,15 +103,16 @@ $color-base:            #222222;
 $color-headings:        $color-darker;
 $background-color-base: $white;
 
-$color-header-banner:           $color-primary;
-$color-header-menu:             tint($color-primary, 35%);
+$color-header-banner:   $color-primary;
+
+$color-header-menu:         tint($color-primary, 35%);
+$color-menu-bg-hover:       $color-primary;
+$color-menu-bg-active:      tint($color-primary, 60%);
+$color-menu-text-hover:     $color-base;
+$color-menu-text-active:    $color-base;
+
 $link-color-breadcrumb:         $color-base;
 $link-color-hover-breadcrumb:   $color-header-banner;
-
-$color-menu-bg-hover: shade($color-primary, 10%);
-$color-menu-bg-active: tint($color-primary, 60%);
-$color-menu-text-hover: $color-base;
-$color-menu-text-active: $color-base;
 
 $link-color:        $belize-hole;
 $link-color-hover:  shade($link-color, 25%);

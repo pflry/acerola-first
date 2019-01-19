@@ -83,6 +83,26 @@ b, strong {
     list-style-type: decimal;
 }
 
+// list check
+.checklist li {
+    list-style-type: none;
+    padding-left: 0.25rem;
+    position: relative;
+
+    &:before {
+        background-image: icon('check-square.svg');
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        content: '';
+        display: inline-block;
+        height: 1rem;
+        left: -1.25rem;
+        position: absolute;
+        top: 0.2rem;
+        width: 1rem;
+    }
+}
+
 // Links
 // -----------------------------------
 a {

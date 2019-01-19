@@ -48,6 +48,12 @@
     margin-top: 0;
 }
 
+.widget .feather {
+    float: left;
+    margin-right: 0.5rem;
+    vertical-align: bottom;
+}
+
 // Static widgets
 // -----------------------------------
 .widget a {
@@ -79,15 +85,10 @@
 
 .widget__contact .office--contact {
     font-size: $font-size-base;
+    padding-top: 1rem;
 
     & + .office--contact {
-        padding-top: 0;
-    }
-
-    .feather {
-        height: 1rem;
-        width: auto;
-        margin-right: 0.5rem;
+        padding-top: 0.5rem;
     }
 } 
 

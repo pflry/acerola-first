@@ -82,8 +82,6 @@
 .site-menu .menu .menu-item.active > a,
 .site-menu .menu .menu-item.current-menu-ancestor > a {
     background-color: $color-menu-bg-active;
-
-    @include angle-cut($color-primary);
 }
 
 // Menu niveau 2
