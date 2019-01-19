@@ -77,4 +77,37 @@ function img_func( $atts) {
 	}
 }
 
+/**
+ * Shortcodes timeline event
+ */
+function acerola_timeline_event($atts, $content = null ) {
+    $atts = shortcode_atts(
+        array(
+            'position' => 'direction-r',
+            'titre' => 'Ici le titre',
+            'date' => '2099',
+        ), $atts, 'timeline-event' );
+
+    return '<li>
+                <div class="'.$atts['position'].'">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">'.$atts['titre'].'</span>
+                        <span class="time-wrapper"><span class="time">'.$atts['date'].'</span></span>
+                    </div>
+                    <div class="desc">'.$content.'</div>
+                </div>
+            </li>';
+    }
+add_shortcode( 'timeline-event', 'acerola_timeline_event' );
+
+/**
+ * Shortcodes timeline parent
+ */
+function acerola_timeline($atts, $content = null) {
+    $content = do_shortcode($content);
+    return '<ul class="ntimeline list-unstyled">'.$content.'</ul>';
+    }
+add_shortcode( 'timeline', 'acerola_timeline' );
+
 ?>

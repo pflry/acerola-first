@@ -1,0 +1,204 @@
+//
+// Timeline
+// --------------------------------------------------
+
+.ntimeline {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.ntimeline:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    display: block;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background: #d5d5d5;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(213, 213, 213, 0)), color-stop(8%, #d5d5d5), color-stop(92%, #d5d5d5), to(rgba(213, 213, 213, 0)));
+    background: -webkit-linear-gradient(top, rgba(213, 213, 213, 0) 0%, #d5d5d5 8%, #d5d5d5 92%, rgba(213, 213, 213, 0) 100%);
+    background: -o-linear-gradient(top, rgba(213, 213, 213, 0) 0%, #d5d5d5 8%, #d5d5d5 92%, rgba(213, 213, 213, 0) 100%);
+    background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, #d5d5d5 8%, #d5d5d5 92%, rgba(213, 213, 213, 0) 100%);
+    z-index: 5;
+}
+
+.ntimeline li {
+    padding: 2em 0;
+}
+
+.ntimeline .hexa {
+    background: #fbd115;
+    border-radius: 50%;
+    height: 16px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: -30px;
+    width: 16px;
+    z-index: 5;
+}
+
+.direction-l,
+.direction-r {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+
+.flag-wrapper {
+    text-align: center;
+    position: relative;
+}
+
+.flag {
+    position: relative;
+    display: inline;
+    background: #ffffff;
+    font-weight: 600;
+    z-index: 15;
+    padding: 6px 10px;
+    text-align: left;
+    border-radius: 0;
+}
+
+.direction-l .flag,
+.direction-r .flag {
+    -webkit-box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+.time-wrapper {
+    display: block;
+    position: relative;
+    margin: 4px 0 0 0;
+    z-index: 14;
+    line-height: 1em;
+    vertical-align: middle;
+    color: white;
+}
+
+.direction-l .time-wrapper,
+.direction-r .time-wrapper {
+    float: none;
+}
+
+.time {
+    background: #fbd115;
+    display: inline-block;
+    padding: 8px;
+    color: #333333;
+}
+
+.desc {
+    position: relative;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background: white;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    z-index: 15;
+}
+
+.direction-l .desc,
+.direction-r .desc {
+    margin: 1em;
+}
+
+@media (min-width: 768px) {
+    .ntimeline {
+        width: 100%;
+        margin: 20px auto 0 auto;
+    }
+
+    .ntimeline li:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .ntimeline .hexa {
+        left: -28px;
+        right: auto;
+        top: 8px;
+    }
+
+    .ntimeline .direction-l .hexa {
+        left: auto;
+        right: -28px;
+    }
+
+    .direction-l {
+        position: relative;
+        width: 47.3%;
+        float: left;
+        text-align: right;
+    }
+
+    .direction-r {
+        position: relative;
+        width: 47.3%;
+        float: right;
+        text-align: left;
+    }
+
+    .flag-wrapper {
+        display: inline-block;
+    }
+
+    .flag {
+        font-size: 18px;
+    }
+
+    .time-wrapper {
+        display: inline;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .direction-l .time-wrapper {
+        float: left;
+    }
+
+    .direction-r .time-wrapper {
+        float: right;
+    }
+
+    .time {
+        padding: 5px 10px;
+    }
+
+    .direction-r .desc {
+        margin: 1em 0 0 0.75em;
+    }
+
+    .desc {
+        -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (min-width: 992px) {
+
+    .direction-l,
+    .direction-r {
+        width: 47.9%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .direction-l,
+    .direction-r {
+        width: 48.3%;
+    }
+}
