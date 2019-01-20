@@ -78,7 +78,10 @@ function img_func( $atts) {
 }
 
 /**
- * Shortcodes timeline event
+ * Shortcodes timeline (shortcode in shortcode)
+ * 
+ * [timeline][timeline-event position="direction-r (droite)" titre="titre événement" date="année en chiffre"]description événement[/timeline-event][timeline-event position="direction-l (gauche)" titre="titre événement" date="année en chiffre"]description événement[/timeline-event]...[/timeline]
+ *
  */
 function acerola_timeline_event($atts, $content = null ) {
     $atts = shortcode_atts(
@@ -101,13 +104,34 @@ function acerola_timeline_event($atts, $content = null ) {
     }
 add_shortcode( 'timeline-event', 'acerola_timeline_event' );
 
-/**
- * Shortcodes timeline parent
- */
 function acerola_timeline($atts, $content = null) {
     $content = do_shortcode($content);
     return '<ul class="timeline">'.$content.'</ul>';
     }
 add_shortcode( 'timeline', 'acerola_timeline' );
+
+/**
+ * Shortcodes bloc collaborateur sur page présentation cabinet
+ * 
+ * [equipe nom="nom collaborateur" fonction="fonction collaborateur" image="image path"]présentation collaborateur[/equipe]
+ */
+function acerola_equipe($atts, $content = null ) {
+    $atts = shortcode_atts(
+        array(
+            'image' => 'http://satyr.io/480x480?texture=cross',
+            'nom' => 'Lorem ipsum',
+            'fonction' => 'Consultant'
+        ), $atts, 'equipe' );
+
+    return '<figure class="team-member">
+				<img src="'.$atts['image'].'" alt="'.$atts['nom'].' - Acérola Carrière" class="img-fluid">
+				<figcaption>
+					<h3 class="h3--title">'.$atts['nom'].'</h3>
+					<small>'.$atts['fonction'].'</small>
+					<p>'.$content.'</p>
+				</figcaption>
+			</figure>';
+        }
+add_shortcode( 'equipe', 'acerola_equipe' );
 
 ?>

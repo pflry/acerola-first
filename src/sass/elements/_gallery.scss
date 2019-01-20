@@ -1,0 +1,18 @@
+//
+// Galerie collaborateurs
+// --------------------------------------------------
+
+.team-member {
+    margin: 0 auto;
+    max-width: 480px;
+
+    @media (min-width: $medium) {
+        float: left;
+        max-width: 25%;
+    }
+}
+
+.team-member figcaption {
+    overflow: hidden;
+    padding: 15px 0 25px;
+}
