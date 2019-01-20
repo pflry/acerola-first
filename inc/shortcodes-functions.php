@@ -89,9 +89,9 @@ function acerola_timeline_event($atts, $content = null ) {
         ), $atts, 'timeline-event' );
 
     return '<li>
-                <div class="'.$atts['position'].'">
+				<div class="'.$atts['position'].'">
+					<div class="hexa"></div>
                     <div class="flag-wrapper">
-                        <span class="hexa"></span>
                         <span class="flag">'.$atts['titre'].'</span>
                         <span class="time-wrapper"><span class="time">'.$atts['date'].'</span></span>
                     </div>
@@ -106,7 +106,7 @@ add_shortcode( 'timeline-event', 'acerola_timeline_event' );
  */
 function acerola_timeline($atts, $content = null) {
     $content = do_shortcode($content);
-    return '<ul class="ntimeline list-unstyled">'.$content.'</ul>';
+    return '<ul class="timeline">'.$content.'</ul>';
     }
 add_shortcode( 'timeline', 'acerola_timeline' );
 
