@@ -20,8 +20,22 @@
             <?php the_content(); ?>
             <div class="entry-links"><?php wp_link_pages(); ?></div>
         </section>
+        <section class="entry-contact">
+            <div class="entry-contact__header">
+                <div class="logo">
+                    <?php echo get_build_icon_path('logo-acerola-filet.svg') ?>
+                </div>
+                <div class="title">
+                    <h5 class="h5">Prenez contact</h5>
+                </div>
+            </div>
+            <div class="entry-contact__body">
+                Utilisez notre <a href="http://www.acerolacarriere.fr/contact/">formulaire de contact</a><br>
+                Appelez nous au 01 41 79 17 93
+                <span class="horaires">du lundi au vendredi de 8h à 20h et le samedi de 8h à 13h</span>
+            </div>
+        </section>
     </article>
-    <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
     <?php endwhile; endif; ?>
 </section>
 <?php get_sidebar(); ?>

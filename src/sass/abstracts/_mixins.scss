@@ -77,10 +77,9 @@
 // Alerts
 @mixin alert($color) {
     background-color: tint($color, 85);
-    color: shade($color, 50);
+    color: shade($color, 80);
 
-    .alert-title,
     .alert-icon {
-        color: shade($color, 35);
+        color: shade($color, 10);
     }
 }

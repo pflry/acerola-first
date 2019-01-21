@@ -22,11 +22,10 @@
     align-self: flex-start;
 
     ul li {
-        position: relative;
         background-color: $color-light;
-        padding: 1.5rem;
         border-radius: $border-radius;
-        // @include angle-cut($white);
+        padding: 1.5rem;
+        position: relative;
     }
 
     ul li + li {
@@ -57,10 +56,14 @@
 // Static widgets
 // -----------------------------------
 .widget a {
-    color: $color-base;
+    color: $color-base;;
 }
 
 // Widget contact
+.widget__contact {
+
+}
+
 .widget__contact .office {
     font-size: $font-size-sm;
 
@@ -104,4 +107,14 @@
     a + a {
         margin-left: 0;
     }
-} 
+}
+
+// Widget download
+.widget__download {
+    
+
+    .widget-title {
+        font-size: $font-size-h6;
+        margin-bottom: 1rem;
+    }
+}
