@@ -3,16 +3,37 @@
 // --------------------------------------------------
 
 .team-member {
-    margin: 0 auto;
-    max-width: 480px;
+    margin: 2rem auto;
+    max-width: 280px;
+
+    @media (min-width: 560px) {
+        float: left;
+        margin: 2rem 2% 0 2%;
+        max-width: 46%;
+        min-height: 420px;
+    }
 
     @media (min-width: $medium) {
-        float: left;
-        max-width: 25%;
+        margin: 2rem 1% 0 1%;
+        max-width: 23%;
+        min-height: 380px;
     }
 }
 
 .team-member figcaption {
-    overflow: hidden;
-    padding: 15px 0 25px;
+    .nom {
+        font-family: $font-family-base;
+        font-weight: 600;
+        margin: 0.25rem 0;
+    }
+
+    .fonction {
+        font-size: $font-size-sm;
+        line-height: 1.3;
+    }
+
+    .experience {
+        font-size: $font-size-sm;
+        margin: 0.25rem 0 0;
+    }
 }

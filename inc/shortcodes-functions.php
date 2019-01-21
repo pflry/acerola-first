@@ -126,9 +126,9 @@ function acerola_equipe($atts, $content = null ) {
     return '<figure class="team-member">
 				<img src="'.$atts['image'].'" alt="'.$atts['nom'].' - Acérola Carrière" class="img-fluid">
 				<figcaption>
-					<h3 class="h3--title">'.$atts['nom'].'</h3>
-					<small>'.$atts['fonction'].'</small>
-					<p>'.$content.'</p>
+					<h6 class="nom">'.$atts['nom'].'</h6>
+					<div class="fonction">'.$atts['fonction'].'</div>
+					<p class="experience">'.$content.'</p>
 				</figcaption>
 			</figure>';
         }
