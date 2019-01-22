@@ -74,6 +74,20 @@
     }
 }
 
+// Buttons
+@mixin bouton($color) {
+    background-color: $color;
+    border-color: $color;
+    color: dynamic-color($color);
+    transition: $transition-base;
+
+    &:hover {
+        background-color: shade($color, 15%);
+        border-color: shade($color, 15%);
+        color: dynamic-color($color);
+    }
+}
+
 // Alerts
 @mixin alert($color) {
     background-color: tint($color, 85);

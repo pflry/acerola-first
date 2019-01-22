@@ -9,14 +9,13 @@
  */
 
 ?><aside id="sidebar" role="complementary" class="sidebar side-standard">
-    <?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
         <div id="primary" class="widget-area">
             <ul class="ul-wrapper">
-
                 <?php get_template_part( 'sidebar-contact' ); ?>
 
-                <?php dynamic_sidebar( 'primary-widget-area' ); ?>
+                <?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
+                    <?php dynamic_sidebar( 'primary-widget-area' ); ?>
+                <?php endif; ?>
             </ul>
         </div>
-    <?php endif; ?>
 </aside>

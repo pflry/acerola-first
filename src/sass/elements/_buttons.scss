@@ -16,16 +16,32 @@
     white-space: nowrap;
 }
 
-.btn-primary {
-    color: dynamic-color($color-primary);
-    background-color: $color-primary;
-    border-color: $color-primary;
-    transition: $transition-base;
+.btn:hover {
+    text-decoration: none;
+}
 
-    &:hover {
-        background-color: shade($color-primary, 15%);
-        border-color: shade($color-primary, 15%);
-    }
+.btn-primary {
+    @include bouton($color-primary);
+}
+
+.btn-secondary {
+    @include bouton($color-secondary);
+}
+
+.btn-success {
+    @include bouton($color-success);
+}
+
+.btn-info {
+    @include bouton($color-info);
+}
+
+.btn-warning {
+    @include bouton($color-warning);
+}
+
+.btn-danger {
+    @include bouton($color-danger);
 }
 
 .btn-scrolltop {

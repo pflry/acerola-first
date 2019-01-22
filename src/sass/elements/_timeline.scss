@@ -10,8 +10,8 @@
     width: 100%;
 
     &:before {
-        background: $color-border;
-        background: linear-gradient(to bottom, white(0) 0%, $color-border 8%, $color-border 92%, white(0) 100%);
+        background: $gray;
+        background: linear-gradient(to bottom, white(0) 0%, $gray 8%, $gray 92%, white(0) 100%);
         content: '';
         display: block;
         height: 100%;

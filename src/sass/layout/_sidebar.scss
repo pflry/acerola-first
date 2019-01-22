@@ -23,12 +23,11 @@
 
     ul li {
         border-radius: $border-radius;
-        padding: 1.5rem;
         position: relative;
     }
 
     ul li + li {
-        margin-top: 1.5rem;
+        margin-top: 1.375rem;
     }
 
     .ul-wrapper,
@@ -40,10 +39,10 @@
 }
 
 
-
 // Static widgets
 // -----------------------------------
 .widget-title {
+    color: $color-base;
     font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 500;
@@ -55,56 +54,79 @@
     transform: translateY(2px);
 }
 
-.widget a {
-    color: $color-base;;
-}
-
 .widget .feather {
     float: left;
     margin-right: 0.5rem;
     vertical-align: bottom;
 }
 
-// Widget contact
-.widget__contact {
-    background-color: $gray-200;
+// Widget office
+.widget__office {
+    background-color: shade($office-azur, 30%);
+    padding: 1rem;
 }
 
-.widget__contact .office {
+.widget__office .widget-title {
+    color: $white;
+    padding: 0 0 1rem;
+}
+
+.widget__office .office {
+    background-color: $office-azur;
+    color: $white;
     font-size: $font-size-sm;
+    padding: 1rem;
+    border-radius: $border-radius;
 
     & + .office {
-        padding-top: 0.75rem;
+        margin-top: 0.75rem;
     }
 
     .office--name {
-        font-size: 1rem;
-        font-weight: 700;
+        font-weight: 500;
         margin-bottom: 0.1rem;
+        text-transform: uppercase;
     }
 
     .feather {
         float: left;
+        height: auto;
         margin-right: 0.5rem;
         transform: translateY(0.15rem);
-        height: auto;
         width: auto;
+        color: $color-primary;
     }
 }
 
-.widget__contact .office--contact {
-    font-size: $font-size-base;
-    padding-top: 1rem;
+// Widget contact
+.widget__contact {
+    @extend .widget__office;
+}
 
-    & + .office--contact {
-        padding-top: 0.5rem;
+.widget__contact .contact {
+    background-color: $office-azur;
+    font-size: $font-size-sm;
+    padding: 1rem;
+    color: $white;
+    border-radius: $border-radius;
+
+    a {
+        color: $white;
     }
-} 
+
+    .feather {
+        color: $color-primary;
+        transform: translateY(-0.15rem);
+    }
+
+    div + div {
+        margin-top: 0.75rem;
+    }
+}
 
 // Widget follow
 .widget__follow {
-    background-color: $color-header-top;
-    padding: 0 !important;
+    background-color: $color-primary;
 }
 
 .widget__follow .socials {
@@ -153,3 +175,20 @@
 }
 
 // Widget newsletter
+.widget__newsletter {
+    background-color: shade($office-azur, 30%);
+}
+
+.widget__newsletter .widget-title {
+    color: $white;
+}
+
+.widget__newsletter .register {
+    padding: 0 0 1rem;
+    text-align: center;
+
+    @media screen and (min-width: 920px) {
+        padding: 0 0 1rem 1rem;
+        text-align: left;
+    }
+}
