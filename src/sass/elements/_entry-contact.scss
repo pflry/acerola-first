@@ -3,10 +3,7 @@
 // --------------------------------------------------
 
 .entry-contact {
-    background-color: $color-light;
-    border-radius: $border-radius;
-    display: flex;
-    padding: 1rem;
+    @extend %well;
 }
 
 .entry-contact__header {
