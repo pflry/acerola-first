@@ -2,17 +2,6 @@
 // Main Menu
 // --------------------------------------------------
 
-// Menu icon Home
-.menu-header .menu-home {
-    color: $color-base;
-    padding-right: 1rem;
-    
-    .feather {
-        height: $font-size-base;
-        vertical-align: text-top;
-        width: auto;
-    }
-}
 
 // main menu blog
 .site-menu {
@@ -45,9 +34,11 @@
 
 // Menu niveau 1
 .site-menu .menu .menu-item {
-    min-height: 1px;
     position: relative;
     vertical-align: middle;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    font-weight: 600;
 
     &.hover,
     &:hover {
@@ -66,52 +57,89 @@
     background-color: transparent;
     color: $color-base;
     display: flex;
-    height: 50px;
     line-height: 1em;
-    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem;
+    padding: 0.375rem 0 0.25rem ;
     text-decoration: none;
     transition: $transition-base;
+    border-bottom: solid 4px transparent;
 
     &:hover {
-        background-color: $color-menu-bg-hover;
+        background-color: transparent;
         color: $color-menu-text-hover;
         text-decoration: none;
+        border-color: $cyanide;
     }
 }
 
 .site-menu .menu .menu-item.active > a,
 .site-menu .menu .menu-item.current-menu-ancestor > a {
-    background-color: $color-menu-bg-active;
+    border-color: $cyanide;
 }
 
 // Menu niveau 2
 .site-menu .menu ul {
     bottom: 0;
-    left: 0;
+    left: -45%;
     margin-top: 0;
     position: absolute;
-    top: 100%;
+    right: -45%;
+    top: 135%;
     visibility: hidden;
+    white-space: nowrap;
     width: auto;
     z-index: 100;
-    white-space: nowrap;
+
+    &:after {
+        border-color: transparent transparent shade($office-azur, 35%) transparent;
+        border-style: solid;
+        border-width: 0 0 1rem 1.35rem;
+        content: '';
+        display: block;
+        height: 0;
+        left: calc(50% - 1.35rem);
+        position: absolute;
+        top: -1rem;
+        width: 0;
+        transition: $transition-base;
+    }
+}
+
+.site-menu .menu ul .menu-item a {
+    background-color: shade($office-azur, 35%);
+    border: none;
+    color: white(0.5);
+    display: block;
+    font-size: 0.925em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    span {
+        border-bottom: solid 1px white(0.25);
+        display: block;
+        padding: 1.15rem 0;
+    }  
 }
 
 .site-menu .menu ul .menu-item {
-    a {
-        background-color: $color-header-menu;
-        border-top: solid 1px $white;
-        color: $color-base;
-        padding: 0.75rem 1rem;
-        
+    a:hover,
+    &.active > a {
+        background-color: shade($office-azur, 35%);
+        color: $white;
     }
 
-    a:hover {
-        background-color: $color-menu-bg-hover;
-        color: $color-menu-text-hover;
+    &:last-child a span {
+        border-bottom: none;
     }
 
-    &.active > a:after {
-        display: none;
+    &:first-child a {
+        border-radius: $border-radius $border-radius 0 0;
+    }
+
+    &:last-child a {
+        border-radius: 0 0 $border-radius $border-radius;
     }
 }

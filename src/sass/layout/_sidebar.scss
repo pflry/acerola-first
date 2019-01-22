@@ -22,7 +22,6 @@
     align-self: flex-start;
 
     ul li {
-        background-color: $color-light;
         border-radius: $border-radius;
         padding: 1.5rem;
         position: relative;
@@ -40,11 +39,24 @@
     }
 }
 
+
+
+// Static widgets
+// -----------------------------------
 .widget-title {
-    font-family: $font-family-title;
-    font-size: $font-size-h5;
-    font-weight: 600;
-    margin-top: 0;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    transform: translateY(2px);
+}
+
+.widget a {
+    color: $color-base;;
 }
 
 .widget .feather {
@@ -53,15 +65,9 @@
     vertical-align: bottom;
 }
 
-// Static widgets
-// -----------------------------------
-.widget a {
-    color: $color-base;;
-}
-
 // Widget contact
 .widget__contact {
-
+    background-color: $gray-200;
 }
 
 .widget__contact .office {
@@ -96,25 +102,54 @@
 } 
 
 // Widget follow
-.widget__follow .footer__connect-socials {
+.widget__follow {
+    background-color: $color-header-top;
+    padding: 0 !important;
+}
+
+.widget__follow .socials {
     display: flex;
-    justify-content: space-around;
+    height: 66px;
+}
 
-    a {
-        margin-bottom: 0;
-    }
+.widget__follow .socials .feather {
+    fill: $white;
+    stroke-width: 0;
 
-    a + a {
-        margin-left: 0;
+    &.feather-viadeo {
+        height: 1.5rem;
+        width: auto;
     }
 }
 
-// Widget download
-.widget__download {
-    
+.widget__follow .socials .facebook {
+    @include social($facebook-color);
+    border-bottom-left-radius: $border-radius;
+}
 
-    .widget-title {
-        font-size: $font-size-h6;
-        margin-bottom: 1rem;
+.widget__follow .socials .twitter {
+    @include social($twitter-color);
+}
+
+.widget__follow .socials .linkedin {
+    @include social($linkedin-color);
+}
+
+.widget__follow .socials .viadeo {
+    @include social($viadeo-color);
+    border-bottom-right-radius: $border-radius;
+}
+
+.widget__follow .socials a {
+    align-items: center;
+    display: inline-flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    transition: $transition-base;
+
+    &:hover {
+        background-color: $gray-500;
     }
 }
+
+// Widget newsletter

@@ -47,12 +47,12 @@
     text-transform: uppercase;
 
     a {
-        color: $orange;
+        color: $link-color;
         transition: color 0.25s ease;
     }
 
     a:hover {
-        color: shade($orange, 20%);
+        color: shade($link-color, 20%);
         text-decoration: none;
     }
 }

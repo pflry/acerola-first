@@ -2,18 +2,17 @@
 // acerolacarriere.fr - Variables and config
 // --------------------------------------------------
 
-// ----------------
-// Breakpoints zone
-// ----------------
+// Breakpoint zone
+// -----------------------------------
 $small:   576px;
 $medium:  768px;
 $intermediate: 844px;
 $large:   992px;
 $x-large: 1200px;
 
-// ----------
-// Fonts zone
-// ----------
+
+// Font zone
+// -----------------------------------
 
 // Font families
 $font-family-sans-serif: ('Roboto', Arial, sans-serif);
@@ -23,7 +22,6 @@ $font-family-monospace: (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospa
 $font-family-base : $font-family-sans-serif;
 $font-family-headings : $font-family-serif;
 $font-family-title : ('Montserrat', Arial, sans-serif);
-
 
 // Font sizes
 $font-size-base: 1rem;
@@ -47,81 +45,125 @@ $font-size-h5: 1.25rem;
 $font-size-h6: 1rem;
 
 
-// ----------
-// Colors zone
-// ----------
+// Color zone
+// -----------------------------------
 
+// Basics
 $white:    #fff;
 $black:    #000;
 
-// Flat UI colors
-$june-bud:      #badc58;
-$pure-apple:    #6ab04c;
+// Flat WButtons
+$debris:            #d1d5d8;
+$cyanide:           #3498db;
+$tuesday-yellow:    #f1c40f;
+$juicy-orange:      #e74c3c;
+$ui-green:          #1abc9c;
 
-$peter-river:   #3498db;
-$belize-hole:   #2980b9;
+// add
+$moody-carrot:      #f75c03;
+$office-azur:       #2274a5;
 
-$sun-flower:    #f1c40f;
-// $sun-flower:    #fbd115;
-$orange:        #f39c12;
+// Grayscale
+$gray: $debris;
+$gray-100: #f5f6f7;
+$gray-200: #eceeef;
+$gray-300: #e3e5e7;
+$gray-400: #dadddf;
+$gray-500: #d1d5d8;
+$gray-600: #a7aaac;
+$gray-700: #7d7f81;
+$gray-800: #535556;
+$gray-900: #292a2b;
 
-$carrot:        #e67e22;
-$pumpkin:       #d35400;
-
-$alizarin:      #e74c3c;
-$pomegranate:   #c0392b;
-
-$clouds:        #ecf0f1;
-$silver:        #bdc3c7;
-
-$concrete:      #95a5a6;
-$asbestos:      #7f8c8d;
-
-$wet-asphalt:   #34495e;
-$midnight-blue: #2c3e50;
-
-$razzmatazz:    #db0a5b;
-
-// Social colors
-$facebook-color:    #3b5998;
-$google-plus-color: #dd4b39;
-$linkedin-color:    #0077b5;
-$pdf-color:         #aa0000;
 
 // Semantic colors
-$color-primary :  $sun-flower;
-$color-secondary: $asbestos;
-$color-success :  $pure-apple;
-$color-info:      $peter-river;
-$color-warning:   $carrot;
-$color-danger:    $razzmatazz;
-$color-light:     $clouds;
-$color-dark:      $wet-asphalt;
-$color-darker:    $midnight-blue;
+$color-primary :    #f1c40f; // $tuesday-yellow
+$color-secondary:   #7d7f81; // $gray-700
+$color-success :    #1abc9c; // $ui-green
+$color-info:        #3498db; // $cyanide
+$color-warning:     #f75c03; // $moody-carrot
+$color-danger:      #e74c3c; // $juicy-orange
+$color-light:       #f5f6f7; // $gray-100;
+$color-dark:        #535556; // $gray-800;
+$color-darker:      #292a2b; // $gray-900;
 
-// Composants colors
-$color-base:            #222222;
-$color-headings:        $color-darker;
+// Brand colors
+$facebook-color:    #3b5998;
+$twitter-color:     #1da1f2;
+$linkedin-color:    #0077b5;
+$viadeo-color:      #f07355;
+$pdf-color:         #aa0000;
+
+
+// Composant colors
+// -----------------------------------
+
 $background-color-base: $white;
 
-$color-header-banner:   $color-primary;
+// Typography
+$color-base: $color-darker;
+$color-headings: $color-darker;
 
-$color-header-menu:         tint($color-primary, 35%);
-$color-menu-bg-hover:       $color-primary;
-$color-menu-bg-active:      tint($color-primary, 60%);
-$color-menu-text-hover:     $color-base;
-$color-menu-text-active:    $color-base;
+// Link
+$link-color: $color-info;
+$link-color-hover: shade($link-color, 25%);
 
-$link-color-breadcrumb:         $color-base;
-$link-color-hover-breadcrumb:   $color-header-banner;
+// Header top
+$color-header-top: tint($tuesday-yellow, 20%);
+$color-content-header-top: $color-base;
+$color-hover-header-top: $color-base;
 
-$link-color:        $belize-hole;
-$link-color-hover:  shade($link-color, 25%);
+// Header banner
+$color-header-banner: $color-primary;
 
-$color-muted:  $color-secondary;
-$color-border: $silver;
-$color-forms:  $color-dark;
-$color-code:   $razzmatazz;
+$color-header-menu: $gray-200;
+$color-menu-bg-hover: $cyanide;
+$color-menu-bg-active: tint($tuesday-yellow, 60%);
+$color-menu-text-hover: $color-base;
+$color-menu-text-active: $color-base;
+
+// Header breadcrumb
+$color-header-breadcrumb: $gray-100;
+$link-color-breadcrumb: $color-base;
+$link-color-hover-breadcrumb: $link-color-hover;
+$link-color-breadcrumb-active: $gray-700;
+$color-breadcrumb-icon: $tuesday-yellow;
+
+
+$color-muted: $gray-500;
+$color-border: $gray-200;
+$color-forms: $color-dark;
+$color-code: $color-danger;
+
+
+
+// Flat UI colors
+// $june-bud:      #badc58;
+// $pure-apple:    #6ab04c;
+
+// $peter-river:   #3498db;
+// $belize-hole:   #2980b9;
+
+// $sun-flower:    #f1c40f;
+// $acerola:    #fbd115;
+// $orange:        #f39c12;
+
+
+// $pumpkin:       #d35400;
+
+// $alizarin:      #e74c3c;
+// $pomegranate:   #c0392b;
+
+// $clouds:        #ecf0f1;
+// $silver:        #bdc3c7;
+
+// $concrete:      #95a5a6;
+// $asbestos:      #7f8c8d;
+
+// $wet-asphalt:   #34495e;
+// $midnight-blue: #2c3e50;
+
+// $razzmatazz:    #db0a5b;
 
 
 // ---------------

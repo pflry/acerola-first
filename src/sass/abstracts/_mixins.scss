@@ -83,3 +83,12 @@
         color: shade($color, 10);
     }
 }
+
+// Socials sidebar
+@mixin social($color) {
+    background-color: $color;
+
+    &:hover {
+        background-color: shade($color, 40%);
+    }
+}

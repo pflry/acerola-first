@@ -110,7 +110,7 @@
 
     &.active,
     &.current-menu-ancestor {
-        background-color: $belize-hole;
+        background-color: $color-info;
     }
 }
 
@@ -163,8 +163,8 @@
         }
 
         &:focus {
-            border-color: $belize-hole;
-            box-shadow: 0 0 5px rgba($belize-hole, 1);
+            border-color: $color-secondary;
+            box-shadow: 0 0 5px rgba($color-secondary, 1);
         }
     }
 

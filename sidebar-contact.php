@@ -36,17 +36,17 @@
 
 <li class="widget widget__follow">
     <h3 class="widget-title">Suivez nous</h3>
-    <div class="footer__connect-socials">
-        <a href="https://www.facebook.com/acerolacarriere" target="_blank">
+    <div class="socials">
+        <a href="https://www.facebook.com/acerolacarriere" target="_blank" class="facebook">
             <?php echo get_build_icon_path('facebook.svg') ?>
         </a>
-        <a href="https://twitter.com/AcerolaCarriere" target="_blank">
+        <a href="https://twitter.com/AcerolaCarriere" target="_blank" class="twitter">
             <?php echo get_build_icon_path('twitter.svg') ?>
         </a>
-        <a href="https://www.linkedin.com/profile/view?id=222313042" target="_blank">
+        <a href="https://www.linkedin.com/profile/view?id=222313042" target="_blank" class="linkedin">
             <?php echo get_build_icon_path('linkedin.svg') ?>
         </a>
-        <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" target="_blank">
+        <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" target="_blank" class="viadeo">
             <?php echo get_build_icon_path('viadeo.svg') ?>
         </a>
     </div>

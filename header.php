@@ -109,26 +109,25 @@
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
                     </div>
 
-                    <div id="search" class="site-search">
+                    <!-- <div id="search" class="site-search">
                         <?php get_search_form(); ?>
-                    </div>
-                    
-                    <button id="openSlideMenu" class="menu-toggle">
-                        <?php echo get_build_icon_path('menu.svg') ?>
-                    </button>
-                </div>
-            </section>
-            <section class="menu-header">
-                <div class="container">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" class="menu-home">
-                        <?php echo get_build_icon_path('home.svg') ?>
-                    </a>
+                    </div> -->
+
                     <nav id="menu" class="site-menu">
                         <?php wp_nav_menu( array(
                             'walker' => new CSS_Menu_Maker_Walker(),
                             'theme_location' => 'primary',
 						    'menu'           => 'Header Menu') ); ?>
                     </nav>
+                    
+                    <button id="openSlideMenu" class="menu-toggle">
+                        <?php echo get_build_icon_path('menu.svg') ?>
+                    </button>
+                </div>
+            </section>
+            <section id="filAriane" class="blog-header__breadcrumb">
+                <div class="container">
+                    <?php echo get_the_breadcrumb() ?>
                 </div>
             </section>
         </header>

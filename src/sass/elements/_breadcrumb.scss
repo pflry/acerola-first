@@ -3,8 +3,7 @@
 // --------------------------------------------------
 
 .breadcrumb {
-    font-size: $font-size-sm;
-    margin: 0.65rem 0;
+    margin: 1rem 0;
     padding: 0;
 }
 
@@ -20,12 +19,13 @@
     }
 
     &.active {
-        color: black(0.6);
+        color: $link-color-breadcrumb-active;
     }
 
-    .icon {
+    .feather {
         height: 1rem;
-        stroke: $color-primary;
+        stroke-width: 3px;
+        stroke: $color-breadcrumb-icon;
         transform: translateY(-1px);
     }
 }
