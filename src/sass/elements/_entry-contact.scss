@@ -1,0 +1,52 @@
+//
+// Page contact
+// --------------------------------------------------
+
+.entry-contact {
+    background-color: $color-light;
+    border-radius: $border-radius;
+    display: flex;
+    padding: 1rem;
+}
+
+.entry-contact__header {
+    display: none;
+    padding-right: 1rem;
+
+    .logo-acerola-filet {
+        color: $color-headings;
+        height: 50px;
+        width: auto;
+
+        .ball {
+            color: $color-primary;
+        }
+    }
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
+}
+
+.entry-contact__body {
+    flex: 1 1 auto;
+
+    .h5 {
+        font-family: $font-family-title;
+        margin: 0;
+    }
+
+    .horaires {
+        display: block;
+        font-size: $font-size-sm;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    li,
+    li + li {
+        margin: 0.35rem 0 0 !important;
+    }
+}

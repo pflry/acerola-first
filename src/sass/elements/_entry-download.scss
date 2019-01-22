@@ -1,0 +1,24 @@
+//
+// Block page download
+// --------------------------------------------------
+
+.entry-download {
+    align-items: center;
+    background-color: $color-light;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.375rem;
+    padding: 1rem;
+}
+
+.entry-download__header {
+
+    .h5 {
+        font-family: $font-family-title;
+        margin: 0;
+    }
+}
+
+.entry-download__body {
+}

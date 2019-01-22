@@ -13,8 +13,6 @@
         <div id="primary" class="widget-area">
             <ul class="ul-wrapper">
 
-                <?php get_template_part( 'sidebar-plaquette' ); ?>
-
                 <?php get_template_part( 'sidebar-contact' ); ?>
 
                 <?php dynamic_sidebar( 'primary-widget-area' ); ?>

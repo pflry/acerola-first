@@ -133,32 +133,33 @@ p {
 // Blockquote
 // -----------------------------------
 .wp-block-quote {
+    background-color: $color-light;
     background-image: icon('quote.svg');
-    background-position: 0 0;
+    background-position: 1rem 0.75rem;
     background-repeat: no-repeat;
-    background-size: 2rem;
-    margin-bottom: 1.375rem;
-    padding-top: 0.6rem;
+    background-size: 2.5rem;
+    border-radius: $border-radius;
+    margin: 0 1.375rem 1.375rem 1.375rem;
+    padding: 1.375rem 1.375rem 1.375rem 4.25rem;
     position: relative;
 
     p {
-        font-style: italic;
-        margin: 0 0.75rem 0.25rem 2.5rem;
-        text-align: justify;
+        color: tint($color-base, 15%);
         font-family: $font-family-serif;
-        color: tint($color-base, 25%);
+        font-style: italic;
+        text-align: justify;
+        margin-bottom: 0.25rem;
     }
 
     cite {
         font-weight: 300;
         font-size: $font-size-sm;
-        margin-left: 2.5rem;
     }
 
     @media screen and (min-width: $medium) {
-        p {
-            margin: 0 2.5rem 0.25rem 2.5rem;
-        }
+        // p {
+        //     margin: 0 2.5rem 0.25rem 2.5rem;
+        // }
     }
 }
 
