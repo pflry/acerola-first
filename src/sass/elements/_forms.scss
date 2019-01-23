@@ -21,10 +21,10 @@
         opacity: 1;
     }
 
-    &:focus {
-        border-color: $color-primary;
-        box-shadow: 0 0 5px rgba($color-primary, 1);
-    }
+    // &:focus {
+    //     border-color: $color-primary;
+    //     box-shadow: 0 0 5px rgba($color-primary, 1);
+    // }
 
     @media screen and (min-width: $medium) {
         max-width: 60%;

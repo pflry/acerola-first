@@ -5,16 +5,29 @@
 .entry-download {
     @extend %well;
     align-items: center;
-    justify-content: space-between;
+    background-color: $color-primary;
+    flex-direction: column;
+
+    div:last-child {
+        margin-top: 0.75rem;
+    }
+    
+    @media screen and (min-width: $small) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        div:last-child {
+            margin-top: 0;
+        }
+    }
 }
 
 .entry-download__header {
-
+    color: $color-base;
+    font-weight: 500;
+    
     .h5 {
         font-family: $font-family-title;
         margin: 0;
     }
-}
-
-.entry-download__body {
 }

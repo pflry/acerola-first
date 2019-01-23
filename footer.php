@@ -5,9 +5,7 @@
             <div class="footer__approval">
                 <div class="container">
                     <div class="footer__approval--title">
-                        <div class="line-title"></div>
-                        <h4 class="h4">Nos agréments</h4>
-                        <div class="line-title"></div>
+                        <h4 class="title">Nos agréments</h4>
                     </div>
                 </div>
 
@@ -48,16 +46,16 @@
                         <div class="footer__connect-socials">
                             <h5 class="h5">Suivez nous</h5>
                             <div>
-                                <a href="https://www.facebook.com/acerolacarriere" target="_blank">
+                                <a href="https://www.facebook.com/acerolacarriere" target="_blank" class="facebook">
                                     <?php echo get_build_icon_path('facebook.svg') ?>
                                 </a>
-                                <a href="https://twitter.com/AcerolaCarriere" target="_blank">
+                                <a href="https://twitter.com/AcerolaCarriere" target="_blank" class="twitter">
                                     <?php echo get_build_icon_path('twitter.svg') ?>
                                 </a>
-                                <a href="https://www.linkedin.com/profile/view?id=222313042" target="_blank">
+                                <a href="https://www.linkedin.com/profile/view?id=222313042" target="_blank" class="linkedin">
                                     <?php echo get_build_icon_path('linkedin.svg') ?>
                                 </a>
-                                <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" target="_blank">
+                                <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" target="_blank" class="viadeo">
                                     <?php echo get_build_icon_path('viadeo.svg') ?>
                                 </a>
                             </div>

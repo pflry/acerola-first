@@ -1,8 +1,9 @@
 //
-// Sidebar
+// Sidebar static
 // --------------------------------------------------
 
 .sidebar {
+    align-self: flex-start;
     display: none;
     flex: 0 1 auto;
     margin-left: 0.9375rem;
@@ -12,40 +13,30 @@
     top: 2rem;
     width: 35%;
 
+    .ul-wrapper {
+        @extend %ul-reset;
+    }
+
     @media screen and (min-width: $intermediate) {
         display: block;
-    }
-}
-
-// side standard
-.side-standard {
-    align-self: flex-start;
-
-    ul li {
-        border-radius: $border-radius;
-        position: relative;
-    }
-
-    ul li + li {
-        margin-top: 1.375rem;
-    }
-
-    .ul-wrapper,
-    .ul-wrapper > li,
-    .ul-wrapper > li p:last-child,
-    .ul-wrapper > li:last-child ul {
-        margin-bottom: 0
     }
 }
 
 
 // Static widgets
 // -----------------------------------
+.widget {
+    background-color: $color-office-dark;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    position: relative;
+}
+
 .widget-title {
-    color: $color-base;
+    color: $white;
     font-family: $font-family-base;
     font-size: $font-size-sm;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 2px;
     line-height: 1;
     margin: 0;
@@ -55,31 +46,86 @@
 }
 
 .widget .feather {
+    color: $cyanide;
     float: left;
+    height: auto;
     margin-right: 0.5rem;
-    vertical-align: bottom;
+    stroke-width: 1.5px;
+    width: auto;
+}
+
+// Widget contact
+.widget__contact {
+    background-color: $office-azur;
+    margin-top: 0.5rem;
+}
+
+.widget__contact .contact {
+    background-color: $color-office-dark;
+    border-radius: $border-radius;
+    color: $white;
+    padding: 1rem;
+    line-height: 1.8;
+
+    a {
+        color: $white;
+    }
+
+    div {
+        display: block;
+    }
+
+    div:last-child {
+        margin-top: 0.35rem;
+    }
+
+    span {
+        @extend %bullet;
+        display: none;
+    }
+
+    @media screen and (min-width: 872px) {
+        line-height: $line-height-base;
+
+        div {
+            display: inline-block;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .feather {
+            float: none;
+            display: inline-block;
+            margin-right: 0.25rem;
+            vertical-align: bottom;
+        }
+
+        div:last-child {
+            margin-top: 0;
+        }
+    }
 }
 
 // Widget office
 .widget__office {
-    background-color: shade($office-azur, 30%);
-    padding: 1rem;
+    background-color: $office-azur;
+    margin-top: 0.5rem;
 }
 
-.widget__office .widget-title {
-    color: $white;
-    padding: 0 0 1rem;
-}
 
 .widget__office .office {
-    background-color: $office-azur;
+    background-color: $color-office-dark;
     color: $white;
-    font-size: $font-size-sm;
     padding: 1rem;
-    border-radius: $border-radius;
+
+    &:last-child {
+        border-radius: 0 0 $border-radius $border-radius;
+    }
 
     & + .office {
-        margin-top: 0.75rem;
+       border-top: solid 2px $office-azur;
     }
 
     .office--name {
@@ -87,46 +133,66 @@
         margin-bottom: 0.1rem;
         text-transform: uppercase;
     }
+}
 
-    .feather {
-        float: left;
-        height: auto;
-        margin-right: 0.5rem;
-        transform: translateY(0.15rem);
-        width: auto;
-        color: $color-primary;
+// Widget search
+.widget__search {
+    background-color: transparent;
+    margin-top: 2rem;
+    padding-top: 1.9rem;
+    border-top: solid 1px $color-border;
+}
+
+.widget__search .search-form {
+    width: 100%;
+    display: flex;
+
+    .form-control {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: $gray-300;
+        border: none;
+    }
+    
+    .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 }
 
-// Widget contact
-.widget__contact {
-    @extend .widget__office;
+
+// Widget newsletter
+.widget__newsletter {
+    margin-top: 1.375rem;
 }
 
-.widget__contact .contact {
-    background-color: $office-azur;
-    font-size: $font-size-sm;
-    padding: 1rem;
-    color: $white;
-    border-radius: $border-radius;
+.widget__newsletter .register {
+    padding: 0 0 1rem;
+    text-align: center;
 
-    a {
-        color: $white;
+    .btn {
+        padding: 0.375rem 0.45rem;
     }
 
-    .feather {
-        color: $color-primary;
-        transform: translateY(-0.15rem);
-    }
+    @media screen and (min-width: 920px) {
+        padding: 0 0 1rem 1rem;
+        text-align: left;
 
-    div + div {
-        margin-top: 0.75rem;
+        .btn {
+            padding: 0.375rem 0.75rem;
+        }
     }
 }
 
 // Widget follow
 .widget__follow {
     background-color: $color-primary;
+    margin-top: 1.375rem;
+}
+
+.widget__follow .widget-title {
+    color: $color-base;
+    font-weight: 400;
 }
 
 .widget__follow .socials {
@@ -145,20 +211,20 @@
 }
 
 .widget__follow .socials .facebook {
-    @include social($facebook-color);
+    @include social($facebook-color, $gray-200);
     border-bottom-left-radius: $border-radius;
 }
 
 .widget__follow .socials .twitter {
-    @include social($twitter-color);
+    @include social($twitter-color, $gray-200);
 }
 
 .widget__follow .socials .linkedin {
-    @include social($linkedin-color);
+    @include social($linkedin-color, $gray-200);
 }
 
 .widget__follow .socials .viadeo {
-    @include social($viadeo-color);
+    @include social($viadeo-color, $gray-200);
     border-bottom-right-radius: $border-radius;
 }
 
@@ -171,24 +237,5 @@
 
     &:hover {
         background-color: $gray-500;
-    }
-}
-
-// Widget newsletter
-.widget__newsletter {
-    background-color: shade($office-azur, 30%);
-}
-
-.widget__newsletter .widget-title {
-    color: $white;
-}
-
-.widget__newsletter .register {
-    padding: 0 0 1rem;
-    text-align: center;
-
-    @media screen and (min-width: 920px) {
-        padding: 0 0 1rem 1rem;
-        text-align: left;
     }
 }

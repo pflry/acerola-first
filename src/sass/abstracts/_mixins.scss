@@ -99,10 +99,15 @@
 }
 
 // Socials sidebar
-@mixin social($color) {
+@mixin social($color, $bgcolor) {
     background-color: $color;
+    transition: $transition-base;
 
     &:hover {
-        background-color: shade($color, 40%);
+        background-color: $bgcolor;
+
+        > .feather {
+            fill: $color;
+        }
     }
 }

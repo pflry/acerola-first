@@ -17,6 +17,7 @@
             <div>
                 <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93
             </div>
+            <span>&bullet;</span>
             <div>
                 <?php echo get_build_icon_path('mail.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">Par E-mail</a>
             </div>
@@ -42,6 +43,19 @@
     </div>
 </li>
 
+<li class="widget widget__search">
+    <div class="site-search">
+        <?php get_search_form(); ?>
+    </div>
+</li>
+
+<li class="widget widget__newsletter">
+    <h3 class="widget-title">Restez informé</h3>
+    <div class="register">
+        <a href="http://eepurl.com/dnrOCP" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
+    </div>
+</li>
+
 <li class="widget widget__follow">
     <h3 class="widget-title">Suivez nous</h3>
     <div class="socials">
@@ -57,12 +71,5 @@
         <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" target="_blank" class="viadeo">
             <?php echo get_build_icon_path('viadeo.svg') ?>
         </a>
-    </div>
-</li>
-
-<li class="widget widget__newsletter">
-    <h3 class="widget-title">Restez informé</h3>
-    <div class="register">
-        <a href="http://eepurl.com/dnrOCP" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
     </div>
 </li>

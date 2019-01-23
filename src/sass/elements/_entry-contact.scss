@@ -4,38 +4,26 @@
 
 .entry-contact {
     @extend %well;
-}
+    background-color: $office-azur;
+    display: block;
+    color: $white;
 
-.entry-contact__header {
-    display: none;
-    padding-right: 1rem;
-
-    .logo-acerola-filet {
-        color: $color-headings;
-        height: 50px;
-        width: auto;
-
-        .ball {
-            color: $color-primary;
-        }
-    }
-
-    @media screen and (min-width: $medium) {
-        display: block;
-    }
-}
-
-.entry-contact__body {
-    flex: 1 1 auto;
-
-    .h5 {
-        font-family: $font-family-title;
+    .title {
+        @extend %titre-service;
         margin: 0;
+        color: $white;
+
+    }
+
+    a {
+        color: $color-primary;
     }
 
     .horaires {
         display: block;
         font-size: $font-size-sm;
+        color: white(0.7);
+        font-weight: 300;
     }
 
     ul {
@@ -43,7 +31,11 @@
     }
 
     li,
-    li + li {
+    li+li {
         margin: 0.35rem 0 0 !important;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: none;
     }
 }

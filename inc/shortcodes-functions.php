@@ -162,7 +162,7 @@ function download_plaquette( $atts ) {
 					</span>
     			</div>
 				<div class="entry-download__body">
-					<a href="'. esc_attr($a['src']) .'" class="btn btn-primary">
+					<a href="'. esc_attr($a['src']) .'" class="btn btn-pdf">
 						'. get_build_icon_path('file.svg') .'
 						'. $name .'
 					</a>

@@ -44,8 +44,15 @@
     @include bouton($color-danger);
 }
 
+.btn-pdf {
+    @include bouton($pdf-color);
+    // background-image: icon('pdf.svg');
+    // background-repeat: no-repeat;
+    // background-size: 1.5rem 1.5rem;
+}
+
 .btn-scrolltop {
-    @extend .btn-primary;
+    @extend .btn-success;
     border-radius: 50%;
     bottom: 55px;
     height: 50px;
@@ -57,7 +64,7 @@
     z-index: 1000;
 
     @media screen and (min-width: $medium) {
-        bottom: 25px;
+        bottom: 60px;
         right: 1rem;
     }
 }

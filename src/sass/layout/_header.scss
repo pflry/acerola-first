@@ -155,22 +155,10 @@
 }
 
 .site-title .logo-acerola {
-    color: $color-content-header-top;
+    @extend %darkblue;
     height: 67px;
     margin-top: 1rem;
     width: auto;
-
-    .acerola {
-        color: $white;
-    }
-
-    .ball {
-        color: $color-primary;
-    }
-
-    .carriere {
-        color: $color-content-header-top;
-    }
 }
 
 // search field

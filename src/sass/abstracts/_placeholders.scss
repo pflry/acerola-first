@@ -2,7 +2,35 @@
 // Placeholders
 // --------------------------------------------------
 
+// Typography
+// -----------------------------------
+%bullet {
+    color: inherit;
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 0;
+    padding: 0 0.25rem;
+    transform: translateY(0.25rem);
+}
 
+%ul-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+%titre-service {
+    color: inherit;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+// Elements
+// -----------------------------------
 %well {
     background-color: $color-light;
     border-radius: $border-radius;
@@ -11,6 +39,37 @@
     padding: 1rem;
 }
 
+// Logo full
+// -----------------------------------
+
+// fonds clairs
+%darkblue {
+    color: shade($office-azur, 50%);
+
+    .acerola {
+        color: $white;
+    }
+
+    .ball {
+        color: $color-primary;
+    }
+
+    .carriere {
+        color: $color-content-header-top;
+    }
+}
+
+// Logo filaire
+// -----------------------------------
+
+// fonds foncés
+%lightgray {
+    color: $color-light;
+
+    .ball {
+        color: $color-primary;
+    }
+}
 
 // Utilities
 // -----------------------------------
@@ -26,12 +85,6 @@
     position: fixed;
     right: 0;
     top: 0;
-}
-
-%ul-reset {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 %box-shadow {
