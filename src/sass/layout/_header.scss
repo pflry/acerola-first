@@ -38,13 +38,8 @@
     order: 0;
 
     .signature {
-        font-family: $font-family-title;
-        font-size: 1.15rem;
-        font-weight: 600;
-
-        span {
-            font-weight: 600;
-        }
+        @extend %titre-service;
+        font-weight: 500;
     }
 
     .agence {
@@ -57,11 +52,7 @@
     }
 
     .bullet {
-        display: inline-block;
-        font-size: 1.5rem;
-        line-height: 0;
-        padding: 0 0.25rem;
-        transform: translateY(0.25rem);
+        @extend %bullet;
         color: $color-content-header-top;
     }
 
@@ -160,42 +151,6 @@
     margin-top: 1rem;
     width: auto;
 }
-
-// search field
-// .site-search {
-//     display: none;
-//     padding-left: 0.9375rem;
-//     width: 35%;
-
-//     @media screen and (min-width: $medium) {
-//         display: block;
-//     }
-// }
-
-// .site-search .search-form {
-//     display: flex;
-//     justify-content: flex-end;
-
-//     .search-field {
-//         background-color: $white;
-//         border-color: transparent;
-//         height: 24px;
-//         max-width: 100% !important;
-//         position: relative;
-
-//         &::placeholder {
-//             color: tint($color-base, 20%);
-//         }
-//     }
-
-//     .search-submit {
-//         background-color: transparent;
-//         border-radius: 0 $border-radius $border-radius 0;
-//         border: none;
-//         color: $color-content-header-top;
-//         position: absolute;
-//     }
-// }
 
 // Breadcrumb
 // -----------------------------------

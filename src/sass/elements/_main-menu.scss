@@ -91,7 +91,7 @@
     z-index: 100;
 
     &:after {
-        border-color: transparent transparent shade($office-azur, 35%) transparent;
+        border-color: transparent transparent shade($office-azur, 50%) transparent;
         border-style: solid;
         border-width: 0 0 1rem 1.35rem;
         content: '';
@@ -106,7 +106,7 @@
 }
 
 .site-menu .menu ul .menu-item a {
-    background-color: shade($office-azur, 35%);
+    background-color: shade($office-azur, 50%);
     border: none;
     color: white(0.5);
     display: block;
@@ -127,7 +127,7 @@
 .site-menu .menu ul .menu-item {
     a:hover,
     &.active > a {
-        background-color: shade($office-azur, 35%);
+        background-color: shade($office-azur, 50%);
         color: $white;
     }
 
