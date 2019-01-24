@@ -2,6 +2,17 @@
 // Single blog post
 // --------------------------------------------------
 
+
+.entry-category {
+    @extend %titre-service;
+    font-size: $font-size-h3;
+    margin-bottom: 0;
+
+    a {
+        color: $color-primary;
+    }
+}
+
 .entry-footer {
     background-color: $color-light;
     border-radius: $border-radius;

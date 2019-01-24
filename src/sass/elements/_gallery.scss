@@ -18,6 +18,10 @@
         max-width: 23%;
         min-height: 380px;
     }
+
+    @media (min-width: $x-large) {
+        min-height: 410px;
+    }
 }
 
 .team-member figcaption {

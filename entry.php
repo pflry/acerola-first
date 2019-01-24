@@ -1,5 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
+        <h3 class="entry-category"><?php the_category( ' ' ); ?></h3>
         <?php if ( is_singular() ) { ?>
             <h1 class="entry-title"><?php the_title(); ?></h1>
         <?php } else { ?>
@@ -9,7 +10,8 @@
             </h2>
         <?php } ?>
         
-        <?php the_post_thumbnail('full', ['class' => 'img-fluid', 'title' => 'Feature image']); ?>
+        <?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?>
+         <?php get_template_part( 'entry-meta' ); ?>
         <?php edit_post_link(); ?>
         
     </header>
