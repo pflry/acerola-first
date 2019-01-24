@@ -11,7 +11,7 @@
     padding-bottom: 2rem;
     position: sticky;
     width: 35%;
-    top: -30.5rem;
+    top: -31.125rem;
 
     .ul-wrapper {
         @extend %ul-reset;
@@ -29,7 +29,12 @@
     background-color: $color-office-dark;
     border-radius: $border-radius;
     font-size: $font-size-sm;
+    margin-top: 1.375rem;
     position: relative;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .widget-title {
@@ -54,7 +59,6 @@
 // Widget contact
 .widget__contact {
     background-color: $office-azur;
-    margin-top: 0.5rem;
 }
 
 .widget__contact .contact {
@@ -105,7 +109,6 @@
 // Widget office
 .widget__office {
     background-color: $office-azur;
-    margin-top: 0.5rem;
 }
 
 
@@ -170,10 +173,6 @@
 
 
 // Widget newsletter
-.widget__newsletter {
-    margin-top: 1.375rem;
-}
-
 .widget__newsletter .register {
     padding: 0 0 1rem;
     text-align: center;
@@ -195,7 +194,6 @@
 // Widget follow
 .widget__follow {
     background-color: $color-primary;
-    margin-top: 1.375rem;
 }
 
 .widget__follow .widget-title {
@@ -244,11 +242,15 @@
 
 // Widget approval (agréments)
 .widget__approval {
-    margin-top: 1.375rem;
-    background-color: $color-info;
+    background-color: $color-primary;
+
+    .widget-title {
+        color: $color-base;
+        font-weight: 400;
+    }
 }
 .widget__approval .approval-body {
-    background-color: tint($color-info, 90%);
+    background-color: tint($color-primary, 30%);
     padding: 1.5rem 0 1rem;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;

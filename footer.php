@@ -2,34 +2,6 @@
 
         <footer id="footer" role="contentinfo" class="footer">
 
-            <div class="footer__approval">
-                <div class="container">
-                    <div class="footer__approval--title">
-                        <h4 class="title">Nos agréments</h4>
-                    </div>
-                </div>
-
-                <div class="container container-block">
-                    <div class="carousel">
-                        <a href="https://www.fongecif-idf.fr/" target="_blank" rel="noopener noreferrer">
-                            <img src="<?php echo get_build_img_path('logo-fongecif.png') ?>" alt="Fongecif">
-                        </a>
-                        <a href="https://www.afdas.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="<?php echo get_build_img_path('logo-afdas.png') ?>" alt="Afdas">
-                        </a>
-                        <a href="https://www.data-dock.fr/" target="_blank" rel="noopener noreferrer">
-                            <img src="<?php echo get_build_img_path('logo-datadock.png') ?>" alt="Datadock">
-                        </a>
-                        <a href="http://www.agefos-pme.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="<?php echo get_build_img_path('logo-agefos.jpg') ?>" alt="Agefos PME">
-                        </a>
-                        <a href="http://www.opcalia.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="<?php echo get_build_img_path('logo-opcalia.png') ?>" alt="Opcalia">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
             <div class="footer__infos">
                 <div class="container">
 

@@ -21,6 +21,8 @@
             <div class="entry-links"><?php wp_link_pages(); ?></div>
         </section>
 
+        <?php get_template_part( 'page-block-approval' ); ?>
+
         <?php get_template_part( 'page-block-contact' ); ?>
 
     </article>
