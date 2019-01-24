@@ -52,6 +52,18 @@ body {
     max-width: 1000px;
     padding: 0 1.875rem;
     width: 100%;
+
+    @media screen and (min-width: $medium) {
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: $large) {
+        max-width: 960px;
+    }
+    
+    @media screen and (min-width: $x-large) {
+        max-width: 1170px;
+    }
 }
 
 .container-main {
@@ -60,26 +72,48 @@ body {
     padding-top: 0.875rem;
 
     @media screen and (min-width: $medium) {
-        max-width: 768px;
         padding-top: 1.875rem;
     }
 
-    @media screen and (min-width: $intermediate) {
-        max-width: 1000px;
+    @media screen and (min-width: $large) {
         padding-bottom: 2rem;
         padding-top: 2rem;
     }
+
 }
 
 // main
-.page-main {
+.page-main,
+.single-main {
     flex: 0 1 auto;
     width: 100%;
 
-    @media screen and (min-width: $intermediate) {
+    @media screen and (min-width: $large) {
         margin-right: 0.9375rem;
         order: 1;
-        width: 65%;
+        width: 67%;
+    }
+
+    @media screen and (min-width: $x-large) {
+        margin-right: 1.875rem;
+        width: 70%;
+    }
+}
+
+.sidebar {
+    display: none;
+    flex: 0 1 auto;
+    margin-left: 0.9375rem;
+    order: 2;
+    width: 33%;
+
+    @media screen and (min-width: $large) {
+        display: block;
+    }
+
+    @media screen and (min-width: $x-large) {
+        margin-left: 1.875rem;
+        width: 30%;
     }
 }
 

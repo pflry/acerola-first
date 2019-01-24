@@ -4,21 +4,12 @@
 
 .sidebar {
     align-self: flex-start;
-    display: none;
-    flex: 0 1 auto;
-    margin-left: 0.9375rem;
-    order: 2;
     padding-bottom: 2rem;
     position: sticky;
-    width: 35%;
     top: -31.125rem;
 
     .ul-wrapper {
         @extend %ul-reset;
-    }
-
-    @media screen and (min-width: $intermediate) {
-        display: block;
     }
 }
 

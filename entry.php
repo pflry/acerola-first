@@ -8,7 +8,8 @@
                 <?php  echo wp_trim_words( get_the_title(), $num_words = 10, $more = '&hellip;' ); ?></a>
             </h2>
         <?php } ?>
-
+        
+        <?php the_post_thumbnail('full', ['class' => 'img-fluid', 'title' => 'Feature image']); ?>
         <?php edit_post_link(); ?>
         
     </header>
