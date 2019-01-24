@@ -106,8 +106,8 @@
     &:hover {
         background-color: $bgcolor;
 
-        > .feather {
-            fill: $color;
+        > .icon {
+            color: $color;
         }
     }
 }

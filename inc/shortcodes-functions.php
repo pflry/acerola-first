@@ -91,11 +91,11 @@ function alert_func( $atts, $content = null ) {
 			break;
 		case 'warning':
 			$class = 'alert-warning';
-			$icon = get_build_icon_path('alert-circle.svg');
+			$icon = get_build_icon_path('warning.svg');
 			break;
 		case 'danger':
 			$class = 'alert-danger';
-			$icon = get_build_icon_path('alert-triangle.svg');
+			$icon = get_build_icon_path('danger.svg');
 			break;
 		default:
 			$class = 'alert-info';

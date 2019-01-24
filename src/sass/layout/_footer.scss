@@ -19,6 +19,7 @@
 .footer__approval {
     background-color: tint($color-info, 90%);
     height: 180px;
+    display: none;
 }
 
 // titre
@@ -127,13 +128,13 @@
 }
 
 .footer__connect-contact .contact {
-    .feather {
+    font-size: $font-size-sm;
+
+    .icon {
         color: $color-light;
         height: $font-size-base;
         margin-right: 0.25rem;
-        stroke-width: 1.5px;
-        transform: translateY(-0.075rem);
-        width: auto;
+        vertical-align: middle;
     }
 
     .bullet {
@@ -151,9 +152,8 @@
     border-radius: 50%;
     border: none;
     display: inline-block;
-    padding: 0.5rem;
     text-align: center;
-    width: 42px;
+    width: 2.625rem;
 
     & + a {
         margin-left: 0.75rem;
@@ -178,13 +178,13 @@
         @include social($viadeo-color, $color-light);
     }
 
-    .feather {
-        fill: $white;
-        height: 1.5rem;
-        stroke-width: 0;
+    .icon {
+        color: $white;
+        display: inline-block;
+        height: 1.25rem;
+        margin: 0.688rem 0;
         transition: $transition-base;
-        vertical-align: bottom;
-        width: auto;
+        vertical-align: middle;
     }
 
 }
@@ -210,11 +210,16 @@
         text-transform: uppercase;
     }
 
-    .feather {
+    .office--picto {
         color: $office-azur;
-        float: left;
-        margin-right: 0.5rem;
-        transform: translateY(0.15rem);
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .office--address {
+        display: inline-block;
+        padding: 0.1rem 0 0 0.25rem;
+        color: white(0.8);
     }
 }
 
@@ -237,7 +242,7 @@
 // -----------------------------------
 .footer__legal {
     background-color: shade($office-azur, 52%);
-    color: $color-light;
+    color: shade($color-info, 5%);
 
     .container {
         align-items: center;
@@ -251,7 +256,7 @@
     }
 
     a {
-        color: $color-light;
+        color: shade($color-info, 5%);
         text-decoration: none;
 
         &:hover {
@@ -264,6 +269,7 @@
 .footer__legal .copyright {
     flex: 0 1 auto;
     font-size: $font-size-sm;
+    font-weight: 300;
 }
 
 .footer__legal .copyright .blog-name {
@@ -279,9 +285,9 @@
 
     .menu-item {
         display: inline-block;
+        font-size: 0.75rem;
         padding-right: 1rem;
         text-transform: uppercase;
-        font-size: 0.75rem;
     }
 
     @media screen and (min-width: $medium) {

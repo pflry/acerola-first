@@ -39,7 +39,7 @@
                             <div class="welcome">Prenez contact dès maintenant, nous vous réservons le meilleur accueil.</div>
 
                             <div class="contact">
-                                <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93<span class="bullet">•</span><?php echo get_build_icon_path('mail.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">contact</a>
+                                <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93<span class="bullet">•</span><?php echo get_build_icon_path('email.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">Par E-mail</a>
                             </div>
                         </div>
 
@@ -65,16 +65,25 @@
                     <div class="footer-office">
                         <h5 class="h5">Nos bureaux</h5>
                         <div class="office">
-                           <div class="office--name">Acérola Carrière Paris</div>
-                           <?php echo get_build_icon_path('map-pin.svg') ?>24 Rue Mogador<br>75009 Paris
+                            <div class="office--name">Acérola Carrière Paris</div>
+                            <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
+                            <div class="office--address">
+                                24 Rue Mogador<br>75009 Paris
+                            </div>
                         </div>
                         <div class="office">
-                            <div class="office--name">Acérola Carrière Neuilly-Plaisance</div>
-                            <?php echo get_build_icon_path('map-pin.svg') ?>3 quater avenue Victor Hugo<br>93360 Neuilly-Plaisance
+                            <div class="office--name">Acérola Carrière Neuilly Plaisance</div>
+                            <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
+                            <div class="office--address">
+                                3 quater avenue Victor Hugo<br>93360 Neuilly-Plaisance
+                            </div>
                         </div>
                         <div class="office">
                             <div class="office--name">Acérola Carrière Montévrain</div>
-                            <?php echo get_build_icon_path('map-pin.svg') ?>14 avenue de l'Europe<br>77144 Montévrain
+                            <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
+                            <div class="office--address">
+                                14 avenue de l'Europe<br>77144 Montévrain
+                            </div>
                         </div>
                     </div> 
                     
@@ -96,7 +105,7 @@
                     </nav>
 
                     <div id="copyRight" class="copyright">
-                        <?php echo sprintf( __( '%1$s%2$s', 'pflry' ), '&copy;', date( 'Y' ) );  ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="blog-name">acérola <span>carrière</span></a>
+                        <?php echo sprintf( __( '%1$s%2$s', 'pflry' ), '&copy;', date( 'Y' ) );  ?><span class="blog-name">acérola carrière</span>
                     </div>
                 </div>
             </div>

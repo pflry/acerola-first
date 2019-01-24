@@ -39,6 +39,14 @@
     padding: 1rem;
 }
 
+%btn-icon {
+    padding-left: 0.5rem !important;
+
+    .icon {
+        padding-right: 0.25rem;
+    }
+}
+
 // Logo full
 // -----------------------------------
 
@@ -68,6 +76,14 @@
 
     .ball {
         color: $color-primary;
+    }
+}
+
+%lightyellow {
+    color: $color-primary;
+
+    .ball {
+        color: $white;
     }
 }
 

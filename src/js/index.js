@@ -59,7 +59,10 @@ app.slickCarousel = {
                 speed: 300,
                 slidesToShow: 1,
                 centerMode: true,
-                variableWidth: true
+                variableWidth: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false
             });
         });  
     }

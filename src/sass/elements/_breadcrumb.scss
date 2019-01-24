@@ -22,10 +22,9 @@
         color: $link-color-breadcrumb-active;
     }
 
-    .feather {
-        height: 1rem;
-        stroke-width: 3px;
-        stroke: $color-breadcrumb-icon;
+    .icon {
+        height: 1.25rem;
+        color: $color-breadcrumb-icon;
         transform: translateY(-1px);
     }
 }

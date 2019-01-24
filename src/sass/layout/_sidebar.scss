@@ -10,8 +10,8 @@
     order: 2;
     padding-bottom: 2rem;
     position: sticky;
-    top: 2rem;
     width: 35%;
+    top: -30.5rem;
 
     .ul-wrapper {
         @extend %ul-reset;
@@ -45,13 +45,10 @@
     transform: translateY(2px);
 }
 
-.widget .feather {
+.widget .icon {
     color: $cyanide;
     float: left;
-    height: auto;
-    margin-right: 0.5rem;
-    stroke-width: 1.5px;
-    width: auto;
+    margin-right: 0.25rem;
 }
 
 // Widget contact
@@ -95,11 +92,8 @@
             display: inline-block;
         }
 
-        .feather {
+        .icon {
             float: none;
-            display: inline-block;
-            margin-right: 0.25rem;
-            vertical-align: bottom;
         }
 
         div:last-child {
@@ -119,6 +113,9 @@
     background-color: $color-office-dark;
     color: $white;
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
     &:last-child {
         border-radius: 0 0 $border-radius $border-radius;
@@ -132,6 +129,17 @@
         font-weight: 500;
         margin-bottom: 0.1rem;
         text-transform: uppercase;
+        flex: 1 1 100%;
+    }
+
+    .office--picto {
+        flex: 0 1 auto;
+    }
+
+    .office--address {
+        flex: 1 1 auto;
+        padding: 0.1rem 0 0 0.25rem;
+        color: white(0.8);
     }
 }
 
@@ -200,14 +208,8 @@
     height: 66px;
 }
 
-.widget__follow .socials .feather {
-    fill: $white;
-    stroke-width: 0;
-
-    &.feather-viadeo {
-        height: 1.5rem;
-        width: auto;
-    }
+.widget__follow .socials .icon {
+    color: $white;
 }
 
 .widget__follow .socials .facebook {
@@ -238,4 +240,34 @@
     &:hover {
         background-color: $gray-500;
     }
+}
+
+// Widget approval (agréments)
+.widget__approval {
+    margin-top: 1.375rem;
+    background-color: $color-info;
+}
+.widget__approval .approval-body {
+    background-color: tint($color-info, 90%);
+    padding: 1.5rem 0 1rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    .slick-next {
+        right: -0.2rem;
+    }
+
+    .slick-prev {
+        left: -0.2rem;
+    }
+}
+
+.widget__approval .carousel a {
+    padding: 0 3.75rem;
+}
+
+.widget__approval .carousel img {
+    max-height: 80px;
+    outline: none;
+    width: auto;
 }

@@ -36,7 +36,7 @@
 <body <?php body_class(); ?>>
     <section id="mobalMenu" class="mobile-menu">
         <button class="menu-toggle active">
-            <?php echo get_build_icon_path('x.svg') ?>
+            <?php echo get_build_icon_path('close.svg') ?>
         </button>
         <div class="container">
             <div id="search" class="mobile-menu__search">
@@ -75,7 +75,7 @@
                         <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93
                     </span>
                     <span class="contact-email">
-                        <?php echo get_build_icon_path('mail.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">contact</a>
+                        <?php echo get_build_icon_path('email.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">contact</a>
                     </span>
                 </div>
 
