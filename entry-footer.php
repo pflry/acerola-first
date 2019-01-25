@@ -1,4 +1,3 @@
-<span class="tag-links"><?php the_tags( 'Tags : ', '&nbsp;' ); ?></span>
 <footer class="entry-footer">
     <?php if ( is_singular() ) { ?>
         <span class="last-update">Dernière mise à jour le <span><?php the_modified_date(); ?></span></span>

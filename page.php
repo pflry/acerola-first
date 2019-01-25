@@ -1,5 +1,7 @@
 <?php
 /**
+ * Template Name: page
+ * 
  * The template for displaying single page
  *
  * Displays standard single page.
