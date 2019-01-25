@@ -16,23 +16,46 @@
     }
 }
 
+.entry-meta__author {
+    color: $gray-700;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    padding: 0 0 1.375rem;
+
+    .bullet {
+        @extend %bullet;
+    }
+
+    .icon {
+        margin-right: 0.25rem;
+        color: $color-primary;
+    }
+
+    .author {
+        font-weight: 500;
+    }
+}
+
 .entry-meta .avatar {
     border-radius: 50%;
 }
 
 .entry-meta .content {
     display: flex;
+    align-items: center;
+    height: 20px;
+    margin: 0.5rem 0; 
 }
 
 .entry-meta__date {
+    color: $gray-700;
     flex: 0 1 auto;
     font-size: $font-size-sm;
     display: block;
 
     .icon {
-        height: $font-size-base;
-        margin-right: 0.15rem;
-        vertical-align: top;
+        margin-right: 0.25rem;
+        color: $color-primary;
     }
 }
 
