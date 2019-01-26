@@ -34,5 +34,3 @@ if ($siteurl === 'https://pflry.eu') {
 		return 'https://cdn.pflry.eu';
 	});
 }
-
-?>

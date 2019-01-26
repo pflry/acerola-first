@@ -68,10 +68,14 @@ body {
 
 .container-main {
     align-items: stretch;
-    padding-bottom: 1.875rem;
+    padding-bottom: 0.9rem;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 0.875rem;
 
-    @media screen and (min-width: $medium) {
+    @media screen and (min-width: $small) {
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
         padding-top: 1.875rem;
     }
 
@@ -149,9 +153,13 @@ body {
 
 // img
 .img-fluid {
-    border-radius: $border-radius;
+    border-radius: 0;
     height: auto;
     max-width: 100%;
+
+    @media screen and (min-width: $small) {
+        border-radius: $border-radius;
+    }
 }
 
 // utilities

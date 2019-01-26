@@ -9,9 +9,12 @@
                 <?php  echo wp_trim_words( get_the_title(), $num_words = 10, $more = '&hellip;' ); ?></a>
             </h2>
         <?php } ?>
-        
+        <?php get_template_part( 'entry-meta' ); ?>
+
         <?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?>
-         <?php get_template_part( 'entry-meta' ); ?>
+        
+        <?php get_template_part( 'entry-social' ); ?>
+         
         <?php edit_post_link(); ?>
         
     </header>

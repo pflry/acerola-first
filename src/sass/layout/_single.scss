@@ -2,12 +2,20 @@
 // Single blog post
 // --------------------------------------------------
 
+.bullet {
+    @extend %bullet;
+}
 
+// Entry metas
+// -----------------------------------
+
+// Category
 .entry-category {
-    letter-spacing: 6px;
-    font-weight: 500; 
-    font-size: $font-size-lg;
+    @extend %mobile;
     font-family: $font-family-base;
+    font-size: $font-size-lg;
+    font-weight: 500; 
+    letter-spacing: 6px;
     margin: 0;
     text-transform: uppercase;
 
@@ -16,54 +24,49 @@
     }
 }
 
-.entry-meta__author {
+// Author & publication
+.entry-meta {
+    @extend %mobile;
     color: $gray-700;
     font-size: $font-size-sm;
-    text-transform: uppercase;
-    padding: 0 0 1.375rem;
+    min-height: 1.875rem;
+    padding-bottom: 0.375rem; 
+}
 
-    .bullet {
-        @extend %bullet;
-    }
-
-    .icon {
-        margin-right: 0.25rem;
-        color: $color-primary;
-    }
+.entry-meta__author {
+    display: inline-block;
 
     .author {
         font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .icon {
+        margin: -0.1rem 0 0 0.25rem;
+        padding: 0;
+        vertical-align: middle;
     }
 }
 
-.entry-meta .avatar {
-    border-radius: 50%;
-}
-
-.entry-meta .content {
-    display: flex;
-    align-items: center;
-    height: 20px;
-    margin: 0.5rem 0; 
-}
-
 .entry-meta__date {
-    color: $gray-700;
-    flex: 0 1 auto;
-    font-size: $font-size-sm;
-    display: block;
+    display: inline-block;
 
-    .icon {
-        margin-right: 0.25rem;
-        color: $color-primary;
+    .entry-date,
+    .bullet {
+        display: none;
+    }
+
+    @media screen and (min-width: $small) {
+        .entry-date,
+        .bullet {
+            display: inline-block;
+        }
     }
 }
 
 .entry-meta__tag {
     display: block;
-    text-align: right;
     font-size: $font-size-sm;
-    flex: 1 1 auto;
 
     .icon {
         color: $color-info;
@@ -87,9 +90,27 @@
     }
 }
 
-.single-post .entry-content {
-    padding-bottom: 1rem;
+// Entry content
+// -----------------------------------
+
+// title
+.entry-title {
+    @extend %mobile;
 }
+
+// post-image
+.wp-post-image {
+    margin-bottom: 1.375rem;
+}
+
+// content
+.entry-content {
+    @extend %mobile;
+}
+
+
+
+
 
 .entry-footer {
     background-color: $color-light;

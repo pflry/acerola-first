@@ -3,7 +3,11 @@
 // --------------------------------------------------
 
 .entry-approval {
-    margin-bottom: 1.375rem;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $small) {
+        margin-bottom: 1.375rem;
+    }
 
     @media screen and (min-width: $intermediate) {
         display: none;
@@ -18,7 +22,11 @@
 .entry-approval__content {
     background-color: tint($color-primary, 25%);
     height: 165px;
-    border-radius: $border-radius,
+    border-radius: 0;
+
+    @media screen and (min-width: $small) {
+        border-radius: $border-radius;
+    }
 }
 
 // titre

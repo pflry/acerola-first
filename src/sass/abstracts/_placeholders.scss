@@ -2,6 +2,17 @@
 // Placeholders
 // --------------------------------------------------
 
+
+%mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media screen and (min-width: $small) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 // Typography
 // -----------------------------------
 %bullet {

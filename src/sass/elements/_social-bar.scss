@@ -1,0 +1,107 @@
+//
+// Block social share
+// --------------------------------------------------
+
+.social-bar {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 44px;
+    justify-content: flex-start;
+    margin-bottom: 1.375rem;
+
+    div {
+        flex: 1 1 auto;
+    }
+
+    a {
+        align-items: center;
+        color: $white;
+        display: flex;
+        height: 44px;
+        justify-content: center;
+        transition: $transition-base;
+    }
+
+    a:hover {
+        background-color: $gray-300 !important;
+        text-decoration: none;
+    }
+
+    .icon {
+        height: 1rem;
+        margin-left: -0.5rem;
+    }
+
+    .title {
+        display: inline-block;
+        font-size: $font-size-sm;
+        margin-left: 0.75rem;
+        line-height: 1.4;
+    }
+}
+
+.social-bar .acerola {
+    flex: 0 1 auto;
+    margin: -1px 0 0 -2px;
+    padding-right: 0.5rem;
+
+    a {
+        padding-left: 0;
+    }
+
+    .logo-acerola-filet {
+        color: $color-dark;
+        height: 46px;
+        width: auto;
+
+        .ball {
+            color: $color-primary;
+        }  
+    }
+}
+
+.social-bar .facebook a {
+    background-color: $facebook-color;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    &:hover {
+        color: $facebook-color;
+    }
+}
+
+.social-bar .twitter a {
+    background-color: $twitter-color;
+
+    &:hover {
+        color: $twitter-color;
+    }
+}
+
+.social-bar .linkedin a {
+    background-color: $linkedin-color;
+
+    &:hover {
+        color: $linkedin-color;
+    }
+}
+
+.social-bar .viadeo a {
+    background-color: $viadeo-color;
+
+    &:hover {
+        color: $viadeo-color;
+    }
+}
+
+.social-bar .email a {
+    background-color: $color-primary;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    &:hover {
+        color: $color-primary;
+    }
+} 
