@@ -4,6 +4,7 @@
 
 // Single post navigation
 .post-navigation {
+    @extend %mobile;
     display: flex;
     align-items: flex-end;
     flex-direction: row;
@@ -15,15 +16,13 @@
 
 .post-navigation .nav-direction {
     background-color: transparent;
-    border: solid 1px $color-primary;
+    border: solid 1px $office-azur;
     border-radius: $border-radius;
-    color: $color-primary;
-    padding: 0.5rem 0.75rem; 
+    color: $office-azur;
     transition: $transition-base;
 
     .icon {
-        height: 1rem;
-        width: 1rem;
+        vertical-align: top;
     }
 }
 
@@ -37,12 +36,12 @@
 }
 
 .post-navigation .nav-previous {
-    .nav-title {
-        padding-left: 6px;
+    .nav-direction {
+        padding: 0.5rem 0.5rem 0.5rem 0;
     }
 
-    .icon {
-        transform: translate(-4px, -1px);
+    .nav-title {
+        padding-left: 6px;
     }
 
     @media screen and (min-width: $small) {
@@ -51,15 +50,15 @@
 }
 
 .post-navigation .nav-next {
+    .nav-direction {
+        padding: 0.5rem 0 0.5rem 0.5rem;
+    }
+
     padding-top: 1rem;
     text-align: right;
 
     .nav-title {
         padding-right: 6px;
-    }
-
-    .icon {
-        transform: translate(4px, -1px);
     }
 
     @media screen and (min-width: $small) {
@@ -68,7 +67,11 @@
     }
 }
 
-.post-navigation a:hover .nav-direction {
-    color: white;
-    background-color: $color-primary;
+.post-navigation a:hover {
+    text-decoration: none;
+
+    .nav-direction {
+        background-color: $office-azur;
+        color: white;
+    }
 }

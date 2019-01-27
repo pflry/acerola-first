@@ -10,7 +10,7 @@
     color: $color-dark;
     display: block;
     font-size: $font-size-base;
-    line-height: 1;
+    line-height: $line-height-base;
     outline: none;
     padding: 0.375rem 0.75rem;
     transition: $transition-base;
@@ -37,7 +37,6 @@
 
 .form-group label {
     display: inline-block;
-    font-size: $font-size-sm;
     padding-bottom: 0.375rem;
 }
 
@@ -57,7 +56,10 @@ textarea {
 }
 
 .required {
-    color: $color-primary;
+    color: $color-success;
+    font-size: $font-size-lg;
+    line-height: $line-height-headings;
+    padding-left: 0.25rem;
 }
 
 .form-control.required {

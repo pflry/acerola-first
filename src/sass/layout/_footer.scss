@@ -2,11 +2,8 @@
 // Footer
 // --------------------------------------------------
 
-.footer {
-
-    ul {
-        @extend %ul-reset;
-    }
+.footer ul {
+    @extend %ul-reset;
 }
 
 // Footer infos

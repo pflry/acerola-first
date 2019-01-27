@@ -59,6 +59,16 @@
     }
 }
 
+%img-fluid {
+    border-radius: 0;
+    height: auto;
+    max-width: 100%;
+
+    @media screen and (min-width: $small) {
+        border-radius: $border-radius;
+    }
+}
+
 // Logo full
 // -----------------------------------
 

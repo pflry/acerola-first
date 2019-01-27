@@ -1,0 +1,104 @@
+//
+// Gutenberg class specific
+// --------------------------------------------------
+
+// Class to add
+// -----------------------------------
+
+.lead {
+    font-size: $font-size-lg;
+    font-weight: 500
+}
+
+.well {
+    @extend %well;
+    display: block;
+}
+
+.well-blue {
+    @extend .well;
+    background-color: tint($color-info, 85);
+    color: shade($color-info, 80);
+}
+
+.well-green {
+    @extend .well;
+    background-color: tint($color-success, 85);
+    color: shade($color-success, 80);
+}
+
+// Blocks gutenberg
+// -----------------------------------
+
+// Blockquote
+.wp-block-quote {
+    background-color: $color-light;
+    border-radius: $border-radius;
+    margin: 0 0 1.375rem 1.75rem;
+    padding: 1rem;
+    position: relative;
+
+    p {
+        color: tint($color-base, 15%);
+        font-family: $font-family-serif;
+        font-style: italic;
+        margin-bottom: 0.25rem;
+        text-align: justify;
+    }
+
+    cite {
+        color: $color-dark;
+        display: inline-block;
+        font-size: $font-size-sm;
+        font-weight: 300;
+    }
+
+    &:before {
+        content: '';
+        background-image: url('../icons/quote.svg');
+        background-repeat: no-repeat;
+        background-size: 2.75rem;
+        display: block;
+        position: absolute;
+        height: 2.75rem;
+        width: 2.75rem;
+        left: -1.7rem;
+        top: -0.8rem;
+    }
+
+    @media screen and (min-width: $small) {
+        margin: 0 3rem 1.375rem 3rem;
+    }
+}
+
+// Image
+.wp-block-image {
+    display: block;
+
+    .alignleft,
+    .alignright,
+    .aligncenter {
+        float: none;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    img {
+        @extend %img-fluid;
+    }
+
+
+    @media screen and (min-width: $small) {
+        display: inline;
+
+        .alignleft {
+            float: left;
+            margin-right: 2rem;
+        }
+
+        .alignright {
+            float: right;
+            margin-left: 2rem;
+        }
+    }
+}
