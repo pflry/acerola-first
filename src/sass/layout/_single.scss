@@ -90,8 +90,7 @@
     }
 }
 
-// Entry content
-// -----------------------------------
+
 
 // title
 .entry-title {
@@ -100,7 +99,11 @@
 
 // post-image
 .wp-post-image {
-    margin-bottom: 1.375rem;
+    margin-bottom: 0.5rem;
+
+    @media screen and (min-width: $small) {
+        margin-bottom: 1.375rem;
+    }
 }
 
 // content
@@ -110,23 +113,41 @@
 
 
 
-
+// Entry footer
+// -----------------------------------
 
 .entry-footer {
-    background-color: $color-light;
-    border-radius: $border-radius;
-    border: 1px solid $color-light;
-    color: $color-muted;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: $font-size-sm;
-    justify-content: space-between;
-    margin-top: 1rem;
-    padding: 0.75rem 1.25rem;
-    position: relative;
+    @extend %well;
+    background-color: $gray-400;
+    align-items: center;
+    border-radius: 0;
 
-    span>span {
-        color: $color-dark;
+    @media screen and (min-width: $small) {
+        border-radius: $border-radius;
+    }
+}
+
+.entry-footer .author-vcard {
+    padding-left: 0.75rem;
+    line-height: $line-height-headings;
+
+    .author-vcard--name {
         font-weight: 500;
+        display: block;
+    }
+
+    .author-vcard--description {
+        font-size: $font-size-sm;
+    }
+
+    .break {
+        display: none;
+    }
+
+    @media screen and (min-width: $small) {
+        .author-vcard--name,
+        .break {
+            display: inline;
+        }
     }
 }

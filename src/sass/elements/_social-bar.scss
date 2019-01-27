@@ -25,7 +25,6 @@
     }
 
     a:hover {
-        background-color: $gray-300 !important;
         text-decoration: none;
     }
 
@@ -35,14 +34,27 @@
     }
 
     .title {
-        display: inline-block;
+        display: none;
         font-size: $font-size-sm;
         margin-left: 0.75rem;
         line-height: 1.4;
     }
+
+    @media screen and (min-width: $medium) {
+        .title {
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-width: $large) and (max-width: $x-large) {
+        .title {
+            margin-left: 0.4rem;
+        }
+    }
 }
 
 .social-bar .acerola {
+    display: none;
     flex: 0 1 auto;
     margin: -1px 0 0 -2px;
     padding-right: 0.5rem;
@@ -52,23 +64,27 @@
     }
 
     .logo-acerola-filet {
-        color: $color-dark;
+        @extend %darknight;
         height: 46px;
         width: auto;
+    }
 
-        .ball {
-            color: $color-primary;
-        }  
+    @media screen and (min-width: $small) {
+        display: block;
     }
 }
 
 .social-bar .facebook a {
     background-color: $facebook-color;
-    border-top-left-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
+    overflow: hidden;
 
     &:hover {
-        color: $facebook-color;
+        background-color: shade($facebook-color, 15%);
+    }
+
+    @media screen and (min-width: $small) {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
     }
 }
 
@@ -76,7 +92,7 @@
     background-color: $twitter-color;
 
     &:hover {
-        color: $twitter-color;
+        background-color: shade($twitter-color, 15%);
     }
 }
 
@@ -84,7 +100,7 @@
     background-color: $linkedin-color;
 
     &:hover {
-        color: $linkedin-color;
+        background-color: shade($linkedin-color, 15%);
     }
 }
 
@@ -92,16 +108,19 @@
     background-color: $viadeo-color;
 
     &:hover {
-        color: $viadeo-color;
+        background-color: shade($viadeo-color, 15%);
     }
 }
 
 .social-bar .email a {
     background-color: $color-primary;
-    border-top-right-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
 
     &:hover {
-        color: $color-primary;
+        background-color: shade($color-primary, 15%);
+    }
+
+    @media screen and (min-width: $small) {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
     }
 } 

@@ -2,7 +2,8 @@
 // Placeholders
 // --------------------------------------------------
 
-
+// Grid
+// -----------------------------------
 %mobile {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -95,6 +96,15 @@
 
     .ball {
         color: $white;
+    }
+}
+
+// fonds clairs
+%darknight {
+    color: $color-dark;
+
+    .ball {
+        color: $color-primary;
     }
 }
 

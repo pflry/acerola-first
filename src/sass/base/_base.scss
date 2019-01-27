@@ -152,6 +152,10 @@ body {
 }
 
 // img
+img {
+    vertical-align: top;
+}
+
 .img-fluid {
     border-radius: 0;
     height: auto;
@@ -161,6 +165,37 @@ body {
         border-radius: $border-radius;
     }
 }
+
+.wp-block-image {
+    display: block;
+
+    .alignleft,
+    .alignright,
+    .aligncenter {
+        float: none;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    img {
+        @extend .img-fluid;
+    }
+
+
+    @media screen and (min-width: $small) {
+        display: inline;
+
+        .alignleft {
+            float: left;
+            margin-right: 2rem;
+        }
+
+        .alignright {
+            float: right;
+            margin-left: 2rem;
+        }
+    }
+} 
 
 // utilities
 // -----------------------------------
