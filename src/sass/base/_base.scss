@@ -27,21 +27,11 @@ body {
 
 // wrapper
 .wrapper {
-    min-height: 100vh;
-    padding-bottom: 4.125rem;
     transform: translate(0);
     transition: $transition-base;
 
     &.covered {
         opacity: 0.25;
-    }
-
-    @media screen and (min-width: $medium) {
-        padding-bottom: 23rem;
-    }
-
-    @media screen and (min-width: $intermediate) {
-        padding-bottom: 355.75px;
     }
 }
 
