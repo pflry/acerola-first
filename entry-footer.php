@@ -11,3 +11,6 @@
         <span class="cat-links"><?php _e( 'Catégorie ', 'pflry' ); ?><?php the_category( ', ' ); ?></span>
     <?php } ?>
 </footer>
+
+<?php /*$etiquette = get_build_icon_path('tag.svg'); ?>
+            <?php the_tags( $etiquette, $etiquette );*/ ?>

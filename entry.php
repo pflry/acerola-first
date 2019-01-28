@@ -12,13 +12,9 @@
         <?php get_template_part( 'entry-meta' ); ?>
 
         <?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?>
-        
-        <?php get_template_part( 'entry-social' ); ?>
          
-        <?php edit_post_link(); ?>
-        
     </header>
      <?php if ( is_singular() ) { get_template_part( 'entry-content' ); } ?>
-    <?php /*get_template_part( 'entry', ( is_home() || is_archive() || is_search() ? 'summary' : 'content' ) );*/ ?>
+    <?php edit_post_link(); ?>
     <?php get_template_part( 'entry-footer' ); ?>
 </article>

@@ -26,10 +26,3 @@
     </div>
 
 </section>
-
-<!--<div class="entry-meta__tag">
-            <?php $etiquette = get_build_icon_path('tag.svg'); ?>
-            <?php the_tags( $etiquette, $etiquette ); ?>
-        </div>-->
-
-        <!--<br><?php the_author_meta('description'); ?>-->
