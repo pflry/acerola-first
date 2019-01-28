@@ -61,7 +61,7 @@
         'url' => '',
     );
     $comments_args = array(
-        'class_submit' => 'btn btn-primary',
+        'class_submit' => 'btn btn-success',
         'comment_field' => '<div class="form-group"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br><textarea id="comment" name="comment" aria-required="true" rows="6" class="form-control"></textarea></div>',
         'fields' => apply_filters( 'comment_form_default_fields', $fields ),
     );

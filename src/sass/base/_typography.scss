@@ -2,6 +2,10 @@
 // Typography
 // --------------------------------------------------
 
+html {
+    @include fluid-type($min-width, $max-width, $min-font, $max-font);
+}
+
 // Headings
 // -----------------------------------
 h1,.h1,
@@ -19,20 +23,23 @@ h6,.h6 {
 
 h1,
 .h1,
-.entry-title {
+h1.entry-title {
     font-size: $font-size-h1;
     font-weight: 300;
-    line-height: 1;
-    margin: 1rem 0 1.25rem;
-
-    @media screen and (min-width: $medium) {
-        line-height: $line-height-headings;
-        margin: 0 0 1.25rem;
-    }
+    margin: 0.5rem 0 1.25rem;
 }
 
-h2, .h2 {
+h2, .h2, h2.entry-title {
     font-size: $font-size-h2;
+
+    a {
+        color: $color-headings;
+        transition: $transition-base;
+    }
+
+    a:hover {
+        color: $color-headings;
+    }
 }
 
 h3, .h3 {

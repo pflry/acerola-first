@@ -61,12 +61,11 @@ body {
     padding-bottom: 0.9rem;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 0.875rem;
+    padding-top: 1.875rem;
 
     @media screen and (min-width: $small) {
         padding-left: 1.875rem;
         padding-right: 1.875rem;
-        padding-top: 1.875rem;
     }
 
     @media screen and (min-width: $large) {

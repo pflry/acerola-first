@@ -23,13 +23,12 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 
-    > .menu-item {
-        padding-right: 0rem;
+    @media screen and (min-width: $medium) and (max-width: $large) {
+        >.menu-item:last-child {
+            display: none;
+        }
     }
-
-    > .menu-item:last-child {
-        padding-right: 0;
-    }
+    
 }
 
 // Menu niveau 1
