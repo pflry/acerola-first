@@ -1,18 +1,26 @@
 //
 // Blog home
 // --------------------------------------------------
-.blog-home {
+.blog-home .post {
+    padding-bottom: 0.25rem;
 
+    & + .post {
+        border-top: solid 1px $color-border;
+        padding-top: 1.25rem;
+    }
+}
+
+.blog-home .entry-category {
+    font-size: $font-size-base;
 }
 
 .blog-home .article {
     @extend %mobile;
     position: relative;
-    margin-bottom: 0.875rem;
 
     @media screen and (min-width: $small) {
-        display: flex;
         align-items: flex-start;
+        display: flex;
     }
 }
 
@@ -41,24 +49,50 @@
 
 .blog-home .article__entry {
     @extend %mobile;
-    position: absolute;
     bottom: 1rem;
     left: 0;
-    z-index: 15;
     overflow: hidden;
+    position: absolute;
+    z-index: 15;
     
     .entry-meta {
         display: none;
     }
 
+    @media screen and (min-width: 400px) {
+        .entry-meta {
+            color: $gray-400;
+            display: block;
+            padding-top: 1rem;
+        }
+
+        .entry-meta__author .icon {
+            display: none;
+        }
+
+        .entry-meta__date {
+
+            .last-update,
+            .bullet {
+                display: none;
+            }
+
+            .entry-date {
+                display: inline-block;
+            }
+        }   
+    }
+
     @media screen and (min-width: $small) {
-        position: relative;
         bottom: 0;
         flex: 1 0.5 110%;
         padding: 0 0 0 1rem;
+        position: relative;
 
         .entry-meta {
+            color: $gray-700;
             display: block;
+            padding-top: 0;
         }
     }
 }
@@ -72,7 +106,7 @@
     }
 
     @media screen and (min-width: $small) {
-        margin: 0.25rem 0 1.25rem;
+        margin: 0.25rem 0 0.5rem;
         font-size: $font-size-h3;
 
         a {
