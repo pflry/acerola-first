@@ -3,10 +3,14 @@
 // --------------------------------------------------
 .blog-home .post {
     padding-bottom: 0.25rem;
+    padding-top: 1.25rem;
 
-    & + .post {
-        border-top: solid 1px $color-border;
-        padding-top: 1.25rem;
+    @media screen and (min-width: $small) {
+        padding-bottom: 1.25rem;
+
+        & + .post {
+            border-top: solid 1px $color-border;
+        }
     }
 }
 
@@ -28,6 +32,7 @@
     border-radius: $border-radius;
 
     img {
+        @extend %img-fluid;
         border-radius: $border-radius;
     }
     
@@ -41,8 +46,24 @@
     @media screen and (min-width: $small) {
         flex: 0 1 auto;
 
+        img {
+            max-width: 210px;
+        }
+
         &:before {
             display: none;
+        }
+    }
+
+    @media screen and (min-width: $large) {
+        img {
+            max-width: 140px;
+        }
+    }
+
+    @media screen and (min-width: $x-large) {
+        img {
+            max-width: 240px;
         }
     }
 }
@@ -50,6 +71,7 @@
 .blog-home .article__entry {
     @extend %mobile;
     bottom: 1rem;
+    height: 120px;
     left: 0;
     overflow: hidden;
     position: absolute;
@@ -85,32 +107,41 @@
 
     @media screen and (min-width: $small) {
         bottom: 0;
-        flex: 1 0.5 110%;
+        flex: 1 1 auto;
+        height: auto;
         padding: 0 0 0 1rem;
         position: relative;
 
         .entry-meta {
             color: $gray-700;
             display: block;
+            min-height: auto;
+            padding-bottom: 0;
             padding-top: 0;
         }
     }
 }
 
 .blog-home .article__entry .entry-title {
-    margin: 0;
     line-height: $line-height-headings;
+    margin: 0;
 
     a {
         color: $white;
+        transition: $transition-base;
     }
 
     @media screen and (min-width: $small) {
-        margin: 0.25rem 0 0.5rem;
         font-size: $font-size-h3;
+        margin: 0.25rem 0 0.5rem;
 
         a {
             color: $color-headings;
+        }
+
+        a:hover {
+            color: $gray-700;
+            text-decoration: none;
         }
     }
 

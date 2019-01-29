@@ -24,7 +24,7 @@
 
         <div class="article">
             <div class="article__thumbnail">
-                <?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?>
+                <?php the_post_thumbnail('full'); ?>
             </div>
             
             <div class="article__entry">
