@@ -6,6 +6,30 @@
 .blog-home .format-link {
     @extend %mobile; 
 
+    .post-header {
+        display: flex;
+        border-radius: $border-radius;
+        padding: 1rem 0;
+    }
+
+    .post-header__thumbnail {
+        display:none;
+    }
+
+    .post-header__entry {
+        bottom: auto;
+        flex: 1 1 auto;
+        height: auto;
+        left: auto;
+        overflow: visible;
+        position: relative;
+    }
+
+    .entry-title,
+    .entry-category {
+        padding: 0;
+    }
+
     @media screen and (min-width: $small) {
         &.post {
             padding: 0.25rem 0;
@@ -15,49 +39,65 @@
         &.post + .post {
             border-top: none;
         }
-    }
 
-    .entry-meta {
-        display: none;
-    }
-}
+        .post-header__thumbnail {
+            flex: 0 1 15%;
+            display: block;
+            padding: 0 0 0 1.25rem;
+            text-align: center;
 
-.format-link,
-.format-aside {
-    
-    .post-header {
-        border-radius: $border-radius;
-        padding: 1.25rem 0;
+            .icon {
+                height: 4rem;
+                color: white(0.5);
+            }
+        }
 
-        @media screen and (min-width: $small) {
+        .post-header__entry {
+            flex: 0 1 85%;
+        }
 
+        .entry-title {
+            padding: 0 1rem 0 0;
         }
     }
 
-    .post-header__entry {
-        padding: 0 1rem !important;
-    }
+    @media screen and (min-width: $medium) {
+        // .post-header__thumbnail {
+        //     flex: 0 1 15%;
+        // }
 
-    .post-header__thumbnail {
-        padding: 0.5rem 0 0 1.25rem;
-
-        .icon {
-            height: 4rem;
-            color: white(0.5);
-        }
+        // .post-header__entry {
+        //     flex: 0 1 85%;
+        // }
     }
 }
 
 // aside format
 .format-aside .post-header {
-    background-color: $color-info;
+    background-color: $aside-bg-color;
 
     .entry-category a {
-        color: $white;
+        color: $aside-category-color;
+    }
+
+    .entry-title a {
+        color: $aside-title-color;
+    }
+
+    @media screen and (min-width: $small) {
+
     }
 }
 
 // link format
 .format-link .post-header {
-    background-color: $color-primary;
+    background-color: $link-bg-color;
+
+    .entry-category {
+        color: $link-category-color;
+    }
+
+    .entry-title a {
+        color: $link-title-color;
+    }
 }

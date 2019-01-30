@@ -24,8 +24,9 @@
                     <?php echo get_build_icon_path('link.svg') ?>
                 </div>
                 <div class="post-header__entry">
+                    <h3 class="entry-category">Lien</h3>
                     <h2 class="entry-title">
-                        <a href="<?php echo $has_url; ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+                        <a href="<?php echo $has_url; ?>" title="<?php the_title_attribute(); ?>" target="_blank" rel="noopener">
                         <?php  echo wp_trim_words( get_the_title(), $num_words = 30, $more = '&nbsp;&hellip;' ); ?></a>
                     </h2>
                 </div>
