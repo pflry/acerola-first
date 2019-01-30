@@ -12,10 +12,11 @@
 
     a {
         color: $link-color-breadcrumb;
+        transition: $transition-base;
     }
 
     a:hover {
-        color: $link-color-hover-breadcrumb;
+        color: $black;
     }
 
     &.active {

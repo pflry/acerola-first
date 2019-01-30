@@ -45,7 +45,7 @@ function acerola_setup() {
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'link' ) );
 
 	/**
 	 * Register main menu
