@@ -60,16 +60,6 @@
             padding: 0 1rem 0 0;
         }
     }
-
-    @media screen and (min-width: $medium) {
-        // .post-header__thumbnail {
-        //     flex: 0 1 15%;
-        // }
-
-        // .post-header__entry {
-        //     flex: 0 1 85%;
-        // }
-    }
 }
 
 // aside format
@@ -82,10 +72,10 @@
 
     .entry-title a {
         color: $aside-title-color;
-    }
 
-    @media screen and (min-width: $small) {
-
+        &:hover {
+            color: rgba($aside-title-color, 0.7);
+        }
     }
 }
 
@@ -99,5 +89,9 @@
 
     .entry-title a {
         color: $link-title-color;
+
+        &:hover {
+            color: rgba($link-title-color, 0.7);
+        }
     }
 }

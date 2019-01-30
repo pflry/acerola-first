@@ -16,14 +16,14 @@
 
 .pagination .page-numbers {
     border-radius: 50%;
-    background-color: $color-primary;
-    border: solid 1px $color-primary;
+    background-color: $office-azur;
+    border: solid 1px $office-azur;
     color: $white;
     font-family: $font-family-base;
     font-size: $font-size-lg;
     font-weight: 400;
     height: 2.5rem;
-    line-height: 2.15;
+    line-height: 2;
     margin: 0 0.2rem;
     text-align: center;
     transition: $transition-base;
@@ -32,21 +32,23 @@
     &:hover,
     &.current {
         background-color: $white;
-        border-color: $color-primary;
-        color: $color-primary;
+        border-color: $office-azur;
+        color: $office-azur;
         text-decoration: none;
     }
  
     &.prev,
     &.next {
-        line-height: 2.3;
+        .icon {
+            vertical-align: middle;
+        }
     }
 
     &.dots,
     &.dots:hover {
         background-color: transparent;
         border: none;
-        color: $color-primary;
+        color: $office-azur;
         margin: 0;
     }
 }
