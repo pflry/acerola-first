@@ -1,16 +1,16 @@
 <?php
 
 /**
- * PFLRYGULP functions and definitions
+ * acerola functions and definitions
  *
  * @package WordPress
  * @subpackage ACEROLA CARRIERE v3.0
  * @since 1.0
  */
 
-if ( ! function_exists( 'pflrygulp_setup' ) ) :
+if ( ! function_exists( 'acerola_setup' ) ) :
 
-function pflrygulp_setup() {
+function acerola_setup() {
 
 	/**
 	 * Remove unnecessary code from wp_head
@@ -31,18 +31,13 @@ function pflrygulp_setup() {
 	/**
 	 * Remove query strings from static resources 
 	 */ 
-	add_filter( 'script_loader_src', 'pflrygulp_remove_script_version', 15, 1 );
-	add_filter( 'style_loader_src', 'pflrygulp_remove_script_version', 15, 1 );
+	add_filter( 'script_loader_src', 'acerola_remove_script_version', 15, 1 );
+	add_filter( 'style_loader_src', 'acerola_remove_script_version', 15, 1 );
 
-	function pflrygulp_remove_script_version( $src ){
+	function acerola_remove_script_version( $src ){
 		$parts = explode( '?ver', $src );
 		return $parts[0];
 	}
-
-	/**
-	 * Stop loading css Contact Form plugin
-	 */
-	add_filter( 'wpcf7_load_css', '__return_false' );
 
 	/**
 	 * Enable support
@@ -50,31 +45,27 @@ function pflrygulp_setup() {
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
-
-	/**
-	 * Images size
-	 */
-	update_option( 'large_size', 707 );
+	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image' ) );
 
 	/**
 	 * Register main menu
 	 */
 	register_nav_menus( 
 		array(
-			'primary'	=>	__( 'Header Menu', 'pflrygulp' ),
-			'secondary'	=>	__( 'Footer Menu', 'pflrygulp' ),
-			'tertiary'	=>	__( 'Legal Menu', 'pflrygulp' ),
-			'quaternary'	=>	__( 'Mobile Menu', 'pflrygulp' ),
-			'quinary'	=>	__( 'Mobile Legal', 'pflrygulp' )
+			'primary'	=>	__( 'Header Menu', 'acerola' ),
+			'secondary'	=>	__( 'Footer Menu', 'acerola' ),
+			'tertiary'	=>	__( 'Legal Menu', 'acerola' ),
+			'quaternary'	=>	__( 'Mobile Menu', 'acerola' ),
+			'quinary'	=>	__( 'Mobile Legal', 'acerola' )
 		)
 	);
 
 	/**
 	 * Activate sidebar
 	 */
-	add_action( 'widgets_init', 'pflrygulp_register_sidebar' );
+	add_action( 'widgets_init', 'acerola_register_sidebar' );
 
-	function pflrygulp_register_sidebar() {
+	function acerola_register_sidebar() {
 		register_sidebar( array (
 			'name' => 'Sidebar Widget Area',
 			'id' => 'primary-widget-area',
@@ -83,6 +74,34 @@ function pflrygulp_setup() {
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
 		) );
+	}
+
+	/**
+	 * Limit excerpt to a number of characters
+	 */ 
+	add_filter('the_excerpt', 'acerola_short_excerpt');
+
+	function acerola_short_excerpt($excerpt){
+		$limit = 80;
+
+		if (strlen($excerpt) > $limit) {
+			return substr($excerpt, 0, strpos($excerpt, ' ', $limit));
+		}
+		return $excerpt;
+	}
+
+	/**
+	 * Exclude pages from WordPress search results
+	 */
+	if (!is_admin()) {
+		add_filter('pre_get_posts', 'acerola_search_filter');
+
+		function acerola_search_filter($query) {
+			if ($query->is_search) {
+				$query->set('post_type', 'post');
+			}
+			return $query;
+		}
 	}
 
 	/**
@@ -100,34 +119,6 @@ function pflrygulp_setup() {
 	 * Comments functions
 	 */
 	require get_parent_theme_file_path( '/inc/comments-functions.php' );
-
-	/**
-	 * Limit excerpt to a number of characters
-	 */ 
-	add_filter('the_excerpt', 'pflrygulp_short_excerpt');
-
-	function pflrygulp_short_excerpt($excerpt){
-		$limit = 80;
-
-		if (strlen($excerpt) > $limit) {
-			return substr($excerpt, 0, strpos($excerpt, ' ', $limit));
-		}
-		return $excerpt;
-	}
-
-	/**
-	 * Exclude pages from WordPress search results
-	 */
-	if (!is_admin()) {
-		add_filter('pre_get_posts', 'pflrygulp_search_filter');
-
-		function pflrygulp_search_filter($query) {
-			if ($query->is_search) {
-				$query->set('post_type', 'post');
-			}
-			return $query;
-		}
-	}
 
 	/**
 	 * Medias functions
@@ -150,6 +141,6 @@ function pflrygulp_setup() {
 	require get_parent_theme_file_path( '/inc/walker-functions.php' );
 
 }
-endif; // pflrygulp_setup
+endif; // acerola_setup
 
-add_action( 'after_setup_theme', 'pflrygulp_setup' );
+add_action( 'after_setup_theme', 'acerola_setup' );

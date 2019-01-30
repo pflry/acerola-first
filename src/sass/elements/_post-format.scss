@@ -1,0 +1,96 @@
+//
+// Post formats
+// --------------------------------------------------
+
+
+// Aside (en passant)
+// -----------------------------------
+.format-aside .post-header__thumbnail {
+    display: none;
+}
+
+// Post list
+.blog-home .format-aside {
+    @extend %mobile; 
+
+    @media screen and (min-width: $small) {
+        &.post {
+            padding: 0.25rem 0;
+        }
+        
+        &.post + .post {
+            border-top: none;
+        }
+    }
+}
+
+.blog-home .format-aside .post-header {
+    background-color: $color-info;
+    border-radius: $border-radius;
+    padding: 1.25rem 0;
+
+    @media screen and (min-width: $small) {
+        // background-image: url('../icons/new-outlined.svg');
+        // background-repeat: no-repeat;
+        // background-size: 20%;
+        // background-position: 95% center;
+        padding: 1.25rem;
+    }
+}
+
+.blog-home .format-aside .post-header__entry {
+    bottom: inherit;
+    height: auto;
+    left: inherit;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+}
+
+.blog-home .format-aside .entry-category {
+    a {
+        color: $white;
+    }
+}
+
+.blog-home .format-aside .entry-title {
+    font-size: 2.25rem;
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: shade($white,15%);
+        }
+    }
+}
+
+.blog-home .format-aside .entry-meta {
+    display: none;
+    color: $white;
+
+    a {
+        color: $white;
+    }
+}
+
+
+// Gallery
+// -----------------------------------
+.format-gallery {
+
+}
+
+
+// Link
+// -----------------------------------
+.format-link {
+
+}
+
+
+// Image
+// -----------------------------------
+.format-image {
+
+}

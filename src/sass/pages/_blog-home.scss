@@ -2,7 +2,7 @@
 // Blog home
 // --------------------------------------------------
 .blog-home .post {
-    padding-bottom: 0.25rem;
+    padding-bottom: 0;
     padding-top: 1.25rem;
 
     @media screen and (min-width: $small) {
@@ -11,6 +11,10 @@
         & + .post {
             border-top: solid 1px $color-border;
         }
+
+        & + .format-aside {
+            border-top: none;
+        }
     }
 }
 
@@ -18,7 +22,7 @@
     font-size: $font-size-base;
 }
 
-.blog-home .article {
+.blog-home .post-header {
     @extend %mobile;
     position: relative;
 
@@ -28,7 +32,7 @@
     }
 }
 
-.blog-home .article__thumbnail {
+.blog-home .post-header__thumbnail {
     border-radius: $border-radius;
 
     img {
@@ -68,7 +72,7 @@
     }
 }
 
-.blog-home .article__entry {
+.blog-home .post-header__entry {
     @extend %mobile;
     bottom: 1rem;
     height: 120px;
@@ -77,16 +81,22 @@
     position: absolute;
     z-index: 15;
     
-    .entry-meta {
-        display: none;
+    @media screen and (min-width: $small) {
+        bottom: 0;
+        flex: 1 1 auto;
+        height: auto;
+        padding: 0 0 0 1rem;
+        position: relative;
     }
+}
+
+.blog-home .entry-meta {
+    display: none;
 
     @media screen and (min-width: 400px) {
-        .entry-meta {
-            color: $gray-400;
-            display: block;
-            padding-top: 1rem;
-        }
+        color: $gray-400;
+        display: block;
+        padding-top: 1rem;
 
         .entry-meta__author .icon {
             display: none;
@@ -106,23 +116,15 @@
     }
 
     @media screen and (min-width: $small) {
-        bottom: 0;
-        flex: 1 1 auto;
-        height: auto;
-        padding: 0 0 0 1rem;
-        position: relative;
-
-        .entry-meta {
-            color: $gray-700;
-            display: block;
-            min-height: auto;
-            padding-bottom: 0;
-            padding-top: 0;
-        }
+        color: $gray-700;
+        display: block;
+        min-height: auto;
+        padding-bottom: 0;
+        padding-top: 0;
     }
 }
 
-.blog-home .article__entry .entry-title {
+.blog-home .entry-title {
     line-height: $line-height-headings;
     margin: 0;
 
