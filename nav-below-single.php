@@ -2,7 +2,7 @@
 $chevronLeft = get_build_icon_path('chevron-left.svg');
 $chevronRight = get_build_icon_path('chevron-right.svg');
 
-$excluded_terms = 'link';
+$excluded_terms = 'lien';
 ?>
 
 <nav id="nav-below" class="post-navigation" role="navigation">
