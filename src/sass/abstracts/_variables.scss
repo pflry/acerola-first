@@ -57,7 +57,7 @@ $max-font: 17px;
 $white:    #fff;
 $black:    #000;
 
-// Paleete base (Flat WButtons)
+// Palette base (Flat WButtons)
 $debris:            #d1d5d8;
 $cyanide:           #3498db;
 $tuesday-yellow:    #f1c40f;
@@ -65,10 +65,14 @@ $juicy-orange:      #e74c3c;
 $ui-green:          #1abc9c;
 
 // add
+$orange-flowering:  #f5d76e;
 $moody-carrot:      #f75c03;
-$office-azur:       #2274a5;
 $ny-red:            #d31145;
 $washing-blue:      #c9dfed;
+$turquoise-dream:   #81cfe0;
+$office-azur:       #2274a5;
+$seventies:         #b0b300;
+$christmas-green:   #219452;
 
 // Grayscale
 $gray: $debris;
@@ -143,14 +147,22 @@ $link-color-breadcrumb-active: $gray-700;
 $color-breadcrumb-icon: $tuesday-yellow;
 
 // Post formats
-$aside-bg-color: $color-info;
+$aside-bg-color: $christmas-green;
 $aside-category-color: white(0.5);
 $aside-title-color: $white;
 
-$link-bg-color: $color-secondary;
+$link-bg-color: $office-azur;
 $link-category-color: white(0.5);
 $link-title-color: $white;
 
+// Pagination
+$pagination-color: $office-azur;
+$pagination-dots-color: $pagination-color;
+$pagination-bg-color: $white;
+$pagination-border-color: $office-azur;
+$pagination-color-h: $white;
+$pagination-bg-color-h: $office-azur;
+$pagination-border-color-h: $office-azur;
 
 // ---------------
 // Components zone
