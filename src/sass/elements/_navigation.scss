@@ -6,17 +6,15 @@
 .post-navigation {
     @extend %mobile;
     display: flex;
-    align-items: flex-end;
     flex-direction: row;
-    height: 40px;
-    justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 1.375rem;
 }
 
 
 .post-navigation .nav-direction {
     background-color: transparent;
-    border: solid 1px $office-azur;
+    border: solid 1.5px $office-azur;
     border-radius: $border-radius;
     color: $office-azur;
     transition: $transition-base;
@@ -26,43 +24,25 @@
     }
 }
 
-.post-navigation .nav-title {
-    color: $color-border;
-    display: block; // masqué
-    display: none;
-    font-size: $font-size-sm;
-    margin-top: 1rem;
-    transition: $transition-base;
-}
-
 .post-navigation .nav-previous {
+    flex: 1 1 auto;
+    text-align: right;
+
     .nav-direction {
-        padding: 0.5rem 0.5rem 0.5rem 0;
-    }
-
-    .nav-title {
-        padding-left: 6px;
-    }
-
-    @media screen and (min-width: $small) {
-        padding-right: 1rem;
+        padding: 0.5rem 0 0.5rem 0.5rem;
     }
 }
 
 .post-navigation .nav-next {
+    flex: 0 1 auto;
+
     .nav-direction {
-        padding: 0.5rem 0 0.5rem 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 0;
     }
 
-    padding-top: 1rem;
     text-align: right;
 
-    .nav-title {
-        padding-right: 6px;
-    }
-
     @media screen and (min-width: $small) {
-        padding-left: 1rem;
         padding-top: 0;
     }
 }

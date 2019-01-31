@@ -139,7 +139,7 @@ function acerola_setup() {
 	 * Walker menu
 	 */
 	require get_parent_theme_file_path( '/inc/walker-functions.php' );
-
+	
 }
 endif; // acerola_setup
 

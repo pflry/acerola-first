@@ -27,6 +27,12 @@
     color: shade($color-success, 80);
 }
 
+.well-yellow {
+    @extend .well;
+    background-color: tint($color-primary, 85);
+    color: shade($color-primary, 80);
+}
+
 // Blocks gutenberg
 // -----------------------------------
 
@@ -87,9 +93,16 @@
         @extend %img-fluid;
     }
 
+    figcaption {
+        text-align: center;
+        padding: 0.75rem 0 0;
+        color: $color-muted;
+        font-style: italic;
+        font-size: $font-size-sm;
+    }
+
 
     @media screen and (min-width: $small) {
-        display: inline;
 
         .alignleft {
             float: left;
