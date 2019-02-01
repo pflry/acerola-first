@@ -24,7 +24,7 @@
                     <?php echo get_build_icon_path('link.svg') ?>
                 </div>
                 <div class="post-header__entry">
-                    <h3 class="entry-category">Lien</h3>
+                    <h3 class="entry-category"><?php the_category( ' ' ); ?></h3>
                     <h2 class="entry-title">
                         <a href="<?php echo $has_url; ?>" title="<?php the_title_attribute(); ?>" target="_blank" rel="noopener">
                         <?php  echo wp_trim_words( get_the_title(), $num_words = 30, $more = '&nbsp;&hellip;' ); ?></a>
@@ -50,7 +50,9 @@
             <header class="post-header">
                 <?php if( has_post_thumbnail() ) { ?>
                     <div class="post-header__thumbnail">
-                        <?php the_post_thumbnail('full'); ?>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+                            <?php the_post_thumbnail('full'); ?>
+                        </a>
                     </div>
                 <?php } ?>
                 

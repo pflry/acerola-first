@@ -131,6 +131,12 @@
     a {
         color: $white;
         transition: $transition-base;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-light;
+        }
     }
 
     @media screen and (min-width: $small) {
