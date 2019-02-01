@@ -1,6 +1,13 @@
 //
 // Blog home
 // --------------------------------------------------
+
+// infinite scroll
+.jscroll .pagination {
+    display: none;
+}
+
+// posts
 .blog-home .post {
     padding-bottom: 0;
     padding-top: 1.25rem;

@@ -1,6 +1,7 @@
 'use strict';
 
 require('slick-carousel');
+require('jscroll');
 
 const app = {
     init: function() {
@@ -8,6 +9,7 @@ const app = {
         app.slideMenu.init();
         app.scrollHeader.init();
         app.slickCarousel.init();
+        app.jScroll.init();
     }
 };
 
@@ -41,7 +43,6 @@ app.slideMenu = {
 // Scroll header
 app.scrollHeader = {
     init: function() {
-
         $(window).scroll(function () {
             let st = $(this).scrollTop();
             st > 100 ? $('#blogHeaderTop').addClass('scroll') : $('#blogHeaderTop').removeClass('scroll');
@@ -67,5 +68,23 @@ app.slickCarousel = {
         });  
     }
 };
+
+// jScroll (infinite scroll)
+app.jScroll = {
+    init: function() {
+        let options = {
+            debug: true,
+            autoTrigger: true,
+            autoTriggerUntil: 2,
+            loadingHtml: '<small>Loading ...</small>',
+            pagingSelector: 'nav.navigation',
+            nextSelector: 'nav.navigation .nav-links a.next',
+            contentSelector: '.jscroll',
+            padding: 20
+        };
+        $('.jscroll').jscroll(options);
+    }
+};
+
 
 app.init();

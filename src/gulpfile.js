@@ -201,7 +201,7 @@ gulp.task('scripts:infos', () => {
 
 
 //-- Assets
-gulp.task('copy:assets', () => {
+gulp.task('copy', () => {
     let polices = gulp.src(src.fonts)
         .pipe(changed(dest.fonts.rep))
         .pipe(gulp.dest(dest.fonts.rep));
@@ -219,7 +219,7 @@ gulp.task('copy:assets', () => {
 
 
 //-- Clean all dist folders
-gulp.task('clean:all', () => {
+gulp.task('clean', () => {
     return gulp.src([
             dest.css.files,
             dest.js.files,
@@ -249,10 +249,10 @@ gulp.task('serve', () => {
 
 
 //-- Default
-gulp.task('default', ['copy:assets', 'serve']);
+gulp.task('default', ['copy', 'serve']);
 
 
 //-- Build
-gulp.task('build', ['css', 'scripts', 'copy:assets']);
+gulp.task('build', ['css', 'scripts', 'copy']);
 
-gulp.task('build:infos', ['css', 'scripts:infos', 'copy:assets']);
+gulp.task('build:infos', ['css', 'scripts:infos', 'copy']);
