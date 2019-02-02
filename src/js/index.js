@@ -73,10 +73,9 @@ app.slickCarousel = {
 app.jScroll = {
     init: function() {
         let options = {
-            debug: true,
+            debug: false,
             autoTrigger: true,
-            autoTriggerUntil: 2,
-            loadingHtml: '<small>Loading ...</small>',
+            loadingHtml: '<div class="loader">Chargement</div>',
             pagingSelector: 'nav.navigation',
             nextSelector: 'nav.navigation .nav-links a.next',
             contentSelector: '.jscroll',
@@ -85,6 +84,5 @@ app.jScroll = {
         $('.jscroll').jscroll(options);
     }
 };
-
 
 app.init();

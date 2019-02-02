@@ -78,20 +78,12 @@
 }
 
 // Image
-.wp-block-image {
-    display: block;
-    padding-bottom: 1.375rem;
-
-    .alignleft,
-    .alignright,
-    .aligncenter {
-        float: none;
-        text-align: center;
-        margin: 1rem;
-    }
+.post figure {
+    margin: 0 0 1.375rem;
 
     img {
         @extend %img-fluid;
+        border-radius: $border-radius;
     }
 
     figcaption {
@@ -102,17 +94,34 @@
         font-size: $font-size-sm;
     }
 
+    &.alignleft,
+    &.alignright,
+    &.aligncenter {
+        float: none;
+        text-align: center;
+    }
 
     @media screen and (min-width: $small) {
 
-        .alignleft {
-            float: left;
-            margin-left: 0;
+        &.alignleft,
+        &.alignright {
+            figcaption {
+                display: none;
+            }
         }
 
-        .alignright {
+        &.alignleft {
+            float: left;
+            margin: 0 1.375rem 0 0;
+        }
+
+        &.alignright {
             float: right;
-            margin-left: 2rem;
+            margin: 0 0 0 1.375rem;
         }
     }
+}
+
+div.wp-block-image {
+    display: inline;
 }

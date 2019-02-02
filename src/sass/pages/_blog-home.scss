@@ -2,9 +2,34 @@
 // Blog home
 // --------------------------------------------------
 
+.blog-home {
+    padding-bottom: 1.375rem;
+
+    @media screen and (min-width: $small) {
+        padding-bottom: 0;
+    }
+}
+
+
 // infinite scroll
 .jscroll .pagination {
     display: none;
+}
+
+.loader {
+    @extend %titre-service;
+    background-image: url('../images/ajax-loader.gif');
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: $color-secondary;
+    font-weight: 400;
+    margin-top: 1.375rem;
+    padding-top: 2.5rem;
+    text-align: center;
+
+    @media screen and (min-width: $small) {
+        margin-bottom: 1.375rem;
+    }
 }
 
 // posts
