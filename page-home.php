@@ -10,8 +10,8 @@
  * @subpackage ACEROLA CARRIERE v3.0
  */
 
-get_header(); ?>
-<section id="content" role="main" class="main">
-
+get_header('home'); ?>
+<section id="content" role="main" class="main page-home">
+    Homepage
 </section>
 <?php get_footer(); ?>

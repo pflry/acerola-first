@@ -21,6 +21,8 @@
 
 /* Layout */
 @import 'layout/header';
-@import 'layout/posts-list';
 @import 'layout/sidebar';
 @import 'layout/single';
+
+/* Pages */
+@import 'pages/homepage';
