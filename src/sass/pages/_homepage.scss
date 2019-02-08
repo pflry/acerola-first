@@ -2,3 +2,27 @@
 // Homepage
 // --------------------------------------------------
 
+/* Header */
+.home .blog-header {
+    background-image: image($hp-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .blog-header--logo {
+    align-self: flex-end;
+    display: block;
+}
+
+.home .logo-acerola {
+    @extend %darkblue;
+    height: 67px;
+    margin-top: 1rem;
+    width: auto;
+    align-self: end;
+}
+
+
+.site-title .logo-acerola {
+    display: none;
+}

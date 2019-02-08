@@ -11,7 +11,14 @@
  */
 
 get_header('home'); ?>
-<section id="content" role="main" class="main page-home">
+<section id="content" role="main" class="main page-home page-full">
     Homepage
+
+    <section id="blockAgency" class="block-agency">
+        <div class="container">
+            <h2 class="h2">Le cabinet Acérola Carrière</h2>
+        </div>
+    </section>
+
 </section>
 <?php get_footer(); ?>
