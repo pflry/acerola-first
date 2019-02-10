@@ -9,17 +9,36 @@
     background-repeat: no-repeat;
 }
 
-.home .blog-header--logo {
-    align-self: flex-end;
+.home-visual {
     display: block;
+    position: relative;
+
+    .img-fluid {
+        border-radius: 0;
+    }
 }
 
-.home .logo-acerola {
+.home-visual:after {
+    content: '';
+    background-color: $color-primary;
+    width: 100%;
+    min-height: 4rem;
+    display: block;
+    transform: rotate(-10deg);
+}
+
+.blog-header--logo {
+    display: block;
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+}
+
+.blog-header--logo .logo-acerola {
     @extend %darkblue;
     height: 67px;
     margin-top: 1rem;
     width: auto;
-    align-self: end;
 }
 
 

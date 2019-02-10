@@ -41,7 +41,11 @@
         <?php /*get_template_part( 'blog-header-top' );*/ ?>
         
         <header id="header" class="blog-header">
-            <div class="container flex-end">
+            <div class="container home-visual">
+                <?php $image_homepage = 'fabio-spinelli-695744-unsplash.jpg' ?>
+                
+                <img src="<?php echo get_build_img_path($image_homepage) ?>" alt="fabio-spinelli-695744-unsplash" class="img-fluid">
+                
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home" class="blog-header--logo"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
             </div>
             
