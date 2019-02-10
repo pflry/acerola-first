@@ -38,17 +38,9 @@
 
     <div id="containerWrapper" class="wrapper">
 
-        <?php /*get_template_part( 'blog-header-top' );*/ ?>
+        <?php get_template_part( 'blog-header-top' ); ?>
         
-        <header id="header" class="blog-header">
-            <div class="container home-visual">
-                <?php $image_homepage = 'fabio-spinelli-695744-unsplash.jpg' ?>
-                
-                <img src="<?php echo get_build_img_path($image_homepage) ?>" alt="fabio-spinelli-695744-unsplash" class="img-fluid">
-                
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home" class="blog-header--logo"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
-            </div>
-            
+        <header id="header" class="blog-header">           
             <section id="blogBanner" class="blog-header__banner">
                 <div class="container">
                     <div id="siteTitle" class="site-title">
@@ -70,9 +62,15 @@
                     </button>
                 </div>
             </section>
-            <section id="filAriane" class="blog-header__breadcrumb">
+            <section id="headerHiglight" class="blog-header__highlight">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="<?php echo get_build_img_path('bruce-mars-pexels-575w.jpg') ?>">
+                    <source media="(min-width: 501px)" srcset="<?php echo get_build_img_path('bruce-mars-pexels-1600w.jpg') ?>">
+                    <img src="<?php echo get_build_img_path('bruce-mars-pexels.jpg') ?>" alt="Acérola Carrière" class="img-fluid">
+                </picture>
+
                 <div class="container">
-                    <?php echo get_the_breadcrumb() ?>
+                    
                 </div>
             </section>
         </header>

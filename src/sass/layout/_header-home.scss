@@ -1,0 +1,35 @@
+//
+// Header homepage
+// --------------------------------------------------
+
+.home .blog-header__banner {
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before {
+        background-color: $color-primary;
+        bottom: 0;
+        content: '';
+        height: 5rem;
+        left: -0.1rem;
+        position: absolute;
+        right: 0;
+        transform: rotate(-3deg) skewX(-3deg);
+        transform-origin: right bottom;
+        z-index: 1;
+    }
+
+}
+
+.home .blog-header__highlight {
+    background-color: $color-secondary;
+    position: relative;
+
+    .img-fluid {
+        border-radius: 0;
+    }
+}
