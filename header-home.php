@@ -64,9 +64,11 @@
             </section>
             <section id="headerHiglight" class="blog-header__highlight">
                 <picture>
-                    <source media="(max-width: 500px)" srcset="<?php echo get_build_img_path('bruce-mars-pexels-575w.jpg') ?>">
-                    <source media="(min-width: 501px)" srcset="<?php echo get_build_img_path('bruce-mars-pexels-1600w.jpg') ?>">
-                    <img src="<?php echo get_build_img_path('bruce-mars-pexels.jpg') ?>" alt="Acérola Carrière" class="img-fluid">
+                    <source media="(max-width: 500px)" srcset="<?php echo get_build_img_path('poster-500w.jpg') ?>">
+                    <source media="(max-width: 768px)" srcset="<?php echo get_build_img_path('poster-768w.jpg') ?>">
+                    <source media="(max-width: 992px)" srcset="<?php echo get_build_img_path('poster-992w.jpg') ?>">
+                    <source media="(max-width: 1200px)" srcset="<?php echo get_build_img_path('poster-1200w.jpg') ?>">
+                    <img src="<?php echo get_build_img_path('poster-1600w.jpg') ?>" alt="Acérola Carrière" class="img-fluid">
                 </picture>
 
                 <div class="container">
