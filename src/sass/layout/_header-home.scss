@@ -28,9 +28,11 @@
 .home .blog-header__highlight {
     background-color: $color-secondary;
     position: relative;
+    text-align: center;
 
     .img-fluid {
         border-radius: 0;
         width: 100%;
+        max-width: 1600px;
     }
 }

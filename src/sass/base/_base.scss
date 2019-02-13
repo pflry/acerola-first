@@ -27,10 +27,11 @@ body {
 
 // wrapper
 .wrapper {
-    transform: translate(0);
-    transition: $transition-base;
+    background-color: $white;
     min-height: 100vh;
     padding-bottom: 80px;
+    transform: translate(0);
+    transition: $transition-base;
 
     &.covered {
         opacity: 0.25;
@@ -46,6 +47,8 @@ body {
 
     @media screen and (min-width: $x-large) {
         padding-bottom: 376.63px;
+        max-width: 1280px;
+        margin: 0 auto;
     }
 }
 

@@ -81,12 +81,13 @@
                     </div>
                 </div>
             </div>
-            
         </footer>
     </div> <!-- fin wrapper -->
-     <button id="scrollTop" class="btn btn-scrolltop">
+
+    <button id="scrollTop" class="btn btn-scrolltop">
         <?php echo get_build_icon_path('arrow-up.svg'); ?>
     </button>
+
     <?php wp_footer(); ?>
 </body>
 
