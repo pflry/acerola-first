@@ -104,3 +104,82 @@
         }
     }
 }
+
+// Bloc diagonale
+@mixin diagonalBefore($direction:left, $color:white) {
+    position: relative;
+
+    &:before {
+        background-color: $color;
+        content: '';
+        height: 5rem;
+        position: absolute;
+        top: -5rem;
+        z-index: 10;
+    }
+
+    @if $direction==right {
+        &:before {
+            left: 0;
+            right: -0.05rem;
+            transform: rotate(3deg) skewX(3deg);
+            transform-origin: left bottom;
+
+            @media screen and (min-width: $large) {
+                right: -0.1rem;
+            }
+        }
+    }
+
+    @else {
+        &:before {
+            left: -0.05rem;
+            right: 0;
+            transform: rotate(-3deg) skewX(-3deg);
+            transform-origin: right bottom;
+
+            @media screen and (min-width: $large) {
+                left: -0.1rem;
+            }
+        }
+    }
+}
+
+@mixin diagonalAfter($direction:left, $color:white) {
+    position: relative;
+
+    &:after {
+        background-color: $color;
+        bottom: -1rem;
+        content: '';
+        height: 5rem;
+        position: absolute;
+        z-index: 10;
+    }
+
+    @if $direction==right {
+        &:after {
+            left: 0;
+            right: -0.05rem;
+            transform: rotate(3deg) skewX(3deg);
+            transform-origin: left bottom;
+
+            @media screen and (min-width: $large) {
+                right: -0.1rem;
+            }
+        }
+    }
+
+    @else {
+        &:after {
+            left: -0.05rem;
+            right: 0;
+            transform: rotate(-3deg) skewX(-3deg);
+            transform-origin: right bottom;
+
+            @media screen and (min-width: $large) {
+                left: -0.1rem;
+            }
+        }
+    }
+}

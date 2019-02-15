@@ -7,32 +7,43 @@
 
     .container {
         position: relative;
-        z-index: 2;
+        z-index: 100;
     }
-
-    &:before {
-        background-color: $color-primary;
-        bottom: 0;
-        content: '';
-        height: 5rem;
-        left: -0.1rem;
-        position: absolute;
-        right: 0;
-        transform: rotate(-3deg) skewX(-3deg);
-        transform-origin: right bottom;
-        z-index: 1;
-    }
-
 }
 
 .home .blog-header__highlight {
+    @include diagonalBefore(left, $color-primary);
+    @include diagonalAfter(right, $white);
     background-color: $color-secondary;
-    position: relative;
     text-align: center;
 
     .img-fluid {
         border-radius: 0;
-        width: 100%;
         max-width: 1600px;
+        width: 100%;
+    }
+}
+
+.home .blog-header__highlight .container {
+    @extend %absolute-pos;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($black,0.35);
+    z-index: 5;
+
+    @media screen and (min-width: $medium) {
+        max-width: 100%;
+    }
+}
+
+.home .blog-header__highlight .headline {
+    color: $white;
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: 1;
+    transform: translateY(-1rem);
+
+    @media screen and (min-width: 501px) {
+        transform: translateY(-0.5rem);
     }
 }
