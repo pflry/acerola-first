@@ -72,7 +72,7 @@
                 </picture>
 
                 <div class="container">
-                    <div class="headline">Vitaminer les carrières</div>
+                    <div class="headline">vitaminer les carrières</div>
                 </div>
             </section>
         </header>
