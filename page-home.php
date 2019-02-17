@@ -12,12 +12,15 @@
 
 get_header('home'); ?>
 <section id="content" role="main" class="main page-home page-full">
-    Homepage
-
     <section id="blockAgency" class="block-agency">
-        <div class="container">
+        <!--<div class="container">
             <h2 class="h2">Le cabinet Acérola Carrière</h2>
+        </div>-->
+        <div class="container" style="z-index:15;position:relative;justify-content:space-around">
+            <h3 id="counter1"></h3>
+            <h3 id="counter2"></h3>
         </div>
+        
     </section>
 
 </section>

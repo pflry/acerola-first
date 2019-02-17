@@ -2,46 +2,8 @@
 // Homepage
 // --------------------------------------------------
 
-/* Header */
-.home .blog-header {
-    background-image: image($hp-image);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.home-visual {
-    display: block;
-    position: relative;
-
-    .img-fluid {
-        border-radius: 0;
-    }
-}
-
-.home-visual:after {
-    content: '';
-    background-color: $color-primary;
-    width: 100%;
-    min-height: 4rem;
-    display: block;
-    transform: rotate(-10deg);
-}
-
-.blog-header--logo {
-    display: block;
-    position: absolute;
-    right: 5rem;
-    top: 2rem;
-}
-
-.blog-header--logo .logo-acerola {
-    @extend %darkblue;
-    height: 67px;
-    margin-top: 1rem;
-    width: auto;
-}
-
-
-.site-title .logo-acerola {
-    display: none;
+.page-home section:first-child {
+    // transform: translateY(-2rem);
+    // position: relative;
+    // z-index: 10;
 }

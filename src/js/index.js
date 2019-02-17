@@ -2,6 +2,7 @@
 
 require('slick-carousel');
 require('jscroll');
+import CountUp from 'countup.js';
 
 const app = {
     init: function() {
@@ -10,6 +11,7 @@ const app = {
         app.scrollHeader.init();
         app.slickCarousel.init();
         app.jScroll.init();
+        app.countUp.init();
     }
 };
 
@@ -82,6 +84,24 @@ app.jScroll = {
             padding: 20
         };
         $('.jscroll').jscroll(options);
+    }
+};
+
+// countUp
+app.countUp = {
+    init: function() {
+        let options = {
+            useEasing: true,
+            useGrouping: true,
+            separator: ' ',
+            decimal: ',',
+        };
+
+        let numAnim1 = new CountUp("counter1", 2, 2008799, 0, 5, options);
+        numAnim1.start();
+        
+        let numAnim2 = new CountUp("counter2", 0, 2508799, 0, 5, options);
+        numAnim2.start();
     }
 };
 
