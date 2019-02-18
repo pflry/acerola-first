@@ -2,8 +2,85 @@
 // Homepage
 // --------------------------------------------------
 
-.page-home section:first-child {
-    // transform: translateY(-2rem);
-    // position: relative;
-    // z-index: 10;
+/* Bloc Counters */
+.home-counters {
+    @include diagonalBefore(right, $color-office-dark);
+    background-color: $color-office-dark;
+    position: relative;
+    z-index: 15;
+}
+
+.home-counters .container {
+    align-items: stretch;
+    flex-direction: column;
+    position: relative;
+    z-index: 15;
+
+    @media screen and (min-width: $medium) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.home-counters .counter {
+
+    &:first-child {
+        margin-top: -1.5rem;
+    }
+
+    @media screen and (min-width: $medium) {
+        flex: 0 1 33.333%;
+        padding: 0 0.5rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (min-width: $large) {
+        padding: 0 1rem;
+    }
+}
+
+.home-counters .counter-head {
+    display: flex;
+    justify-content: center;
+
+    .counter--digit {
+        color: $color-primary;
+        flex: 0 1 auto;
+        font-size: $font-size-h1;
+        font-weight: 300;
+        line-height: 1;
+        padding-right: 0.3rem;
+        white-space: nowrap;
+    }
+
+    .counter--title {
+        @extend %titre-service;
+        flex: 0 1 auto;
+        font-size: 1rem;
+        margin-bottom: 0;
+        padding-left: 0.3rem;
+        text-align: left;
+        color: $white;
+    }
+
+    @media screen and (min-width: $medium) {
+        .counter--digit,
+        .counter--title {
+            flex: 0 1 auto;
+        }
+    }
+}
+
+.home-counters .counter-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    p {
+        color: $washing-blue;
+        margin: 1rem 0 2.5rem;
+    }
 }

@@ -13,7 +13,6 @@
 
 .home .blog-header__highlight {
     @include diagonalBefore(left, $color-primary);
-    @include diagonalAfter(right, $white);
     background-color: $color-secondary;
     text-align: center;
 
@@ -28,7 +27,6 @@
     @extend %absolute-pos;
     align-items: center;
     justify-content: center;
-    // background-color: rgba($black,0.35);
     z-index: 5;
 
     @media screen and (min-width: $medium) {

@@ -94,14 +94,25 @@ app.countUp = {
             useEasing: true,
             useGrouping: true,
             separator: ' ',
-            decimal: ',',
+            decimal: ','
         };
 
-        let numAnim1 = new CountUp("counter1", 2, 2008799, 0, 5, options);
-        numAnim1.start();
+        let params = {
+            start: 0,
+            decimals: 0,
+            duration: 5
+        }
+
+        let kounters = ['counterCareer','counterCustomer','counterContact'];
         
-        let numAnim2 = new CountUp("counter2", 0, 2508799, 0, 5, options);
-        numAnim2.start();
+        let i;
+        
+        for (i = 0; i < kounters.length; i++) {
+            let end = parseInt($('#'+kounters[i]).attr('data-number'));
+            let yocounter = new CountUp(kounters[i], params.start, end, params.decimals, params.duration, options);
+            yocounter.start();
+        }
+    
     }
 };
 

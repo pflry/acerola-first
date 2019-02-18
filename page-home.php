@@ -12,16 +12,40 @@
 
 get_header('home'); ?>
 <section id="content" role="main" class="main page-home page-full">
-    <section id="blockAgency" class="block-agency">
-        <!--<div class="container">
-            <h2 class="h2">Le cabinet Acérola Carrière</h2>
-        </div>-->
-        <div class="container" style="z-index:15;position:relative;justify-content:space-around">
-            <h3 id="counter1"></h3>
-            <h3 id="counter2"></h3>
+    
+    <section id="homeCounters" class="home-counters">
+        <div class="container">
+            <div class="counter">
+                <div class="counter-head">
+                    <div id="counterCareer" class="counter--digit" data-number="291"></div>
+                    <div class="counter--title">carrières<br>boostées</div>
+                </div>
+                <div class="counter-content">
+                    <p>Un nouveau projet professionnel, la confiance retrouvée &hellip;</p>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="counter-head">
+                    <div id="counterCustomer" class="counter--digit" data-number="89"></div>
+                    <div class="counter--title">clients<br>entreprise</div>
+                </div>
+                <div class="counter-content">
+                    <p>Notre cocktail vitaminé : proximité, efficacité, optimisation du budget.</p>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="counter-head">
+                    <div id="counterContact" class="counter--digit" data-number="2388"></div>
+                    <div class="counter--title">contacts<br>réseaux</div>
+                </div>
+                <div class="counter-content">
+                    <p>&hellip; à partager avec vous !</p>
+                </div>
+            </div>
         </div>
-        
     </section>
+
+
 
 </section>
 <?php get_footer(); ?>
