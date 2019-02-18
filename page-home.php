@@ -45,6 +45,33 @@ get_header('home'); ?>
         </div>
     </section>
 
+    <section id="homeCompany" class="home-company">
+        <div class="container">
+            <div class="home-bloc--picture">
+                <picture>
+                    <source media="(max-width: 510px)" srcset="<?php echo get_build_img_path('company-575w.jpg') ?>">
+                    <source media="(max-width: 767px)" srcset="<?php echo get_build_img_path('company-768w.jpg') ?>">
+                    <source media="(max-width: 992px)" srcset="<?php echo get_build_img_path('company-992w.jpg') ?>">
+                    <source media="(max-width: 1280px)" srcset="<?php echo get_build_img_path('company.jpg') ?>">
+                    <img src="<?php echo get_build_img_path('company.jpg') ?>" alt="Acérola Carrière" class="img-fluid">
+                </picture>
+            </div>
+            <div class="home-bloc--content">
+                <h2 class="h2">
+                    Le cabinet Acérola&nbsp;Carrière
+                </h2>
+                <!-- Acérola Carrière c’est un cabinet de conseil&nbsp;RH&nbsp;:
+                <ul>
+                    <li>dirigé par une psychologue du travail</li>
+                    <li>spécialiste du développement RH des TPE-PME</li>
+                    <li>expert en accompagnement individuel de salariés et demandeurs d’emploi</li>
+                </ul> -->
+                <p>Avec 100 bilans de compétences et 40 recrutements réalisés par an, le cabinet est un acteur majeur de la gestion des carrières  à Paris et dans l’Est parisien.</p>
+                <a href="le-cabinet/" class="btn btn-primary">Découvrir Acérola Carrière</a>
+            </div>
+        </div>
+    </section>
+
 
 
 </section>
