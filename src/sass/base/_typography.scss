@@ -4,6 +4,8 @@
 
 html {
     @include fluid-type($min-width, $max-width, $min-font, $max-font);
+    // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important
 }
 
 // Headings
@@ -25,12 +27,16 @@ h1,
 .h1,
 h1.entry-title {
     font-size: $font-size-h1;
-    font-weight: 300;
+    font-weight: 900;
     margin: 0.5rem 0 1.25rem;
+    color: $gray-900;
 }
 
 h2, .h2, h2.entry-title {
     font-size: $font-size-h2;
+    font-weight: 700;
+    color: $gray-900;
+    margin: 2.75rem 0 1rem;
 
     a {
         color: $color-headings;
@@ -44,6 +50,8 @@ h2, .h2, h2.entry-title {
 
 h3, .h3 {
     font-size: $font-size-h3;
+    font-weight: 500;
+    color: $gray-800;
 }
 
 h4, .h4 {

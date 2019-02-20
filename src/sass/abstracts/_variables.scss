@@ -15,12 +15,12 @@ $x-large: 1200px;
 // -----------------------------------
 
 // Font families
-$font-family-sans-serif: ('Roboto', Arial, sans-serif);
-$font-family-serif: ('Noto Serif', serif);
+$font-family-sans-serif: ('Poppins', Arial, sans-serif);
+$font-family-serif: $font-family-sans-serif;
 $font-family-monospace: (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
 
 $font-family-base : $font-family-sans-serif;
-$font-family-headings : $font-family-serif;
+$font-family-headings : ('Roboto', Arial, sans-serif);
 
 // Font sizes
 $font-size-base: 1rem;
