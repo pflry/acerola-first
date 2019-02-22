@@ -15,25 +15,24 @@ $x-large: 1200px;
 // -----------------------------------
 
 // Font families
-$font-family-sans-serif: ('Poppins', Arial, sans-serif);
-$font-family-serif: $font-family-sans-serif;
-$font-family-monospace: (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
+$font-family-sans-serif:    ('Poppins', Arial, sans-serif);
+$font-family-monospace:     (Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
 
-$font-family-base : $font-family-sans-serif;
-$font-family-headings : ('Roboto', Arial, sans-serif);
+$font-family-base :         $font-family-sans-serif;
+$font-family-headings :     ('Lato', Arial, sans-serif);
 
 // Font sizes
-$font-size-base: 1rem;
+$font-size-base: 16px;
 $font-size-lg:   1.125rem;
 $font-size-sm:   0.875rem;
 
 // Font weights
-$font-weight-base: 400;
-$font-weight-headings: 500;
+$font-weight-base:      400;
+$font-weight-headings:  500;
 
 // Line heights
-$line-height-base:     1.45;
-$line-height-headings: 1.2;
+$line-height-base:      1.45;
+$line-height-headings:  1.2;
 
 // Headings sizes (major third - 1.250)
 $font-size-h1: 2.95rem;
@@ -42,12 +41,6 @@ $font-size-h3: 1.75rem;
 $font-size-h4: 1.5rem;
 $font-size-h5: 1.25rem;
 $font-size-h6: 1rem;
-
-// Fluid font-size
-$min-width: 320px;
-$max-width: 1200px;
-$min-font: 14px;
-$max-font: 17px;
 
 
 // Color zone

@@ -27,9 +27,9 @@
         border-radius: 0;
     }
 
-    // @media screen and (min-width: $medium) {
-    //     flex: 0 1 50%;
-    // }
+    @media screen and (min-width: $medium) {
+        flex: 0 1 50%;
+    }
 }
 
 .home-company .home-bloc--content {
@@ -43,11 +43,16 @@
     color: $white;
 
     .h2 {
-        color: $white;
+        color: $color-primary;
+        font-weight: 900;
     }
 
     .btn {
-        align-self: center;
+        align-self: flex-start;
+    }
+
+    .company--complement {
+        display: none;
     }
 
     @media screen and (min-width: 600px) {
@@ -55,14 +60,21 @@
     }
 
     @media screen and (min-width: $medium) {
-        // background: transparent;
-        // background-color: $color-info;
-        // position: relative;
-        // flex: 0 1 50%;
-        // padding: 1rem 1.875rem 1.875rem;
+        background: $washing-blue;
+        flex: 0 1 50%;
+        padding: 1rem 1.875rem 1.875rem;
+        position: relative;
+        color: $color-office-dark;
 
-        // .btn {
-        //     align-self: flex-start;
-        // }
+        .h2 {
+            margin-top: 1rem;
+            color: $color-office-dark;
+        }
+    }
+
+    @media screen and (min-width: $large) {
+        .company--complement{
+            display: block;
+        }
     }
 }

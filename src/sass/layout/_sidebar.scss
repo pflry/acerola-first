@@ -30,7 +30,7 @@
 .widget-title {
     color: $white;
     font-family: $font-family-base;
-    font-size: $font-size-sm;
+    font-size: $font-size-base;
     font-weight: 300;
     letter-spacing: 2px;
     line-height: 1;
@@ -49,6 +49,11 @@
 // Widget contact
 .widget__contact {
     background-color: $office-azur;
+
+    .icon {
+        height: 1.25em;
+        vertical-align: top;
+    }
 }
 
 .widget__contact .contact {
@@ -171,12 +176,12 @@
         padding: 0.375rem 0.45rem;
     }
 
-    @media screen and (min-width: 920px) {
-        padding: 0 0 1rem 1rem;
-        text-align: left;
+    @media screen and (min-width: $x-large) {
+        padding: 0 1rem 1rem 1rem;
 
         .btn {
             padding: 0.375rem 0.75rem;
+            display: block;
         }
     }
 }

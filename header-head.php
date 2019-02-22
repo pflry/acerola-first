@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="<?php echo get_build_img_path('ios-icon.png') ?>">
     
     <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato:300,400,700,900" rel="stylesheet">
     <?php get_template_part( 'header-styles' ); ?>
 
     <?php wp_head(); ?>

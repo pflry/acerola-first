@@ -8,19 +8,22 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    font-family: $font-family-headings;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     padding-bottom: 1.375rem;
 }
 
 
 .post-navigation .nav-direction {
-    background-color: transparent;
-    border: solid 1.5px $office-azur;
+    background-color: $office-azur;
     border-radius: $border-radius;
-    color: $office-azur;
+    color: $white;
     transition: $transition-base;
 
     .icon {
         vertical-align: top;
+        transform: translateY(1.5px);
     }
 }
 
@@ -29,7 +32,7 @@
     text-align: right;
 
     .nav-direction {
-        padding: 0.5rem 0 0.5rem 0.5rem;
+        padding: 0.6rem 0 0.75rem 0.75rem;
     }
 }
 
@@ -37,7 +40,7 @@
     flex: 0 1 auto;
 
     .nav-direction {
-        padding: 0.5rem 0.5rem 0.5rem 0;
+        padding: 0.6rem 0.75rem 0.75rem 0;
     }
 
     text-align: right;
@@ -51,7 +54,7 @@
     text-decoration: none;
 
     .nav-direction {
-        background-color: $office-azur;
+        background-color: $cyanide;
         color: white;
     }
 }

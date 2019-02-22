@@ -22,7 +22,12 @@
     <div class="entry-meta__date">
         <span class="last-update">Mis à jour le <?php the_modified_date(); ?></span>
         <span class="bullet">&bullet;</span>
-        <span class="entry-date">Publié le <?php the_time( get_option( 'date_format' ) ); ?></span>
+        <?php 
+            $dateShort = get_the_date( 'j M. Y' );
+            $dateLong = get_the_date( 'j F Y' );
+        ?>
+        <span class="entry-date entry-date--long">Publié le <?php echo $dateLong ?></span>
+        <span class="entry-date entry-date--short">Publié le <?php echo $dateShort ?></span>
     </div>
 
 </section>
