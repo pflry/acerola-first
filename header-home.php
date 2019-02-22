@@ -46,7 +46,7 @@
 
             <section class="home-headline">
                 <div class="container">
-                    <div class="headline">vitaminer les carrières</div>
+                    <div class="headline"><span>vitaminer </span>les carrières</div>
                 </div>
             </section>
                 

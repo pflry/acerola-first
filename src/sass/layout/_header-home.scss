@@ -31,8 +31,8 @@
 
 .home .site-title .logo-acerola {
     @extend %primeyellow;
-    height: 90px;
-    margin-top: 2rem;
+    height: 67px;
+    margin-top: 1rem;
     width: auto;
 }
 
@@ -92,7 +92,14 @@
 
 .home-headline .headline {
     color: $white;
-    font-size: $font-size-h1;
-    font-family: $font-family-headings;
-    font-weight: 900;
+    font-size: calc(#{$font-size-h1} * 1.65);
+    // font-family: $font-family-headings;
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+
+    span {
+        display: block;
+        font-size: $font-size-h1;
+    }
 }
