@@ -43,19 +43,45 @@
                     </button>
                 </div>
             </section>
-            <section id="headerHiglight" class="blog-header__highlight">
-                <picture>
-                    <source media="(max-width: 500px)" srcset="<?php echo get_build_img_path('poster-500w.jpg') ?>">
-                    <source media="(max-width: 768px)" srcset="<?php echo get_build_img_path('poster-768w.jpg') ?>">
-                    <source media="(max-width: 992px)" srcset="<?php echo get_build_img_path('poster-992w.jpg') ?>">
-                    <source media="(max-width: 1280px)" srcset="<?php echo get_build_img_path('poster-1280w.jpg') ?>">
-                    <img src="<?php echo get_build_img_path('poster-1280w.jpg') ?>" alt="Acérola Carrière" class="img-fluid">
-                </picture>
 
+            <section class="home-headline">
                 <div class="container">
                     <div class="headline">vitaminer les carrières</div>
                 </div>
             </section>
+                
+            <section class="home-counters">
+                <div class="container">
+                    <div class="counter">
+                        <div class="counter-head">
+                            <div id="counterCareer" class="counter--digit" data-number="291"></div>
+                            <div class="counter--title">carrières boostées</div>
+                        </div>
+                        <div class="counter-content">
+                            <p>Un nouveau projet professionnel, la confiance retrouvée &hellip;</p>
+                        </div>
+                    </div>
+                    <div class="counter">
+                        <div class="counter-head">
+                            <div id="counterCustomer" class="counter--digit" data-number="89"></div>
+                            <div class="counter--title">clients entreprise</div>
+                        </div>
+                        <div class="counter-content">
+                            <p>Notre cocktail vitaminé : proximité, efficacité, optimisation du budget.</p>
+                        </div>
+                    </div>
+                    <div class="counter">
+                        <div class="counter-head">
+                            <div id="counterContact" class="counter--digit" data-number="2388"></div>
+                            <div class="counter--title">contacts réseaux</div>
+                        </div>
+                        <div class="counter-content">
+                            <p>&hellip; à partager avec vous !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
         </header>
 
         <div id="containerMain">

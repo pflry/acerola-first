@@ -60,13 +60,9 @@
 }
 
 %img-fluid {
-    border-radius: 0;
+    border-radius: $border-radius;
     height: auto;
     max-width: 100%;
-
-    @media screen and (min-width: $small) {
-        border-radius: $border-radius;
-    }
 }
 
 // Logo full
@@ -86,6 +82,23 @@
 
     .carriere {
         color: $color-content-header-top;
+    }
+}
+
+// fonds foncés
+%primeyellow {
+    color: $color-primary;
+
+    .acerola {
+        color: shade($office-azur, 50%);
+    }
+
+    .ball {
+        color: $white;
+    }
+
+    .carriere {
+        color: $white;
     }
 }
 

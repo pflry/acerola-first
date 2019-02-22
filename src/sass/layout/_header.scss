@@ -64,9 +64,9 @@
 
         .icon {
             color: $color-content-header-top;
-            height: $font-size-base;
+            height: 1.25rem;
             padding-right: 0.1rem;
-            vertical-align: middle;
+            vertical-align: top;
             width: auto;
         }   
     }
@@ -75,14 +75,14 @@
 // Top social
 .blog-header__top .top-social a {
     border-radius: 50%;
-    border: solid 1px $color-content-header-top;
-    color: $color-content-header-top;
+    color: $white;
     display: inline-block;
     margin-left: 0.25rem;
     padding: 0.15rem;
     text-align: center;
     transition: $transition-base;
     width: 1.675rem;
+    height: 1.675rem;
 
     .icon {
         height: $font-size-sm;
@@ -92,10 +92,26 @@
         width: auto;
     }
 
+    &.facebook {
+        background-color: $facebook-color;
+    }
+
+    &.twitter {
+        background-color: $twitter-color;
+    }
+
+    &.linkedin {
+        background-color: $linkedin-color;
+    }
+
+    &.viadeo {
+        background-color: $viadeo-color;
+    }
+
     .icon-facebook,
     .icon-twitter,
     .icon-linkedin {
-        fill: $color-content-header-top;
+        fill: $white;
         stroke-width: 0;
     }
 

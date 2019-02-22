@@ -69,6 +69,10 @@
         text-decoration: none;
         border-color: $cyanide;
     }
+
+    .home & {
+        color: $white;
+    }
 }
 
 .site-menu .menu .menu-item.active > a,

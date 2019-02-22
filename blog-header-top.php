@@ -19,16 +19,16 @@
         </div>
 
         <div class="top-social">
-            <a href="https://www.facebook.com/acerolacarriere" class="" target="_blank">
+            <a href="https://www.facebook.com/acerolacarriere" class="facebook" target="_blank">
                 <?php echo get_build_icon_path('facebook.svg') ?>
             </a>
-            <a href="https://twitter.com/AcerolaCarriere" class="" target="_blank">
+            <a href="https://twitter.com/AcerolaCarriere" class="twitter" target="_blank">
                 <?php echo get_build_icon_path('twitter.svg') ?>
             </a>
-            <a href="https://www.linkedin.com/profile/view?id=222313042" class="picto-social picto-social--sm" target="_blank">
+            <a href="https://www.linkedin.com/profile/view?id=222313042" class="linkedin" target="_blank">
                 <?php echo get_build_icon_path('linkedin.svg') ?>
             </a>
-            <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" class="" target="_blank">
+            <a href="http://www.viadeo.com/profile/002l8hk33l3bnvr" class="viadeo" target="_blank">
                 <?php echo get_build_icon_path('viadeo.svg') ?>
             </a>
         </div>
