@@ -4,8 +4,13 @@
 
 
 .home-counters {
+    display: none;
     position: relative;
     z-index: 15;
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
 }
 
 .home-counters .container {

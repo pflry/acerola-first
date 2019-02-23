@@ -1,8 +1,10 @@
 //
 // Header homepage
 // --------------------------------------------------
+
+/* home header */
 .home .blog-header {
-    height: calc(100vh - 40px);
+    height: 100vh;
     background-image: image('poster.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,8 +19,13 @@
         content: '';
         background: rgba($black,0.35);        
     }
+
+    @media screen and (min-width: $medium) {
+        height: calc(100vh - 40px);
+    }
 }
 
+// Banner menu
 .home .blog-header__banner {
     background: transparent;
     position: relative;
@@ -36,6 +43,47 @@
     width: auto;
 }
 
+// Home headline
+.home-headline {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: center;
+    position: relative;
+    z-index: 15;
+}
+
+.home-headline .headline {
+    color: $white;
+    font-size: 11vw;
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+
+    span {
+        display: block;
+        font-size: 8vw;
+    }
+
+    @media screen and (min-width: $medium) {
+        font-size: calc(#{$font-size-h2} * 1.65);
+
+        span {
+            font-size: $font-size-h2;
+        }
+    }
+
+    @media screen and (min-width: $x-large) {
+        font-size: calc(#{$font-size-h1} * 1.65);
+
+        span {
+            font-size: $font-size-h1;
+        }
+    }
+}
+
+
+/* bloc header top */
 .home .blog-header__top {
     background-color: $color-darker;
     color: $white;
@@ -82,24 +130,5 @@
         &.icon-viadeo {
             color: $viadeo-color;
         }
-    }
-}
-
-.home-headline {
-    position: relative;
-    z-index: 15;
-}
-
-.home-headline .headline {
-    color: $white;
-    font-size: calc(#{$font-size-h1} * 1.65);
-    // font-family: $font-family-headings;
-    font-weight: 700;
-    line-height: 1.15;
-    text-transform: uppercase;
-
-    span {
-        display: block;
-        font-size: $font-size-h1;
     }
 }

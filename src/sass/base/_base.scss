@@ -28,33 +28,15 @@ body {
 // wrapper
 .wrapper {
     background-color: $white;
-    // min-height: 100vh;
-    // padding-bottom: 80px;
-    // transform: translate(0);
-    // transition: $transition-base;
 
     &.covered {
         opacity: 0.25;
     }
 
-    // @media screen and (min-width: $medium) {
-    //     padding-bottom: 367.27px;;
-    // }
-
-    // @media screen and (min-width: $large) {
-    //     padding-bottom: 362.59px;
-    // }
-
     // @media screen and (min-width: $x-large) {
-    //     padding-bottom: 376.63px;
     //     max-width: 1280px;
     //     margin: 0 auto;
     // }
-
-    @media screen and (min-width: $x-large) {
-        max-width: 1280px;
-        margin: 0 auto;
-    }
 }
 
 // containers

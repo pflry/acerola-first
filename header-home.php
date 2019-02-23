@@ -20,8 +20,8 @@
     <div id="containerWrapper" class="wrapper">
 
         <?php get_template_part( 'blog-header-top' ); ?>
-        
-        <header id="header" class="blog-header">           
+
+        <header id="header" class="blog-header">
             <section id="blogBanner" class="blog-header__banner">
                 <div class="container">
                     <div id="siteTitle" class="site-title">
@@ -35,7 +35,7 @@
                         <?php wp_nav_menu( array(
                             'walker' => new CSS_Menu_Maker_Walker(),
                             'theme_location' => 'primary',
-						    'menu'           => 'Header Menu') ); ?>
+                            'menu'           => 'Header Menu') ); ?>
                     </nav>
                     
                     <button id="openSlideMenu" class="menu-toggle">
@@ -55,7 +55,7 @@
                     <div class="counter">
                         <div class="counter-head">
                             <div id="counterCareer" class="counter--digit" data-number="291"></div>
-                            <div class="counter--title">carrières boostées</div>
+                            <div class="counter--title">carrières&nbsp;boostées</div>
                         </div>
                         <div class="counter-content">
                             <p>Un nouveau projet professionnel, la confiance retrouvée &hellip;</p>
@@ -64,7 +64,7 @@
                     <div class="counter">
                         <div class="counter-head">
                             <div id="counterCustomer" class="counter--digit" data-number="89"></div>
-                            <div class="counter--title">clients entreprise</div>
+                            <div class="counter--title">clients&nbsp;entreprise</div>
                         </div>
                         <div class="counter-content">
                             <p>Notre cocktail vitaminé : proximité, efficacité, optimisation du budget.</p>
@@ -73,7 +73,7 @@
                     <div class="counter">
                         <div class="counter-head">
                             <div id="counterContact" class="counter--digit" data-number="2388"></div>
-                            <div class="counter--title">contacts réseaux</div>
+                            <div class="counter--title">contacts&nbsp;réseaux</div>
                         </div>
                         <div class="counter-content">
                             <p>&hellip; à partager avec vous !</p>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </section>
-            
+        
         </header>
 
         <div id="containerMain">

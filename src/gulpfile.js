@@ -37,10 +37,6 @@ const dest = {
         rep: '../dist/js/',
         files: '../dist/js/*.*'
     },
-    fonts: {
-        rep: '../dist/fonts/',
-        files: '../dist/fonts/*.*'
-    },
     icons: {
         rep: '../dist/icons/',
         files: '../dist/icons/*.*'
@@ -202,10 +198,6 @@ gulp.task('scripts:infos', () => {
 
 //-- Assets
 gulp.task('copy', () => {
-    let polices = gulp.src(src.fonts)
-        .pipe(changed(dest.fonts.rep))
-        .pipe(gulp.dest(dest.fonts.rep));
-
     let images = gulp.src(src.images)
         .pipe(changed(dest.images.rep))
         .pipe(gulp.dest(dest.images.rep));
@@ -214,7 +206,7 @@ gulp.task('copy', () => {
         .pipe(changed(dest.icons.rep))
         .pipe(gulp.dest(dest.icons.rep));
 
-    return merge(polices, images, icones);
+    return merge(images, icones);
 });
 
 
@@ -224,8 +216,7 @@ gulp.task('clean', () => {
             dest.css.files,
             dest.js.files,
             dest.images.files,
-            dest.icons.files,
-            dest.fonts.files
+            dest.icons.files
         ], {
             read: false
         })
