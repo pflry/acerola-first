@@ -3,6 +3,7 @@
 require('slick-carousel');
 require('jscroll');
 import CountUp from 'countup.js';
+import OnScreen from 'onscreen';
 
 const app = {
     init: function() {
@@ -100,19 +101,26 @@ app.countUp = {
         let params = {
             start: 0,
             decimals: 0,
-            duration: 5
-        }
+            duration: 15
+        };
 
-        let kounters = ['counterCareer','counterCustomer','counterContact'];
+        let kounters = ['counterCareer', 'counterCustomer', 'counterContact', 'counterCareerBody', 'counterCustomerBody', 'counterContactBody'];
         
         let i;
-        
-        for (i = 0; i < kounters.length; i++) {
-            let end = parseInt($('#'+kounters[i]).attr('data-number'));
-            let yocounter = new CountUp(kounters[i], params.start, end, params.decimals, params.duration, options);
-            yocounter.start();
-        }
-    
+
+        let os = new OnScreen({
+            tolerance: 0,
+            debounce: 0
+        });
+
+        os.on('enter', '.counter', (element, event) => {
+            for (i = 0; i < kounters.length; i++) {
+                let end = parseInt($('#' + kounters[i]).attr('data-number'));
+                let yocounter = new CountUp(kounters[i], params.start, end, params.decimals, params.duration, options);
+                yocounter.start();
+            }
+            os.destroy();
+        });
     }
 };
 

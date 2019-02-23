@@ -15,15 +15,11 @@
 
 .home-counters .container {
     align-items: stretch;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     padding-bottom: 1.5rem;
     position: relative;
     z-index: 15;
-
-    @media screen and (min-width: $medium) {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 }
 
 .home-counters .counter {
@@ -82,7 +78,65 @@
     text-align: center;
 
     p {
-        color: $washing-blue;
+        color: $gray-200;
         margin: 1rem 0 0.5rem;
+    }
+}
+
+/* Counters body */
+.home-counters-body {
+    background-color: $color-primary;
+    display: block;
+    position: relative;
+    z-index: 15;
+
+    @media screen and (min-width: $medium) {
+        display: none;
+    }
+}
+
+.home-counters-body .container {
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 15;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.home-counters-body .counter {
+    padding: 1rem 0;
+}
+
+.home-counters-body .counter-head {
+    text-align: center;
+
+    .counter--digit {
+        color: $white;
+        font-size: $font-size-h1;
+        font-weight: 500;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .counter--title {
+        @extend %titre-service;
+        color: $color-base;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        margin-top: 0.25rem;
+    }
+}
+
+.home-counters-body .counter-content {
+    display: flex;
+    justify-content: center;
+    max-width: 350px;
+    text-align: center;
+
+    p {
+        color: $color-base;
+        margin: 0;
     }
 }

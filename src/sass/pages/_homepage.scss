@@ -10,11 +10,13 @@
     .container {
         flex-direction: row;
         justify-content: flex-start;
+        padding: 0;
     }
     
     @media screen and (min-width: $medium) {
-        flex-direction: row;
         align-items: stretch;
+        flex-direction: row;
+        padding: 0 1.875rem;
     }
 }
 
