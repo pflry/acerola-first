@@ -2,7 +2,7 @@
 // Home - Bloc counters
 // --------------------------------------------------
 
-
+/* Counters header */
 .home-counters {
     display: none;
     position: relative;
@@ -23,32 +23,21 @@
 }
 
 .home-counters .counter {
-    position: relative;
+    border-radius: $border-radius;
     padding: 1rem;
+    position: relative;
 
     &:first-child {
-        margin-top: -1.5rem;
+        margin-left: 0
     }
 
     &:last-child {
-        margin-bottom: -1.5rem;
+        margin-right: 0
     }
 
     @media screen and (min-width: $medium) {
         background: rgba($black,0.5);
         flex: 1 1 33.333%;
-        margin: 0 0.5rem;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    @media screen and (min-width: $large) {
         margin: 0 0.25rem;
     }
 }
@@ -98,21 +87,29 @@
 .home-counters-body .container {
     align-items: center;
     flex-direction: column;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
     position: relative;
     z-index: 15;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
 }
 
 .home-counters-body .counter {
+    background-color: $white;
+    border-radius: $border-radius;
+    max-width: 350px;
     padding: 1rem 0;
+    width: 100%;
+
+    & + .counter {
+        margin-top: 1rem;
+    }
 }
 
 .home-counters-body .counter-head {
     text-align: center;
 
     .counter--digit {
-        color: $white;
+        color: $color-primary;
         font-size: $font-size-h1;
         font-weight: 500;
         line-height: 1;
@@ -130,13 +127,10 @@
 }
 
 .home-counters-body .counter-content {
-    display: flex;
-    justify-content: center;
-    max-width: 350px;
     text-align: center;
 
     p {
         color: $color-base;
-        margin: 0;
+        margin: 0 1rem;
     }
 }

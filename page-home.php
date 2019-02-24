@@ -52,6 +52,7 @@ get_header('home'); ?>
                     <source media="(max-width: 510px)" srcset="<?php echo get_build_img_path('company-575w.jpg') ?>">
                     <source media="(max-width: 767px)" srcset="<?php echo get_build_img_path('company-768w.jpg') ?>">
                     <source media="(max-width: 991px)" srcset="<?php echo get_build_img_path('company-992w.jpg') ?>">
+                    <source media="(max-width: 1200px)" srcset="<?php echo get_build_img_path('company-575w.jpg') ?>">
                     <source media="(max-width: 1280px)" srcset="<?php echo get_build_img_path('company-1280w.jpg') ?>">
                     <img src="<?php echo get_build_img_path('company-1280w.jpg') ?>" alt="Acérola Carrière" class="img-fluid">
                 </picture>

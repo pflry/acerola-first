@@ -14,9 +14,25 @@
     }
     
     @media screen and (min-width: $medium) {
-        align-items: stretch;
-        flex-direction: row;
-        padding: 0 1.875rem;
+        .container {
+            align-items: stretch;
+            flex-direction: row;
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (min-width: $large) {
+        .container {
+            padding: 0 1.875rem;
+            max-width: 960px;
+        }
+    }
+
+    @media screen and (min-width: $x-large) {
+        .container {
+            padding: 0 1.875rem;
+            max-width: 1170px;
+        }
     }
 }
 
