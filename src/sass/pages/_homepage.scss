@@ -4,93 +4,100 @@
 
 /* Bloc Company */
 .home-company {
-    padding-top: 0;
+    background: $gray-300;
+    padding: 3.125rem 0;
     position: relative;
 
     .container {
-        flex-direction: row;
-        justify-content: flex-start;
-        padding: 0;
-    }
-    
-    @media screen and (min-width: $medium) {
-        .container {
-            align-items: stretch;
-            flex-direction: row;
-            max-width: 100%;
-        }
+        flex-direction: column;
     }
 
     @media screen and (min-width: $large) {
         .container {
-            padding: 0 1.875rem;
-            max-width: 960px;
-        }
-    }
-
-    @media screen and (min-width: $x-large) {
-        .container {
-            padding: 0 1.875rem;
-            max-width: 1170px;
+            align-items: stretch;
+            flex-direction: row;
         }
     }
 }
 
 .home-company .home-bloc--picture {
     flex: 0 1 auto;
+    padding-top: 3.125rem;
 
     .img-fluid {
         border-radius: 0;
     }
 
-    @media screen and (min-width: $medium) {
+    @media screen and (min-width: $large) {
         flex: 0 1 50%;
+        padding-left: 1rem;
+        padding-top: 0;
     }
 }
 
 .home-company .home-bloc--content {
-    @extend %absolute-pos;
     align-items: flex-start;
+    color: $color-base;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: linear-gradient(to bottom, rgba($black, 0) 50%, rgba($black, 0.6) 60%);
-    padding: 1.875rem;
-    color: $white;
 
     .h2 {
-        color: $color-primary;
-        font-weight: 900;
+        color: $color-base;
+        font-weight: 500;
+        margin: 0 0 30px;
+    }
+
+    .h2:after {
+        border: solid 1.5px $color-primary;
+        content: '';
+        display: block;
+        margin-top: 0.5rem;
+        width: 100px;
     }
 
     .btn {
-        align-self: flex-start;
-    }
-
-    .company--complement {
-        display: none;
-    }
-
-    @media screen and (min-width: 600px) {
-        padding: 1.875rem 3.75rem;
+        margin-top: 0.625rem;
     }
 
     @media screen and (min-width: $medium) {
-        background: $washing-blue;
-        flex: 0 1 50%;
-        padding: 1rem 1.875rem 1.875rem;
+        padding: 0;
         position: relative;
-        color: $color-office-dark;
-
-        .h2 {
-            margin-top: 1rem;
-            color: $color-office-dark;
-        }
     }
 
     @media screen and (min-width: $large) {
-        .company--complement{
-            display: block;
-        }
+        background: transparent;
+        flex: 0 1 50%;
+        justify-content: center;
+        padding-right: 1rem;
     }
+}
+
+.main .checklist-home {
+    padding: 0;
+    margin: 0;
+}
+
+.checklist-home li {
+    border-bottom: 1px solid rgba($black, 0.1);
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 30px;
+    position: relative;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.checklist-home li:before {
+    content: '';
+    background-image: url('wp-content/themes/acerola2019/dist/icons/check.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: block;
 }

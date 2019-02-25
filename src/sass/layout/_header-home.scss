@@ -43,6 +43,14 @@
     width: auto;
 }
 
+.home .site-menu .menu .menu-item a {
+    color: $white;
+
+    &:hover {
+        color: $color-menu-text-hover;
+    }
+}
+
 // Home headline
 .home-headline {
     display: flex;
