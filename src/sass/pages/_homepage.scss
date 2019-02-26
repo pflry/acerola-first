@@ -2,53 +2,12 @@
 // Homepage
 // --------------------------------------------------
 
-/* Bloc Company */
-.home-company {
-    background: $gray-300;
-    padding: 3.125rem 0;
-    position: relative;
-
-    .container {
-        flex-direction: column;
-    }
-
-    @media screen and (min-width: $large) {
-        .container {
-            align-items: stretch;
-            flex-direction: row;
-        }
-    }
-}
-
-.home-company .home-bloc--picture {
-    flex: 0 1 auto;
-    padding-top: 3.125rem;
-
-    .img-fluid {
-        border-radius: 0;
-    }
-
-    @media screen and (min-width: $large) {
-        flex: 0 1 50%;
-        padding-left: 1rem;
-        padding-top: 0;
-    }
-}
-
-.home-company .home-bloc--content {
-    align-items: flex-start;
+.home .h2 {
     color: $color-base;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    font-weight: 500;
+    margin: 0 0 30px;
 
-    .h2 {
-        color: $color-base;
-        font-weight: 500;
-        margin: 0 0 30px;
-    }
-
-    .h2:after {
+    &:after {
         border: solid 1.5px $color-primary;
         content: '';
         display: block;
@@ -56,48 +15,112 @@
         width: 100px;
     }
 
-    .btn {
-        margin-top: 0.625rem;
+    &.center:after {
+        margin: 0.5rem auto 0;
     }
+}
 
-    @media screen and (min-width: $medium) {
-        padding: 0;
-        position: relative;
+/* bloc home-expertise */
+.home-expertise {
+    background-color: $white;
+    padding: 3.125rem 0;
+
+    @media screen and (min-width: $small) {
+        p, ul {
+            margin: 0 auto 1.375rem;
+            max-width: 90%;
+        }
     }
 
     @media screen and (min-width: $large) {
-        background: transparent;
-        flex: 0 1 50%;
+        p, ul {
+            max-width: 80%;
+        }
+    }
+}
+
+.home-expertise .container-intro {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3.125rem;
+    text-align: center;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.home-expertise .container-visuals {
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (min-width: $small) {
         justify-content: center;
-        padding-right: 1rem;
+    }
+
+    @media screen and (min-width: $large) {
+        justify-content: space-between;
     }
 }
 
-.main .checklist-home {
-    padding: 0;
-    margin: 0;
-}
-
-.checklist-home li {
-    border-bottom: 1px solid rgba($black, 0.1);
-    list-style-type: none;
-    margin: 0 0 10px 0;
-    padding: 0 0 10px 30px;
+.expertise {
+    background-color: $orange-flowering;
+    border-radius: $border-radius;
+    flex: 0 1 90%;
+    max-width: 300px;
     position: relative;
+    text-align: center;
 
-    &:last-child {
-        border-bottom: none;
+    + .expertise {
+        margin-top: 1.5rem;
+    }
+
+    figcaption {
+        bottom: 1rem;
+        left: 1rem;
+        position: absolute;
+        right: 1rem;
+
+        .btn {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: $small) {
+        flex: 0 1 45%;
+        max-width: auto;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        + .expertise {
+            margin-top: 0;
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media screen and (min-width: $large) {
+        flex: 0 1 23%;
+        margin-left: 0;
+        margin-right: 0;
+
+        &:first-child,
+        &:nth-child(2) {
+            margin-bottom: 0;
+        }
     }
 }
 
-.checklist-home li:before {
-    content: '';
-    background-image: url('wp-content/themes/acerola2019/dist/icons/check.svg');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1.5rem;
-    width: 1.5rem;
+.home-expertise .container-outro {
     display: block;
+    padding-top: 3.125rem;
+    text-align: center;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 }

@@ -2,10 +2,9 @@
 // Header homepage
 // --------------------------------------------------
 
-/* home header */
 .home .blog-header {
     height: 100vh;
-    background-image: image('poster.jpg');
+    background-image: image('poster-575w.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 50%;
@@ -21,11 +20,20 @@
     }
 
     @media screen and (min-width: $medium) {
+        background-image: image('poster-768w.jpg');
         height: calc(100vh - 40px);
+    }
+
+    @media screen and (min-width: $large) {
+        background-image: image('poster-992w.jpg');
+    }
+
+    @media screen and (min-width: $x-large) {
+        background-image: image('poster-1280w.jpg');
     }
 }
 
-// Banner menu
+/* Main menu */
 .home .blog-header__banner {
     background: transparent;
     position: relative;
@@ -36,22 +44,32 @@
     }
 }
 
-.home .site-title .logo-acerola {
-    @extend %primeyellow;
-    height: 67px;
-    margin-top: 1rem;
-    width: auto;
-}
-
+// niveau 1
 .home .site-menu .menu .menu-item a {
     color: $white;
 
     &:hover {
-        color: $color-menu-text-hover;
+        color: $white;
     }
 }
 
-// Home headline
+// niveau 2
+.home .site-menu .menu ul .menu-item a {
+    color: white(0.5);
+}
+
+/* logo */
+.home .site-title .logo-acerola {
+    @extend %primeyellow;
+
+    @media screen and (min-width: $large) {
+        height: 80px;
+        margin-top: 2rem;
+        width: auto;
+    }
+}
+
+/* Home headline */
 .home-headline {
     display: flex;
     flex-direction: column;
@@ -89,7 +107,6 @@
         }
     }
 }
-
 
 /* bloc header top */
 .home .blog-header__top {

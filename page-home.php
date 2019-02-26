@@ -51,13 +51,13 @@ get_header('home'); ?>
                 <h2 class="h2">
                     Le cabinet Acérola&nbsp;Carrière
                 </h2>
-                <p>Acérola Carrière c’est un cabinet de conseil&nbsp;RH&nbsp;:</p>
+                <p>Acérola Carrière c'est un cabinet de conseil&nbsp;RH&nbsp;:</p>
                 <ul class="checklist-home">
                     <li>dirigé par une psychologue du travail</li>
                     <li>spécialiste du développement RH des TPE-PME</li>
-                    <li>expert en accompagnement individuel de salariés et demandeurs d’emploi</li>
+                    <li>expert en accompagnement individuel de salariés et demandeurs d'emploi</li>
                 </ul>
-                <p>Avec 100 bilans de compétences et 40 recrutements réalisés par an, le cabinet est un acteur majeur de la gestion des carrières  à Paris et dans l’Est parisien.</p>
+                <p>Avec 100 bilans de compétences et 40 recrutements réalisés par an, le cabinet est un acteur majeur de la gestion des carrières  à Paris et dans l'Est parisien.</p>
                 <a href="le-cabinet/" class="btn btn-primary">Découvrir Acérola Carrière</a>
             </div>
             <div class="home-bloc--picture">
@@ -72,7 +72,33 @@ get_header('home'); ?>
         </div>
     </section>
 
-
+    <section id="homeExpertise" class="home-expertise">
+        <div class="container container-intro">
+            <h2 class="h2 center">Notre expertise</h2>
+            <p>L'évaluation des compétences, l'ingénierie pédagogique, l'accompagnement des projets professionnels, c'est l'expertise que nous mettons à votre disposition, particuliers ou entreprises.</p>
+        </div>
+        <div class="container container-visuals">
+            <figure class="expertise expertise-skills">
+                <img src="<?php echo get_build_img_path('outplacement.jpg') ?>" alt="Formation" class="img-fluid">
+                <figcaption><a href="bilan-de-competences/" class="btn btn-success">Bilan de compétences</a></figcaption>
+            </figure>
+            <figure class="expertise expertise-recruitment">
+                <img src="<?php echo get_build_img_path('recrutement.jpg') ?>" alt="Formation" class="img-fluid">
+                <figcaption><a href="conseil-en-recrutement/" class="btn btn-success">Recrutement</a></figcaption>
+            </figure>
+            <figure class="expertise expertise-outplacement">
+                <img src="<?php echo get_build_img_path('competences.jpg') ?>" alt="Formation" class="img-fluid">
+                <figcaption><a href="outplacement/" class="btn btn-success">Outplacement</a></figcaption>
+            </figure>
+            <figure class="expertise expertise-training">
+                <img src="<?php echo get_build_img_path('formation3.jpg') ?>" alt="Formation" class="img-fluid">
+                <figcaption><a href="#" class="btn btn-success">Formations</a></figcaption>
+            </figure>
+        </div>
+        <div class="container container-outro">
+            <p>Nous avons également à c&oelig;ur de vous faire profiter de notre connaissance d'un grand nombre de métiers et du marché de l'emploi pour accompagner votre évolution ou votre reconversion professionnelle ou vous permettre de recruter les profils adaptés aux enjeux de votre entreprise.<br>Nos clients apprécient particulièrement notre écoute de leurs besoins et les solutions que nous leur apportons.</p> 
+        </div>
+    </section>
 
 </section>
 <?php get_footer(); ?>
