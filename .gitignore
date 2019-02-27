@@ -97,6 +97,6 @@ wp-content/plugins/hello.php
 
 ### ACEROLA ###
 dist/
-/header-styles.php
+header-styles.php
 
 # End of https://www.gitignore.io/api/node,wordpress

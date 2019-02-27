@@ -74,8 +74,9 @@
 
 /* Counters body */
 .home-counters-body {
-    background-color: $color-primary;
+    background-color: shade($office-azur, 50%);
     display: block;
+    padding: 3.125rem 0;
     position: relative;
     z-index: 15;
 
@@ -87,21 +88,17 @@
 .home-counters-body .container {
     align-items: center;
     flex-direction: column;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
     position: relative;
     z-index: 15;
 }
 
 .home-counters-body .counter {
-    background-color: $white;
-    border-radius: $border-radius;
-    max-width: 350px;
-    padding: 1rem 0;
+    max-width: 380px;
+    padding: 0 1rem;
     width: 100%;
 
     & + .counter {
-        margin-top: 1rem;
+        margin-top: 2.125rem;
     }
 }
 
@@ -109,7 +106,7 @@
     text-align: center;
 
     .counter--digit {
-        color: $color-primary;
+        color: $white;
         font-size: $font-size-h1;
         font-weight: 500;
         line-height: 1;
@@ -118,11 +115,19 @@
 
     .counter--title {
         @extend %titre-service;
-        color: $color-base;
+        color: $white;
         font-size: 1rem;
-        font-weight: 700;
         margin-bottom: 0.25rem;
         margin-top: 0.25rem;
+
+        &:after {
+            border: solid 1px $color-primary;
+            content: '';
+            display: block;
+            margin-top: 0.5rem;
+            margin: 0.5rem auto;
+            width: 100px;
+        }
     }
 }
 
@@ -130,7 +135,6 @@
     text-align: center;
 
     p {
-        color: $color-base;
-        margin: 0 1rem;
+        color: $washing-blue;
     }
 }

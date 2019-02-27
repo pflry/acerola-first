@@ -55,6 +55,10 @@
     font-size: $font-size-base;
     font-weight: 300;
     justify-content: space-between;
+
+    @media screen and (min-width: $medium) and (max-width: $large) {
+        padding-right: 0.25rem;
+    }
 }
 
 // footer connect contact
@@ -67,6 +71,11 @@
 
 .footer__connect-contact .welcome {
     padding: 0.25rem 0 0.5rem;
+    font-size: $font-size-sm;
+
+    @media screen and (min-width: $large) {
+        font-size: $font-size-base;
+    }
 }
 
 .footer__connect-contact .contact {

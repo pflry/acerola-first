@@ -11,7 +11,7 @@
                             <div class="welcome">Prenez contact dès maintenant, nous vous réservons le meilleur accueil.</div>
 
                             <div class="contact">
-                                <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93<span class="bullet">•</span><?php echo get_build_icon_path('email.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">Par E-mail</a>
+                                <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93<span class="bullet">•</span><?php echo get_build_icon_path('email.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">Email</a>
                             </div>
                         </div>
 

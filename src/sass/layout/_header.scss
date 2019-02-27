@@ -148,15 +148,9 @@
     .container {
         align-items: center;
         height: 120px;
-        padding: 0 1.875rem 0 1rem;
+        padding: 0 1.875rem;
         position: relative;
         z-index: 100;
-    }
-
-    @media screen and (min-width: $medium) {
-        .container {
-            padding: 0 1.875rem;
-        }
     }
 }
 
