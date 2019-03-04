@@ -79,16 +79,18 @@ function acerola_setup() {
 	/**
 	 * Limit excerpt to a number of characters
 	 */ 
-	add_filter('the_excerpt', 'acerola_short_excerpt');
+	// add_filter('the_excerpt', 'acerola_short_excerpt');
 
-	function acerola_short_excerpt($excerpt){
-		$limit = 80;
+	// function acerola_short_excerpt($excerpt){
+	// 	$limit = 80;
 
-		if (strlen($excerpt) > $limit) {
-			return substr($excerpt, 0, strpos($excerpt, ' ', $limit));
-		}
-		return $excerpt;
-	}
+	// 	if (strlen($excerpt) > $limit) {
+	// 		return substr($excerpt, 0, strpos($excerpt, ' ', $limit));
+	// 	}
+	// 	return $excerpt;
+	// }
+
+	// add_filter( 'excerpt_length', function( $length ) { return 20; } );
 
 	/**
 	 * Exclude pages from WordPress search results

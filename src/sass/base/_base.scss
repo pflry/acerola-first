@@ -76,7 +76,26 @@ body {
         padding-bottom: 2rem;
         padding-top: 2rem;
     }
+}
 
+.container-full {
+    max-width: 100%;
+    padding: 0;
+
+    @media screen and (min-width: $medium) {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    @media screen and (min-width: $large) {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    @media screen and (min-width: $x-large) {
+        max-width: 100%;
+        padding: 0;
+    }
 }
 
 // main
@@ -156,6 +175,12 @@ img {
 
     &.wp-post-image {
         border-radius: 0;
+    }
+
+    @media screen and (min-width: $small) {
+        &.wp-post-image {
+            border-radius: $border-radius;
+        }
     }
 }
 

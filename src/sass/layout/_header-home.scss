@@ -3,15 +3,15 @@
 // --------------------------------------------------
 
 .home .blog-header {
-    height: 100vh;
     background-image: image('poster-575w.jpg');
+    background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100% 50%;
-    position: relative;
     display: flex;
     flex-direction: column;
+    height: 100vh;
     justify-content: space-between;
+    position: relative;
 
     &:after {
         @extend %absolute-pos;
@@ -21,7 +21,7 @@
 
     @media screen and (min-width: $medium) {
         background-image: image('poster-768w.jpg');
-        height: calc(100vh - 40px);
+        height: calc(87vh - 40px);
     }
 
     @media screen and (min-width: $large) {
