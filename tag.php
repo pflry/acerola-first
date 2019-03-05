@@ -16,10 +16,10 @@
     <div class="arcade-list">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="frame">
-            <?php get_template_part( 'entry' ); ?>
+            <?php get_template_part( 'templates/entry' ); ?>
         </div>
         <?php endwhile; endif; ?>
     </div>
-    <?php get_template_part( 'pagination' ); ?>
+    <?php get_template_part( 'templates/pagination' ); ?>
 </section>
 <?php get_footer(); ?>

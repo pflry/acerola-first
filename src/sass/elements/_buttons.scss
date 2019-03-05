@@ -21,8 +21,25 @@
     text-decoration: none;
 }
 
+.btn-black {
+    background-color: $black;
+    border-color: $black;
+    color: dynamic-color($black);
+    transition: $transition-base;
+
+    &:hover {
+        background-color: tint($black, 25%);
+        border-color: tint($black, 25%);
+        color: dynamic-color($black);
+    }
+}
+
+.btn-white {
+    @include bouton($white);
+}
+
 .btn-primary {
-    @include bouton($black);
+    @include bouton($color-primary);
 }
 
 .btn-secondary {
@@ -35,6 +52,11 @@
 
 .btn-info {
     @include bouton($color-info);
+    color: $white;
+
+    &:hover {
+        color: $white;
+    }
 }
 
 .btn-warning {

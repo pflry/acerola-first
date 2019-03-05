@@ -120,7 +120,7 @@ function acerola_setup() {
 	/**
 	 * Comments functions
 	 */
-	require get_parent_theme_file_path( '/inc/comments-functions.php' );
+	// require get_parent_theme_file_path( '/inc/comments-functions.php' );
 
 	/**
 	 * Medias functions

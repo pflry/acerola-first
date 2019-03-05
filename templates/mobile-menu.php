@@ -4,7 +4,7 @@
     </button>
     <div class="container">
         <div id="search" class="mobile-menu__search">
-            <?php get_template_part( 'searchform-menu' ); ?>
+            <?php get_template_part( 'templates/searchform-menu' ); ?>
         </div>
         <nav id="menu" class="smart-menu">
             <?php wp_nav_menu( array(

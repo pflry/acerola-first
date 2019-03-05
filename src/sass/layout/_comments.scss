@@ -17,29 +17,79 @@
     }
 }
 
+.comments-title,
+.comment-reply-title {
+    font-weight: 900;
+}
+
+/* Formulaire */
+
+// form-group
 .comment-notes {
     color: $color-muted;
+    font-size: $font-size-sm;
+}
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.form-submit {
+    @extend %form-group;
+}
+
+.comment-form-url {
+    display: none;
+}
+
+
+// Elements
+.comment-form label {
+    @extend %label;
+}
+
+.comment-form textarea,
+.comment-form input {
+    @extend %form-control;
+}
+
+.comment-form textarea {
+    @extend %textarea;
+}
+
+.comment-form .submit {
+    @extend .btn;
+    @extend .btn-black;
+    width: auto;
+}
+
+/* Commentaires */
+.main .comment-list {
+    @extend %ul-reset;
 }
 
 // comment
 .comment {
+    margin-bottom: 1.875rem;
+}
+
+.comment-body p {
+    background-color: $color-light;
     border-radius: $border-radius;
-    border: solid 1px $color-border;
-    // font-size: $font-size-sm;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
-    padding: 1rem 1.25rem 0.25rem;
+    padding: 1rem 1.25rem;
 }
 
 .comment-author {
+
     .avatar {
         border-radius: 50%;
         float: left;
         margin-right: 1rem;
+        transform: translateY(-0.25rem);
     }
 
     .fn {
-        font-size: $font-size-base;
+        font-size: $font-size-sm;
+        
     }
 
     .says {
@@ -48,6 +98,7 @@
 }
 
 .comment-meta {
+    font-size: $font-size-sm;
     margin-bottom: 0.5rem;
 }
 

@@ -177,3 +177,52 @@
         text-decoration: none;
     }
 }
+
+// Forms
+// -----------------------------------
+
+%form-control {
+    background-clip: padding-box;
+    background-color: $gray-300;
+    border-radius: $border-radius;
+    border: 0;
+    color: $color-dark;
+    display: block;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    outline: none;
+    padding: 0.75rem;
+    transition: $transition-base;
+    width: 100%;
+
+    &::placeholder {
+        color: $color-secondary;
+        opacity: 1;
+    }
+
+    @media screen and (min-width: $medium) {
+        max-width: 75%;
+    }
+}
+
+%form-group {
+    margin-bottom: 1rem;
+}
+
+%label {
+    color: $gray-800;
+    display: inline-block;
+    font-size: $font-size-sm;
+    font-weight: 900;
+    padding-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+%textarea {
+    overflow: auto;
+    resize: vertical;
+
+    @media screen and (min-width: $medium) {
+        max-width: 100%;
+    }
+}

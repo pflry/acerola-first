@@ -11,7 +11,7 @@
 ?><aside id="sidebar" role="complementary" class="sidebar side-standard">
     <div id="primary" class="widget-area">
         <ul class="ul-wrapper">
-            <?php get_template_part( 'sidebar-static' ); ?>
+            <?php get_template_part( 'templates/sidebar-static' ); ?>
 
             <?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
                 <?php dynamic_sidebar( 'primary-widget-area' ); ?>

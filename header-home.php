@@ -12,10 +12,10 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-<?php get_template_part( 'header-head' ); ?>
+<?php get_template_part( 'templates/header-head' ); ?>
 
 <body <?php body_class(); ?>>
-    <?php get_template_part( 'mobile-menu' ); ?>
+    <?php get_template_part( 'templates/mobile-menu' ); ?>
 
     <div id="containerWrapper" class="wrapper">
 

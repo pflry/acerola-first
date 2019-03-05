@@ -21,6 +21,6 @@
         </div>
         <?php endwhile; endif; ?>
     </div>
-    <?php get_template_part( 'pagination' ); ?>
+    <?php get_template_part( 'templates/pagination' ); ?>
 </section>
 <?php get_footer(); ?>

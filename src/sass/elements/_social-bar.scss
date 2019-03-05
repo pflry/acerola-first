@@ -50,9 +50,16 @@
         }
     }
 
-    @media screen and (min-width: $large) and (max-width: $x-large) {
+    @media screen and (min-width: $large) {
         .title {
+            font-size: 0.75rem;
             margin-left: 0.4rem;
+        }
+    }
+
+    @media screen and (min-width: $x-large) {
+        .title {
+            font-size: $font-size-sm;
         }
     }
 }

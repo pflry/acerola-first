@@ -12,14 +12,14 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-<?php get_template_part( 'header-head' ); ?>
+<?php get_template_part( 'templates/header-head' ); ?>
 
 <body <?php body_class(); ?>>
-    <?php get_template_part( 'mobile-menu' ); ?>
+    <?php get_template_part( 'templates/mobile-menu' ); ?>
 
     <div id="containerWrapper" class="wrapper">
 
-        <?php get_template_part( 'blog-header-top' ); ?>
+        <?php get_template_part( 'templates/blog-header-top' ); ?>
         
         <header id="header" class="blog-header">
              <section id="blogBanner" class="blog-header__banner">
