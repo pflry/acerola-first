@@ -6,19 +6,19 @@
     <div class="container container-visuals">
         <figure class="expertise expertise-skills">
             <img src="<?php echo get_build_img_path('outplacement.jpg') ?>" alt="Formation" class="img-fluid">
-            <figcaption><a href="bilan-de-competences/" class="btn btn-white">Bilan de compétences</a></figcaption>
+            <figcaption><a href="bilan-de-competences/" class="btn btn-black">Bilan de compétences</a></figcaption>
         </figure>
         <figure class="expertise expertise-recruitment">
             <img src="<?php echo get_build_img_path('recrutement.jpg') ?>" alt="Formation" class="img-fluid">
-            <figcaption><a href="conseil-en-recrutement/" class="btn btn-white">Recrutement</a></figcaption>
+            <figcaption><a href="conseil-en-recrutement/" class="btn btn-black">Recrutement</a></figcaption>
         </figure>
         <figure class="expertise expertise-outplacement">
             <img src="<?php echo get_build_img_path('competences.jpg') ?>" alt="Formation" class="img-fluid">
-            <figcaption><a href="outplacement/" class="btn btn-white">Outplacement</a></figcaption>
+            <figcaption><a href="outplacement/" class="btn btn-black">Outplacement</a></figcaption>
         </figure>
         <figure class="expertise expertise-training">
             <img src="<?php echo get_build_img_path('formation3.jpg') ?>" alt="Formation" class="img-fluid">
-            <figcaption><a href="#" class="btn btn-white">Formations</a></figcaption>
+            <figcaption><a href="#" class="btn btn-black">Formations</a></figcaption>
         </figure>
     </div>
     <div class="container container-outro">

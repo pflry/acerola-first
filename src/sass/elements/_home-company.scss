@@ -48,39 +48,8 @@
     }
 
     @media screen and (min-width: $large) {
-        background: transparent;
         flex: 0 1 50%;
         justify-content: center;
         padding-right: 1rem;
     }
-}
-
-// list checklist
-.main .checklist-home {
-    padding: 0;
-    margin: 0;
-}
-
-.checklist-home li {
-    border-bottom: 1px solid rgba($black, 0.1);
-    list-style-type: none;
-    margin: 0 0 10px 0;
-    padding: 0 0 10px 30px;
-    position: relative;
-
-    &:last-child {
-        border-bottom: none;
-    }
-}
-
-.checklist-home li:before {
-    content: '';
-    background-image: url('wp-content/themes/acerola2019/dist/icons/check.svg');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1.5rem;
-    width: 1.5rem;
-    display: block;
 }
