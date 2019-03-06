@@ -1,0 +1,91 @@
+//
+// Home - Bloc Highlight
+// --------------------------------------------------
+
+.home-highlight {
+    background: shade($office-azur, 50%);
+
+    @media screen and (min-width: $medium) {
+        background: linear-gradient(to bottom, $white 50%, $gray-300 50%);
+    }
+}
+
+.home-highlight .container {
+    flex-direction: column;
+    padding-bottom: 3.125rem;
+    padding-top: 3.125rem;
+    align-items: center;
+
+    @media screen and (min-width: $medium) {
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+
+        div:first-child {
+            margin-right: 0.25rem;
+        }
+
+        div:last-child {
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+.home-highlight__body {
+    align-items: center;
+    background: $color-office-dark;
+    border-radius: $border-radius;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+    justify-content: space-between;
+    padding: 1.25rem;
+    position: relative;
+    text-align: center;
+    width: 90%;
+
+    +.home-highlight__body {
+        margin-top: 3.125rem;
+    }
+
+    @media screen and (min-width: $medium) {
+        background: linear-gradient(to bottom right, $color-office-dark 10%, shade($office-azur, 70%) 100%);
+        box-shadow: 0 4px 10px rgba($black, 0.45);
+
+        +.home-highlight__body {
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (min-width: $large) {
+        flex: 0 1 40%;
+    }
+}
+
+.home-highlight__body .rub {
+    @extend %titre-service;
+    color: $white;
+    font-size: 1rem;
+    margin-bottom: 0;
+
+    &:after {
+        border: solid 1px $color-primary;
+        content: '';
+        display: block;
+        margin: 0.5rem auto;
+        width: 100px;
+    }
+}
+
+.home-highlight__body p {
+    color: $gray-200;
+    margin-top: 1rem;
+    flex: 1 1 auto;
+
+    strong {
+        color: $white;
+    }
+}

@@ -16,17 +16,17 @@
 @import 'base/typography';
 
 /* Elements */
-@import 'elements/forms';
 @import 'elements/breadcrumb';
-@import 'elements/home-counters';
-@import 'elements/home-company';
-@import 'elements/home-expertise';
 
 /* Layout */
 @import 'layout/header-home';
 @import 'layout/header';
-@import 'layout/sidebar';
-@import 'layout/single';
+@import 'layout/home-counters';
+@import 'layout/home-company';
+@import 'layout/home-expertise';
+@import 'layout/home-highlight';
+@import 'layout/home-news';
+
 
 /* Pages */
 @import 'pages/homepage';

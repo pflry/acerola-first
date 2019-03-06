@@ -31,7 +31,7 @@
         </div>
         <div class="home-news__content">
             <?php
-                echo '<h2 class="h2">Actualités</h2>';
+                echo '<h2 class="h2">Acérola actualités</h2>';
                 echo '<h3 class="h3">'.$postTitle.'</h3>';
                 echo '<p>'.wp_trim_words($postExcerpt, 40, '&nbsp;&hellip;').'</p>';
                 echo '<a href="'. $postPermalink.'" class="btn btn-black">Lire l\'article</a>';

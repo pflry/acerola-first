@@ -24,13 +24,16 @@
 @import 'elements/timeline';
 @import 'elements/social-bar';
 @import 'elements/gutenberg';
+@import 'elements/forms';
 
 /* Layout */
 @import 'layout/comments';
 @import 'layout/footer';
+@import 'layout/sidebar';
 
 /* Pages */
 @import 'pages/blog';
+@import 'pages/single';
 @import 'pages/sitemap';
 
 /* Vendors */
