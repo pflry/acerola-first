@@ -1,0 +1,89 @@
+//
+// Search results
+// --------------------------------------------------
+
+.search-results {
+    .h1 {
+        @extend %mobile;
+    }
+}
+
+/* Article */
+.search-results article {
+    border-bottom: solid 1px $color-border;
+    padding: 1rem 0 1.25rem;
+}
+
+.search-results .post__content {
+    display: flex;
+
+    p {
+        display: none;
+        margin-bottom: 0.5rem;
+    }
+
+    @media screen and (min-width: $small) {
+        p {
+            display: block;
+        }
+    }
+}
+
+.search-results .thumbnail {
+    display: none;
+    flex: 0 1 auto;
+    margin-right: 1.25rem;
+    min-width: 150px;
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
+
+}
+
+.search-results .content {
+    flex: 1 1 auto;
+}
+
+.search-results .h2 {
+    font-size: $font-size-h3;
+    margin: 0 0 0.5rem;
+
+    a:hover {
+        color: $link-color;
+        text-decoration: none;
+    }
+}
+
+.search-results .entry-footer {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+
+    .entry-meta {
+        padding-bottom: 0;
+        min-height: auto;
+    }
+
+    .last-update,
+    .entry-meta__date .bullet {
+        display: none;
+    }
+}
+
+/* no results */
+.search-results article.no-results {
+    border-bottom: none;
+
+    .entry-title {
+        margin-top: 0;
+    }
+}
+
+.no-results .search-form {
+    display: flex;
+
+    .btn {
+        margin-left: 1rem;
+    }
+}

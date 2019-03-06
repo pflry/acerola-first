@@ -14,7 +14,10 @@
 function get_the_breadcrumb() { 
 	
 	$category = get_queried_object();
-	$category_name = $category->name;
+	
+	if($category) {
+		$category_name = $category->name;
+	}
 
 	$home_link = get_option( 'home' );
 	$blog_link = get_permalink( get_option( 'page_for_posts' ));

@@ -1,5 +1,5 @@
 //
-// Header homepage
+// Blog list posts
 // --------------------------------------------------
 
 .blog-home {
@@ -46,10 +46,6 @@
 
         & + .post {
             border-top: solid 1px $color-border;
-        }
-
-        & + .format-aside {
-            border-top: none;
         }
     }
 }

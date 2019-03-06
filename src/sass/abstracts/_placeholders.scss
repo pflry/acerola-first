@@ -131,6 +131,14 @@
     }
 }
 
+%discreet {
+    color: $gray-300;
+
+    .ball {
+        color: $gray-300;
+    }
+}
+
 // Utilities
 // -----------------------------------
 %vertical-center {

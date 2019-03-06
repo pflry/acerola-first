@@ -19,7 +19,7 @@
 
     <div id="containerWrapper" class="wrapper">
 
-        <?php get_template_part( 'blog-header-top' ); ?>
+        <?php get_template_part( 'templates/blog-header-top' ); ?>
 
         <header id="header" class="blog-header">
             <section id="blogBanner" class="blog-header__banner">

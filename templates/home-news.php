@@ -4,13 +4,7 @@
                 array(
                     'taxonomy' => 'post_format',
                     'field' => 'slug',
-                    'terms' => 'post-format-aside',
-                    'operator' => 'NOT IN'
-                ), 
-                array(
-                    'taxonomy' => 'post_format',
-                    'field' => 'slug',
-                    'terms' => 'post-format-link',
+                    'terms' => array('post-format-aside','post-format-link'),
                     'operator' => 'NOT IN'
                 )
             ) );

@@ -77,33 +77,30 @@ function acerola_setup() {
 	}
 
 	/**
-	 * Limit excerpt to a number of characters
-	 */ 
-	// add_filter('the_excerpt', 'acerola_short_excerpt');
-
-	// function acerola_short_excerpt($excerpt){
-	// 	$limit = 80;
-
-	// 	if (strlen($excerpt) > $limit) {
-	// 		return substr($excerpt, 0, strpos($excerpt, ' ', $limit));
-	// 	}
-	// 	return $excerpt;
-	// }
-
-	// add_filter( 'excerpt_length', function( $length ) { return 20; } );
+	 * Limit excerpt length
+	 */
+	add_filter( 'excerpt_length', 'acerola_excerpt_length', 999 );
+	
+	function acerola_excerpt_length( $length ) {
+		return 30;
+	}
 
 	/**
-	 * Exclude pages from WordPress search results
+	 * Exclude post formats from WordPress search results
 	 */
-	if (!is_admin()) {
-		add_filter('pre_get_posts', 'acerola_search_filter');
+	add_filter('pre_get_posts', 'acerola_search_filter');
 
-		function acerola_search_filter($query) {
-			if ($query->is_search) {
-				$query->set('post_type', 'post');
-			}
-			return $query;
-		}
+	function acerola_search_filter($query) {
+		if( $query->is_main_query() && $query->is_search() ) {
+			$tax_query = array( 
+				array(
+					'taxonomy' => 'post_format',
+					'field' => 'slug',
+					'terms' => array('post-format-aside', 'post-format-link'),
+					'operator' => 'NOT IN'
+				));
+			$query->set( 'tax_query', $tax_query );
+    	}
 	}
 
 	/**
