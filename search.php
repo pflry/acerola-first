@@ -74,9 +74,9 @@
                         </header>
                     </article>
                 <?php endwhile; endif; ?>
-                <div class="well">
-                    <h5 class="h5">Voir plus d'articles</h5>
-                    <a href="/blog/" class="btn btn-black">Accéder au blog</a>
+                <div class="well-info">
+                    <div>Retrouvez toute l'actualité du cabinet <strong>Acérola Carrière</strong> dans le Blog Acérola.</div>
+                    <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="btn btn-black">Accéder au blog</a>
                 </div>
             </section>
 

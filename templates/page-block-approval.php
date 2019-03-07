@@ -1,20 +1,8 @@
-<?php
-/**
- * The template for displaying the approval block in page
- *
- * Displays the approval block in page.
- *
- * @package WordPress
- * @subpackage ACEROLA CARRIERE v3.0
- */
-
-?>
-
 <section class="entry-approval">
-    <div class="container">
+    <div class="container container-full">
         <div class="entry-approval__content">
             <div class="approval-title">
-                <h4 class="title">Nos agréments</h4>
+                <h3 class="title">Nos agréments</h3>
             </div>
             <div class="carousel">
                 <a href="https://www.fongecif-idf.fr/" target="_blank" rel="noopener noreferrer">

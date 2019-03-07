@@ -194,7 +194,7 @@
 
 .widget__follow .widget-title {
     color: $color-base;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .widget__follow .socials {
@@ -207,20 +207,20 @@
 }
 
 .widget__follow .socials .facebook {
-    @include social($facebook-color, $gray-200);
+    @include social($facebook-color, $gray-800);
     border-bottom-left-radius: $border-radius;
 }
 
 .widget__follow .socials .twitter {
-    @include social($twitter-color, $gray-200);
+    @include social($twitter-color, $gray-800);
 }
 
 .widget__follow .socials .linkedin {
-    @include social($linkedin-color, $gray-200);
+    @include social($linkedin-color, $gray-800);
 }
 
 .widget__follow .socials .viadeo {
-    @include social($viadeo-color, $gray-200);
+    @include social($viadeo-color, $gray-800);
     border-bottom-right-radius: $border-radius;
 }
 
@@ -242,7 +242,7 @@
 
     .widget-title {
         color: $color-base;
-        font-weight: 400;
+        font-weight: 500;
     }
 }
 .widget__approval .approval-body {

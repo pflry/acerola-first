@@ -1,0 +1,22 @@
+//
+// Error 404
+// --------------------------------------------------
+.page-error {
+    padding-bottom: 3.125rem;
+}
+
+.page-error .entry-title {
+    span {
+        display: block;
+        font-size: $font-size-h2;
+    }
+}
+
+.page-error .search-form {
+    display: flex;
+    margin-bottom: 2.75rem;
+
+    .btn {
+        margin-left: 1rem;
+    }
+}

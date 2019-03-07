@@ -23,8 +23,6 @@
             <div class="entry-links"><?php wp_link_pages(); ?></div>
         </section>
 
-        <?php get_template_part( 'templates/page-block-approval' ); ?>
-
         <?php get_template_part( 'templates/page-block-contact' ); ?>
 
     </article>

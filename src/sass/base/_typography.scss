@@ -80,10 +80,14 @@ h6, .h6 {
     font-weight: 400;
 }
 
-// Syles
+// Styles
 // -----------------------------------
 b, strong {
     font-weight: 600;
+}
+
+small {
+    font-size: $font-size-sm;
 }
 
 // Listes

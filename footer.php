@@ -1,5 +1,7 @@
         </div> <!-- fin container -->
 
+        <?php get_template_part( 'templates/page-block-approval' ); ?>
+
         <footer id="footer" role="contentinfo" class="footer">
 
             <div class="footer__infos">

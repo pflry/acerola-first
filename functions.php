@@ -82,7 +82,7 @@ function acerola_setup() {
 	add_filter( 'excerpt_length', 'acerola_excerpt_length', 999 );
 	
 	function acerola_excerpt_length( $length ) {
-		return 30;
+		return 28;
 	}
 
 	/**
