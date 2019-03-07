@@ -40,6 +40,11 @@ function acerola_setup() {
 	}
 
 	/**
+	 * Stop loading css Contact Form plugin
+	 */
+	add_filter( 'wpcf7_load_css', '__return_false' );
+
+	/**
 	 * Enable support
 	 */
 	add_theme_support( 'custom-logo' );

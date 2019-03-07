@@ -1,6 +1,9 @@
 //
 // Comments
 // --------------------------------------------------
+.comments-area {
+    padding-bottom: 3.125rem;
+}
 
 .comments {
     @extend %mobile;

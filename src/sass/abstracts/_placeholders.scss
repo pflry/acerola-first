@@ -229,7 +229,7 @@
     display: inline-block;
     font-size: $font-size-sm;
     font-weight: 900;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.375rem;
     text-transform: uppercase;
 }
 
@@ -239,5 +239,16 @@
 
     @media screen and (min-width: $medium) {
         max-width: 100%;
+
+        &.form-control {
+            max-width: 100%;
+        } 
     }
+}
+
+%required {
+    color: $color-success;
+    font-size: $font-size-lg;
+    font-weight: 400;
+    line-height: $line-height-headings;
 }
