@@ -36,69 +36,50 @@
                 </section>
             </article>
 
-            <section id="lastNews" class="last-news">
+            <section id="lastNews" class="last-news blog-home">
+                 <h2 class="h2">Derniers articles</h2>
                 <?php
-                $args = array( 'numberposts' => '5', 'tax_query' => array(
+                $recent_args = array(
+                    "posts_per_page" => 4,
+                    "orderby"        => "date",
+                    "order"          => "DESC",
+                    'tax_query' => array(
                     array(
                         'taxonomy' => 'post_format',
                         'field' => 'slug',
                         'terms' => array('post-format-aside','post-format-link'),
                         'operator' => 'NOT IN'
-                    )
-                ) );
-                $recent_posts = wp_get_recent_posts( $args );
-                foreach( $recent_posts as $recent ){
-                    echo '<article id="post-'.$recent["ID"].'" class="post type-post">';
-                    echo '<header class="post-header">';
-                    echo '<div class="post-header__thumbnail">';
-                    echo '<a href="'.get_permalink($recent["ID"]).'" alt="'.$recent["post_title"].'" rel="bookmark"><img src="'.get_the_post_thumbnail_url($recent["ID"]).'" class="img-fluid"></a></div>';
-                    echo '</article>';
-                }
-                
-                /*
-
-                //         echo '<div class="post-header__entry">';
-            //         echo '<h3 class="entry-category"><?php the_category( ' ' ); ?></h3>';
-            //         <h2 class="entry-title">
-            //             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-            //             <?php  echo wp_trim_words( get_the_title(), $num_words = 30, $more = '&nbsp;&hellip;' ); ?></a>
-            //         </h2>
-            //         <?php get_template_part( 'templates/entry-meta' ); ?>
-            //     </div>
-            // </header>
-                    
-
-                    $args = array( 'numberposts' => '5' );
-                    $recent_posts = wp_get_recent_posts( $args );
-                    
-                    foreach( $recent_posts as $recent ) {
-                        // $postTitle = $recent["post_title"];
-                        // $postPermalink = get_permalink($recent["ID"]);
-                        // $postThumbnail = get_the_post_thumbnail_url($recent["ID"]);
-                        // $postExcerpt = wp_trim_excerpt($recent['post_content']); ?>
-                        <article id="<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <div class="post__content">
-                        <div class="thumbnail">
-                            <?php
-                                echo '<img src="'.$postThumbnail.'" alt="'.$postTitle.'" class="img-fluid">'
-                            ?>
-                        </div>
-                        <div class="content">
-                            <header class="entry-header">
-                                <?php
-                                echo '<h2 class="h2 entry-title"><a href="'. $postPermalink.'" rel="bookmark">'.$postTitle.'</a></h2>';
-                                ?>
-                            </header>
-                            <footer class="entry-footer">
+                    ))
+                );      
+                $recent_posts = new WP_Query( $recent_args );
+                if ( $recent_posts -> have_posts() ) : while ( $recent_posts -> have_posts() ) : $recent_posts -> the_post(); ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                        <header class="post-header">
+                            <?php if( has_post_thumbnail() ) : ?>
+                                <div class="post-header__thumbnail">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+                                        <?php the_post_thumbnail('full'); ?>
+                                    </a>
+                                </div>
+                            <?php endif; ?>
+                            
+                            <div class="post-header__entry">
+                                <h3 class="entry-category"><?php the_category( ' ' ); ?></h3>
+                                <h2 class="entry-title">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+                                    <?php  echo wp_trim_words( get_the_title(), $num_words = 30, $more = '&nbsp;&hellip;' ); ?></a>
+                                </h2>
                                 <?php get_template_part( 'templates/entry-meta' ); ?>
-                            </footer>
-                        </div>
-                    </div>
-                </article>
-                   <?php }
-                    wp_reset_query();
-                */ ?>
+                            </div>
+                        </header>
+                    </article>
+                <?php endwhile; endif; ?>
+                <div class="well">
+                    <h5 class="h5">Voir plus d'articles</h5>
+                    <a href="/blog/" class="btn btn-black">Accéder au blog</a>
+                </div>
             </section>
+
         <?php endif; ?>
     </section>
 <?php get_sidebar(); ?>

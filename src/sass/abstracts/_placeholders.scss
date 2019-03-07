@@ -48,7 +48,14 @@
     border-radius: $border-radius;
     display: flex;
     margin-bottom: 1.375rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 1rem;
+
+    @media screen and (min-width: $small) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 %btn-icon {

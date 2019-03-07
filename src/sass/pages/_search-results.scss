@@ -3,6 +3,8 @@
 // --------------------------------------------------
 
 .search-results {
+    padding-bottom: 2rem;
+    
     .h1 {
         @extend %mobile;
     }
@@ -77,6 +79,7 @@
 
     .entry-title {
         margin-top: 0;
+        font-size: $font-size-h1;
     }
 }
 
@@ -85,5 +88,43 @@
 
     .btn {
         margin-left: 1rem;
+    }
+}
+
+// dernières actualités
+.search-results .last-news {
+    padding-top: 3.125rem;
+}
+.search-results .last-news .h2 {
+    @extend %mobile;
+    font-size: $font-size-h1;
+}
+
+.search-results .last-news article {
+    border-bottom: none;
+}
+
+.search-results .well {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .h5 {
+        margin-top: 0;
+    }
+
+    div {
+        padding-bottom: 1.375rem;
+    }
+
+    @media screen and (min-width: $small) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .h5 {
+            margin: 0;
+        }
     }
 }
