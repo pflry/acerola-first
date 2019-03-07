@@ -19,9 +19,6 @@
     ?>
     <div class="container">
         <div class="home-news__picture" style="background-image:url('<?php echo $postThumbnail ?>');">
-            <?php
-                /*echo '<img src="'.$postThumbnail.'" alt="'.$postTitle.'" class="img-fluid">'*/
-            ?>
         </div>
         <div class="home-news__content">
             <?php
