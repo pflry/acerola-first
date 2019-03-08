@@ -75,10 +75,14 @@
     margin-bottom: 1.875rem;
 }
 
-.comment-body p {
+.comment-body {
     background-color: $color-light;
     border-radius: $border-radius;
-    padding: 1rem 1.25rem;
+    padding: 1.25rem;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .comment-author {
@@ -91,7 +95,7 @@
     }
 
     .fn {
-        font-size: $font-size-sm;
+        // font-size: $font-size-sm;
         
     }
 
@@ -102,9 +106,14 @@
 
 .comment-meta {
     font-size: $font-size-sm;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .akismet_comment_form_privacy_notice {
     display: none;
+}
+
+// no comments
+.no-comments {
+    font-weight: 500;
 }
