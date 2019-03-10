@@ -45,7 +45,8 @@ const dest = {
         rep: '../dist/images/',
         files: '../dist/images/*.*',
     },
-    tpl: '../'
+    tpl: '../',
+    subsites: '../../acerola2019subsites/'
 }
 
 
@@ -239,11 +240,43 @@ gulp.task('serve', () => {
 });
 
 
+//-- CHILD THEME SUBSITES
+
+//-- Copy DIST to child themes
+gulp.task('copy:child', () => {
+    gulp.src('../dist/**/*.*')
+        .pipe(gulp.dest(dest.subsites + 'dist/'))
+});
+
+//-- SCSS
+gulp.task('css:child', () => {
+
+    let delfile = gulp.src(dest.subsites + 'style.*', {
+            read: false
+        })
+        .pipe(clean({
+            force: true
+        }))
+
+    let sCSS = gulp.src(dest.subsites + 'src/sass/style.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(dest.subsites))
+
+    return merge(delfile, sCSS);
+});
+
 //-- Default
 gulp.task('default', ['copy', 'serve']);
 
 
 //-- Build
-gulp.task('build', ['css', 'scripts', 'copy']);
+gulp.task('build', ['css', 'scripts', 'copy', 'copy:child']);
 
 gulp.task('build:infos', ['css', 'scripts:infos', 'copy']);
