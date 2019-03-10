@@ -235,8 +235,10 @@ gulp.task('serve', () => {
     });
 
     gulp.watch('sass/**/*.scss', ['css']);
+    gulp.watch(dest.subsites + 'src/sass/**/*.scss', ['css:child'])
     gulp.watch('js/*.js', ['scripts']);
-    gulp.watch('../*.php').on('change', browserSync.reload);
+    gulp.watch('../**/*.php').on('change', browserSync.reload);
+    gulp.watch(dest.subsites + '/**/*.php').on('change', browserSync.reload);
 });
 
 
@@ -271,6 +273,9 @@ gulp.task('css:child', () => {
 
     return merge(delfile, sCSS);
 });
+
+
+//-- COMMANDES
 
 //-- Default
 gulp.task('default', ['copy', 'serve']);
