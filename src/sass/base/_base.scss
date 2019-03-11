@@ -28,6 +28,8 @@ body {
 // wrapper
 .wrapper {
     background-color: $white;
+    opacity: 1;
+    transition: opacity 0.25s linear;
 
     &.covered {
         opacity: 0.25;

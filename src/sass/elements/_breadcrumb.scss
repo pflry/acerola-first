@@ -29,3 +29,16 @@
         transform: translateY(-1px);
     }
 }
+
+.blog-breadcrumb {
+    background-color: $color-header-breadcrumb;
+    display: none;
+
+    .home & {
+        display: none;
+    }
+
+    @media screen and (min-width: $medium) {
+        display: block;
+    }
+}

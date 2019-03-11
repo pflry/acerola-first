@@ -12,6 +12,7 @@
     height: 100vh;
     justify-content: space-between;
     position: relative;
+    top: 0;
 
     &:after {
         @extend %absolute-pos;
@@ -22,6 +23,12 @@
     @media screen and (min-width: $medium) {
         background-image: image('poster-768w.jpg');
         height: calc(87vh - 40px);
+        position: relative;
+        top: 0;
+
+        &.scroll {
+            box-shadow: none;
+        }
     }
 
     @media screen and (min-width: $large) {
@@ -35,18 +42,67 @@
 
 /* Main menu */
 .home .blog-header__banner {
-    background: transparent;
-    position: relative;
+    @extend %absolute-pos;
+    bottom: auto;
+    background-color: transparent;
 
     .container {
         position: relative;
         z-index: 100;
+    }
+
+    @media screen and (min-width: $medium) {
+        top: 40px;
+        z-index: 1025;
+        background-color: transparent;
+        box-shadow: 0;
+        transition: all 0.25s linear;
+        transition: background-color 0.25s ease-in;
+
+        &.scroll {
+            background-color: $color-header-banner;
+            box-shadow: 0 0.25rem 0.75rem black(0.2);
+            position: sticky;
+            top: 0;
+
+
+            .container {
+                height: 50px;
+            }
+
+            .site-title .logo-acerola {
+                color: shade($office-azur, 50%);
+                height: 40px;
+                margin-top: 0.5rem;
+
+                .acerola {
+                    color: $white;
+                }
+
+                .ball {
+                    color: $color-primary;
+                }
+
+                .carriere {
+                    color: $color-content-header-top;
+                } 
+            }
+
+            .site-menu .menu .menu-item a {
+                color: $color-base;
+            }
+
+            + .blog-header > .blog-header__top {
+                display: none;
+            }
+        }
     }
 }
 
 // niveau 1
 .home .site-menu .menu .menu-item a {
     color: $white;
+    transition: all 0.25s linear;
 
     &:hover {
         color: $white;
@@ -61,6 +117,7 @@
 /* logo */
 .home .site-title .logo-acerola {
     @extend %primeyellow;
+    transition: all 0.25s linear;
 
     @media screen and (min-width: $large) {
         height: 80px;
@@ -112,6 +169,7 @@
 .home .blog-header__top {
     background-color: $color-darker;
     color: $white;
+    transition: background-color 0.25s linear;
 
     a {
         color: $white;
