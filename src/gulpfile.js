@@ -245,6 +245,15 @@ gulp.task('serve', () => {
 //-- CHILD THEME SUBSITES
 
 //-- Copy DIST to child themes
+gulp.task('clean:child', () => {
+    return gulp.src(dest.subsites + 'dist/', {
+            read: false
+        })
+        .pipe(clean({
+            force: true
+        }));
+});
+
 gulp.task('copy:child', () => {
     gulp.src('../dist/**/*.*')
         .pipe(gulp.dest(dest.subsites + 'dist/'))

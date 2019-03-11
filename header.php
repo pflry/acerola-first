@@ -19,9 +19,9 @@
 
     <div id="containerWrapper" class="wrapper">
 
-        <?php get_template_part( 'templates/blog-header-top' ); ?>
-        
         <header id="header" class="blog-header">
+            <?php get_template_part( 'templates/blog-header-top' ); ?>
+
              <section id="blogBanner" class="blog-header__banner">
                 <div class="container">
                     <div id="siteTitle" class="site-title">
@@ -43,11 +43,12 @@
                     </button>
                 </div>
             </section>
-            <section id="filAriane" class="blog-header__breadcrumb">
-                <div class="container">
-                    <?php echo get_the_breadcrumb() ?>
-                </div>
-            </section>
+            
         </header>
-
+        
+        <section id="filAriane" class="blog-breadcrumb">
+            <div class="container">
+                <?php echo get_the_breadcrumb() ?>
+            </div>
+        </section>
         <div id="containerMain" class="container container-main">
