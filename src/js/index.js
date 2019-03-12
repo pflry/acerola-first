@@ -48,8 +48,8 @@ app.scrollHeader = {
     init: function() {
         $(window).scroll(function () {
             let st = $(this).scrollTop();
-            st > 40 ? $('#header').addClass('scroll') : $('#header').removeClass('scroll');
-            st > 40 ? $('#blogBannerHome').addClass('scroll') : $('#blogBannerHome').removeClass('scroll');
+            st > 50 ? $('#header').addClass('scroll') : $('#header').removeClass('scroll');
+            st > 50 ? $('#blogBannerHome').addClass('scroll') : $('#blogBannerHome').removeClass('scroll');
         });
     }
 };

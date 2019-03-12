@@ -56,8 +56,8 @@
         z-index: 1025;
         background-color: transparent;
         box-shadow: 0;
-        transition: all 0.25s linear;
-        transition: background-color 0.25s ease-in;
+        transition: all .15s linear;
+        transition: background-color .75s ease-in;
 
         &.scroll {
             background-color: $color-header-banner;
@@ -102,7 +102,7 @@
 // niveau 1
 .home .site-menu .menu .menu-item a {
     color: $white;
-    transition: all 0.25s linear;
+    transition: all 0.15s linear;
 
     &:hover {
         color: $white;
@@ -117,7 +117,7 @@
 /* logo */
 .home .site-title .logo-acerola {
     @extend %primeyellow;
-    transition: all 0.25s linear;
+    transition: all 0.15s linear;
 
     @media screen and (min-width: $large) {
         height: 80px;
@@ -169,7 +169,7 @@
 .home .blog-header__top {
     background-color: $color-darker;
     color: $white;
-    transition: background-color 0.25s linear;
+    transition: background-color 0.15s linear;
 
     a {
         color: $white;

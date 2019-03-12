@@ -9,7 +9,7 @@
         box-shadow: 0;
         position: sticky;
         top: -40px;
-        transition: box-shadow 0.25s linear;
+        transition: box-shadow 0.15s linear;
         z-index: 1000;
 
         &.scroll {
@@ -37,7 +37,7 @@
         height: 120px;
         padding: 0 1.875rem;
         position: relative;
-        transition: height 0.25s linear;
+        transition: height 0.15s linear;
         z-index: 100;
     }
 }
@@ -66,6 +66,6 @@
     @extend %darkblue;
     height: 67px;
     margin-top: 1rem;
-    transition: all .25s linear;
+    transition: all .15s linear;
     width: auto;
 }
