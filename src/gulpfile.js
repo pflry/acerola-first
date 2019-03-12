@@ -186,7 +186,7 @@ gulp.task('js:infos', sequence('js:clean', 'js:bundlesinfos'));
 //------------------
 
 // Images copy
-gulp.task('images:copy', () => {
+gulp.task('images:copy', ()=> {
     gulp.src(path.images + '*.*')
         .pipe(changed(path.dest + 'images/'))
         .pipe(gulp.dest(path.dest + 'images/'));
@@ -207,8 +207,8 @@ gulp.task('assets:copy', sequence('images:copy', 'icons:copy'));
 //------------------
 
 // DIST clean all rep
-gulp.task('dist:clean', () => {
-    return gulp.src([
+gulp.task('dist:clean', ()=> {
+    gulp.src([
             path.dest + 'css/*.*',
             path.dest + 'js/*.*',
             path.dest + 'images/*.*',
@@ -228,8 +228,8 @@ gulp.task('dist:clean', () => {
 //-- DIST CHILD
 
 // DIST child clean
-gulp.task('child:clean:dist', () => {
-    return gulp.src(path.child + 'dist/', {
+gulp.task('child:clean:dist', ()=> {
+    gulp.src(path.child + 'dist/', {
             read: false
         })
         .pipe(clean({
@@ -238,7 +238,7 @@ gulp.task('child:clean:dist', () => {
 });
 
 // DIST child copy form parent
-gulp.task('child:copy:dist', () => {
+gulp.task('child:copy:dist', ()=> {
     gulp.src(path.dest + '**/*.*')
         .pipe(gulp.dest(path.child + 'dist/'))
 });
@@ -284,17 +284,17 @@ gulp.task('child', sequence('child:dist', 'child:css'));
 //-- BROWSER SYNC
 //------------------
 
-gulp.task('serve', () => {
+gulp.task('serve', ()=> {
     browserSync.init({
         proxy: "http://localhost/acerola",
         ws: true
     });
 
     gulp.watch(path.scss + '/**/*.scss', ['css']);
-    gulp.watch(path.child + 'src/sass/**/*.scss', ['child:css'])
+    gulp.watch(path.child + 'src/sass/**/*.scss', ['child:styles:css'])
     gulp.watch('js/*.js', ['js']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
-    gulp.watch(path.child + '/**/*.php').on('change', browserSync.reload);
+    gulp.watch([path.child + '/**/*.php', path.child + 'style.css']).on('change', browserSync.reload);
 });
 
 
