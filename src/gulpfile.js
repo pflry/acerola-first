@@ -31,6 +31,7 @@ const path = {
 
 
 //-- SCSS
+//------------------
 
 // CSS clean
 gulp.task('css:clean', ()=> {
@@ -85,7 +86,8 @@ gulp.task('css:styles', ()=> {
 gulp.task('css', sequence('css:clean', 'css:critical', 'css:styles'));
 
 
-//-- Javascript
+//-- JAVASCRIPT
+//------------------
 
 // JS clean
 gulp.task('js:clean', ()=> {
@@ -180,23 +182,31 @@ gulp.task('js', sequence('js:clean', 'js:bundles'));
 gulp.task('js:infos', sequence('js:clean', 'js:bundlesinfos'));
 
 
-//-- Assets copy
+//-- ASSETS
+//------------------
+
+// Images copy
 gulp.task('images:copy', () => {
     gulp.src(path.images + '*.*')
         .pipe(changed(path.dest + 'images/'))
         .pipe(gulp.dest(path.dest + 'images/'));
 });
 
+// Icons copy
 gulp.task('icons:copy', ()=> {
     gulp.src(path.icons + '*.*')
         .pipe(changed(path.dest + 'icons/'))
         .pipe(gulp.dest(path.dest + 'icons/'));
 });
 
+// Assets copy
 gulp.task('assets:copy', sequence('images:copy', 'icons:copy'));
 
 
-//-- Clean all dist folders
+//-- DIST 
+//------------------
+
+// DIST clean all rep
 gulp.task('dist:clean', () => {
     return gulp.src([
             path.dest + 'css/*.*',
@@ -213,6 +223,7 @@ gulp.task('dist:clean', () => {
 
 
 //-- CHILD THEME SUBSITES
+//------------------
 
 //-- DIST CHILD
 
@@ -271,6 +282,8 @@ gulp.task('child', sequence('child:dist', 'child:css'));
 
 
 //-- BROWSER SYNC
+//------------------
+
 gulp.task('serve', () => {
     browserSync.init({
         proxy: "http://localhost/acerola",
@@ -285,7 +298,8 @@ gulp.task('serve', () => {
 });
 
 
-//-- COMMANDES
+//-- COMMANDS
+//------------------
 
 //-- Default
 gulp.task('default', sequence('assets:copy', 'serve'));
