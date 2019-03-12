@@ -9,7 +9,7 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     stripCssComments = require('gulp-strip-css-comments'),
     changed = require('gulp-changed'),
-    merge = require('merge-stream'),
+    sequence = require('gulp-sequence'),
     webpack = require('webpack'),
     webpackStream = require('webpack-stream'),
     named = require('vinyl-named'),
@@ -19,47 +19,32 @@ const gulp = require('gulp'),
 
 
 //-- Paths
-const src = {
-    scss: 'sass/styles.scss',
-    critical: 'sass/critical.scss',
-    js: 'js/index.js',
-    fonts: 'fonts/*.*',
-    icons: 'icons/*.*',
-    images: 'images/*.*'
-}
-
-const dest = {
-    css: {
-        rep: '../dist/css/',
-        files: '../dist/css/*.*'
-    },
-    js: {
-        rep: '../dist/js/',
-        files: '../dist/js/*.*'
-    },
-    icons: {
-        rep: '../dist/icons/',
-        files: '../dist/icons/*.*'
-    },
-    images: {
-        rep: '../dist/images/',
-        files: '../dist/images/*.*',
-    },
+const path = {
+    scss: 'sass/',
+    js: 'js/',
+    images: 'images/',
+    icons: 'icons/',
+    dest: '../dist/',
     tpl: '../',
-    subsites: '../../acerola2019subsites/'
-}
+    child: '../../acerola2019subsites/'
+};
 
 
 //-- SCSS
-gulp.task('css', () => {
-    let cleanCSS = gulp.src(dest.css.files, {
+
+// CSS clean
+gulp.task('css:clean', ()=> {
+    gulp.src(path.dest + 'css/*.*', {
             read: false
         })
         .pipe(clean({
             force: true
         }));
+});
 
-    let criticalCSS = gulp.src(src.critical)
+// CSS critical
+gulp.task('css:critical', ()=> {
+    gulp.src(path.scss + 'critical.scss')
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -75,9 +60,12 @@ gulp.task('css', () => {
             basename: 'header-styles',
             extname: '.php'
         }))
-        .pipe(gulp.dest(dest.tpl));
+        .pipe(gulp.dest('../'));
+});
 
-    let sCSS = gulp.src(src.scss)
+// CSS styles
+gulp.task('css:styles', ()=> {
+    gulp.src(path.scss + 'styles.scss')
         .pipe(sourcemaps.init())
         .pipe(hash({
             hashLength: 6,
@@ -90,25 +78,28 @@ gulp.task('css', () => {
             browsers: ['last 2 versions']
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(dest.css.rep))
+        .pipe(gulp.dest(path.dest + 'css/'))
         .pipe(browserSync.stream());
-
-    return merge(cleanCSS, criticalCSS, sCSS);
 });
+
+gulp.task('css', sequence('css:clean', 'css:critical', 'css:styles'));
 
 
 //-- Javascript
 
-// Scripts bundler
-gulp.task('scripts', () => {
-    let cleanJS = gulp.src(dest.js.files, {
+// JS clean
+gulp.task('js:clean', ()=> {
+    gulp.src(path.dest + 'js/*.*', {
             read: false
         })
         .pipe(clean({
             force: true
         }))
+});
 
-    let webpackJS = gulp.src(src.js)
+// JS bundler
+gulp.task('js:bundles', ()=> {
+    gulp.src(path.js + 'index.js')
         .pipe(named())
         .pipe(webpackStream({
             mode: 'production',
@@ -137,22 +128,13 @@ gulp.task('scripts', () => {
                 }
             }
         }))
-        .pipe(gulp.dest(dest.js.rep))
+        .pipe(gulp.dest(path.dest + 'js/'))
         .pipe(browserSync.stream());
-
-    return merge(cleanJS, webpackJS);
 });
 
-// Scripts bundler + infos
-gulp.task('scripts:infos', () => {
-    let cleanJS = gulp.src(dest.js.files, {
-            read: false
-        })
-        .pipe(clean({
-            force: true
-        }))
-
-    let webpackJS = gulp.src(src.js)
+// JS bundler + infos
+gulp.task('js:bundlesinfos', ()=> {
+    gulp.src(path.js + 'index.js')
         .pipe(named())
         .pipe(webpackStream({
             mode: 'production',
@@ -190,34 +172,37 @@ gulp.task('scripts:infos', () => {
                 }
             }
         }))
-        .pipe(gulp.dest(dest.js.rep))
+        .pipe(gulp.dest(path.dest + 'js/'))
         .pipe(browserSync.stream());
-
-    return merge(cleanJS, webpackJS);
 });
 
+gulp.task('js', sequence('js:clean', 'js:bundles'));
+gulp.task('js:infos', sequence('js:clean', 'js:bundlesinfos'));
 
-//-- Assets
-gulp.task('copy', () => {
-    let images = gulp.src(src.images)
-        .pipe(changed(dest.images.rep))
-        .pipe(gulp.dest(dest.images.rep));
 
-    let icones = gulp.src(src.icons)
-        .pipe(changed(dest.icons.rep))
-        .pipe(gulp.dest(dest.icons.rep));
-
-    return merge(images, icones);
+//-- Assets copy
+gulp.task('images:copy', () => {
+    gulp.src(path.images + '*.*')
+        .pipe(changed(path.dest + 'images/'))
+        .pipe(gulp.dest(path.dest + 'images/'));
 });
+
+gulp.task('icons:copy', ()=> {
+    gulp.src(path.icons + '*.*')
+        .pipe(changed(path.dest + 'icons/'))
+        .pipe(gulp.dest(path.dest + 'icons/'));
+});
+
+gulp.task('assets:copy', sequence('images:copy', 'icons:copy'));
 
 
 //-- Clean all dist folders
-gulp.task('clean', () => {
+gulp.task('dist:clean', () => {
     return gulp.src([
-            dest.css.files,
-            dest.js.files,
-            dest.images.files,
-            dest.icons.files
+            path.dest + 'css/*.*',
+            path.dest + 'js/*.*',
+            path.dest + 'images/*.*',
+            path.dest + 'icons/*.*'
         ], {
             read: false
         })
@@ -227,26 +212,13 @@ gulp.task('clean', () => {
 });
 
 
-//-- BrowserSync
-gulp.task('serve', () => {
-    browserSync.init({
-        proxy: "http://localhost/acerola",
-        ws: true
-    });
-
-    gulp.watch('sass/**/*.scss', ['css']);
-    gulp.watch(dest.subsites + 'src/sass/**/*.scss', ['css:child'])
-    gulp.watch('js/*.js', ['scripts']);
-    gulp.watch('../**/*.php').on('change', browserSync.reload);
-    gulp.watch(dest.subsites + '/**/*.php').on('change', browserSync.reload);
-});
-
-
 //-- CHILD THEME SUBSITES
 
-//-- Copy DIST to child themes
-gulp.task('clean:child', () => {
-    return gulp.src(dest.subsites + 'dist/', {
+//-- DIST CHILD
+
+// DIST child clean
+gulp.task('child:clean:dist', () => {
+    return gulp.src(path.child + 'dist/', {
             read: false
         })
         .pipe(clean({
@@ -254,22 +226,31 @@ gulp.task('clean:child', () => {
         }));
 });
 
-gulp.task('copy:child', () => {
-    gulp.src('../dist/**/*.*')
-        .pipe(gulp.dest(dest.subsites + 'dist/'))
+// DIST child copy form parent
+gulp.task('child:copy:dist', () => {
+    gulp.src(path.dest + '**/*.*')
+        .pipe(gulp.dest(path.child + 'dist/'))
 });
 
-//-- SCSS
-gulp.task('css:child', () => {
+// DIST child
+gulp.task('child:dist', sequence('child:clean:dist', 'child:copy:dist'));
 
-    let delfile = gulp.src(dest.subsites + 'style.*', {
+
+//-- SCSS CHILD
+
+// CSS child clean
+gulp.task('child:clean:css', ()=> {
+    gulp.src(path.child + 'style.*', {
             read: false
         })
         .pipe(clean({
             force: true
         }))
+});
 
-    let sCSS = gulp.src(dest.subsites + 'src/sass/style.scss')
+// CSS child styles
+gulp.task('child:styles:css', ()=> {
+    gulp.src(path.child + 'src/sass/style.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compressed'
@@ -278,19 +259,39 @@ gulp.task('css:child', () => {
             browsers: ['last 2 versions']
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(dest.subsites))
+        .pipe(gulp.dest(path.child))
+});
 
-    return merge(delfile, sCSS);
+// CSS child
+gulp.task('child:css', sequence('child:clean:css', 'child:styles:css'));
+
+
+//-- GLOBAL CHILD
+gulp.task('child', sequence('child:dist', 'child:css'));
+
+
+//-- BROWSER SYNC
+gulp.task('serve', () => {
+    browserSync.init({
+        proxy: "http://localhost/acerola",
+        ws: true
+    });
+
+    gulp.watch(path.scss + '/**/*.scss', ['css']);
+    gulp.watch(path.child + 'src/sass/**/*.scss', ['child:css'])
+    gulp.watch('js/*.js', ['js']);
+    gulp.watch('../**/*.php').on('change', browserSync.reload);
+    gulp.watch(path.child + '/**/*.php').on('change', browserSync.reload);
 });
 
 
 //-- COMMANDES
 
 //-- Default
-gulp.task('default', ['copy', 'serve']);
-
+gulp.task('default', sequence('assets:copy', 'serve'));
 
 //-- Build
-gulp.task('build', ['css', 'scripts', 'copy', 'copy:child']);
+gulp.task('build', sequence('css', 'js', 'assets:copy', 'child'));
 
-gulp.task('build:infos', ['css', 'scripts:infos', 'copy']);
+//-- Build with bundles infos
+gulp.task('build:infos', sequence('css', 'js:infos', 'assets:copy', 'child'));
