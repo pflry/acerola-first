@@ -26,7 +26,7 @@ const path = {
     icons: 'icons/',
     dest: '../dist/',
     tpl: '../',
-    child: '../../acerola2019subsites/'
+    child: '../../emploi-acerola-v19/'
 };
 
 
