@@ -208,19 +208,13 @@ gulp.task('assets:copy', sequence('images:copy', 'icons:copy'));
 
 // DIST clean all rep
 gulp.task('dist:clean', ()=> {
-    gulp.src([
-            path.dest + 'css/*.*',
-            path.dest + 'js/*.*',
-            path.dest + 'images/*.*',
-            path.dest + 'icons/*.*'
-        ], {
+    gulp.src(path.dest, {
             read: false
         })
         .pipe(clean({
             force: true
         }));
 });
-
 
 //-- CHILD THEME SUBSITES
 //------------------
@@ -237,14 +231,14 @@ gulp.task('child:clean:dist', ()=> {
         }));
 });
 
-// DIST child copy form parent
+// DIST child copy from parent
 gulp.task('child:copy:dist', ()=> {
     gulp.src(path.dest + '**/*.*')
         .pipe(gulp.dest(path.child + 'dist/'))
 });
 
 // DIST child
-gulp.task('child:dist', sequence('child:clean:dist', 'child:copy:dist'));
+gulp.task('child:dist', sequence('child:copy:dist'));
 
 
 //-- SCSS CHILD
@@ -273,12 +267,30 @@ gulp.task('child:styles:css', ()=> {
         .pipe(gulp.dest(path.child))
 });
 
+// CSS admin child styles
+gulp.task('child:admin:css', ()=> {
+    gulp.src(path.child + 'src/sass/style-editor.scss')
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
+        .pipe(gulp.dest(path.child))
+});
+
 // CSS child
-gulp.task('child:css', sequence('child:clean:css', 'child:styles:css'));
+gulp.task('child:css', sequence('child:styles:css'));
 
 
-//-- GLOBAL CHILD
+//-- COMMANDS GLOBAL CHILD
+
+// Clean
+gulp.task('child:clean', sequence('child:clean:css', 'child:clean:dist'));
+
+// Copy and generate
 gulp.task('child', sequence('child:dist', 'child:css'));
+
 
 
 //-- BROWSER SYNC
@@ -305,7 +317,7 @@ gulp.task('serve', ()=> {
 gulp.task('default', sequence('assets:copy', 'serve'));
 
 //-- Build
-gulp.task('build', sequence('css', 'js', 'assets:copy', 'child'));
+gulp.task('build', sequence('assets:copy', 'css', 'js'));
 
 //-- Build with bundles infos
-gulp.task('build:infos', sequence('css', 'js:infos', 'assets:copy', 'child'));
+gulp.task('build:infos', sequence('assets:copy', 'css', 'js:infos'));
