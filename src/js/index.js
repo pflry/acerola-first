@@ -13,6 +13,7 @@ const app = {
         app.slickCarousel.init();
         app.jScroll.init();
         app.countUp.init();
+        app.accordion.init();
     }
 };
 
@@ -125,6 +126,26 @@ app.countUp = {
             }
             os.destroy();
         });
+    }
+};
+
+// accordion
+app.accordion = {
+    init: function () {
+
+        $('button.accordion').click(function (event) {
+            $(this).toggleClass('active');
+            
+            let index = $('button.accordion').index(this);
+            
+            if(index != 0) {
+                $('#sorting').toggleClass('open');
+            }else{
+                $('#filtering').toggleClass('open');
+            }
+            
+        });
+
     }
 };
 
