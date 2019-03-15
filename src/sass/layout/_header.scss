@@ -35,10 +35,14 @@
     .container {
         align-items: center;
         height: 120px;
-        padding: 0 1.875rem;
+        padding: 0 1rem;
         position: relative;
         transition: height 0.15s linear;
         z-index: 100;
+    }
+
+    @media screen and (min-width: $small) {
+        padding: 0 1.875rem;
     }
 }
 

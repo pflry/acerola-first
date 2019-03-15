@@ -222,7 +222,7 @@ gulp.task('dist:clean', ()=> {
 //-- DIST CHILD
 
 // DIST child clean
-gulp.task('child:clean:dist', ()=> {
+gulp.task('child:dist:clean', () => {
     gulp.src(path.child + 'dist/', {
             read: false
         })
@@ -232,19 +232,19 @@ gulp.task('child:clean:dist', ()=> {
 });
 
 // DIST child copy from parent
-gulp.task('child:copy:dist', ()=> {
+gulp.task('child:dist:copy', ()=> {
     gulp.src(path.dest + '**/*.*')
         .pipe(gulp.dest(path.child + 'dist/'))
 });
 
 // DIST child
-gulp.task('child:dist', sequence('child:copy:dist'));
+gulp.task('child:dist', sequence('child:dist:copy'));
 
 
 //-- SCSS CHILD
 
 // CSS child clean
-gulp.task('child:clean:css', ()=> {
+gulp.task('child:css:clean', ()=> {
     gulp.src(path.child + 'style.*', {
             read: false
         })
@@ -280,13 +280,13 @@ gulp.task('child:admin:css', ()=> {
 });
 
 // CSS child
-gulp.task('child:css', sequence('child:styles:css'));
+gulp.task('child:css', sequence('child:styles:css', 'child:admin:css'));
 
 
 //-- COMMANDS GLOBAL CHILD
 
 // Clean
-gulp.task('child:clean', sequence('child:clean:css', 'child:clean:dist'));
+gulp.task('child:clean', sequence('child:css:clean', 'child:dist:clean'));
 
 // Copy and generate
 gulp.task('child', sequence('child:dist', 'child:css'));
