@@ -132,20 +132,10 @@ app.countUp = {
 // accordion
 app.accordion = {
     init: function () {
-
-        $('button.accordion').click(function (event) {
+        $('#accordion').click(function () {
             $(this).toggleClass('active');
-            
-            let index = $('button.accordion').index(this);
-            
-            if(index != 0) {
-                $('#sorting').toggleClass('open');
-            }else{
-                $('#filtering').toggleClass('open');
-            }
-            
+            $('#jobCategories').slideToggle(250);
         });
-
     }
 };
 
