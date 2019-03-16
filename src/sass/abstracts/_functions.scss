@@ -53,20 +53,20 @@
 /// should not include trailing slash
 /// @access public
 /// @type String
-$asset-base-path1: 'wp-content/themes/acerola-v19/dist';
-$asset-base-path2: '../wp-content/themes/acerola-v19/dist';
+$asset-path-home: 'wp-content/themes/acerola-v19/dist';
+$asset-path: '../wp-content/themes/acerola-v19/dist';
 
 /// Asset URL builder
 /// @access private
 /// @param {String} $type - Asset type, matching folder name
 /// @param {String} $file - Asset file name, including extension
 /// @return {URL} - A `url()` function leading to the asset
-@function assetimage($type, $file) {
-    @return url($asset-base-path1 + '/' + $type + '/' + $file);
+@function assethomepath($type, $file) {
+    @return url($asset-path-home + '/' + $type + '/' + $file);
 }
 
-@function asseticon($type, $file) {
-    @return url($asset-base-path2 + '/' + $type + '/' + $file);
+@function assetpath($type, $file) {
+    @return url($asset-path + '/' + $type + '/' + $file);
 }
 
 /// Image asset helper
@@ -75,7 +75,11 @@ $asset-base-path2: '../wp-content/themes/acerola-v19/dist';
 /// @return {URL} - A `url()` function leading to the image
 /// @require {function} asset
 @function image($file) {
-    @return assetimage('images', $file);
+    @return assetpath('images', $file);
+}
+
+@function imagehome($file) {
+    @return assethomepath('images', $file);
 }
 
 /// Icon asset helper
@@ -85,4 +89,8 @@ $asset-base-path2: '../wp-content/themes/acerola-v19/dist';
 /// @require {function} asset
 @function icon($file) {
     @return asseticon('icons', $file);
+}
+
+@function iconhome($file) {
+    @return assethomepath('icons', $file)
 }

@@ -83,7 +83,9 @@ gulp.task('css:styles', ()=> {
         .pipe(browserSync.stream());
 });
 
-gulp.task('css', sequence('css:clean', 'css:critical', 'css:styles'));
+gulp.task('css', (callback)=> {
+    sequence('css:clean', 'css:critical', 'css:styles')(callback)
+});
 
 
 //-- JAVASCRIPT
@@ -178,8 +180,13 @@ gulp.task('js:bundlesinfos', ()=> {
         .pipe(browserSync.stream());
 });
 
-gulp.task('js', sequence('js:clean', 'js:bundles'));
-gulp.task('js:infos', sequence('js:clean', 'js:bundlesinfos'));
+gulp.task('js', (callback)=> {
+    sequence('js:clean', 'js:bundles')(callback)
+});
+
+gulp.task('js:infos', (callback)=> {
+    sequence('js:clean', 'js:bundlesinfos')(callback)
+});
 
 
 //-- ASSETS
@@ -200,7 +207,9 @@ gulp.task('icons:copy', ()=> {
 });
 
 // Assets copy
-gulp.task('assets:copy', sequence('images:copy', 'icons:copy'));
+gulp.task('assets:copy', (callback)=> {
+    sequence('images:copy', 'icons:copy')(callback)
+});
 
 
 //-- DIST 
@@ -238,7 +247,9 @@ gulp.task('child:dist:copy', ()=> {
 });
 
 // DIST child
-gulp.task('child:dist', sequence('child:dist:copy'));
+gulp.task('child:dist', (callback)=> {
+    sequence('child:dist:copy')(callback)
+});
 
 
 //-- SCSS CHILD
@@ -280,16 +291,23 @@ gulp.task('child:admin:css', ()=> {
 });
 
 // CSS child
-gulp.task('child:css', sequence('child:styles:css', 'child:admin:css'));
+gulp.task('child:css', (callback)=> {
+    sequence('child:styles:css', 'child:admin:css')(callback)
+});
+
 
 
 //-- COMMANDS GLOBAL CHILD
 
 // Clean
-gulp.task('child:clean', sequence('child:css:clean', 'child:dist:clean'));
+gulp.task('child:clean', (callback)=> {
+    sequence('child:css:clean', 'child:dist:clean')(callback)
+});
 
 // Copy and generate
-gulp.task('child', sequence('child:dist', 'child:css'));
+gulp.task('child', (callback)=> {
+    sequence('child:dist', 'child:css')(callback)
+});
 
 
 
@@ -303,9 +321,10 @@ gulp.task('serve', ()=> {
     });
 
     gulp.watch(path.scss + '/**/*.scss', ['css']);
-    gulp.watch(path.child + 'src/sass/**/*.scss', ['child:styles:css'])
     gulp.watch('js/*.js', ['js']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
+    
+    gulp.watch(path.child + 'src/sass/**/*.scss', ['child:styles:css'])
     gulp.watch([path.child + '/**/*.php', path.child + 'style.css']).on('change', browserSync.reload);
 });
 

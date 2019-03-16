@@ -44,7 +44,7 @@
 
 .checklist-home li:before {
     content: '';
-    background-image: url('wp-content/themes/acerola2019/dist/icons/check.svg');
+    background-image: iconhome('check.svg');
     background-repeat: no-repeat;
     position: absolute;
     top: 0;

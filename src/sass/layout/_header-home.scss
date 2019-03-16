@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 .home .blog-header {
-    background-image: image('poster-575w.jpg');
+    background-image: imagehome('poster-575w.jpg');
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,7 +21,7 @@
     }
 
     @media screen and (min-width: $medium) {
-        background-image: image('poster-768w.jpg');
+        background-image: imagehome('poster-768w.jpg');
         height: calc(87vh - 40px);
         position: relative;
         top: 0;
@@ -32,11 +32,11 @@
     }
 
     @media screen and (min-width: $large) {
-        background-image: image('poster-992w.jpg');
+        background-image: imagehome('poster-992w.jpg');
     }
 
     @media screen and (min-width: $x-large) {
-        background-image: image('poster-1280w.jpg');
+        background-image: imagehome('poster-1280w.jpg');
     }
 }
 
