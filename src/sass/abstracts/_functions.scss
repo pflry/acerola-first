@@ -88,7 +88,7 @@ $asset-path: '../wp-content/themes/acerola-v19/dist';
 /// @return {URL} - A `url()` function leading to the icon
 /// @require {function} asset
 @function icon($file) {
-    @return asseticon('icons', $file);
+    @return assetpath('icons', $file);
 }
 
 @function iconhome($file) {
