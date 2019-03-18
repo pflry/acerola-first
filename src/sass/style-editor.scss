@@ -1,0 +1,112 @@
+@charset 'utf-8';
+/*!
+Theme Name: emploi-acerola-v19
+Description: Theme enfant de acerola-v19
+Author: PFLRY
+Author URI: https://pflry.eu
+Template: acerola-v19 
+Version: 19
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+$font-family-sans-serif: ('Poppins', Arial, sans-serif);
+
+/* Abstracts */
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+// Forms
+#acerolajob {
+    background-color: $gray-200;
+    border-radius: $border-radius;
+    font-family: $font-family-sans-serif;
+}
+
+#acerolajob h2.hndle {
+    border: none !important;
+    font-size: 1.25rem;
+    font-weight: 400 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#acerolajob .handlediv {
+    height: 58px;
+    width: 58px;
+
+    .toggle-indicator:before {
+        font-size: 2rem;
+    }
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+
+    & + .form-group {
+        margin-left: 1rem;
+    }
+    
+    &.zip {
+        flex: 0 1 20%;
+    }
+
+    &.town {
+        flex: 1 1 auto;
+    }
+
+    &.paper,
+    &.practice,
+    &.mode,
+    &.reference {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+}
+
+.form-control,
+input[type=text].form-control {
+    background-clip: padding-box;
+    background-color: $white;
+    border-radius: $border-radius;
+    border: solid 1px $gray-500;
+    color: $color-dark;
+    display: block;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    outline: none;
+    padding: 0.75rem;
+    transition: $transition-base;
+    width: 100%;
+    
+
+    &::placeholder {
+        color: $color-secondary;
+        opacity: 1;
+    }
+}
+
+.inside label {
+    color: $gray-800;
+    display: inline-block;
+    font-size: $font-size-sm;
+    font-weight: 900;
+    padding-bottom: 0.375rem;
+    text-transform: uppercase;
+}
+
+.wp-admin select.form-control {
+    @extend .form-control;
+    height: auto;
+    max-width: 100%;
+    padding: 0.65rem;
+    width: auto;
+}

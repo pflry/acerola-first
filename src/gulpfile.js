@@ -25,8 +25,7 @@ const path = {
     images: 'images/',
     icons: 'icons/',
     dest: '../dist/',
-    tpl: '../',
-    child: '../../emploi-acerola-v19/'
+    tpl: '../'
 };
 
 
@@ -85,6 +84,18 @@ gulp.task('css:styles', ()=> {
 
 gulp.task('css', (callback)=> {
     sequence('css:clean', 'css:critical', 'css:styles')(callback)
+});
+
+// CSS admin styles
+gulp.task('admin:css', () => {
+    gulp.src(path.scss + 'style-editor.scss')
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
+        .pipe(gulp.dest('../'))
 });
 
 
@@ -225,91 +236,6 @@ gulp.task('dist:clean', ()=> {
         }));
 });
 
-//-- CHILD THEME SUBSITES
-//------------------
-
-//-- DIST CHILD
-
-// DIST child clean
-gulp.task('child:dist:clean', () => {
-    gulp.src(path.child + 'dist/', {
-            read: false
-        })
-        .pipe(clean({
-            force: true
-        }));
-});
-
-// DIST child copy from parent
-gulp.task('child:dist:copy', ()=> {
-    gulp.src(path.dest + '**/*.*')
-        .pipe(gulp.dest(path.child + 'dist/'))
-});
-
-// DIST child
-gulp.task('child:dist', (callback)=> {
-    sequence('child:dist:copy')(callback)
-});
-
-
-//-- SCSS CHILD
-
-// CSS child clean
-gulp.task('child:css:clean', ()=> {
-    gulp.src(path.child + 'style.*', {
-            read: false
-        })
-        .pipe(clean({
-            force: true
-        }))
-});
-
-// CSS child styles
-gulp.task('child:styles:css', ()=> {
-    gulp.src(path.child + 'src/sass/style.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions']
-        }))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(path.child))
-});
-
-// CSS admin child styles
-gulp.task('child:admin:css', ()=> {
-    gulp.src(path.child + 'src/sass/style-editor.scss')
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions']
-        }))
-        .pipe(gulp.dest(path.child))
-});
-
-// CSS child
-gulp.task('child:css', (callback)=> {
-    sequence('child:styles:css', 'child:admin:css')(callback)
-});
-
-
-
-//-- COMMANDS GLOBAL CHILD
-
-// Clean
-gulp.task('child:clean', (callback)=> {
-    sequence('child:css:clean', 'child:dist:clean')(callback)
-});
-
-// Copy and generate
-gulp.task('child', (callback)=> {
-    sequence('child:dist', 'child:css')(callback)
-});
-
-
 
 //-- BROWSER SYNC
 //------------------
@@ -323,9 +249,6 @@ gulp.task('serve', ()=> {
     gulp.watch(path.scss + '/**/*.scss', ['css']);
     gulp.watch('js/*.js', ['js']);
     gulp.watch('../**/*.php').on('change', browserSync.reload);
-    
-    gulp.watch(path.child + 'src/sass/**/*.scss', ['child:styles:css'])
-    gulp.watch([path.child + '/**/*.php', path.child + 'style.css']).on('change', browserSync.reload);
 });
 
 

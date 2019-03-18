@@ -33,6 +33,7 @@ Version: 1.0.0
 @import 'elements/social-bar';
 @import 'elements/gutenberg';
 @import 'elements/forms';
+@import 'elements/job-filter';
 
 /* Layout */
 @import 'layout/comments';
@@ -41,6 +42,7 @@ Version: 1.0.0
 
 /* Pages */
 @import 'pages/blog';
+@import 'pages/job-list';
 @import 'pages/single';
 @import 'pages/sitemap';
 @import 'pages/search-results';

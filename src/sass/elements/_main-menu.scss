@@ -142,3 +142,7 @@
         border-radius: 0 0 $border-radius $border-radius;
     }
 }
+
+.site-menu .menu .menu-item.current_page_parent a {
+    border-color: $cyanide;
+}

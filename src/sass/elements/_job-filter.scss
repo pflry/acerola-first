@@ -1,0 +1,48 @@
+//
+// Header banner jobJob filter
+// --------------------------------------------------
+
+.filters {
+    @extend %mobile;
+    background-color: transparent;
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+}
+
+.filters #accordion.btn {
+    background-color: transparent;
+    font-family: $font-family-base;
+    font-weight: 500;
+    padding: 0;
+
+    &:after {
+        background-image: url('../icons/chevron-down.svg');
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 24px;
+        vertical-align: top;
+        width: 24px;
+    }
+
+    &.active:after {
+        background-image: url('../icons/chevron-up.svg');
+    }
+}
+
+.filters .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filters .content a {
+    flex: 0 1 48%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+
+    @media screen and (min-width: $small) {
+        flex: 0 1 32%;
+    }
+}

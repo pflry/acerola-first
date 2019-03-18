@@ -14,26 +14,36 @@
 
 <?php get_template_part( 'templates/header-head' ); ?>
 
+<?php $blog_id = get_current_blog_id(); ?>
+
 <body <?php body_class(); ?>>
+<?php 
+    if ($blog_id == 1) { 
+        $home_url = esc_url( home_url( '/' ) );
+    } else {
+        $home_url = '/acerola/';
+    }
+?>
     <?php get_template_part( 'templates/mobile-menu' ); ?>
 
     <div id="containerWrapper" class="wrapper">
-
+        
+        <?php get_template_part( 'templates/blog-header-top' ); ?>
+        
         <header id="header" class="blog-header">
-            <?php get_template_part( 'templates/blog-header-top' ); ?>
-
-             <section id="blogBanner" class="blog-header__banner">
+            <section id="blogBanner" class="blog-header__banner">
                 <div class="container">
                     <div id="siteTitle" class="site-title">
                         <span class="site-title--invisible">
                             <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">Acérola Carrière</a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
                         </span>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
+                        <a href="<?php echo $home_url; ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
+                    
                     </div>
 
                     <nav id="menu" class="site-menu">
                         <?php wp_nav_menu( array(
-                            'walker' => new CSS_Menu_Maker_Walker(),
+                            'walker'         => new CSS_Menu_Maker_Walker(),
                             'theme_location' => 'primary',
 						    'menu'           => 'Header Menu') ); ?>
                     </nav>
@@ -48,7 +58,13 @@
         
         <section id="filAriane" class="blog-breadcrumb">
             <div class="container">
-                <?php echo get_the_breadcrumb() ?>
+                    <?php 
+                        if ($blog_id == 1) { 
+                            echo get_the_breadcrumb();;
+                        } else {
+                            echo get_the_breadcrumb_job();;
+                        }
+                    ?>
             </div>
         </section>
         <div id="containerMain" class="container container-main">

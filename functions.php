@@ -119,10 +119,6 @@ function acerola_setup() {
 	 */ 
 	require get_parent_theme_file_path( '/inc/breadcrumb-functions.php' );
 
-	/**
-	 * Comments functions
-	 */
-	// require get_parent_theme_file_path( '/inc/comments-functions.php' );
 
 	/**
 	 * Medias functions
@@ -135,14 +131,45 @@ function acerola_setup() {
 	require get_parent_theme_file_path( '/inc/shortcodes-functions.php' );
 
 	/**
-	 * AMP theming
-	 */
-	// require get_parent_theme_file_path( '/inc/amp-functions.php' );
-
-	/**
 	 * Walker menu
 	 */
 	require get_parent_theme_file_path( '/inc/walker-functions.php' );
+
+	/**
+	 * Enqueue admin styles
+	 */
+	add_action('admin_print_styles', 'admin_css', 11 );
+
+	function admin_css() {
+		wp_enqueue_style('admin_css', get_stylesheet_directory_uri() . '/style-editor.css');
+	}
+
+	/**
+	 * SITE EMPLOI
+	 */ 
+	$blog_id = get_current_blog_id();
+
+	/**
+	 * EMPLOI Meta functions
+	 */ 
+    if ($blog_id == 2) { 
+        require get_theme_file_path( '/inc/meta-job-functions.php' );
+	}
+	
+	/**
+	 * EMPLOI Filtering a Class in Navigation Menu 
+	 */ 
+	if ($blog_id == 2) {
+		add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+	}
+	
+	function special_nav_class($classes, $item){
+		if((is_single() || is_category()) && $item->title == 'Offres d\'emploi'){
+
+		$classes[] = 'current_page_parent';
+		}
+		return $classes;
+	}
 	
 }
 endif; // acerola_setup
