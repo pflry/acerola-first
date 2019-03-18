@@ -1,11 +1,10 @@
 @charset 'utf-8';
 /*!
-Theme Name: emploi-acerola-v19
-Description: Theme enfant de acerola-v19
+Theme Name: Acerola admin wp v19.0
+Description: Thème admin wordpress du cabinet Acérola Carrière
 Author: PFLRY
 Author URI: https://pflry.eu
-Template: acerola-v19 
-Version: 19
+Version: 19.0
 */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
@@ -94,7 +93,7 @@ input[type=text].form-control {
     }
 }
 
-.inside label {
+#acerolajob .inside label {
     color: $gray-800;
     display: inline-block;
     font-size: $font-size-sm;

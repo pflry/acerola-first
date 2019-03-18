@@ -82,12 +82,8 @@ gulp.task('css:styles', ()=> {
         .pipe(browserSync.stream());
 });
 
-gulp.task('css', (callback)=> {
-    sequence('css:clean', 'css:critical', 'css:styles')(callback)
-});
-
 // CSS admin styles
-gulp.task('admin:css', () => {
+gulp.task('css:admin', () => {
     gulp.src(path.scss + 'style-editor.scss')
         .pipe(sass({
             outputStyle: 'compressed'
@@ -96,6 +92,10 @@ gulp.task('admin:css', () => {
             browsers: ['last 2 versions']
         }))
         .pipe(gulp.dest('../'))
+});
+
+gulp.task('css', (callback) => {
+    sequence('css:clean', 'css:critical', 'css:styles', 'css:admin')(callback)
 });
 
 
