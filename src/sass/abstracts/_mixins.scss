@@ -47,10 +47,12 @@
     color: dynamic-color($color);
     transition: $transition-base;
 
-    &:hover {
-        background-color: shade($color, 15%);
-        border-color: shade($color, 15%);
+    &:hover,
+    &.active {
+        background-color: shade($color, 20%);
+        border-color: shade($color, 20%);
         color: dynamic-color($color);
+        text-decoration: none;
     }
 }
 

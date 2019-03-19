@@ -14,8 +14,7 @@
     @extend %mobile;
 
     span {
-        display: block;
-        font-size: $font-size-h2;
+        text-transform: lowercase;
     }
 }
 

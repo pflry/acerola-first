@@ -14,6 +14,7 @@ const app = {
         app.jScroll.init();
         app.countUp.init();
         app.accordion.init();
+        app.jobFilters.init();
     }
 };
 
@@ -136,6 +137,18 @@ app.accordion = {
             $(this).toggleClass('active');
             $('#jobCategories').slideToggle(250);
         });
+    }
+};
+
+
+// job filters (btn active or not)
+app.jobFilters = {
+    init: function () {
+        let currentURL = $(location).attr("href");
+        let pathArray = currentURL.split('/');
+        let btnID = '#'+pathArray[pathArray.length-2];
+
+        $(btnID).length ? $(btnID).toggleClass('active') : $('#allCategories').toggleClass('active');
     }
 };
 

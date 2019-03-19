@@ -17,10 +17,6 @@
     white-space: normal;
 }
 
-.btn:hover {
-    text-decoration: none;
-}
-
 .btn-black {
     background-color: $black;
     border-color: $black;
@@ -54,7 +50,8 @@
     @include bouton($color-info);
     color: $white;
 
-    &:hover {
+    &:hover,
+    &.active {
         color: $white;
     }
 }

@@ -22,7 +22,7 @@
 
 <?php } elseif  ($blog_id == 2) { ?>
      <section id="content" role="main" class="main job-list categorie">
-        <h1 class="h1">Offres d'emploi <span>Catégorie <?php single_cat_title(); ?></h1>
+        <h1 class="h1">Offres d'emploi <span><?php single_cat_title(); ?></span></h1>
         <?php get_template_part( 'templates/job-filter' ); ?>
         <div class="jscroll">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -34,7 +34,7 @@
 
 <?php } else { ?>
     <section id="content" role="main" class="main training-list categorie">
-        <h1 class="h1">Offres d'emploi <span>Catégorie <?php single_cat_title(); ?></h1>
+        <h1 class="h1">Formation <span><?php single_cat_title(); ?></span></h1>
         <?php get_template_part( 'templates/job-filter' ); ?>
         <div class="jscroll">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
