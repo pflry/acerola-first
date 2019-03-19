@@ -1,0 +1,46 @@
+//
+// Job single post
+// --------------------------------------------------
+
+.single-job .entry-title {
+    font-size: $font-size-h2;
+    text-transform: uppercase;
+    font-family: $font-family-base;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.single-job .criterias {
+    @extend %well;
+    justify-content: space-between;
+
+}
+
+.single-job .entry-meta {
+    color: $color-base;
+    display: block;
+    font-size: $font-size-base;
+    padding: 0;
+
+    .text-muted {
+        color: $color-info;
+    }
+
+    &:nth-child(2) {
+        flex: 1 1 auto;
+        padding-left: 2rem;
+    }
+}
+
+.single-job .entry-meta div {
+    display: block;
+
+    & + div {
+        margin-top: 0.5rem;
+    }
+
+    .icon {
+        color: $color-info;
+        width: 1.1rem;
+    }
+}

@@ -1,5 +1,5 @@
 //
-// Blog list posts
+// Job list posts
 // --------------------------------------------------
 
 .job-list {
@@ -14,7 +14,9 @@
     @extend %mobile;
 
     span {
-        text-transform: lowercase;
+        display: block;
+        font-size: $font-size-h2;
+        color: $color-info;
     }
 }
 

@@ -96,7 +96,7 @@ function get_the_breadcrumb_job() {
 				<li class="breadcrumb-item"><?php echo $chevron_right ?></li>
 				<li class="breadcrumb-item"><a href="<?php echo $home_link; ?>">Offres d'emploi</a></li>
 				<li class="breadcrumb-item"><?php echo $chevron_right ?></li>
-				<li class="breadcrumb-item active">Catégorie <?php echo $category_name; ?></li>
+				<li class="breadcrumb-item active">Secteur d'activité : <?php echo $category_name; ?></li>
 			
 			<?php } else if (is_single()) { ?>
 				<li class="breadcrumb-item"><?php echo $chevron_right ?></li>

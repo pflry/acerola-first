@@ -17,6 +17,10 @@
     white-space: normal;
 }
 
+a.btn:hover {
+    text-decoration: none;
+}
+
 .btn-black {
     background-color: $black;
     border-color: $black;

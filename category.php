@@ -22,7 +22,7 @@
 
 <?php } elseif  ($blog_id == 2) { ?>
      <section id="content" role="main" class="main job-list categorie">
-        <h1 class="h1">Offres d'emploi <span><?php single_cat_title(); ?></span></h1>
+        <h1 class="h1">Offres d'emploi <span>Secteur d'activité : <?php single_cat_title(); ?></span></h1>
         <?php get_template_part( 'templates/job-filter' ); ?>
         <div class="jscroll">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

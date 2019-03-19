@@ -1,5 +1,5 @@
 <div class="filters">
-    <button id="accordion" class="btn">Filtrer par catégorie</button>
+    <button id="accordion" class="btn">Filtrer par secteur d'activité</button>
     <div id="jobCategories" class="content" style="display:none;">
         
         <?php   
