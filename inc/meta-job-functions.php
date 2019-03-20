@@ -19,6 +19,8 @@ function cd_meta_box_cb() {
     $practice = isset( $values['practice'] ) ? esc_attr( $values['practice'][0] ) : '';
     $mode = isset( $values['mode'] ) ? esc_attr( $values['mode'][0] ) : '';
     $reference = isset( $values['reference'] ) ? $values['reference'][0] : '';
+    $jobNumber = isset( $values['nbPostes'] ) ? $values['nbPostes'][0] : '';
+    $start = isset( $values['start'] ) ? $values['start'][0] : '';
 
     wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
     ?>
@@ -73,6 +75,18 @@ function cd_meta_box_cb() {
             </select>
         </div>
     </div>
+
+    <div class="form-row form-row--four">
+        <div class="form-group job-number">
+            <label for="nbPostes">Poste(s) à pourvoir</label>
+            <input type="number" name="nbPostes" id="nbPostes" class="form-control" value="<?php echo $jobNumber; ?>" />
+        </div>
+
+        <div class="form-group start">
+            <label for="start">Début de contrat</label>
+            <input type="text" name="start" id="start" class="form-control" value="<?php echo $start; ?>" />
+        </div>
+    </div>
     
     <?php
 }
@@ -114,6 +128,12 @@ function cd_meta_box_save( $post_id ) {
 
     if( isset( $_POST['reference'] ) )
         update_post_meta( $post_id, 'reference', wp_kses( $_POST['reference'], $allowed ) );
+
+    if( isset( $_POST['nbPostes'] ) )
+        update_post_meta( $post_id, 'nbPostes', wp_kses( $_POST['nbPostes'], $allowed ) );
+
+    if( isset( $_POST['start'] ) )
+        update_post_meta( $post_id, 'start', wp_kses( $_POST['start'], $allowed ) );
 }
 
 ?>

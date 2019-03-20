@@ -63,7 +63,9 @@ $font-family-sans-serif: ('Poppins', Arial, sans-serif);
     &.paper,
     &.practice,
     &.mode,
-    &.reference {
+    &.reference,
+    &.job-number,
+    &.start {
         flex: 1 1 50%;
         display: flex;
         flex-direction: column;
@@ -72,7 +74,7 @@ $font-family-sans-serif: ('Poppins', Arial, sans-serif);
 }
 
 .form-control,
-input[type=text].form-control {
+input.form-control {
     background-clip: padding-box;
     background-color: $white;
     border-radius: $border-radius;
@@ -91,6 +93,10 @@ input[type=text].form-control {
         color: $color-secondary;
         opacity: 1;
     }
+}
+
+input[type=number].form-control {
+    height: auto;
 }
 
 #acerolajob .inside label {
