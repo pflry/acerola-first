@@ -12,9 +12,13 @@
 
 .single-job .criterias {
     @extend %well;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding-bottom: 0;
+    flex-wrap: wrap;
 
+    @media screen and (min-width: $small) {
+        justify-content: space-around;
+    }
 }
 
 .single-job .entry-meta {
@@ -27,6 +31,10 @@
         color: $color-info;
         line-height: 1;
         margin-bottom: 0.15rem;
+    }
+
+    @media screen and (min-width: $small) {
+        
     }
 }
 

@@ -22,6 +22,7 @@
             <?php get_template_part( 'templates/pagination' ); ?>
         </div>
     </section>
+    <?php get_sidebar(); ?>
 
 <?php } elseif ($blog_id == 2) { ?>
     <section id="content" role="main" class="main job-list">
@@ -34,6 +35,7 @@
             <?php get_template_part( 'templates/pagination' ); ?>
         </div>
     </section>
+    <?php get_sidebar(); ?>
 
 <?php } else { ?>
     <section id="content" role="main" class="main training-list">
@@ -46,7 +48,7 @@
             <?php get_template_part( 'templates/pagination' ); ?>
         </div>
     </section>
+    <?php get_sidebar(); ?>
 <?php } ?>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -135,7 +135,16 @@ app.accordion = {
     init: function () {
         $('#accordion').click(function () {
             $(this).toggleClass('active');
+            $('#trier').removeClass('active');
             $('#jobCategories').slideToggle(250);
+            $('#sortTypes').slideUp(250);
+        });
+
+        $('#trier').click(function () {
+            $(this).toggleClass('active');
+            $('#accordion').removeClass('active');
+            $('#sortTypes').slideToggle(250);
+            $('#jobCategories').slideUp(250);
         });
     }
 };

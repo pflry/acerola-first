@@ -11,7 +11,18 @@
 ?><aside id="sidebar" role="complementary" class="sidebar side-standard">
     <div id="primary" class="widget-area">
         <ul class="ul-wrapper">
+            <?php $blog_id = get_current_blog_id(); ?>
+            
+            <?php if ($blog_id == 1) : ?>
             <?php get_template_part( 'templates/sidebar-static' ); ?>
+
+            <?php elseif ($blog_id == 2) : ?>
+            <?php get_template_part( 'templates/sidebar-static-jobs' ); ?>
+
+            <?php else : ?>
+            <?php get_template_part( 'templates/sidebar-static-jobs' ); ?>
+
+            <?php endif; ?>
 
             <?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
                 <?php dynamic_sidebar( 'primary-widget-area' ); ?>

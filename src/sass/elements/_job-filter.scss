@@ -4,34 +4,42 @@
 
 .filters {
     @extend %mobile;
-    background-color: transparent;
-    border-radius: $border-radius;
     overflow: hidden;
     position: relative;
-}
+    display: flex;
+    justify-content: space-between;
 
-.filters #accordion.btn {
-    background-color: transparent;
-    font-family: $font-family-base;
-    font-weight: 500;
-    padding: 0;
-
-    &:after {
-        background-image: url('../icons/chevron-down.svg');
-        background-repeat: no-repeat;
-        content: '';
-        display: inline-block;
-        height: 24px;
-        vertical-align: top;
-        width: 24px;
-    }
-
-    &.active:after {
-        background-image: url('../icons/chevron-up.svg');
+    .tri {
+        margin-left: 1rem;
     }
 }
 
-.filters .content {
+.filters .btn-light {
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 314px;
+
+    &:hover,
+    &:focus,
+    &.active {
+        background-color: $gray-400;
+        border-color: $gray-400;
+    }
+
+    &.active .icon {
+        transform: rotate(180deg)
+    }
+
+    @media screen and (min-width: $small) {
+        width: auto;
+        padding: 0.75rem 1.875rem;;
+        max-width: inherit;
+    }
+}
+
+.filters-content,
+.sort-content {
+    @extend %mobile;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -46,8 +54,14 @@
         justify-content: flex-start;
 
         a {
-            flex: 0 1 30%;
+            flex: 0 1 31%;
             margin: 1rem 0.5rem 0;
         }
     }
+}
+
+.sort-content {
+   @media screen and (min-width: $small) {
+       justify-content: flex-end;
+   }
 }
