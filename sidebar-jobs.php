@@ -1,18 +1,22 @@
 <?php
 /**
- * The template for displaying the common sidebar
+ * The template for displaying the job widgets in sidebar
  *
- * Displays the common sidebar with widgets.
+ * Displays the job widgets in sidebar.
  *
  * @package WordPress
- * @subpackage ACEROLA CARRIERE v3.0
+ * @subpackage ACEROLA CARRIERE EMPLOI v19
  */
 
 ?>
-
 <aside id="sidebar" role="complementary" class="sidebar side-standard">
     <div id="primary" class="widget-area">
         <ul class="ul-wrapper">
+            
+            <?php if (is_singular()) : ?>
+                <?php get_template_part( 'templates/widget-job-criterias' ); ?>
+            <?php endif; ?>
+
             <li class="widget widget__contact">
                 <h3 class="widget-title">Contactez nous</h3>
                 <div class="textwidget custom-html-widget">
@@ -57,7 +61,7 @@
 
             <li class="widget widget__search">
                 <div class="site-search">
-                    <?php get_search_form(); ?>
+                    <?php get_template_part( 'searchform-jobs' ); ?>
                 </div>
             </li>
 

@@ -120,11 +120,62 @@
 }
 
 .social-bar .email a {
-    background-color: $color-primary;
+    background-color: $color-success;
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
 
     &:hover {
-        background-color: shade($color-primary, 15%);
+        background-color: shade($color-success, 15%);
     }
 } 
+
+// Social bar Jobs
+//-----------------
+.social-bar-jobs {
+    @extend %well;
+    align-items: center;
+    background-color: $gray-200;
+    justify-content: space-between;
+}
+
+.social-bar-jobs .social-bar {
+    align-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 0;
+
+    div {
+        flex: 0 1 auto;
+        margin-right: 0.5rem;
+    }
+
+    a {
+        align-items: center;
+        color: $white;
+        display: flex;
+        height: 44px;
+        width: 44px;
+        justify-content: center;
+        transition: $transition-base;
+        border-radius: 50%;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .icon {
+        height: 1rem;
+        margin-left: 0;
+    }
+
+    .share {
+        margin-right: 1rem;
+    }
+
+    .share .icon {
+        height: 1.5rem;
+    }
+}

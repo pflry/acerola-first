@@ -8,23 +8,25 @@ html {
 
 // Headings
 // -----------------------------------
-h1,.h1,
+
 h2,.h2,
 h3,.h3,
 h4,.h4,
 h5,.h5,
 h6,.h6 {
     color: $color-headings;
-    font-family: $font-family-headings;
+    font-family: $font-family-base;
     line-height: $line-height-headings;
     margin: 1rem 0;
 }
 
 h1, .h1, h1.entry-title {
+    font-family: $font-family-headings;
     color: $gray-900;
     font-size: calc(#{$font-size-h1} * 0.85);
     font-weight: 900;
     margin: 0.5rem 0 1.25rem;
+    line-height: $line-height-headings;
 
     @media screen and (min-width: $small) {
         font-size: $font-size-h1;

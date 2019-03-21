@@ -2,6 +2,7 @@
 // Comments
 // --------------------------------------------------
 .comments-area {
+    @extend %mobile;
     padding-bottom: 3.125rem;
 }
 
@@ -62,7 +63,11 @@
 .comment-form .submit {
     @extend .btn;
     @extend .btn-black;
-    width: auto;
+    width: 100%;
+
+    @media screen and (min-width: $small) {
+        width: auto;
+    }
 }
 
 /* Commentaires */

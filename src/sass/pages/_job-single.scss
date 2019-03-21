@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 .single-job .entry-title {
-    font-size: $font-size-h2;
     text-transform: uppercase;
     font-family: $font-family-base;
     font-weight: 600;
@@ -18,6 +17,7 @@
 
     @media screen and (min-width: $small) {
         justify-content: space-around;
+        display: none;
     }
 }
 

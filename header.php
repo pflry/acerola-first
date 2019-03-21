@@ -21,7 +21,7 @@
     if ($blog_id == 1) { 
         $home_url = esc_url( home_url( '/' ) );
     } else {
-        $home_url = '/acerola/';
+        $home_url = '/';
     }
 ?>
     <?php get_template_part( 'templates/mobile-menu' ); ?>

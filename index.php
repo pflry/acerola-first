@@ -35,7 +35,7 @@
             <?php get_template_part( 'templates/pagination' ); ?>
         </div>
     </section>
-    <?php get_sidebar(); ?>
+    <?php get_sidebar('jobs'); ?>
 
 <?php } else { ?>
     <section id="content" role="main" class="main training-list">

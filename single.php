@@ -10,6 +10,7 @@
             <?php get_template_part( 'nav', 'below-single' ); ?>
         </footer>
     </section>
+    <?php get_sidebar(); ?>
 
 <?php } elseif ($blog_id == 2) { ?>
     <section id="content" role="main" class="main single-main">
@@ -20,6 +21,7 @@
             <?php /* get_template_part( 'nav', 'below-single' ); */ ?>
         </footer>
     </section>
+    <?php get_sidebar('jobs'); ?>
 
 <?php } else { ?>
     <section id="content" role="main" class="main single-main">
@@ -30,8 +32,8 @@
             <?php /* get_template_part( 'nav', 'below-single' ); */ ?>
         </footer>
     </section>
+    <?php get_sidebar(); ?>
 
 <?php } ?>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

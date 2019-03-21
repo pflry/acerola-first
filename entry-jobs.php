@@ -1,6 +1,7 @@
 <?php if ( is_singular() ) { ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('single-job'); ?>>
         <h1 class="entry-title"><?php the_title(); ?></h1>
+        <?php get_template_part( 'templates/entry-social-jobs' ); ?>
         <section class="criterias">
             <?php get_template_part( 'templates/entry-meta-single-job' ); ?>
             
@@ -10,8 +11,6 @@
         </section>
         <?php the_content(); ?>
         <?php edit_post_link(); ?>
-        <?php the_category( ' ' ); ?>
-        <?php get_template_part( 'templates/entry-footer' ); ?>
     </article>        
 <?php } else { ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

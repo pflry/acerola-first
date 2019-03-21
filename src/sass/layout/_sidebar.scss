@@ -272,5 +272,35 @@
 
 // Widget Job Criterias
 .widget__job-criterias {
-    background-color: $gray-500;
+    background-color: $color-info;
+
+    .textwidget {
+        background-color: $gray-100;
+        border-radius: 0 0 $border-radius $border-radius;
+        padding: 0.5rem 0;
+    }
+}
+
+.widget__job-criterias .entry-meta {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: $font-size-base;
+    color: $color-base;
+    border-top: solid 1px $gray-400;
+    align-items: center;
+
+    &:first-child {
+        border-top: none;
+    }
+
+    .icon {
+        color: $color-info;
+        padding-right: 0.5rem;
+        stroke-width: 1.5px;
+        height: 1.75rem;
+    }
+
+    .text-muted {
+        color: $color-info;
+    }
 }

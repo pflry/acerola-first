@@ -11,5 +11,6 @@
 
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <input type="search" class="form-control search-field" placeholder="Recherche" value="<?php echo get_search_query(); ?>" name="s" />
+    <input type="hidden" name="site_section" value="emploi" />
     <button type="submit" class="search-submit btn"><?php echo get_build_icon_path('search.svg') ?></button>
 </form>
