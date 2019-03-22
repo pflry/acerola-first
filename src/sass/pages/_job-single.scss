@@ -2,26 +2,51 @@
 // Job single post
 // --------------------------------------------------
 
+.single-job {
+    @extend %mobile;
+}
+
 .single-job .entry-title {
-    text-transform: uppercase;
     font-family: $font-family-base;
     font-weight: 600;
     letter-spacing: 2px;
+    padding: 0;
+    text-transform: uppercase;
 }
 
-.single-job .criterias {
-    @extend %well;
-    justify-content: flex-start;
-    padding-bottom: 0;
-    flex-wrap: wrap;
+.single-job .entry-remind {
+    @extend %titre-service;
+    color: $gray-700;
+    font-weight: 400;
+    margin: 0;
 
-    @media screen and (min-width: $small) {
-        justify-content: space-around;
+    @media screen and (min-width: $medium) {
         display: none;
     }
 }
 
-.single-job .entry-meta {
+.single-job .criterias {
+    @extend %well;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+
+    @media screen and (min-width: $large) {
+        display: none;
+    }
+}
+
+.single-job .criterias > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @media screen and (min-width: $medium) {
+        justify-content: space-between;
+    }
+}
+
+.single-job .meta-content {
     color: $color-base;
     display: block;
     font-size: $font-size-base;
@@ -32,21 +57,26 @@
         line-height: 1;
         margin-bottom: 0.15rem;
     }
+}
+
+.single-job .criterias section > div {
+    display: flex;
+    margin-bottom: 1rem;
+    flex: 1 1 100%;
 
     @media screen and (min-width: $small) {
-        
+        flex: 0 1 50%;
+    }
+    
+    @media screen and (min-width: $medium) {
+        flex: 0 1 33%;
     }
 }
 
-.single-job .entry-meta > div {
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.single-job .entry-meta .meta-picto {
-    display: flex;
+.single-job .criterias .meta-picto {
     align-items: flex-start;
     color: $color-info;
+    display: flex;
     padding-right: 0.5rem;
 
     .icon {

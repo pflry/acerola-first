@@ -13,7 +13,7 @@
 ?>
 
 <li class="widget widget__job-criterias">
-    <h3 class="widget-title">Critères de l'annonce</h3>
+    <h3 class="widget-title">Critères de l'offre</h3>
     <div class="textwidget custom-html-widget">
         <div class="entry-meta entry-meta__ref">
             <div class="meta-picto">

@@ -35,7 +35,7 @@
     <div class="email">
         <a target="_blank" title="Partager par E-mail" href="mailto:?subject='<?php echo $social_title; ?>'&body='<?php echo $social_link; ?>'" rel="nofollow">
             <?php echo get_build_icon_path('email.svg'); ?>
-            <span class="title">E-mail</span>
+            <span class="title">Email</span>
         </a>
     </div>
 </div>

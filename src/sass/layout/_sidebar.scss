@@ -274,6 +274,10 @@
 .widget__job-criterias {
     background-color: $color-info;
 
+    .widget-title {
+        font-weight: 700;
+    }
+
     .textwidget {
         background-color: $gray-100;
         border-radius: 0 0 $border-radius $border-radius;

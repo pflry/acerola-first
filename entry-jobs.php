@@ -1,8 +1,9 @@
 <?php if ( is_singular() ) { ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('single-job'); ?>>
+        <h4 class="entry-remind">Offre d'emploi</h4>
         <h1 class="entry-title"><?php the_title(); ?></h1>
         <?php get_template_part( 'templates/entry-social-jobs' ); ?>
-        <section class="criterias">
+        <section class="criterias" id="metaSingle" style="display:none;">
             <?php get_template_part( 'templates/entry-meta-single-job' ); ?>
         </section>
         <?php the_content(); ?>

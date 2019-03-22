@@ -146,6 +146,20 @@ app.accordion = {
             $('#sortTypes').slideToggle(250);
             $('#jobCategories').slideUp(250);
         });
+
+        $('#shareJob').click(function () {
+            $(this).toggleClass('active');
+            $('#criteriaJob').removeClass('active');
+            $('#socialJob').slideToggle(250);
+            $('#metaSingle').slideUp(250);
+        });
+        
+        $('#criteriaJob').click(function () {
+            $(this).toggleClass('active');
+            $('#shareJob').removeClass('active');
+            $('#metaSingle').slideToggle(250);
+            $('#socialJob').slideUp(250);
+        });
     }
 };
 
