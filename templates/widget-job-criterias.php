@@ -60,6 +60,7 @@
             </div>
         </div>
 
+        <?php if ($meta_contrat !='') : ?>
         <div class="entry-meta entry-meta__contract">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('file-text.svg') ?>
@@ -69,7 +70,9 @@
                 <span><?php echo $meta_contrat ?></span>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if ($meta_exp !='') : ?>
         <div class="entry-meta entry-meta__practice">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('briefcase.svg') ?>
@@ -79,7 +82,9 @@
                 <span class="meta-practice"><?php echo $meta_exp ?></span>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if ($meta_mode !='') : ?>
         <div class="entry-meta entry-meta__mode">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('watch.svg') ?>
@@ -89,7 +94,9 @@
                 <span><?php echo $meta_mode ?></span>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if ($meta_nbpostes !='') : ?>
         <div class="entry-meta entry-meta__nbjobs">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('user-line.svg') ?>
@@ -107,7 +114,9 @@
                 </span>
             </div>
         </div>
-
+        <?php endif; ?>
+        
+        <?php if ($meta_debut !='') : ?>
         <div class="entry-meta entry-meta__start">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('calendar-line.svg') ?>
@@ -117,5 +126,6 @@
                 <span><?php echo $meta_debut ?></span>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 </li>
