@@ -11,17 +11,18 @@
 }
 
 .home-highlight .container {
+    align-items: center;
     flex-direction: column;
     padding-bottom: 3.125rem;
     padding-top: 3.125rem;
-    align-items: center;
 
     @media screen and (min-width: $medium) {
-        padding-bottom: 1.5rem;
-        padding-top: 1.5rem;
+        align-items: stretch;
         flex-direction: row;
         justify-content: center;
-        align-items: stretch;
+        min-height: 287px;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
 
         div:first-child {
             margin-right: 0.25rem;

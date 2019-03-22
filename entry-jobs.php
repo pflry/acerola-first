@@ -4,10 +4,6 @@
         <?php get_template_part( 'templates/entry-social-jobs' ); ?>
         <section class="criterias">
             <?php get_template_part( 'templates/entry-meta-single-job' ); ?>
-            
-            <!-- <section class="actions">
-                <a href="" class="btn btn-black">Postuler</a>
-            </section> -->
         </section>
         <?php the_content(); ?>
         <?php edit_post_link(); ?>
