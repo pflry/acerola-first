@@ -11,20 +11,10 @@
 
 ?><?php get_header(); ?>
 
-<?php if ($blog_id == 1) { ?>
-    <section id="content" role="main" class="main blog-home">
-        <h1 class="h1"><?php single_post_title(); ?></h1>
-        <div class="jscroll">
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'entry' ); ?>
-            <?php comments_template(); ?>
-            <?php endwhile; endif; ?>
-            <?php get_template_part( 'templates/pagination' ); ?>
-        </div>
-    </section>
-    <?php get_sidebar(); ?>
+<?php 
+global $child;
 
-<?php } elseif ($blog_id == 2) { ?>
+if ($child == 'emploi') : ?>
     <section id="content" role="main" class="main job-list">
         <h1 class="h1">Offres d'emploi</h1>
         <?php get_template_part( 'templates/job-filter' ); ?>
@@ -37,7 +27,7 @@
     </section>
     <?php get_sidebar('jobs'); ?>
 
-<?php } else { ?>
+<?php elseif ($child == 'formation') : ?>
     <section id="content" role="main" class="main training-list">
         <h1 class="h1">Formations</h1>
         <?php get_template_part( 'templates/job-filter' ); ?>
@@ -49,6 +39,20 @@
         </div>
     </section>
     <?php get_sidebar(); ?>
-<?php } ?>
+
+<?php else : ?>
+    <section id="content" role="main" class="main blog-home">
+        <h1 class="h1"><?php single_post_title(); ?></h1>
+        <div class="jscroll">
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <?php get_template_part( 'entry' ); ?>
+            <?php comments_template(); ?>
+            <?php endwhile; endif; ?>
+            <?php get_template_part( 'templates/pagination' ); ?>
+        </div>
+    </section>
+    <?php get_sidebar(); ?>
+    
+<?php endif; ?>
 
 <?php get_footer(); ?>

@@ -4,10 +4,10 @@
     </button>
     <div class="container">
         <div id="search" class="mobile-menu__search">
-            <?php $blog_id = get_current_blog_id();
-            if ($blog_id == 2) :  
+            <?php global $child;
+            if ($child == 'emploi') :
                 get_template_part( 'templates/searchform-menu-jobs' );
-            elseif ($blog_id == 3) :  
+            elseif ($child == 'formation') : 
                 get_template_part( 'templates/searchform-menu-jobs' );
             else :
                 get_template_part( 'templates/searchform-menu' );

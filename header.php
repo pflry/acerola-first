@@ -14,17 +14,12 @@
 
 <?php get_template_part( 'templates/header-head' ); ?>
 
-<?php $blog_id = get_current_blog_id(); ?>
-
 <body <?php body_class(); ?>>
-<?php 
-    if ($blog_id == 1) { 
-        $home_url = esc_url( home_url( '/' ) );
-    } else {
-        $home_url = '/';
-    }
+<?php
+    global $child;
+    global $home_url;
+    get_template_part( 'templates/mobile-menu' );
 ?>
-    <?php get_template_part( 'templates/mobile-menu' ); ?>
 
     <div id="containerWrapper" class="wrapper">
         
@@ -37,7 +32,7 @@
                         <span class="site-title--invisible">
                             <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">Acérola Carrière</a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
                         </span>
-                        <a href="<?php echo $home_url; ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
+                        <a href="<?php echo $home_url ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
                     
                     </div>
 
@@ -59,11 +54,13 @@
         <section id="filAriane" class="blog-breadcrumb">
             <div class="container">
                     <?php 
-                        if ($blog_id == 1) { 
-                            echo get_the_breadcrumb();;
-                        } else {
-                            echo get_the_breadcrumb_job();;
-                        }
+                        if ($child == 'emploi') : 
+                            echo get_the_breadcrumb_job();
+                        elseif ($child == 'formation') :
+                            echo get_the_breadcrumb_job();
+                        else :
+                            echo get_the_breadcrumb();
+                        endif;
                     ?>
             </div>
         </section>

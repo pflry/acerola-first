@@ -145,21 +145,36 @@ function acerola_setup() {
 	}
 
 	/**
-	 * SITE EMPLOI
+	 * MULTISITES
 	 */ 
-	$blog_id = get_current_blog_id();
+	function sitemulti() {
+		$current_site = get_blog_details()->blogname;
+		global $child;
+		global $home_url;
+
+		if (strpos($current_site, 'emploi') == true) : 
+			require get_theme_file_path( '/inc/meta-job-functions.php' );
+			$child = 'emploi';
+			$home_url = '../';
+
+		elseif (strpos($current_site, 'formations') == true) :
+			$child = 'formation';
+			$home_url = '../';
+
+		else :
+			$child = 'parent';
+			$home_url = esc_url( home_url( '/' ) );
+			
+		endif;
+	}
+	add_action( 'init', 'sitemulti');
+	
 
 	/**
-	 * EMPLOI Meta functions
-	 */ 
-    if ($blog_id == 2) { 
-        require get_theme_file_path( '/inc/meta-job-functions.php' );
-	}
-	
-	/**
 	 * EMPLOI Filtering a Class in Navigation Menu 
-	 */ 
-	if ($blog_id == 2) {
+	 */
+	global $child;
+	if ($child == 'emploi') {
 		add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 	}
 	
