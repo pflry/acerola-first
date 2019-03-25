@@ -10,7 +10,7 @@
         <div class="home-highlight__body highlight-job">
             <div class="rub">Emplois</div>
             <p>Boostez votre recherche d'emploi avec <strong>Acérola Carrière</strong>. Découvrez nos offres d'emploi et postulez en ligne.</p>
-            <a href="/emplois/" class="btn btn-primary">Offres d'emploi</a>
+            <a href="/emploi/" class="btn btn-primary">Offres d'emploi</a>
         </div>
 
     </div>

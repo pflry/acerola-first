@@ -7,7 +7,7 @@
         <span>Partager&nbsp;</span>
         <?php echo get_build_icon_path('share.svg'); ?>
     </button>
-    <a href="" class="btn btn-black">Postuler</a>
+    <a href="#jobForm" class="btn btn-black">Postuler</a>
 </div>
 
 <div class="social-bar" id="socialJob" style="display:none;">

@@ -8,6 +8,7 @@ import OnScreen from 'onscreen';
 const app = {
     init: function() {
         app.scrollTop.init();
+        app.scrollAnchor.init();
         app.slideMenu.init();
         app.scrollHeader.init();
         app.slickCarousel.init();
@@ -15,6 +16,7 @@ const app = {
         app.countUp.init();
         app.accordion.init();
         app.jobFilters.init();
+        app.customFileInput.init();
     }
 };
 
@@ -30,6 +32,19 @@ app.scrollTop = {
         $(window).scroll(function() {
             let topPos = $(this).scrollTop();
             topPos > 100 ? $('#scrollTop').addClass('scroll-active') : $('#scrollTop').removeClass('scroll-active');
+        });
+    }
+};
+
+// Smooth scroll anchor
+app.scrollAnchor = {
+    init: function() {
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
         });
     }
 };
@@ -172,6 +187,43 @@ app.jobFilters = {
         let btnID = '#'+pathArray[pathArray.length-2];
 
         $(btnID).length ? $(btnID).toggleClass('active') : $('#allCategories').toggleClass('active');
+    }
+};
+
+
+// Custom file input
+ app.customFileInput = {
+    init: function () {
+        $('.inputfile').each(function () {
+            let $input = $(this),
+                $label = $input.next('label'),
+                labelVal = $label.html();
+
+            $input.on('change', function (e) {
+                let fileName = '';
+
+                if (e.target.value) {
+                    fileName = e.target.value.split('\\').pop();
+                }
+                    
+
+                if (fileName) {
+                    $label.html(fileName);
+                    $label.addClass('selected');
+                }else{
+                    $label.html(labelVal);
+                }
+            });
+
+            // Firefox bug fix
+            $input
+                .on('focus', function () {
+                    $input.addClass('has-focus');
+                })
+                .on('blur', function () {
+                    $input.removeClass('has-focus');
+                });
+        });
     }
 };
 

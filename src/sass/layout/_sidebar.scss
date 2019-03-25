@@ -10,6 +10,10 @@
     .ul-wrapper {
         @extend %ul-reset;
     }
+
+    &.side-jobs {
+        top: 5rem;
+    }
 }
 
 
@@ -144,9 +148,9 @@
 // Widget search
 .widget__search {
     background-color: transparent;
+    border-top: solid 1px $color-border;
     margin-top: 2rem;
     padding-top: 1.9rem;
-    border-top: solid 1px $color-border;
 }
 
 .widget__search .search-form {
@@ -245,6 +249,7 @@
         font-weight: 500;
     }
 }
+
 .widget__approval .approval-body {
     background-color: tint($color-primary, 30%);
     padding: 1.5rem 0 1rem;
@@ -272,10 +277,15 @@
 
 // Widget Job Criterias
 .widget__job-criterias {
-    background-color: $color-info;
+    background-color: transparent;
+    border-bottom: solid 1px $color-border;
+    margin-bottom: 1.9rem;
+    padding-bottom: 2rem;
 
     .widget-title {
-        font-weight: 700;
+        background-color: $color-info;
+        border-radius: $border-radius $border-radius 0 0;
+        font-weight: 400;
     }
 
     .textwidget {
@@ -286,12 +296,12 @@
 }
 
 .widget__job-criterias .entry-meta {
-    display: flex;
-    padding: 0.5rem 1rem;
-    font-size: $font-size-base;
-    color: $color-base;
-    border-top: solid 1px $gray-400;
     align-items: center;
+    border-top: solid 1px $gray-400;
+    color: $color-base;
+    display: flex;
+    font-size: $font-size-base;
+    padding: 0.5rem 1rem;
 
     &:first-child {
         border-top: none;
@@ -299,9 +309,9 @@
 
     .icon {
         color: $color-info;
+        height: 1.75rem;
         padding-right: 0.5rem;
         stroke-width: 1.5px;
-        height: 1.75rem;
     }
 
     .text-muted {

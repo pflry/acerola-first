@@ -8,6 +8,9 @@
 
 .form-group {
    @extend %form-group;
+   p {
+       margin: 0;
+   }
 }
 
 .form-group label {
@@ -32,4 +35,38 @@ textarea {
 
 .form-control[name=your-subject] {
     max-width: 100%;
+}
+
+.form-inline {
+    display: flex;
+    justify-content: space-between;
+
+    .form-group {
+        flex: 0 1 48.75%;
+    }
+
+    .form-control {
+        max-width: 100%
+    }
+}
+
+// File input
+.inputfile {
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0.1px;
+    z-index: -1;
+}
+
+label.btn {
+    cursor: pointer;
+}
+
+label.btn.selected {
+    @extend .btn-success;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: none;
 }

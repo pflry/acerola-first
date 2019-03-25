@@ -34,11 +34,6 @@ body {
     &.covered {
         opacity: 0.25;
     }
-
-    // @media screen and (min-width: $x-large) {
-    //     max-width: 1280px;
-    //     margin: 0 auto;
-    // }
 }
 
 // containers
@@ -193,6 +188,14 @@ img {
     display: none !important;
 }
 
+.d-block {
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
 .rounded {
     border-radius: $border-radius;
 }
@@ -216,4 +219,8 @@ img {
 
 .flex-end {
     justify-content: flex-end;
+}
+
+.f-left {
+    float: left;
 }

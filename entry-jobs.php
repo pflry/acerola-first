@@ -7,6 +7,7 @@
             <?php get_template_part( 'templates/entry-meta-single-job' ); ?>
         </section>
         <?php the_content(); ?>
+        <?php get_template_part( 'templates/entry-form-job' ); ?>
         <?php edit_post_link(); ?>
     </article>        
 <?php } else { ?>

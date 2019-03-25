@@ -40,9 +40,18 @@ function acerola_setup() {
 	}
 
 	/**
-	 * Stop loading css Contact Form plugin
+	 * Contact Form 7 plugin
 	 */
+
+	// Stop loading css Contact Form plugin
 	add_filter( 'wpcf7_load_css', '__return_false' );
+
+	// No spans around input
+	add_filter('wpcf7_form_elements', function($content) {
+		$content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+		return $content;
+	});
 
 	/**
 	 * Enable support
@@ -155,11 +164,11 @@ function acerola_setup() {
 		if (strpos($current_site, 'emploi') == true) : 
 			require get_theme_file_path( '/inc/meta-job-functions.php' );
 			$child = 'emploi';
-			$home_url = '../';
+			$home_url = '/';
 
 		elseif (strpos($current_site, 'formations') == true) :
 			$child = 'formation';
-			$home_url = '../';
+			$home_url = '/';
 
 		else :
 			$child = 'parent';
