@@ -25,18 +25,34 @@
     }
 }
 
-.single-job .criterias {
-    @extend %well;
-    margin-left: 0;
-    margin-right: 0;
-    padding-bottom: 0;
-
-    & + p {
-        margin-top: 3.125rem;
+.single-job h2 {
+    &:after {
+        border: solid 1.5px $color-primary;
+        content: '';
+        display: block;
+        margin-top: 0.5rem;
+        width: 100px;
     }
+}
+
+.single-job .criterias {
+    background-color: $gray-100;
+    border-radius: $border-radius;
+    margin-bottom: 1.375rem;
 
     @media screen and (min-width: $large) {
         display: none;
+    }
+}
+
+.single-job .criterias-title {
+    @extend %titre-service;
+    font-weight: 600;
+    margin: 0 0 -0.5rem;
+    padding: 1rem 1rem 0 1.5rem;
+
+    &:after {
+        border: none;
     }
 }
 
@@ -44,6 +60,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @media screen and (min-width: $small) {
+        justify-content: space-between;
+    }
 
     @media screen and (min-width: $medium) {
         justify-content: space-between;
@@ -63,17 +83,42 @@
     }
 }
 
-.single-job .criterias section > div {
+.single-job .criterias .entry-meta {
     display: flex;
-    margin-bottom: 1rem;
     flex: 1 1 100%;
+    padding: 1rem 0 0.75rem 1.5rem;
+    position: relative;
 
-    @media screen and (min-width: $small) {
+    & + .entry-meta {
+        border-top: solid 1px $color-border;
+    }
+
+    @media screen and (min-width: $small) and (max-width: $medium - 1) {
         flex: 0 1 50%;
+        border-bottom: solid 1px $color-border;
+
+        &:last-child:nth-child(odd) {
+            border-bottom: none;
+        }
+
+        &:nth-last-child(2):nth-child(odd),
+        &:last-child:nth-child(even) {
+            border-bottom: none;
+        }
+        
+        & + .entry-meta {
+            border-top: none;
+        }
     }
     
     @media screen and (min-width: $medium) {
-        flex: 0 1 33%;
+        flex: 0 1 33.333333%;
+
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3) {
+            border-top: none;
+        }
     }
 }
 
@@ -81,7 +126,7 @@
     align-items: flex-start;
     color: $color-info;
     display: flex;
-    padding-right: 0.5rem;
+    padding-right: 0.75rem;
 
     .icon {
         stroke-width: 1.5px; 

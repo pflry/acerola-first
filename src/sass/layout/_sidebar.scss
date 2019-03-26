@@ -277,20 +277,15 @@
 
 // Widget Job Criterias
 .widget__job-criterias {
-    background-color: transparent;
-    border-bottom: solid 1px $color-border;
-    margin-bottom: 1.9rem;
-    padding-bottom: 2rem;
+    background-color: $gray-100;
 
     .widget-title {
-        background-color: $color-info;
-        border-radius: $border-radius $border-radius 0 0;
-        font-weight: 400;
+        color: $color-base;
+        font-weight: 600;
+        padding-bottom: 0;
     }
 
     .textwidget {
-        background-color: $gray-100;
-        border-radius: 0 0 $border-radius $border-radius;
         padding: 0.5rem 0;
     }
 }

@@ -13,14 +13,14 @@
 ?>
 
 <li class="widget widget__job-criterias">
-    <h3 class="widget-title">Critères de l'offre</h3>
+    <h3 class="widget-title">Résumé de l'offre</h3>
     <div class="textwidget custom-html-widget">
         <div class="entry-meta entry-meta__ref">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('tag-line.svg') ?>
             </div>
             <div class="meta-content">
-                <div class="text-muted">Référence de l'offre</div>
+                <div class="text-muted">Référence</div>
                 <span><?php echo $meta_ref ?></span>
             </div>
         </div>

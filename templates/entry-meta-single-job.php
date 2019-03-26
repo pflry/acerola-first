@@ -23,18 +23,21 @@
     $category = get_the_category($post->ID);
     $meta_cat = $category[0]->cat_name;
 ?>
+<h2 class="h2 criterias-title">Résumé de l'offre</h2>
 <section>
-    <div class="entry-meta__ref">
+    <?php if ($meta_ref !='') : ?>
+    <div class="entry-meta entry-meta__ref">
         <div class="meta-picto">
             <?php echo get_build_icon_path('tag-line.svg') ?>
         </div>
         <div class="meta-content">
-            <div class="text-muted">Référence de l'offre</div>
+            <div class="text-muted">Référence</div>
             <span><?php echo $meta_ref ?></span>
         </div>
     </div>
+    <?php endif; ?>
 
-    <div class="entry-meta__date">
+    <div class="entry-meta entry-meta__date">
         <?php  
             $dateShort = get_the_date( 'j F Y' );
             $dateLong = get_the_date( 'j F Y' );
@@ -49,7 +52,8 @@
         </div>
     </div>
 
-    <div class="entry-meta__place">
+    <?php if ($meta_ville !='' && $meta_cp !='') : ?>
+    <div class="entry-meta entry-meta__place">
         <div class="meta-picto">
             <?php echo get_build_icon_path('map-pin2.svg') ?>
         </div>
@@ -58,8 +62,9 @@
             <span><?php echo $meta_cp ?>&nbsp;<?php echo $meta_ville ?></span>
         </div>
     </div>
+    <?php endif; ?>
 
-    <div class="entry-meta__cat">
+    <div class="entry-meta entry-meta__cat">
         <div class="meta-picto">
             <?php echo get_build_icon_path('pie-chart.svg') ?>
         </div>
@@ -70,7 +75,7 @@
     </div>
 
     <?php if ($meta_contrat !='') : ?>
-    <div class="entry-meta__contract">
+    <div class="entry-meta entry-meta__contract">
         <div class="meta-picto">
             <?php echo get_build_icon_path('file-text.svg') ?>
         </div>
@@ -82,7 +87,7 @@
     <?php endif; ?>
 
     <?php if ($meta_exp !='') : ?>
-    <div class="entry-meta__practice">
+    <div class="entry-meta entry-meta__practice">
         <div class="meta-picto">
             <?php echo get_build_icon_path('briefcase.svg') ?>
         </div>
@@ -94,7 +99,7 @@
     <?php endif; ?>
 
     <?php if ($meta_mode !='') : ?>
-    <div class="entry-meta__mode">
+    <div class="entry-meta entry-meta__mode">
         <div class="meta-picto">
             <?php echo get_build_icon_path('watch.svg') ?>
         </div>
@@ -106,7 +111,7 @@
     <?php endif; ?>
 
     <?php if ($meta_nbpostes !='') : ?>
-    <div class="entry-meta__nbjobs">
+    <div class="entry-meta entry-meta__nbjobs">
         <div class="meta-picto">
             <?php echo get_build_icon_path('user-line.svg') ?>
         </div>
@@ -126,7 +131,7 @@
     <?php endif; ?>
     
     <?php if ($meta_debut !='') : ?>
-    <div class="entry-meta__start">
+    <div class="entry-meta entry-meta__start">
         <div class="meta-picto">
             <?php echo get_build_icon_path('calendar-line.svg') ?>
         </div>
