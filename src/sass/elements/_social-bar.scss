@@ -8,7 +8,7 @@
     flex-wrap: nowrap;
     height: 44px;
     justify-content: flex-start;
-    margin-bottom: 1.375rem;
+    margin-bottom: 3.125rem;
     margin-top: 1.375em;
 
     div {
@@ -38,10 +38,6 @@
         font-size: $font-size-sm;
         margin-left: 0.75rem;
         line-height: 1.4;
-    }
-
-    @media screen and (min-width: $small) {
-        margin-top: 1.375rem;
     }
 
     @media screen and (min-width: $medium) {

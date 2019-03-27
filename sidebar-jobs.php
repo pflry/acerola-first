@@ -26,7 +26,7 @@
                         </div>
                         <span>&bullet;</span>
                         <div>
-                            <?php echo get_build_icon_path('email.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">Email</a>
+                            <?php echo get_build_icon_path('email.svg') ?> <a href="/contact/">Email</a>
                         </div>
                     </div>
                 </div>

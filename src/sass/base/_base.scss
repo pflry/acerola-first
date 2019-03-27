@@ -121,10 +121,12 @@ body {
 
     @media screen and (min-width: $large) {
         display: block;
+        min-width: 297px;
     }
 
     @media screen and (min-width: $x-large) {
         margin-left: 1.875rem;
+        min-width: 333px;
         width: 30%;
     }
 }
