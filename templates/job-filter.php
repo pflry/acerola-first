@@ -7,7 +7,7 @@
         </button>
     </div>
 
-    <div class="tri">
+    <div class="tri d-none">
         <button id="trier" class="btn btn-light">
             Trier <?php echo get_build_icon_path('chevron-down.svg') ?>
         </button>

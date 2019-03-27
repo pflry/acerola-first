@@ -14,12 +14,14 @@
 
 <?php get_template_part( 'templates/header-head' ); ?>
 
-<body <?php body_class(); ?>>
 <?php
     global $child;
     global $home_url;
-    get_template_part( 'templates/mobile-menu' );
+    global $major_class;
 ?>
+<body <?php body_class($major_class); ?>>
+
+    <?php get_template_part( 'templates/mobile-menu' ); ?>
 
     <div id="containerWrapper" class="wrapper">
         

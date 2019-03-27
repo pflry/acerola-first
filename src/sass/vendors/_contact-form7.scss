@@ -19,19 +19,17 @@ div.wpcf7-response-output {
 
 	&.wpcf7-display-none {
 		padding: 0;
+		margin: 0;
 	}
 }
 
 div.wpcf7-mail-sent-ok {
-    @extend .alert-success;
+   background-color: $color-success;
+   color: $white;
 }
 
 div.wpcf7-mail-sent-ng,
-div.wpcf7-aborted {
-    @extend .alert-danger;
-}
-
-div.wpcf7-spam-blocked,
+div.wpcf7-aborted,div.wpcf7-spam-blocked,
 div.wpcf7-validation-errors,
 div.wpcf7-acceptance-missing {
 	background-color: $color-danger;

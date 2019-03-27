@@ -189,8 +189,9 @@ app.jobFilters = {
             let $input = $(this),
                 $label = $input.next('label'),
                 labelVal = $label.html();
-
+            
             $input.on('change', function (e) {
+                
                 let fileName = '';
 
                 if (e.target.value) {
@@ -205,15 +206,7 @@ app.jobFilters = {
                     $label.html(labelVal);
                 }
             });
-
-            // Firefox bug fix
-            $input
-                .on('focus', function () {
-                    $input.addClass('has-focus');
-                })
-                .on('blur', function () {
-                    $input.removeClass('has-focus');
-                });
+            
         });
     }
 };

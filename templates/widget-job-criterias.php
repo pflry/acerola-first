@@ -8,6 +8,7 @@
     $meta_nbpostes = get_post_meta( get_the_ID(), 'nbPostes', true );
     $meta_debut = get_post_meta( get_the_ID(), 'start', true );
 
+    $date = get_the_date( 'j F Y' );
     $category = get_the_category($post->ID);
     $meta_cat = $category[0]->cat_name;
 ?>
@@ -15,6 +16,8 @@
 <li class="widget widget__job-criterias">
     <h3 class="widget-title">Résumé de l'offre</h3>
     <div class="textwidget custom-html-widget">
+        
+    <?php if ($meta_ref !='') : ?>
         <div class="entry-meta entry-meta__ref">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('tag-line.svg') ?>
@@ -24,22 +27,21 @@
                 <span><?php echo $meta_ref ?></span>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if ($date !='') : ?>
         <div class="entry-meta entry-meta__date">
-            <?php  
-                $dateShort = get_the_date( 'j M. Y' );
-                $dateLong = get_the_date( 'j F Y' );
-            ?>
             <div class="meta-picto">
                 <?php echo get_build_icon_path('clock.svg') ?>
             </div>
             <div class="meta-content">
                 <div class="text-muted">Date publication</div>
-                <span class="entry-date entry-date--long"><?php echo $dateLong ?></span>
-                <span class="entry-date entry-date--short"><?php echo $dateShort ?></span>
+                <span class="entry-date"><?php echo $date ?></span>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if ($meta_cp !='' || $meta_ville !='') : ?>
         <div class="entry-meta entry-meta__place">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('map-pin2.svg') ?>
@@ -49,7 +51,9 @@
                 <span><?php echo $meta_cp ?>&nbsp;<?php echo $meta_ville ?></span>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if ($meta_cat !='') : ?>
         <div class="entry-meta entry-meta__cat">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('pie-chart.svg') ?>
@@ -59,6 +63,7 @@
                 <span><?php echo $meta_cat ?></span>
             </div>
         </div>
+        <?php endif; ?>
 
         <?php if ($meta_contrat !='') : ?>
         <div class="entry-meta entry-meta__contract">

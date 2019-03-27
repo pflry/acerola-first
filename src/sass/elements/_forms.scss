@@ -60,6 +60,10 @@ textarea {
     z-index: -1;
 }
 
+.inputfile[aria-invalid=true] ~ label.btn {
+    background-color: $color-danger;
+}
+
 label.btn {
     cursor: pointer;
     font-size: $font-size-lg;
@@ -128,6 +132,7 @@ input[type=checkbox]:checked {
     background-color: $gray-200;
     margin-top: 3.125rem;
     padding: 1.56rem 1rem;
+    margin-bottom: -3.125rem;
 
     .text-info {
         color: $color-base;
@@ -148,7 +153,7 @@ input[type=checkbox]:checked {
     @media screen and (min-width: $small) {
         border-radius: $border-radius;
         padding: 1.56rem 2rem;
-        margin-bottom: 3.125rem;
+        margin-bottom: 0;
 
         .wpcf7-form,
         .text-info {
@@ -169,12 +174,25 @@ input[type=checkbox]:checked {
     }
 }
 
+.form-job .form-group--file {
+    display: flex;
+    flex-direction: column;
+
+    br {
+        display: none;
+    }
+
+    .wpcf7-not-valid-tip {
+        order: 3;
+    }
+}
+
 .form-job .form-control {
     background-color: $white;
 }
 
 .form-job input[aria-invalid=true] {
-    background-color: tint($color-danger,50);
+    background-color: $color-danger;
     color: $white;
 }
 
