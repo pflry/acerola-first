@@ -245,3 +245,57 @@
         display: block;
     }
 }
+
+// Footer Newsletter
+// -----------------------------------
+.footer-extra {
+    background-color: shade($office-azur, 52%);
+    // background: linear-gradient(to right, shade($office-azur, 62%) 55%, shade($office-azur, 52%) 55%);
+    color: $white;
+    display: none;
+
+    .container {
+        align-items: center;
+        height: 80px;
+        justify-content: space-between;
+    }
+    
+    .btn {
+        padding: 0.75rem 1rem;
+    }
+
+    @media screen and (min-width: $medium) and (max-width: $large - 1) {
+        display: block;
+    }
+}
+
+.footer-extra .sep {
+    border-left: solid 2px shade($office-azur, 55%);
+    border-right: solid 1.5px shade($office-azur, 40%);
+    min-height: 80px;
+    display: none;
+}
+
+.footer-extra__newsletter {
+    // span {
+    //     display: none;
+    // }
+}
+
+.footer-extra__search {
+    .search-form {
+        display: flex;
+    }
+
+    .form-control {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        border: none;
+    }
+
+    .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

@@ -154,6 +154,18 @@ function acerola_setup() {
 	}
 
 	/**
+	 * Global VARS
+	 */
+	add_action( 'init', 'globVars');
+
+	function globVars() {
+		global $newsletter_url;
+
+		// general globals var
+		$newsletter_url = "http://eepurl.com/dnrOCP";
+	}
+
+	/**
 	 * MULTISITES
 	 */ 
 

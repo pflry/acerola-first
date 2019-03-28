@@ -6,6 +6,7 @@
     flex-direction: column;
     padding: 1.15rem 0 0;
     height: 100vh;
+    overflow-y: scroll;
 }
 
 .mobile-menu ul {
@@ -174,5 +175,15 @@
         position: absolute;
         right: 1rem;
         top: 0.25rem;
+    }
+}
+
+// Button newsletter
+// -----------------------------------
+.mobile-menu__newsletter {
+    padding: 1rem;
+
+    .btn {
+        padding: 0.75rem 1rem;
     }
 }

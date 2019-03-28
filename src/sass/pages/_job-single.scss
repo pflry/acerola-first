@@ -25,16 +25,6 @@
     }
 }
 
-.single-job h2 {
-    &:after {
-        border: solid 1.5px $color-primary;
-        content: '';
-        display: block;
-        margin-top: 0.5rem;
-        width: 100px;
-    }
-}
-
 .single-job .criterias {
     background-color: $gray-100;
     border-radius: $border-radius;

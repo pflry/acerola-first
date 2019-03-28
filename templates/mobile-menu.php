@@ -19,6 +19,10 @@
                 'theme_location' => 'quaternary',
                 'menu'           => 'Mobile Menu') ); ?>
         </nav>
+        <div class="mobile-menu__newsletter">
+            <?php global $newsletter_url; ?>
+            <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
+        </div>
         <nav id="menu" class="smart-menu smart-menu--legal">
             <?php wp_nav_menu( array(
                 'walker' => new CSS_Menu_Maker_Walker(),

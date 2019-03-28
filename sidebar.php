@@ -103,9 +103,10 @@
             </li>
 
             <li class="widget widget__newsletter">
+                <?php global $newsletter_url; ?>
                 <h3 class="widget-title">Restez informé</h3>
                 <div class="register">
-                    <a href="http://eepurl.com/dnrOCP" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
+                    <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
                 </div>
             </li>
 

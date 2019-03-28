@@ -4,6 +4,28 @@
 
         <footer id="footer" role="contentinfo" class="footer">
 
+            <div class="footer-extra">
+                <div class="container">
+                    <div class="footer-extra__search site-search">
+                        <?php global $child;
+                        if ($child == 'emploi') :
+                            get_template_part( 'searchform-jobs' );
+                        elseif ($child == 'formation') : 
+                            get_search_form();
+                        else :
+                           get_search_form();
+                        endif; ?>
+                    </div>
+                    <div class="sep"></div>
+                    <div class="footer-extra__newsletter">
+                        <?php global $newsletter_url; ?>
+                        <span>Restez informé&nbsp;</span>
+                        <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Abonnez-vous</a>
+                    </div>
+                    
+                </div>
+            </div>
+
             <div class="footer__infos">
                 <div class="container">
 

@@ -175,6 +175,11 @@
     margin: 0;
     font-size: $font-size-h3;
 
+    &:after {
+        border: none;
+        margin: 0;
+    }
+
     a {
         color: $white;
         transition: $transition-base;

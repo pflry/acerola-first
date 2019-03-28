@@ -47,6 +47,11 @@
     margin: 0 0 0.5rem;
     padding: 0;
 
+    &:after {
+        border: none;
+        margin: 0;
+    }
+
     a {
         color: $color-info;
         transition: $transition-base;
