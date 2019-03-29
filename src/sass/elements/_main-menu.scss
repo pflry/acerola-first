@@ -23,9 +23,14 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 
-    @media screen and (min-width: $medium) and (max-width: $large) {
-        >.menu-item:last-child {
+    @media screen and (min-width: $medium) {
+        > .menu-item:last-child {
             display: none;
+        }
+    }
+    @media screen and (min-width: $large) {
+        > .menu-item:last-child {
+            display: block;
         }
     }
     

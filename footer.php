@@ -19,8 +19,8 @@
                     <div class="sep"></div>
                     <div class="footer-extra__newsletter">
                         <?php global $newsletter_url; ?>
-                        <span>Restez informé&nbsp;</span>
-                        <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Abonnez-vous</a>
+                        <span class="d-none">Restez informé&nbsp;</span>
+                        <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Newsletter Acérola carrière</a>
                     </div>
                     
                 </div>

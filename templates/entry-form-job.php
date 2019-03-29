@@ -7,5 +7,5 @@
         <span class="job-ref"><span>référence&nbsp;<?php echo $meta_ref ?></span>
     </h2>
     <p class="text-info">Pour postuler, veuillez compléter le formulaire ci-dessous et joindre votre lettre de motivation et votre curriculum-vitae. Tous les champs sont obligatoires.</p>
-    <?php echo do_shortcode( '[contact-form-7 id="56" title="Formulaire de candidature"]' ); ?>
+    <?php echo do_shortcode( '[contact-form-7 id="67" title="Formulaire de candidature"]' ); ?>
 </section>

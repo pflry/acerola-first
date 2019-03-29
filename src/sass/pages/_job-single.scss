@@ -83,9 +83,9 @@
         border-top: solid 1px $color-border;
     }
 
-    @media screen and (min-width: $small) and (max-width: $medium - 1) {
-        flex: 0 1 50%;
+    @media screen and (min-width: $small) {
         border-bottom: solid 1px $color-border;
+        flex: 0 1 50%;
 
         &:last-child:nth-child(odd) {
             border-bottom: none;
@@ -102,7 +102,12 @@
     }
     
     @media screen and (min-width: $medium) {
+        border-bottom: none;
         flex: 0 1 33.333333%;
+
+        & + .entry-meta {
+            border-top: solid 1px $color-border;
+        }
 
         &:first-child,
         &:nth-child(2),
