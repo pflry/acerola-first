@@ -51,11 +51,6 @@
 }
 
 // form-group
-.comment-notes {
-    // color: $color-muted;
-    // font-size: $font-size-sm;
-}
-
 .comment-form-comment,
 .comment-form-author,
 .comment-form-email {
@@ -158,5 +153,17 @@
 
 // no comments
 .no-comments {
+    background-color: $color-info;
     font-weight: 500;
+    margin: 0 auto;
+    width: auto;
+    color: $white;
+
+    .icon {
+        color: $gray-200;
+    }
+
+    @media screen and (min-width: $small) {
+        width: 85%;
+    }
 }

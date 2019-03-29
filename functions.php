@@ -172,13 +172,25 @@ function acerola_setup() {
 	/**
 	 * EMPLOI Filtering a Class in Navigation Menu 
 	 */
-
-	function special_nav_class($classes, $item){
-		if((is_single() || is_category()) && $item->title == 'Offres d\'emploi'){
-			$classes[] = 'current_page_parent';
-		}
-		return $classes;
-	}
+	// add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+	
+	// function special_nav_class($classes, $item){
+		
+	// 	if (is_single() || is_category() && $item->title == 'Offres d\'emploi') :
+	// 		$classes[] = 'current_page_parent';
+	// 		return $classes;
+	// 	elseif (is_single() || is_category() && $item->title == 'Formations') :
+	// 		$classes[] = 'current_page_parent';
+	// 		return $classes;
+	// 	endif;
+			
+		// if((is_single() || is_category()) && $item->title == 'Offres d\'emploi'){
+		// 	$classes[] = 'current_page_parent';
+		// } elseif ((is_single() || is_category()) && $item->title == 'Formations') {
+		// 	$classes[] = 'current_page_parent';
+		// }
+		// return $classes;
+	//}
 
 	function sitemulti() {
 		$current_site = get_blog_details()->blogname;
@@ -188,7 +200,6 @@ function acerola_setup() {
 
 		if (strpos($current_site, 'emploi') == true) : 
 			require get_theme_file_path( '/inc/meta-job-functions.php' );
-			add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 			$child = 'emploi';
 			$major_class = 'site-job';
 			$home_url = '/';

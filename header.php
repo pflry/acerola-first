@@ -59,7 +59,7 @@
                         if ($child == 'emploi') : 
                             echo get_the_breadcrumb_job();
                         elseif ($child == 'formation') :
-                            echo get_the_breadcrumb_job();
+                            echo get_the_breadcrumb_training();
                         else :
                             echo get_the_breadcrumb();
                         endif;
