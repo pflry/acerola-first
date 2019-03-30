@@ -82,23 +82,26 @@
                             </div>
                         </div>
                     </div> 
-                    
+                    <?php switch_to_blog( 1 ); ?>
                     <nav id="footerMenu" class="footer-menu">
                         <h5 class="h5">Navigation</h5>
                         <?php wp_nav_menu( array( 
                             'theme_location' => 'secondary',
                             'menu'           => 'Footer Menu') ); ?>
                     </nav>
+                    <?php restore_current_blog(); ?>
                 </div>
             </div>
 
             <div class="footer__legal">
                 <div class="container">
+                    <?php switch_to_blog( 1 ); ?>
                     <nav id="legalMenu" class="legal-menu">
                         <?php wp_nav_menu( array( 
                             'theme_location' => 'tertiary',
                             'menu'           => 'Legal Menu') ); ?>
                     </nav>
+                    <?php restore_current_blog(); ?>
 
                     <div id="copyRight" class="copyright">
                         <?php echo sprintf( __( '%1$s%2$s', 'pflry' ), '&copy;', date( 'Y' ) );  ?><span class="blog-name">acérola carrière</span>

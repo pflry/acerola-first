@@ -83,5 +83,13 @@ function add_google_analytics() { ?>
 	</script>
 <?php }
 
+/**
+ * Enqueue admin styles
+ */
+add_action('admin_print_styles', 'admin_css', 11 );
+
+function admin_css() {
+	wp_enqueue_style('admin_css', get_stylesheet_directory_uri() . '/style-editor.css');
+}
 
 ?>

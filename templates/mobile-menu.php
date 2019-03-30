@@ -23,11 +23,15 @@
             <?php global $newsletter_url; ?>
             <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
         </div>
+        
+        <?php switch_to_blog( 1 ); ?>
         <nav id="menu" class="smart-menu smart-menu--legal">
             <?php wp_nav_menu( array(
                 'walker' => new CSS_Menu_Maker_Walker(),
                 'theme_location' => 'quinary',
                 'menu'           => 'Mobile Legal') ); ?>
         </nav>
+        <?php restore_current_blog(); ?>
+        
     </div>
 </section>

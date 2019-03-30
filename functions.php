@@ -128,7 +128,6 @@ function acerola_setup() {
 	 */ 
 	require get_parent_theme_file_path( '/inc/breadcrumb-functions.php' );
 
-
 	/**
 	 * Medias functions
 	 */
@@ -145,18 +144,9 @@ function acerola_setup() {
 	require get_parent_theme_file_path( '/inc/walker-functions.php' );
 
 	/**
-	 * Enqueue admin styles
-	 */
-	add_action('admin_print_styles', 'admin_css', 11 );
-
-	function admin_css() {
-		wp_enqueue_style('admin_css', get_stylesheet_directory_uri() . '/style-editor.css');
-	}
-
-	/**
 	 * Global VARS
 	 */
-	add_action( 'init', 'globVars');
+	add_action('init', 'globVars');
 
 	function globVars() {
 		global $newsletter_url;
@@ -168,30 +158,6 @@ function acerola_setup() {
 	/**
 	 * MULTISITES
 	 */ 
-
-	/**
-	 * EMPLOI Filtering a Class in Navigation Menu 
-	 */
-	// add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-	
-	// function special_nav_class($classes, $item){
-		
-	// 	if (is_single() || is_category() && $item->title == 'Offres d\'emploi') :
-	// 		$classes[] = 'current_page_parent';
-	// 		return $classes;
-	// 	elseif (is_single() || is_category() && $item->title == 'Formations') :
-	// 		$classes[] = 'current_page_parent';
-	// 		return $classes;
-	// 	endif;
-			
-		// if((is_single() || is_category()) && $item->title == 'Offres d\'emploi'){
-		// 	$classes[] = 'current_page_parent';
-		// } elseif ((is_single() || is_category()) && $item->title == 'Formations') {
-		// 	$classes[] = 'current_page_parent';
-		// }
-		// return $classes;
-	//}
-
 	function sitemulti() {
 		$current_site = get_blog_details()->blogname;
 		global $child;
