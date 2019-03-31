@@ -19,16 +19,16 @@
 
     <div id="containerWrapper" class="wrapper">
 
-        <section id="blogBannerHome" class="blog-header__banner">
+        <section id="blogBannerHome" class="blog-header__banner blog-home">
             <div class="container">
-                <div id="siteTitle" class="site-title">
+                <div id="siteTitle" class="site-title blog-home">
                     <span class="site-title--invisible">
                         <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1 class="h1">'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">Acérola Carrière</a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
                     </span>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo get_build_icon_path('logo-acerola.svg') ?></a>
                 </div>
 
-                <nav id="menu" class="site-menu">
+                <nav id="menu" class="site-menu blog-home">
                     <?php wp_nav_menu( array(
                         'walker' => new CSS_Menu_Maker_Walker(),
                         'theme_location' => 'primary',
@@ -41,10 +41,10 @@
             </div>
         </section>
 
-        <header id="header" class="blog-header">
+        <header id="header" class="blog-header blog-home">
             <?php get_template_part( 'templates/blog-header-top' ); ?>
 
-            <section class="home-headline">
+            <section class="home-headline blog-home">
                 <div class="container">
                     <div class="headline"><span>vitaminer </span>les carrières</div>
                 </div>

@@ -11,8 +11,7 @@
  */
 
 ?><?php get_header(); ?>
-<section id="content" role="main" class="main training-list">
-    <h1 class="h1">Formations</h1>
+<section id="content" role="main" class="main training-list page-full">
     <div class="jscroll">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <?php get_template_part( 'entry' ); ?>
@@ -20,5 +19,4 @@
         <?php get_template_part( 'templates/pagination' ); ?>
     </div>
 </section>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

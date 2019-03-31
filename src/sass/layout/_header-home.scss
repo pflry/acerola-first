@@ -2,7 +2,7 @@
 // Header homepage
 // --------------------------------------------------
 
-.home .blog-header {
+.blog-header.blog-home {
     background-image: imagehome('poster-575w.jpg');
     background-position: 100% 50%;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 }
 
 /* Main menu */
-.home .blog-header__banner {
+.blog-header__banner.blog-home {
     @extend %absolute-pos;
     bottom: auto;
     background-color: transparent;
@@ -100,7 +100,7 @@
 }
 
 // niveau 1
-.home .site-menu .menu .menu-item a {
+.site-menu.blog-home .menu .menu-item a {
     color: $white;
     transition: all 0.15s linear;
 
@@ -110,12 +110,12 @@
 }
 
 // niveau 2
-.home .site-menu .menu ul .menu-item a {
+.site-menu.blog-home .menu ul .menu-item a {
     color: white(0.5);
 }
 
 /* logo */
-.home .site-title .logo-acerola {
+.site-title.blog-home .logo-acerola {
     @extend %primeyellow;
     transition: all 0.15s linear;
 
@@ -127,7 +127,7 @@
 }
 
 /* Home headline */
-.home-headline {
+.home-headline.blog-home {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -136,7 +136,7 @@
     z-index: 15;
 }
 
-.home-headline .headline {
+.home-headline.blog-home .headline {
     color: $white;
     font-size: 11vw;
     font-weight: 700;
@@ -166,7 +166,7 @@
 }
 
 /* bloc header top */
-.home .blog-header__top {
+.blog-home .blog-header__top {
     background-color: $color-darker;
     color: $white;
     transition: background-color 0.15s linear;
@@ -182,7 +182,7 @@
     }
 }
 
-.home .blog-header__top .top-social a {
+.blog-home .blog-header__top .top-social a {
     border-color: $white;
     color: $white;
 

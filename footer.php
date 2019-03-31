@@ -81,8 +81,9 @@
                                 14 avenue de l'Europe<br>77144 Montévrain
                             </div>
                         </div>
-                    </div> 
-                    <?php switch_to_blog( 1 ); ?>
+                    </div>
+                    <?php $idMainSite = get_network()->site_id; ?>
+                    <?php switch_to_blog( $idMainSite ); ?>
                     <nav id="footerMenu" class="footer-menu">
                         <h5 class="h5">Navigation</h5>
                         <?php wp_nav_menu( array( 
@@ -95,7 +96,7 @@
 
             <div class="footer__legal">
                 <div class="container">
-                    <?php switch_to_blog( 1 ); ?>
+                    <?php switch_to_blog( $idMainSite ); ?>
                     <nav id="legalMenu" class="legal-menu">
                         <?php wp_nav_menu( array( 
                             'theme_location' => 'tertiary',

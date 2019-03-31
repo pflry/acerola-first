@@ -79,7 +79,7 @@ a.btn:hover {
 
 /* button scrolltop */
 .btn-scrolltop {
-    @extend .btn-success;
+    @extend .btn-primary;
     border-radius: 50%;
     bottom: 55px;
     height: 50px;
