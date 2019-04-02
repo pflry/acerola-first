@@ -10,6 +10,10 @@
         flex-direction: column;
     }
 
+    @media screen and (min-width: $medium) {
+        padding: 1.5625rem 0 3.125rem;
+    }
+
     @media screen and (min-width: $large) {
         .container {
             align-items: stretch;

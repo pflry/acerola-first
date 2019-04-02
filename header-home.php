@@ -14,7 +14,7 @@
 
 <?php get_template_part( 'templates/header-head' ); ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('acerola-home'); ?>>
     <?php get_template_part( 'templates/mobile-menu' ); ?>
 
     <div id="containerWrapper" class="wrapper">
