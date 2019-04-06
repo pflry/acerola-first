@@ -20,7 +20,6 @@
         <section class="entry-content">
             <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
             <?php the_content(); ?>
-            <h2 class="h2">Les domaines de formation</h2>
             <div class="all-categories">
                 <?php
                     $nonClasseId = get_cat_ID('Non classé');
@@ -37,10 +36,20 @@
                         if ($iconName == '') {$iconName = "management";} 
                             
                         $catIcon = get_build_icon_path($iconName.".svg");
-                        printf( '<a href="%1$s" class="category-entry">
-                        <span class="visuel">'.$catIcon.'</span><span class="title">Formations %2$s</span></a>',
+                        printf( '<div class="category-entry">
+                                    <div class="title">
+                                        <a href="%1$s" class="visuel">'.$catIcon.'</a>
+                                        <h3 class="h3">
+                                            <a href="%1$s">Formations %2$s</a>
+                                        </h3>
+                                    </div>
+                                    <p class="description">
+                                        <a href="%1$s">%3$s</a>
+                                    </p>
+                                </div>',
                             esc_url( get_category_link( $category->term_id ) ),
-                            esc_html( $category->name )
+                            esc_html( $category->name ),
+                            esc_html( $category->description )
                         );
                     }
                 ?>

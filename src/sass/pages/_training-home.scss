@@ -4,59 +4,60 @@
 .all-categories {
     display: flex;
     flex-direction: column;
-
-    // @media screen and (min-width: $small) {
-    //     flex-direction: row;
-    //     flex-wrap: wrap;
-    //     justify-content: space-between;
-    // }
 }
 
 
 // Category entry
 .category-entry {
-    background-color: $gray-800;
+    align-content: stretch;
+    align-items: stretch;
+    background-color: $gray-100;
     border-radius: $border-radius;
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    align-content: stretch;
+    flex-direction: column;
     margin-top: 1.375rem;
-
-    // @media screen and (min-width: $small) {
-    //     flex: 0 1 49%;
-    // }
-
-    // @media screen and (min-width: $large) {
-    //     flex: 0 1 32%;
-    // }
+    padding: 1rem 1rem 0;
 }
 
-.category-entry .visuel {
-    border-radius: $border-radius 0 0 $border-radius;
-    display: block;
-    min-width: 70px;
-    padding: 1rem;
-    text-align: center;
-    width: 20%;
+.category-entry .title {
+    display: flex;
+    flex-basis: row;
+
+    .visuel {
+        display: block;
+        flex: 0 1 auto;
+        padding-right: 0.75rem;
+    }
 
     .icon {
-        color: $color-primary;
-        height: 2.25rem;
+        height: 2rem;
     }
 
     .icon-compass {
         stroke-width: 1.5px;
     }
+
+    .h3 {
+        @extend %titre-service;
+        flex: 1 1 auto;
+        font-size: $font-size-lg;
+        font-weight: 400;
+        margin-top: 0.25rem;
+    }
+
+    @media screen and (min-width: $small) {
+        align-items: center;
+        align-content: center;
+        margin-bottom: 0.75rem;
+
+        .h3 {
+            margin: 0;
+        }
+    }
 }
 
-.category-entry .title {
-    @extend %titre-service;
-    display: block;
-    font-size: $font-size-lg;
-    font-weight: 400;
-    color: $white;
-    padding: 1rem 1rem 1rem 0;
-    flex: 1 1 auto;
-    align-self: center;
+.category-entry .description {
+    a {
+        color: $color-base;
+    }
 }
