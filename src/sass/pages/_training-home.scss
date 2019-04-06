@@ -17,6 +17,11 @@
     flex-direction: column;
     margin-top: 1.375rem;
     padding: 1rem 1rem 0;
+    transition: $transition-base;
+
+    &:hover {
+        background-color: $gray-300;
+    }
 }
 
 .category-entry .title {
@@ -45,6 +50,10 @@
         margin-top: 0.25rem;
     }
 
+    .h3 a:hover {
+        text-decoration: none;
+    }
+
     @media screen and (min-width: $small) {
         align-items: center;
         align-content: center;
@@ -56,8 +65,10 @@
     }
 }
 
-.category-entry .description {
-    a {
-        color: $color-base;
+.category-entry .description a {
+    color: $color-base;
+
+    &:hover {
+        text-decoration: none;
     }
 }
