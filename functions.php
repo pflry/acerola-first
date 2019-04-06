@@ -171,6 +171,7 @@ function acerola_setup() {
 			$home_url = '/';
 
 		elseif (strpos($current_site, 'formations') == true) :
+			require get_theme_file_path( '/inc/meta-training-functions.php' );
 			$child = 'formation';
 			$home_url = '/';
 			$major_class = 'site-training';

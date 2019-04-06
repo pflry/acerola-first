@@ -17,13 +17,15 @@ $font-family-sans-serif: ('Poppins', Arial, sans-serif);
 @import 'abstracts/placeholders';
 
 // Forms
-#acerolajob {
+#acerolajob,
+#acerolatraining {
     background-color: $gray-200;
     border-radius: $border-radius;
     font-family: $font-family-sans-serif;
 }
 
-#acerolajob h2.hndle {
+#acerolajob h2.hndle,
+#acerolatraining h2.hndle {
     border: none !important;
     font-size: 1.25rem;
     font-weight: 400 !important;
@@ -31,7 +33,8 @@ $font-family-sans-serif: ('Poppins', Arial, sans-serif);
     text-transform: uppercase;
 }
 
-#acerolajob .handlediv {
+#acerolajob .handlediv,
+#acerolatraining .handlediv {
     height: 58px;
     width: 58px;
 
@@ -45,7 +48,7 @@ $font-family-sans-serif: ('Poppins', Arial, sans-serif);
     justify-content: space-between;
 }
 
-.form-group {
+#acerolajob .form-group {
     margin-bottom: 1rem;
 
     & + .form-group {
@@ -114,4 +117,29 @@ input[type=number].form-control {
     max-width: 100%;
     padding: 0.65rem;
     width: auto;
+}
+
+#acerolatraining .form-group {
+    margin-bottom: 1rem;
+
+    & + .form-group {
+        margin-left: 1rem;
+    }
+}
+
+#acerolatraining .form-row--one,
+#acerolatraining .form-row--three {
+    div {
+        flex: 0 1 32%;
+    }
+}
+
+#acerolatraining .form-row--two {
+    div {
+        flex: 0 1 49%;
+    }
+}
+
+.wp-admin #acerolatraining select.form-control {
+    width: 94%;
 }

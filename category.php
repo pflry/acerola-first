@@ -27,11 +27,10 @@ if ($child == 'emploi') : ?>
 
 <?php elseif ($child == 'formation') : ?>
     <section id="content" role="main" class="main training-list categorie">
-        <h1 class="h1">Formation <span><?php single_cat_title(); ?></span></h1>
-        <?php get_template_part( 'templates/job-filter' ); ?>
+        <h1 class="h1">Formations <span><?php single_cat_title(); ?></span></h1>
         <div class="jscroll">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part( 'entry' ); ?>
+                <?php get_template_part( 'entry-trainings' ); ?>
             <?php endwhile; endif; ?>
             <?php get_template_part( 'templates/pagination' ); ?>
         </div>

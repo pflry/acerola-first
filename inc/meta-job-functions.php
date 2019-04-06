@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Champs personnalisés
+ * Champs personnalisés Emploi
  */
 
-add_action( 'add_meta_boxes', 'cd_meta_box_add' );
+add_action( 'add_meta_boxes', 'job_meta_box_add' );
 
-function cd_meta_box_add() {
-    add_meta_box( 'acerolajob', 'Critères', 'cd_meta_box_cb', 'post', 'normal', 'high' );
+function job_meta_box_add() {
+    add_meta_box( 'acerolajob', 'Critères', 'job_meta_box_cb', 'post', 'normal', 'high' );
 }
 
-function cd_meta_box_cb() {
+function job_meta_box_cb() {
     global $post;
     $values = get_post_custom( $post->ID );
     $zipcode = isset( $values['codePostal'] ) ? $values['codePostal'][0] : '';

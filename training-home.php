@@ -34,8 +34,8 @@
                     
                     foreach ( $categories as $category ) {
                         $iconName = esc_html( $category->slug );
-                        if ($iconName == '') {$iconName = "management";} 
-                            
+                        if (!isset($iconName)) {$iconName = "management";}
+
                         $catIcon = get_build_icon_path($iconName.".svg");
                         printf( '<div class="category-entry">
                                     <div class="title">
