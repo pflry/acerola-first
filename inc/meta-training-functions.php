@@ -22,6 +22,7 @@ function training_meta_box_cb() {
     $instructor = isset( $values['instructor'] ) ? $values['instructor'][0] : '';
     $options = isset( $values['option'] ) ? $values['option'][0] : '';
     $opca = isset( $values['subvention'] ) ? esc_attr( $values['subvention'][0] ) : '';
+    $cpf = isset( $values['congesformation'] ) ? esc_attr( $values['congesformation'][0] ) : '';
 
     wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
     ?>
@@ -57,9 +58,15 @@ function training_meta_box_cb() {
 
     <div class="form-row form-row--three">
         <div class="form-group opca">
-            <label class="label-global">Prise en charge</label>
+            <label class="label-global">OPCA</label>
             <input type="checkbox" id="subvention" name="subvention" <?php checked( $opca, 'on' ); ?> />
             <label for="subvention" class="label-checkbox">Prise en charge OPCA possible</label>
+        </div>
+
+        <div class="form-group cpf">
+            <label class="label-global">CPF</label>
+            <input type="checkbox" id="congesformation" name="congesformation" <?php checked( $cpf, 'on' ); ?> />
+            <label for="congesformation" class="label-checkbox">&Eacute;ligible CPF</label>
         </div>
     </div>
 
@@ -134,8 +141,11 @@ function cd_meta_box_save( $post_id ) {
     if( isset( $_POST['option'] ) )
         update_post_meta( $post_id, 'option', wp_kses( $_POST['option'], $allowed ) );
         
-    $chk = isset( $_POST['subvention'] ) ? 'on' : 'off';
-        update_post_meta( $post_id, 'subvention', $chk );
+    $chkOpca = isset( $_POST['subvention'] ) ? 'on' : 'off';
+        update_post_meta( $post_id, 'subvention', $chkOpca );
+
+    $chkCPF = isset( $_POST['congesformation'] ) ? 'on' : 'off';
+        update_post_meta( $post_id, 'congesformation', $chkCPF );
 }
 
 ?>
