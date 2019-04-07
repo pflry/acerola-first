@@ -16,7 +16,7 @@
             <h2 class="entry-title">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
             </h2>
-            <p><?php echo wp_trim_words( get_the_content(), 28 ) ?></p>
+            <!-- <p><?php echo wp_trim_words( get_the_content(), 28 ) ?></p> -->
             <?php get_template_part( 'templates/entry-meta-trainings' ); ?>
         </header>
     </article>

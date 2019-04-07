@@ -21,6 +21,7 @@ function training_meta_box_cb() {
     $reference = isset( $values['reference'] ) ? $values['reference'][0] : '';
     $instructor = isset( $values['instructor'] ) ? $values['instructor'][0] : '';
     $options = isset( $values['option'] ) ? $values['option'][0] : '';
+    $opca = isset( $values['subvention'] ) ? esc_attr( $values['subvention'][0] ) : '';
 
     wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
     ?>
@@ -31,6 +32,18 @@ function training_meta_box_cb() {
             <input type="text" name="reference" id="reference" class="form-control" value="<?php echo $reference; ?>" />
         </div>
 
+        <div class="form-group type">
+            <label for="type">Type</label>
+            <select name="type" id="type" class="form-control">
+                <option>choisir</option>
+                <option value="intra ou inter entreprise" <?php selected( $type, 'intra ou inter-entreprise' ); ?>>intra ou inter entreprise</option>
+                <option value="intra-entreprise" <?php selected( $type, 'intra-entreprise' ); ?>>intra-entreprise</option>
+                <option value="inter-entreprise" <?php selected( $type, 'inter-entreprise' ); ?>>inter-entreprise</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row form-row--two">
         <div class="form-group longueur">
             <label for="duree">Durée</label>
             <input type="text" name="duree" id="duree" class="form-control" value="<?php echo $duration; ?>" />
@@ -42,40 +55,35 @@ function training_meta_box_cb() {
         </div>
     </div>
 
+    <div class="form-row form-row--three">
+        <div class="form-group opca">
+            <label class="label-global">Prise en charge</label>
+            <input type="checkbox" id="subvention" name="subvention" <?php checked( $opca, 'on' ); ?> />
+            <label for="subvention" class="label-checkbox">Prise en charge OPCA possible</label>
+        </div>
+    </div>
 
-    <div class="form-row form-row--two">
+    <div class="form-row form-row--four">
         <div class="form-group periodes">
             <label for="dates">Dates</label>
-            <!-- <input type="text" name="dates" id="dates" class="form-control" value="<?php echo $period; ?>" /> -->
             <textarea name="dates" id="dates" class="form-control" rows="4"><?php echo $period; ?></textarea>
         </div>
 
         <div class="form-group ville">
             <label for="lieu">Lieu(x)</label>
-            <!-- <input type="text" name="lieu" id="lieu" class="form-control" value="<?php echo $place; ?>" /> -->
             <textarea name="lieu" id="lieu" class="form-control" rows="4"><?php echo $place; ?></textarea>
         </div>
     </div>
 
-    <div class="form-row form-row--three">
+    <div class="form-row form-row--five">
         <div class="form-group formateur">
             <label for="instructor">Formateur</label>
-            <input type="text" name="instructor" id="instructor" class="form-control" value="<?php echo $instructor; ?>" />
+            <textarea name="instructor" id="instructor" class="form-control" rows="4"><?php echo $instructor; ?></textarea>
         </div>
 
         <div class="form-group option">
             <label for="option">Option(s)</label>
-            <input type="text" name="option" id="option" class="form-control" value="<?php echo $options; ?>" />
-        </div>
-
-        <div class="form-group type">
-            <label for="type">Type</label>
-            <select name="type" id="type" class="form-control">
-                <option>choisir</option>
-                <option value="intra ou inter entreprise" <?php selected( $type, 'intra ou inter-entreprise' ); ?>>intra ou inter entreprise</option>
-                <option value="intra-entreprise" <?php selected( $type, 'intra-entreprise' ); ?>>intra-entreprise</option>
-                <option value="inter-entreprise" <?php selected( $type, 'inter-entreprise' ); ?>>inter-entreprise</option>
-            </select>
+            <textarea name="option" id="option" class="form-control" rows="4"><?php echo $options; ?></textarea>
         </div>
     </div>
     
@@ -115,7 +123,7 @@ function cd_meta_box_save( $post_id ) {
         update_post_meta( $post_id, 'lieu', wp_kses( $_POST['lieu'],$allowed ) );
 
     if( isset( $_POST['type'] ) )
-        update_post_meta( $post_id, 'type', wp_kses( $_POST['type'],$allowed ) );
+        update_post_meta( $post_id, 'type', esc_attr( $_POST['type'] ) );
 
     if( isset( $_POST['reference'] ) )
         update_post_meta( $post_id, 'reference', wp_kses( $_POST['reference'], $allowed ) );
@@ -124,7 +132,10 @@ function cd_meta_box_save( $post_id ) {
         update_post_meta( $post_id, 'instructor', wp_kses( $_POST['instructor'], $allowed ) );
 
     if( isset( $_POST['option'] ) )
-        update_post_meta( $post_id, 'option', esc_attr( $_POST['option'] ) );
+        update_post_meta( $post_id, 'option', wp_kses( $_POST['option'], $allowed ) );
+        
+    $chk = isset( $_POST['subvention'] ) ? 'on' : 'off';
+        update_post_meta( $post_id, 'subvention', $chk );
 }
 
 ?>
