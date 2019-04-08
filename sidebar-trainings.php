@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying the job widgets in sidebar
+ * The template for displaying the training widgets in sidebar
  *
- * Displays the job widgets in sidebar.
+ * Displays the training widgets in sidebar.
  *
  * @package WordPress
  * @subpackage ACEROLA CARRIERE EMPLOI v19
@@ -14,7 +14,7 @@
         <ul class="ul-wrapper">
             
             <?php if (is_singular()) : ?>
-                <?php get_template_part( 'templates/widget-job-criterias' ); ?>
+                <?php get_template_part( 'templates/widget-training-criterias' ); ?>
             <?php endif; ?>
 
             <?php get_template_part( 'templates/widget-contact' ); ?>

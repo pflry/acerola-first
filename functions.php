@@ -149,10 +149,31 @@ function acerola_setup() {
 	add_action('init', 'globVars');
 
 	function globVars() {
-		global $newsletter_url;
+		global $NL_URL;
+		global $TEL;
+		global $OFFICE_PARIS;
+		global $OFFICE_NEUILLY;
+		global $OFFICE_MONTEVRAIN;
 
 		// general globals var
-		$newsletter_url = "http://eepurl.com/dnrOCP";
+		$NL_URL = "http://eepurl.com/dnrOCP";
+		
+		$TEL = "01 41 79 17 93";
+
+		$OFFICE_PARIS = array(
+			"nom"=>"Acérola Carrière Paris",
+			"adresse"=>"24 rue Mogador",
+			"ville"=>"75009 Paris");
+
+		$OFFICE_NEUILLY = array(
+			"nom"=>"Acérola Carrière Neuilly Plaisance",
+			"adresse"=>"3 quater avenue Victor Hugo",
+			"ville"=>"93360 Neuilly-Plaisance");
+
+		$OFFICE_MONTEVRAIN = array(
+			"nom"=>"Acérola Carrière Montévrain",
+			"adresse"=>"14 avenue de l'Europe",
+			"ville"=>"77144 Montévrain");
 	}
 
 	/**

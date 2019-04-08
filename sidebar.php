@@ -13,47 +13,8 @@
 <aside id="sidebar" role="complementary" class="sidebar side-standard">
     <div id="primary" class="widget-area">
         <ul class="ul-wrapper">
-            <li class="widget widget__contact">
-                <h3 class="widget-title">Contactez nous</h3>
-                <div class="textwidget custom-html-widget">
-                    <div class="contact">
-                        <div>
-                            <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93
-                        </div>
-                        <span>&bullet;</span>
-                        <div>
-                            <?php echo get_build_icon_path('email.svg') ?> <a href="/contact/">Email</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
 
-            <li class="widget widget__office">
-                <h3 class="widget-title">Nos bureaux</h3>
-                <div class="textwidget custom-html-widget">
-                    <div class="office">
-                        <div class="office--name">Acérola Carrière Paris</div>
-                        <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
-                        <div class="office--address">
-                            24 Rue Mogador<br>75009 Paris
-                        </div>
-                    </div>
-                    <div class="office">
-                        <div class="office--name">Acérola Carrière Neuilly Plaisance</div>
-                        <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
-                        <div class="office--address">
-                            3 quater avenue Victor Hugo<br>93360 Neuilly-Plaisance
-                        </div>
-                    </div>
-                    <div class="office">
-                        <div class="office--name">Acérola Carrière Montévrain</div>
-                        <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
-                        <div class="office--address">
-                            14 avenue de l'Europe<br>77144 Montévrain
-                        </div>
-                    </div>
-                </div>
-            </li>
+            <?php get_template_part( 'templates/widget-contact' ); ?>
 
             <li class="widget widget__search">
                 <div class="site-search">
@@ -102,13 +63,7 @@
                 </div>
             </li>
 
-            <li class="widget widget__newsletter">
-                <?php global $newsletter_url; ?>
-                <h3 class="widget-title">Restez informé</h3>
-                <div class="register">
-                    <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
-                </div>
-            </li>
+            <?php get_template_part( 'templates/widget-newsletter' ); ?>
 
             <?php if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
                 <?php dynamic_sidebar( 'primary-widget-area' ); ?>

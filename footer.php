@@ -26,6 +26,12 @@
                 </div>
             </div>
 
+            <?php 
+                global $TEL;
+                global $OFFICE_PARIS;
+                global $OFFICE_NEUILLY;
+                global $OFFICE_MONTEVRAIN;
+            ?>
             <div class="footer__infos">
                 <div class="container">
 
@@ -35,7 +41,7 @@
                             <div class="welcome">Prenez contact dès maintenant, nous vous réservons le meilleur accueil.</div>
 
                             <div class="contact">
-                                <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93<span class="bullet">•</span><?php echo get_build_icon_path('email.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">Email</a>
+                                <?php echo get_build_icon_path('phone.svg') ?> <?php echo $TEL ?><span class="bullet">•</span><?php echo get_build_icon_path('email.svg') ?> <a href="/contact/">Email</a>
                             </div>
                         </div>
 
@@ -61,24 +67,24 @@
                     <div class="footer-office">
                         <h5 class="h5">Nos bureaux</h5>
                         <div class="office">
-                            <div class="office--name">Acérola Carrière Paris</div>
+                            <div class="office--name"><?php echo $OFFICE_PARIS['nom'] ?></div>
                             <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
                             <div class="office--address">
-                                24 Rue Mogador<br>75009 Paris
+                                <?php echo $OFFICE_PARIS['adresse'] ?><br><?php echo $OFFICE_PARIS['ville'] ?>
                             </div>
                         </div>
                         <div class="office">
-                            <div class="office--name">Acérola Carrière Neuilly Plaisance</div>
+                            <div class="office--name"><?php echo $OFFICE_NEUILLY['nom'] ?></div>
                             <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
                             <div class="office--address">
-                                3 quater avenue Victor Hugo<br>93360 Neuilly-Plaisance
+                                <?php echo $OFFICE_NEUILLY['adresse'] ?><br><?php echo $OFFICE_NEUILLY['ville'] ?>
                             </div>
                         </div>
                         <div class="office">
-                            <div class="office--name">Acérola Carrière Montévrain</div>
-                            <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
-                            <div class="office--address">
-                                14 avenue de l'Europe<br>77144 Montévrain
+                            <div class="office--name"><?php echo $OFFICE_MONTEVRAIN['nom'] ?></div>
+                                <div class="office--picto"><?php echo get_build_icon_path('business.svg') ?></div>
+                                <div class="office--address">
+                                    <?php echo $OFFICE_MONTEVRAIN['adresse'] ?><br><?php echo $OFFICE_MONTEVRAIN['ville'] ?>
                             </div>
                         </div>
                     </div>

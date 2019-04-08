@@ -313,3 +313,11 @@
         color: $color-info;
     }
 }
+
+.site-training .entry-meta {
+    align-items: flex-start;
+
+    .meta-picto {
+        padding-top: 0.15rem;
+    }
+}
