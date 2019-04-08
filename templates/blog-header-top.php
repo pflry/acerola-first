@@ -1,3 +1,6 @@
+<?php 
+    global $TEL;
+?>
 <section id="blogHeaderTop" class="blog-header__top">
     <div class="container">
         
@@ -11,7 +14,7 @@
                 Montévrain
             </span>
             <span class="contact-telephone">
-                <?php echo get_build_icon_path('phone.svg') ?> 01 41 79 17 93
+                <?php echo get_build_icon_path('phone.svg') ?> <?php echo $TEL ?>
             </span>
             <span class="contact-email">
                 <?php echo get_build_icon_path('email.svg') ?> <a href="https://www.acerolacarriere.fr/contact/">contact</a>
