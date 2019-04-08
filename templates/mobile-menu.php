@@ -14,21 +14,19 @@
             endif; ?>
         </div>
         
-        <?php $idMainSite = get_network()->site_id; ?>
-        <?php switch_to_blog( $idMainSite ); ?>
         <nav id="menu" class="smart-menu">
             <?php wp_nav_menu( array(
                 'walker' => new CSS_Menu_Maker_Walker(),
                 'theme_location' => 'quaternary',
                 'menu'           => 'Mobile Menu') ); ?>
         </nav>
-        <?php restore_current_blog(); ?>
 
         <div class="mobile-menu__newsletter">
             <?php global $newsletter_url; ?>
             <a href="<?php echo $newsletter_url ?>" class="btn btn-success" target="_blank">Abonnez-vous à notre newsletter</a>
         </div>
         
+        <?php $idMainSite = get_network()->site_id; ?>
         <?php switch_to_blog( $idMainSite ); ?>
         <nav id="menu" class="smart-menu smart-menu--legal">
             <?php wp_nav_menu( array(

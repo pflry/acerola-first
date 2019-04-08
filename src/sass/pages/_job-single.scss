@@ -9,9 +9,16 @@
 .single-job .entry-title {
     font-family: $font-family-base;
     font-weight: 600;
+    hyphens: auto;
     letter-spacing: 2px;
+    overflow-wrap: break-word;
     padding: 0;
     text-transform: uppercase;
+
+    @media screen and (min-width: $small) {
+        hyphens: none;
+        overflow-wrap: normal;
+    }
 }
 
 .single-job .entry-remind {
@@ -40,6 +47,10 @@
     font-weight: 600;
     margin: 0 0 -0.5rem;
     padding: 1rem 1rem 0 1.5rem;
+
+    .site-training & {
+        padding: 1rem 1rem 0 1rem;
+    }
 
     &:after {
         border: none;
@@ -78,6 +89,10 @@
     flex: 1 1 100%;
     padding: 1rem 0 0.75rem 1.5rem;
     position: relative;
+
+    .site-training & {
+        padding: 1rem 0 0.75rem 1rem;
+    }
 
     & + .entry-meta {
         border-top: solid 1px $color-border;
@@ -126,4 +141,13 @@
     .icon {
         stroke-width: 1.5px; 
     }
+}
+
+.criterias .entry-meta .meta-content br {
+    line-height: 1.75rem;
+}
+
+.criterias .entry-meta__price .meta-content br+span {
+    display: inline-block;
+    margin-top: 0.25rem;
 }

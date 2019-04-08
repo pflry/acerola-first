@@ -108,7 +108,9 @@
     }
 
     &.active,
-    &.current-menu-ancestor {
+    &.current-menu-ancestor,
+    &.current_page_parent,
+    &.menu-item-home {
         background-color: $color-info;
     }
 }
