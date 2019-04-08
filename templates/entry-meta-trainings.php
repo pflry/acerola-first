@@ -27,14 +27,14 @@
     
     <?php if ($opcaval == 'on') : ?>
     <div class="entry-meta__opca">
-        <?php echo get_build_icon_path('euro.svg'); ?>
+        <?php echo get_build_icon_path('info-line.svg'); ?>
         <span><?php echo $meta_opca ?></span>
     </div>
     <?php endif; ?>
 
     <?php if ($cpfval == 'on') : ?>
     <div class="entry-meta__cpf">
-        <?php echo get_build_icon_path('euro.svg'); ?>
+        <?php echo get_build_icon_path('info-line.svg'); ?>
         <span><?php echo $meta_cpf ?></span>
     </div>
     <?php endif; ?>

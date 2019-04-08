@@ -137,7 +137,7 @@ input[type=number].form-control {
 }
 
 // Checkbox
-input[type=checkbox] {
+#acerolatraining input[type=checkbox] {
     appearance: none;
     background: $white;
     border-radius: $border-radius;
@@ -149,7 +149,7 @@ input[type=checkbox] {
     width: 24px;
 }
 
-input[type=checkbox]:checked {
+#acerolatraining input[type=checkbox]:checked {
     background: $color-info;
     border: none;
 
