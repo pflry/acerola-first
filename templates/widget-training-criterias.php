@@ -13,7 +13,7 @@
 ?>
 
 <li class="widget widget__job-criterias">
-    <h3 class="widget-title">Modalités de la formation</h3>
+    <h3 class="widget-title">Modalités formation</h3>
     <div class="textwidget custom-html-widget">
         
     <?php if ($meta_ref !='') : ?>
@@ -53,7 +53,7 @@
         <?php endif; ?>
 
         <?php if ($meta_price !='') : ?>
-        <div class="entry-meta entry-meta__contract">
+        <div class="entry-meta entry-meta__price">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('euro.svg') ?>
             </div>
@@ -71,7 +71,7 @@
         <?php endif; ?>
 
         <?php if ($meta_place !='') : ?>
-        <div class="entry-meta entry-meta__contract">
+        <div class="entry-meta entry-meta__place">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('business.svg') ?>
             </div>
@@ -86,7 +86,7 @@
         <?php endif; ?>
 
         <?php if ($meta_instructor !='') : ?>
-        <div class="entry-meta entry-meta__contract">
+        <div class="entry-meta entry-meta__instructor">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('user-line.svg') ?>
             </div>
@@ -98,7 +98,7 @@
         <?php endif; ?>
 
         <?php if ($meta_options !='') : ?>
-        <div class="entry-meta entry-meta__contract">
+        <div class="entry-meta entry-meta__options">
             <div class="meta-picto">
                 <?php echo get_build_icon_path('plus-circle.svg') ?>
             </div>

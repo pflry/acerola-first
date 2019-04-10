@@ -321,3 +321,12 @@
         padding-top: 0.15rem;
     }
 }
+
+.widget__job-criterias .entry-meta .meta-content br {
+    line-height: 1.75rem;
+}
+
+.widget__job-criterias .entry-meta__price .meta-content br + span {
+    display: inline-block;
+    margin-top: 0.25rem;
+}

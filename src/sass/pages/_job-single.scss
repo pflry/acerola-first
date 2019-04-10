@@ -8,6 +8,7 @@
 
 .single-job .entry-title {
     font-family: $font-family-base;
+    font-size: 2rem;
     font-weight: 600;
     hyphens: auto;
     letter-spacing: 2px;
@@ -16,6 +17,7 @@
     text-transform: uppercase;
 
     @media screen and (min-width: $small) {
+        font-size: $font-size-h1;
         hyphens: none;
         overflow-wrap: normal;
     }
@@ -147,7 +149,7 @@
     line-height: 1.75rem;
 }
 
-.criterias .entry-meta__price .meta-content br+span {
+.criterias .entry-meta__price .meta-content br + span {
     display: inline-block;
     margin-top: 0.25rem;
 }
