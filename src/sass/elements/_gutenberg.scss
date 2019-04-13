@@ -38,6 +38,12 @@
     color: $white;
 }
 
+.well-darkblue {
+    @extend .well;
+    background-color: shade($office-azur, 50%);
+    color: $white;
+}
+
 // Blocks gutenberg
 // -----------------------------------
 

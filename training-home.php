@@ -38,15 +38,9 @@
 
                         $catIcon = get_build_icon_path($iconName.".svg");
                         printf( '<div class="category-entry">
-                                    <div class="title">
-                                        <a href="%1$s" class="visuel">'.$catIcon.'</a>
-                                        <h3 class="h3">
-                                            <a href="%1$s">Formations %2$s</a>
-                                        </h3>
-                                    </div>
-                                    <p class="description">
-                                        <a href="%1$s">%3$s</a>
-                                    </p>
+                                    <h2 class="h2 title">%2$s</h2>
+                                    <p class="description">%3$s</p>
+                                    <a href="%1$s" class="btn btn-info">'.$catIcon.' %2$s</a>
                                 </div>',
                             esc_url( get_category_link( $category->term_id ) ),
                             esc_html( $category->name ),
