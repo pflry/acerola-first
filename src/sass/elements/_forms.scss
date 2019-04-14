@@ -127,8 +127,8 @@ input[type=checkbox]:checked {
     }
 }
 
-// Form Job
-.form-job {
+// Form Child
+.form-child {
     background-color: $gray-200;
     margin-top: 3.125rem;
     padding: 1.56rem 1rem;
@@ -174,7 +174,7 @@ input[type=checkbox]:checked {
     }
 }
 
-.form-job .form-group--file {
+.form-child .form-group--file {
     display: flex;
     flex-direction: column;
 
@@ -187,17 +187,17 @@ input[type=checkbox]:checked {
     }
 }
 
-.form-job .form-control {
+.form-child .form-control {
     background-color: $white;
 }
 
-.form-job input[aria-invalid=true] {
+.form-child input[aria-invalid=true] {
     background-color: $color-danger;
     color: $white;
 }
 
 
-.form-job__title {
+.form-child__title {
     text-align: center;
     margin-top: 0;
 
@@ -221,12 +221,12 @@ input[type=checkbox]:checked {
     }
 }
 
-.form-job .wpcf7-acceptance {
+.form-child .wpcf7-acceptance {
     padding-top: 1rem;
     display: block;
 }
 
-.form-job .wpcf7-acceptance label {
+.form-child .wpcf7-acceptance label {
     display: flex;
 
     span {

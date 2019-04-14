@@ -3,7 +3,7 @@
         <span>Partager&nbsp;</span>
         <?php echo get_build_icon_path('share.svg'); ?>
     </button>
-    <a href="#" class="btn btn-black">Se renseigner</a>
+    <a href="#trainingForm" class="btn btn-black">Se renseigner</a>
 </div>
 
 <div class="social-bar" id="socialJob" style="display:none;">

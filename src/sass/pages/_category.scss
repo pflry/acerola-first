@@ -1,23 +1,20 @@
 //
-// Training list posts
+// Category page
 // --------------------------------------------------
 
-.training-list {
-
-}
-
-.training-list .h1 {
+// Titre
+.category .h1 {
     @extend %mobile;
-
-    span {
-        display: block;
-        font-size: $font-size-h2;
-        color: $color-info;
-    }
 }
 
-// posts
-.training-list .post {
+.category .training-list .h1 span {
+    text-transform: lowercase;
+}
+
+
+// Posts
+// -----------------------------------
+.category .post {
     background-color: $gray-100;
     border-radius: $border-radius;
     margin: 1.25rem 1rem 0;
@@ -34,13 +31,13 @@
     }
 }
 
-.training-list .post-header {
+.category .post-header {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.training-list .post-header .entry-title {
+.category .post-header .entry-title {
     @extend %titre-service;
     font-size: 1.2rem;
     font-weight: 400;
@@ -74,7 +71,7 @@
     color: $color-base;
     display: block;
     font-size: $font-size-base;
-    padding: 0; 
+    padding: 0;
 }
 
 .entry-meta-jobs div {

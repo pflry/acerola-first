@@ -1,5 +1,5 @@
 <?php if ( is_singular() ) { ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class('single-job'); ?>><?php edit_post_link(); ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('single-child'); ?>><?php edit_post_link(); ?>
         <h4 class="entry-remind">Offre d'emploi</h4>
         <h1 class="entry-title"><?php the_title(); ?></h1>
         <?php get_template_part( 'templates/entry-social-jobs' ); ?>

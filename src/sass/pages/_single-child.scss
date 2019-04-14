@@ -1,12 +1,12 @@
 //
-// Job single post
+// Child single post
 // --------------------------------------------------
 
-.single-job {
+.single-child {
     @extend %mobile;
 }
 
-.single-job .entry-title {
+.single-child .entry-title {
     font-family: $font-family-base;
     font-size: 2rem;
     font-weight: 600;
@@ -23,10 +23,10 @@
     }
 }
 
-.single-job .entry-remind {
+.single-child .entry-remind {
     @extend %titre-service;
-    color: $gray-700;
-    font-weight: 400;
+    color: $color-primary;
+    font-weight: 500;
     margin: 0;
 
     @media screen and (min-width: $medium) {
@@ -34,7 +34,7 @@
     }
 }
 
-.single-job .criterias {
+.single-child .criterias {
     background-color: $gray-100;
     border-radius: $border-radius;
     margin-bottom: 1.375rem;
@@ -44,7 +44,7 @@
     }
 }
 
-.single-job .criterias-title {
+.single-child .criterias-title {
     @extend %titre-service;
     font-weight: 600;
     margin: 0 0 -0.5rem;
@@ -59,7 +59,7 @@
     }
 }
 
-.single-job .criterias > section {
+.single-child .criterias > section {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -73,7 +73,7 @@
     }
 }
 
-.single-job .meta-content {
+.single-child .meta-content {
     color: $color-base;
     display: block;
     font-size: $font-size-base;
@@ -86,7 +86,7 @@
     }
 }
 
-.single-job .criterias .entry-meta {
+.single-child .criterias .entry-meta {
     display: flex;
     flex: 1 1 100%;
     padding: 1rem 0 0.75rem 1.5rem;
@@ -134,7 +134,7 @@
     }
 }
 
-.single-job .criterias .meta-picto {
+.single-child .criterias .meta-picto {
     align-items: flex-start;
     color: $color-info;
     display: flex;

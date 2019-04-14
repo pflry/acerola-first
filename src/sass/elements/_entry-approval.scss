@@ -7,7 +7,8 @@
     margin-bottom: 0;
     padding: 3.125rem 0;
 
-    .site-job & {
+    .site-job &,
+    .single.site-training & {
         display: none;
     }
 

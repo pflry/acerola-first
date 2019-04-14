@@ -15,7 +15,7 @@ global $child;
 
 if ($child == 'emploi') : ?>
      <section id="content" role="main" class="main job-list categorie">
-        <h1 class="h1">Offres d'emploi <span>Secteur d'activité : <?php single_cat_title(); ?></span></h1>
+        <h1 class="h1">Offres d'emploi <span><?php single_cat_title(); ?></span></h1>
         <?php get_template_part( 'templates/job-filter' ); ?>
         <div class="jscroll">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -23,6 +23,7 @@ if ($child == 'emploi') : ?>
             <?php endwhile; endif; ?>
             <?php get_template_part( 'templates/pagination' ); ?>
         </div>
+        <?php get_template_part( 'templates/page-block-contact' ); ?>
     </section>
 
 <?php elseif ($child == 'formation') : ?>
@@ -34,7 +35,9 @@ if ($child == 'emploi') : ?>
             <?php endwhile; endif; ?>
             <?php get_template_part( 'templates/pagination' ); ?>
         </div>
+        <?php get_template_part( 'templates/page-block-contact' ); ?>
     </section>
+
 
 <?php else : ?>
     <section id="content" role="main" class="main categorie">
@@ -45,6 +48,7 @@ if ($child == 'emploi') : ?>
         <?php endwhile; endif; ?>
         <?php get_template_part( 'templates/pagination' ); ?>
     </div>
+    <?php get_template_part( 'templates/page-block-contact' ); ?>
 </section>
 
 <?php endif; ?>

@@ -1,7 +1,7 @@
 <?php $meta_ref = get_post_meta( get_the_ID(), 'reference', true ); ?>
 
-<section id="jobForm" class="form-job">
-    <h2 class="h2 form-job__title">
+<section id="jobForm" class="form-child">
+    <h2 class="h2 form-child__title">
         Postuler à l'offre
         <span class="job-title"><?php the_title(); ?></span>
         <span class="job-ref"><span>référence&nbsp;<?php echo $meta_ref ?></span>
